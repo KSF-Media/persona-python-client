@@ -37,11 +37,11 @@ class UsersApi(object):
 
         Authorization header expects the following format ‘OAuth {token}’  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.users_uuid_get(uuid, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.users_uuid_get(uuid, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str uuid: (required)
         :param str authorization:
         :return: User
@@ -49,7 +49,7 @@ class UsersApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.users_uuid_get_with_http_info(uuid, **kwargs)  # noqa: E501
         else:
             (data) = self.users_uuid_get_with_http_info(uuid, **kwargs)  # noqa: E501
@@ -60,11 +60,11 @@ class UsersApi(object):
 
         Authorization header expects the following format ‘OAuth {token}’  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.users_uuid_get_with_http_info(uuid, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.users_uuid_get_with_http_info(uuid, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str uuid: (required)
         :param str authorization:
         :return: User
@@ -75,7 +75,7 @@ class UsersApi(object):
         local_var_params = locals()
 
         all_params = ['uuid', 'authorization']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -126,7 +126,7 @@ class UsersApi(object):
             files=local_var_files,
             response_type='User',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),

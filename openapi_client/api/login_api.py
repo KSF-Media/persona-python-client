@@ -36,18 +36,18 @@ class LoginApi(object):
         """Login with email and password  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.login_post(login_data, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.login_post(login_data, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param LoginData login_data: (required)
         :return: LoginResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.login_post_with_http_info(login_data, **kwargs)  # noqa: E501
         else:
             (data) = self.login_post_with_http_info(login_data, **kwargs)  # noqa: E501
@@ -57,11 +57,11 @@ class LoginApi(object):
         """Login with email and password  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.login_post_with_http_info(login_data, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.login_post_with_http_info(login_data, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param LoginData login_data: (required)
         :return: LoginResponse
                  If the method is called asynchronously,
@@ -71,7 +71,7 @@ class LoginApi(object):
         local_var_params = locals()
 
         all_params = ['login_data']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -124,7 +124,7 @@ class LoginApi(object):
             files=local_var_files,
             response_type='LoginResponse',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -134,18 +134,18 @@ class LoginApi(object):
         """Login with social media  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.login_some_post(login_data_so_me, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.login_some_post(login_data_so_me, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param LoginDataSoMe login_data_so_me: (required)
         :return: LoginResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.login_some_post_with_http_info(login_data_so_me, **kwargs)  # noqa: E501
         else:
             (data) = self.login_some_post_with_http_info(login_data_so_me, **kwargs)  # noqa: E501
@@ -155,11 +155,11 @@ class LoginApi(object):
         """Login with social media  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.login_some_post_with_http_info(login_data_so_me, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.login_some_post_with_http_info(login_data_so_me, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param LoginDataSoMe login_data_so_me: (required)
         :return: LoginResponse
                  If the method is called asynchronously,
@@ -169,7 +169,7 @@ class LoginApi(object):
         local_var_params = locals()
 
         all_params = ['login_data_so_me']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -222,7 +222,7 @@ class LoginApi(object):
             files=local_var_files,
             response_type='LoginResponse',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -232,18 +232,18 @@ class LoginApi(object):
         """Login with the AccessToken given by the SSO auth  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.login_sso_post(login_data_sso, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.login_sso_post(login_data_sso, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param LoginDataSSO login_data_sso: (required)
         :return: LoginResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.login_sso_post_with_http_info(login_data_sso, **kwargs)  # noqa: E501
         else:
             (data) = self.login_sso_post_with_http_info(login_data_sso, **kwargs)  # noqa: E501
@@ -253,11 +253,11 @@ class LoginApi(object):
         """Login with the AccessToken given by the SSO auth  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.login_sso_post_with_http_info(login_data_sso, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.login_sso_post_with_http_info(login_data_sso, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param LoginDataSSO login_data_sso: (required)
         :return: LoginResponse
                  If the method is called asynchronously,
@@ -267,7 +267,7 @@ class LoginApi(object):
         local_var_params = locals()
 
         all_params = ['login_data_sso']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -320,7 +320,7 @@ class LoginApi(object):
             files=local_var_files,
             response_type='LoginResponse',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
