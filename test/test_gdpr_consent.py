@@ -15,12 +15,12 @@ from __future__ import absolute_import
 import unittest
 
 import openapi_client
-from openapi_client.models.campaign import Campaign  # noqa: E501
+from openapi_client.models.gdpr_consent import GdprConsent  # noqa: E501
 from openapi_client.rest import ApiException
 
 
-class TestCampaign(unittest.TestCase):
-    """Campaign unit test stubs"""
+class TestGdprConsent(unittest.TestCase):
+    """GdprConsent unit test stubs"""
 
     def setUp(self):
         pass
@@ -28,10 +28,10 @@ class TestCampaign(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testCampaign(self):
-        """Test Campaign"""
+    def testGdprConsent(self):
+        """Test GdprConsent"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = openapi_client.models.campaign.Campaign()  # noqa: E501
+        # model = openapi_client.models.gdpr_consent.GdprConsent()  # noqa: E501
         pass
 
 
