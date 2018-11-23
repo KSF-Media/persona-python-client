@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import persona_client
-from persona_client.models.paper import Paper  # noqa: E501
-from persona_client.rest import ApiException
+import persona
+from persona.models.paper import Paper  # noqa: E501
+from persona.rest import ApiException
 
 
 class TestPaper(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestPaper(unittest.TestCase):
     def testPaper(self):
         """Test Paper"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = persona_client.models.paper.Paper()  # noqa: E501
+        # model = persona.models.paper.Paper()  # noqa: E501
         pass
 
 

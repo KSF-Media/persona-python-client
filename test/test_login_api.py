@@ -14,16 +14,16 @@ from __future__ import absolute_import
 
 import unittest
 
-import persona_client
-from persona_client.api.login_api import LoginApi  # noqa: E501
-from persona_client.rest import ApiException
+import persona
+from persona.api.login_api import LoginApi  # noqa: E501
+from persona.rest import ApiException
 
 
 class TestLoginApi(unittest.TestCase):
     """LoginApi unit test stubs"""
 
     def setUp(self):
-        self.api = persona_client.api.login_api.LoginApi()  # noqa: E501
+        self.api = persona.api.login_api.LoginApi()  # noqa: E501
 
     def tearDown(self):
         pass

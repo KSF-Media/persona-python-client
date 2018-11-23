@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import persona_client
-from persona_client.models.login_response import LoginResponse  # noqa: E501
-from persona_client.rest import ApiException
+import persona
+from persona.models.login_response import LoginResponse  # noqa: E501
+from persona.rest import ApiException
 
 
 class TestLoginResponse(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestLoginResponse(unittest.TestCase):
     def testLoginResponse(self):
         """Test LoginResponse"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = persona_client.models.login_response.LoginResponse()  # noqa: E501
+        # model = persona.models.login_response.LoginResponse()  # noqa: E501
         pass
 
 

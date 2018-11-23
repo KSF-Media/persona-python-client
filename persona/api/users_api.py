@@ -17,7 +17,7 @@ import re  # noqa: F401
 # python 2 and python 3 compatibility library
 import six
 
-from persona_client.api_client import ApiClient
+from persona.api_client import ApiClient
 
 
 class UsersApi(object):

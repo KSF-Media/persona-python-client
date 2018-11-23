@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import persona_client
-from persona_client.models.inline_response500_internal_server_error import InlineResponse500InternalServerError  # noqa: E501
-from persona_client.rest import ApiException
+import persona
+from persona.models.inline_response500_internal_server_error import InlineResponse500InternalServerError  # noqa: E501
+from persona.rest import ApiException
 
 
 class TestInlineResponse500InternalServerError(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestInlineResponse500InternalServerError(unittest.TestCase):
     def testInlineResponse500InternalServerError(self):
         """Test InlineResponse500InternalServerError"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = persona_client.models.inline_response500_internal_server_error.InlineResponse500InternalServerError()  # noqa: E501
+        # model = persona.models.inline_response500_internal_server_error.InlineResponse500InternalServerError()  # noqa: E501
         pass
 
 

@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import persona_client
-from persona_client.models.gdpr_consent import GdprConsent  # noqa: E501
-from persona_client.rest import ApiException
+import persona
+from persona.models.gdpr_consent import GdprConsent  # noqa: E501
+from persona.rest import ApiException
 
 
 class TestGdprConsent(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestGdprConsent(unittest.TestCase):
     def testGdprConsent(self):
         """Test GdprConsent"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = persona_client.models.gdpr_consent.GdprConsent()  # noqa: E501
+        # model = persona.models.gdpr_consent.GdprConsent()  # noqa: E501
         pass
 
 

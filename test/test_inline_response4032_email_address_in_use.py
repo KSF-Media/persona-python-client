@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import persona_client
-from persona_client.models.inline_response4032_email_address_in_use import InlineResponse4032EmailAddressInUse  # noqa: E501
-from persona_client.rest import ApiException
+import persona
+from persona.models.inline_response4032_email_address_in_use import InlineResponse4032EmailAddressInUse  # noqa: E501
+from persona.rest import ApiException
 
 
 class TestInlineResponse4032EmailAddressInUse(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestInlineResponse4032EmailAddressInUse(unittest.TestCase):
     def testInlineResponse4032EmailAddressInUse(self):
         """Test InlineResponse4032EmailAddressInUse"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = persona_client.models.inline_response4032_email_address_in_use.InlineResponse4032EmailAddressInUse()  # noqa: E501
+        # model = persona.models.inline_response4032_email_address_in_use.InlineResponse4032EmailAddressInUse()  # noqa: E501
         pass
 
 

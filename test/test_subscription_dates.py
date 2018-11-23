@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import persona_client
-from persona_client.models.subscription_dates import SubscriptionDates  # noqa: E501
-from persona_client.rest import ApiException
+import persona
+from persona.models.subscription_dates import SubscriptionDates  # noqa: E501
+from persona.rest import ApiException
 
 
 class TestSubscriptionDates(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestSubscriptionDates(unittest.TestCase):
     def testSubscriptionDates(self):
         """Test SubscriptionDates"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = persona_client.models.subscription_dates.SubscriptionDates()  # noqa: E501
+        # model = persona.models.subscription_dates.SubscriptionDates()  # noqa: E501
         pass
 
 

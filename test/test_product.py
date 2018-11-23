@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import persona_client
-from persona_client.models.product import Product  # noqa: E501
-from persona_client.rest import ApiException
+import persona
+from persona.models.product import Product  # noqa: E501
+from persona.rest import ApiException
 
 
 class TestProduct(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestProduct(unittest.TestCase):
     def testProduct(self):
         """Test Product"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = persona_client.models.product.Product()  # noqa: E501
+        # model = persona.models.product.Product()  # noqa: E501
         pass
 
 

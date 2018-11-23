@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import persona_client
-from persona_client.models.package_description import PackageDescription  # noqa: E501
-from persona_client.rest import ApiException
+import persona
+from persona.models.package_description import PackageDescription  # noqa: E501
+from persona.rest import ApiException
 
 
 class TestPackageDescription(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestPackageDescription(unittest.TestCase):
     def testPackageDescription(self):
         """Test PackageDescription"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = persona_client.models.package_description.PackageDescription()  # noqa: E501
+        # model = persona.models.package_description.PackageDescription()  # noqa: E501
         pass
 
 

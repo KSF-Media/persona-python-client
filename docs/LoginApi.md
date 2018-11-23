@@ -1,4 +1,4 @@
-# persona_client.LoginApi
+# persona.LoginApi
 
 All URIs are relative to *http://http:/v1*
 
@@ -18,13 +18,13 @@ Login with email and password
 ```python
 from __future__ import print_function
 import time
-import persona_client
-from persona_client.rest import ApiException
+import persona
+from persona.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = persona_client.LoginApi()
-login_data = persona_client.LoginData() # LoginData | 
+api_instance = persona.LoginApi()
+login_data = persona.LoginData() # LoginData | 
 
 try:
     # Login with email and password
@@ -64,13 +64,13 @@ Login with social media
 ```python
 from __future__ import print_function
 import time
-import persona_client
-from persona_client.rest import ApiException
+import persona
+from persona.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = persona_client.LoginApi()
-login_data_so_me = persona_client.LoginDataSoMe() # LoginDataSoMe | 
+api_instance = persona.LoginApi()
+login_data_so_me = persona.LoginDataSoMe() # LoginDataSoMe | 
 
 try:
     # Login with social media
@@ -110,13 +110,13 @@ Login with the AccessToken given by the SSO auth
 ```python
 from __future__ import print_function
 import time
-import persona_client
-from persona_client.rest import ApiException
+import persona
+from persona.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = persona_client.LoginApi()
-login_data_sso = persona_client.LoginDataSSO() # LoginDataSSO | 
+api_instance = persona.LoginApi()
+login_data_sso = persona.LoginDataSSO() # LoginDataSSO | 
 
 try:
     # Login with the AccessToken given by the SSO auth
