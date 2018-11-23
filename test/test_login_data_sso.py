@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import openapi_client
-from openapi_client.models.login_data_sso import LoginDataSSO  # noqa: E501
-from openapi_client.rest import ApiException
+import persona_client
+from persona_client.models.login_data_sso import LoginDataSSO  # noqa: E501
+from persona_client.rest import ApiException
 
 
 class TestLoginDataSSO(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestLoginDataSSO(unittest.TestCase):
     def testLoginDataSSO(self):
         """Test LoginDataSSO"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = openapi_client.models.login_data_sso.LoginDataSSO()  # noqa: E501
+        # model = persona_client.models.login_data_sso.LoginDataSSO()  # noqa: E501
         pass
 
 

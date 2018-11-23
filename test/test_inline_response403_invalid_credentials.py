@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import openapi_client
-from openapi_client.models.inline_response403_invalid_credentials import InlineResponse403InvalidCredentials  # noqa: E501
-from openapi_client.rest import ApiException
+import persona_client
+from persona_client.models.inline_response403_invalid_credentials import InlineResponse403InvalidCredentials  # noqa: E501
+from persona_client.rest import ApiException
 
 
 class TestInlineResponse403InvalidCredentials(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestInlineResponse403InvalidCredentials(unittest.TestCase):
     def testInlineResponse403InvalidCredentials(self):
         """Test InlineResponse403InvalidCredentials"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = openapi_client.models.inline_response403_invalid_credentials.InlineResponse403InvalidCredentials()  # noqa: E501
+        # model = persona_client.models.inline_response403_invalid_credentials.InlineResponse403InvalidCredentials()  # noqa: E501
         pass
 
 

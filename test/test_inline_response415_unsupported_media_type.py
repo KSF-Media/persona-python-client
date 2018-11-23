@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import openapi_client
-from openapi_client.models.inline_response415_unsupported_media_type import InlineResponse415UnsupportedMediaType  # noqa: E501
-from openapi_client.rest import ApiException
+import persona_client
+from persona_client.models.inline_response415_unsupported_media_type import InlineResponse415UnsupportedMediaType  # noqa: E501
+from persona_client.rest import ApiException
 
 
 class TestInlineResponse415UnsupportedMediaType(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestInlineResponse415UnsupportedMediaType(unittest.TestCase):
     def testInlineResponse415UnsupportedMediaType(self):
         """Test InlineResponse415UnsupportedMediaType"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = openapi_client.models.inline_response415_unsupported_media_type.InlineResponse415UnsupportedMediaType()  # noqa: E501
+        # model = persona_client.models.inline_response415_unsupported_media_type.InlineResponse415UnsupportedMediaType()  # noqa: E501
         pass
 
 

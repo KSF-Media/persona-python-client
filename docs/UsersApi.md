@@ -1,4 +1,4 @@
-# openapi_client.UsersApi
+# persona_client.UsersApi
 
 All URIs are relative to *http://http:/v1*
 
@@ -19,12 +19,12 @@ Authorization header expects the following format ‘OAuth {token}’
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import persona_client
+from persona_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = openapi_client.UsersApi()
+api_instance = persona_client.UsersApi()
 uuid = 'uuid_example' # str | 
 gdpr_consent = NULL # list[GdprConsent] | 
 authorization = 'authorization_example' # str |  (optional)
@@ -71,12 +71,12 @@ Authorization header expects the following format ‘OAuth {token}’
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import persona_client
+from persona_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = openapi_client.UsersApi()
+api_instance = persona_client.UsersApi()
 uuid = 'uuid_example' # str | 
 authorization = 'authorization_example' # str |  (optional)
 
