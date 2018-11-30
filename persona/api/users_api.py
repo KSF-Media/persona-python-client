@@ -156,6 +156,7 @@ class UsersApi(object):
         :param async_req bool
         :param str uuid: (required)
         :param str authorization:
+        :param str cache_control:
         :return: User
                  If the method is called asynchronously,
                  returns the request thread.
@@ -179,6 +180,7 @@ class UsersApi(object):
         :param async_req bool
         :param str uuid: (required)
         :param str authorization:
+        :param str cache_control:
         :return: User
                  If the method is called asynchronously,
                  returns the request thread.
@@ -186,7 +188,7 @@ class UsersApi(object):
 
         local_var_params = locals()
 
-        all_params = ['uuid', 'authorization']  # noqa: E501
+        all_params = ['uuid', 'authorization', 'cache_control']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -216,6 +218,8 @@ class UsersApi(object):
         header_params = {}
         if 'authorization' in local_var_params:
             header_params['Authorization'] = local_var_params['authorization']  # noqa: E501
+        if 'cache_control' in local_var_params:
+            header_params['Cache-Control'] = local_var_params['cache_control']  # noqa: E501
 
         form_params = []
         local_var_files = {}

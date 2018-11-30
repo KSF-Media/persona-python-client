@@ -61,7 +61,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **users_uuid_get**
-> User users_uuid_get(uuid, authorization=authorization)
+> User users_uuid_get(uuid, authorization=authorization, cache_control=cache_control)
 
 Get user by UUID.
 
@@ -79,10 +79,11 @@ from pprint import pprint
 api_instance = persona.UsersApi()
 uuid = 'uuid_example' # str | 
 authorization = 'authorization_example' # str |  (optional)
+cache_control = 'cache_control_example' # str |  (optional)
 
 try:
     # Get user by UUID.
-    api_response = api_instance.users_uuid_get(uuid, authorization=authorization)
+    api_response = api_instance.users_uuid_get(uuid, authorization=authorization, cache_control=cache_control)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling UsersApi->users_uuid_get: %s\n" % e)
@@ -94,6 +95,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **uuid** | [**str**](.md)|  | 
  **authorization** | **str**|  | [optional] 
+ **cache_control** | **str**|  | [optional] 
 
 ### Return type
 
