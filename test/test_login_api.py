@@ -49,6 +49,13 @@ class TestLoginApi(unittest.TestCase):
         """
         pass
 
+    def test_login_uuid_delete(self):
+        """Test case for login_uuid_delete
+
+        Logout  # noqa: E501
+        """
+        pass
+
 
 if __name__ == '__main__':
     unittest.main()

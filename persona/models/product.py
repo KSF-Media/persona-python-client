@@ -34,23 +34,26 @@ class Product(object):
         'id': 'str',
         'name': 'str',
         'active': 'ActiveDays',
-        'next_delivery': 'date'
+        'next_delivery': 'date',
+        'paper': 'Paper'
     }
 
     attribute_map = {
         'id': 'id',
         'name': 'name',
         'active': 'active',
-        'next_delivery': 'nextDelivery'
+        'next_delivery': 'nextDelivery',
+        'paper': 'paper'
     }
 
-    def __init__(self, id=None, name=None, active=None, next_delivery=None):  # noqa: E501
+    def __init__(self, id=None, name=None, active=None, next_delivery=None, paper=None):  # noqa: E501
         """Product - a model defined in OpenAPI"""  # noqa: E501
 
         self._id = None
         self._name = None
         self._active = None
         self._next_delivery = None
+        self._paper = None
         self.discriminator = None
 
         self.id = id
@@ -58,6 +61,7 @@ class Product(object):
         self.active = active
         if next_delivery is not None:
             self.next_delivery = next_delivery
+        self.paper = paper
 
     @property
     def id(self):
@@ -148,6 +152,29 @@ class Product(object):
         """
 
         self._next_delivery = next_delivery
+
+    @property
+    def paper(self):
+        """Gets the paper of this Product.  # noqa: E501
+
+
+        :return: The paper of this Product.  # noqa: E501
+        :rtype: Paper
+        """
+        return self._paper
+
+    @paper.setter
+    def paper(self, paper):
+        """Sets the paper of this Product.
+
+
+        :param paper: The paper of this Product.  # noqa: E501
+        :type: Paper
+        """
+        if paper is None:
+            raise ValueError("Invalid value for `paper`, must not be `None`")  # noqa: E501
+
+        self._paper = paper
 
     def to_dict(self):
         """Returns the model properties as a dict"""

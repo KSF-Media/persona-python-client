@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **name** | **str** |  | 
 **active** | [**ActiveDays**](ActiveDays.md) |  | 
 **next_delivery** | **date** |  | [optional] 
+**paper** | [**Paper**](Paper.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

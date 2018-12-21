@@ -73,6 +73,7 @@ Class | Method | HTTP request | Description
 *LoginApi* | [**login_post**](docs/LoginApi.md#login_post) | **POST** /login | Login with email and password
 *LoginApi* | [**login_some_post**](docs/LoginApi.md#login_some_post) | **POST** /login/some | Login with social media
 *LoginApi* | [**login_sso_post**](docs/LoginApi.md#login_sso_post) | **POST** /login/sso | Login with the AccessToken given by the SSO auth
+*LoginApi* | [**login_uuid_delete**](docs/LoginApi.md#login_uuid_delete) | **DELETE** /login/{uuid} | Logout
 *UsersApi* | [**users_uuid_gdpr_put**](docs/UsersApi.md#users_uuid_gdpr_put) | **PUT** /users/{uuid}/gdpr | Updates the GDPR consent settings for a given user.
 *UsersApi* | [**users_uuid_get**](docs/UsersApi.md#users_uuid_get) | **GET** /users/{uuid} | Get user by UUID.
 
