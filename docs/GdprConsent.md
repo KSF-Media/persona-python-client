@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**brand** | **str** |  | 
 **key** | **str** |  | 
 **val** | **bool** |  | 
 

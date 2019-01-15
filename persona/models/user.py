@@ -37,7 +37,8 @@ class User(object):
         'last_name': 'str',
         'address': 'Address',
         'cusno': 'str',
-        'subs': 'list[Subscription]'
+        'subs': 'list[Subscription]',
+        'consent': 'list[GdprConsent]'
     }
 
     attribute_map = {
@@ -47,10 +48,11 @@ class User(object):
         'last_name': 'lastName',
         'address': 'address',
         'cusno': 'cusno',
-        'subs': 'subs'
+        'subs': 'subs',
+        'consent': 'consent'
     }
 
-    def __init__(self, uuid=None, email=None, first_name=None, last_name=None, address=None, cusno=None, subs=None):  # noqa: E501
+    def __init__(self, uuid=None, email=None, first_name=None, last_name=None, address=None, cusno=None, subs=None, consent=None):  # noqa: E501
         """User - a model defined in OpenAPI"""  # noqa: E501
 
         self._uuid = None
@@ -60,6 +62,7 @@ class User(object):
         self._address = None
         self._cusno = None
         self._subs = None
+        self._consent = None
         self.discriminator = None
 
         self.uuid = uuid
@@ -72,6 +75,7 @@ class User(object):
             self.address = address
         self.cusno = cusno
         self.subs = subs
+        self.consent = consent
 
     @property
     def uuid(self):
@@ -227,6 +231,29 @@ class User(object):
             raise ValueError("Invalid value for `subs`, must not be `None`")  # noqa: E501
 
         self._subs = subs
+
+    @property
+    def consent(self):
+        """Gets the consent of this User.  # noqa: E501
+
+
+        :return: The consent of this User.  # noqa: E501
+        :rtype: list[GdprConsent]
+        """
+        return self._consent
+
+    @consent.setter
+    def consent(self, consent):
+        """Sets the consent of this User.
+
+
+        :param consent: The consent of this User.  # noqa: E501
+        :type: list[GdprConsent]
+        """
+        if consent is None:
+            raise ValueError("Invalid value for `consent`, must not be `None`")  # noqa: E501
+
+        self._consent = consent
 
     def to_dict(self):
         """Returns the model properties as a dict"""

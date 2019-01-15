@@ -31,24 +31,51 @@ class GdprConsent(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'brand': 'str',
         'key': 'str',
         'val': 'bool'
     }
 
     attribute_map = {
+        'brand': 'brand',
         'key': 'key',
         'val': 'val'
     }
 
-    def __init__(self, key=None, val=None):  # noqa: E501
+    def __init__(self, brand=None, key=None, val=None):  # noqa: E501
         """GdprConsent - a model defined in OpenAPI"""  # noqa: E501
 
+        self._brand = None
         self._key = None
         self._val = None
         self.discriminator = None
 
+        self.brand = brand
         self.key = key
         self.val = val
+
+    @property
+    def brand(self):
+        """Gets the brand of this GdprConsent.  # noqa: E501
+
+
+        :return: The brand of this GdprConsent.  # noqa: E501
+        :rtype: str
+        """
+        return self._brand
+
+    @brand.setter
+    def brand(self, brand):
+        """Sets the brand of this GdprConsent.
+
+
+        :param brand: The brand of this GdprConsent.  # noqa: E501
+        :type: str
+        """
+        if brand is None:
+            raise ValueError("Invalid value for `brand`, must not be `None`")  # noqa: E501
+
+        self._brand = brand
 
     @property
     def key(self):
