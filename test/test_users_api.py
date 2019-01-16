@@ -28,6 +28,13 @@ class TestUsersApi(unittest.TestCase):
     def tearDown(self):
         pass
 
+    def test_users_post(self):
+        """Test case for users_post
+
+        Create a new user.  # noqa: E501
+        """
+        pass
+
     def test_users_uuid_gdpr_put(self):
         """Test case for users_uuid_gdpr_put
 

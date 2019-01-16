@@ -37,6 +37,7 @@ from persona.models.login_data import LoginData
 from persona.models.login_data_sso import LoginDataSSO
 from persona.models.login_data_so_me import LoginDataSoMe
 from persona.models.login_response import LoginResponse
+from persona.models.new_user import NewUser
 from persona.models.package import Package
 from persona.models.package_description import PackageDescription
 from persona.models.package_offer import PackageOffer

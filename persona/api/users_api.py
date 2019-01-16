@@ -32,6 +32,104 @@ class UsersApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
+    def users_post(self, new_user, **kwargs):  # noqa: E501
+        """Create a new user.  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.users_post(new_user, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param NewUser new_user: (required)
+        :return: LoginResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.users_post_with_http_info(new_user, **kwargs)  # noqa: E501
+        else:
+            (data) = self.users_post_with_http_info(new_user, **kwargs)  # noqa: E501
+            return data
+
+    def users_post_with_http_info(self, new_user, **kwargs):  # noqa: E501
+        """Create a new user.  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.users_post_with_http_info(new_user, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param NewUser new_user: (required)
+        :return: LoginResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = ['new_user']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method users_post" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'new_user' is set
+        if ('new_user' not in local_var_params or
+                local_var_params['new_user'] is None):
+            raise ValueError("Missing the required parameter `new_user` when calling `users_post`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'new_user' in local_var_params:
+            body_params = local_var_params['new_user']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json;charset=utf-8'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json;charset=utf-8'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = []  # noqa: E501
+
+        return self.api_client.call_api(
+            '/users', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='LoginResponse',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
     def users_uuid_gdpr_put(self, uuid, gdpr_consent, **kwargs):  # noqa: E501
         """Updates the GDPR consent settings for a given user.  # noqa: E501
 

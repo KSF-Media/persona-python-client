@@ -74,6 +74,7 @@ Class | Method | HTTP request | Description
 *LoginApi* | [**login_some_post**](docs/LoginApi.md#login_some_post) | **POST** /login/some | Login with social media
 *LoginApi* | [**login_sso_post**](docs/LoginApi.md#login_sso_post) | **POST** /login/sso | Login with the AccessToken given by the SSO auth
 *LoginApi* | [**login_uuid_delete**](docs/LoginApi.md#login_uuid_delete) | **DELETE** /login/{uuid} | Logout
+*UsersApi* | [**users_post**](docs/UsersApi.md#users_post) | **POST** /users | Create a new user.
 *UsersApi* | [**users_uuid_gdpr_put**](docs/UsersApi.md#users_uuid_gdpr_put) | **PUT** /users/{uuid}/gdpr | Updates the GDPR consent settings for a given user.
 *UsersApi* | [**users_uuid_get**](docs/UsersApi.md#users_uuid_get) | **GET** /users/{uuid} | Get user by UUID.
 
@@ -103,6 +104,7 @@ Class | Method | HTTP request | Description
  - [LoginDataSSO](docs/LoginDataSSO.md)
  - [LoginDataSoMe](docs/LoginDataSoMe.md)
  - [LoginResponse](docs/LoginResponse.md)
+ - [NewUser](docs/NewUser.md)
  - [Package](docs/Package.md)
  - [PackageDescription](docs/PackageDescription.md)
  - [PackageOffer](docs/PackageOffer.md)

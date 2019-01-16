@@ -4,9 +4,56 @@ All URIs are relative to *http://http:/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**users_post**](UsersApi.md#users_post) | **POST** /users | Create a new user.
 [**users_uuid_gdpr_put**](UsersApi.md#users_uuid_gdpr_put) | **PUT** /users/{uuid}/gdpr | Updates the GDPR consent settings for a given user.
 [**users_uuid_get**](UsersApi.md#users_uuid_get) | **GET** /users/{uuid} | Get user by UUID.
 
+
+# **users_post**
+> LoginResponse users_post(new_user)
+
+Create a new user.
+
+### Example
+```python
+from __future__ import print_function
+import time
+import persona
+from persona.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = persona.UsersApi()
+new_user = persona.NewUser() # NewUser | 
+
+try:
+    # Create a new user.
+    api_response = api_instance.users_post(new_user)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling UsersApi->users_post: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **new_user** | [**NewUser**](NewUser.md)|  | 
+
+### Return type
+
+[**LoginResponse**](LoginResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json;charset=utf-8
+ - **Accept**: application/json;charset=utf-8
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **users_uuid_gdpr_put**
 > list[object] users_uuid_gdpr_put(uuid, gdpr_consent, authorization=authorization)
