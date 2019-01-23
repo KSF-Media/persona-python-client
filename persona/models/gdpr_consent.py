@@ -32,27 +32,27 @@ class GdprConsent(object):
     """
     openapi_types = {
         'brand': 'str',
-        'key': 'str',
-        'val': 'bool'
+        'consent_key': 'str',
+        'value': 'bool'
     }
 
     attribute_map = {
         'brand': 'brand',
-        'key': 'key',
-        'val': 'val'
+        'consent_key': 'consentKey',
+        'value': 'value'
     }
 
-    def __init__(self, brand=None, key=None, val=None):  # noqa: E501
+    def __init__(self, brand=None, consent_key=None, value=None):  # noqa: E501
         """GdprConsent - a model defined in OpenAPI"""  # noqa: E501
 
         self._brand = None
-        self._key = None
-        self._val = None
+        self._consent_key = None
+        self._value = None
         self.discriminator = None
 
         self.brand = brand
-        self.key = key
-        self.val = val
+        self.consent_key = consent_key
+        self.value = value
 
     @property
     def brand(self):
@@ -78,50 +78,50 @@ class GdprConsent(object):
         self._brand = brand
 
     @property
-    def key(self):
-        """Gets the key of this GdprConsent.  # noqa: E501
+    def consent_key(self):
+        """Gets the consent_key of this GdprConsent.  # noqa: E501
 
 
-        :return: The key of this GdprConsent.  # noqa: E501
+        :return: The consent_key of this GdprConsent.  # noqa: E501
         :rtype: str
         """
-        return self._key
+        return self._consent_key
 
-    @key.setter
-    def key(self, key):
-        """Sets the key of this GdprConsent.
+    @consent_key.setter
+    def consent_key(self, consent_key):
+        """Sets the consent_key of this GdprConsent.
 
 
-        :param key: The key of this GdprConsent.  # noqa: E501
+        :param consent_key: The consent_key of this GdprConsent.  # noqa: E501
         :type: str
         """
-        if key is None:
-            raise ValueError("Invalid value for `key`, must not be `None`")  # noqa: E501
+        if consent_key is None:
+            raise ValueError("Invalid value for `consent_key`, must not be `None`")  # noqa: E501
 
-        self._key = key
+        self._consent_key = consent_key
 
     @property
-    def val(self):
-        """Gets the val of this GdprConsent.  # noqa: E501
+    def value(self):
+        """Gets the value of this GdprConsent.  # noqa: E501
 
 
-        :return: The val of this GdprConsent.  # noqa: E501
+        :return: The value of this GdprConsent.  # noqa: E501
         :rtype: bool
         """
-        return self._val
+        return self._value
 
-    @val.setter
-    def val(self, val):
-        """Sets the val of this GdprConsent.
+    @value.setter
+    def value(self, value):
+        """Sets the value of this GdprConsent.
 
 
-        :param val: The val of this GdprConsent.  # noqa: E501
+        :param value: The value of this GdprConsent.  # noqa: E501
         :type: bool
         """
-        if val is None:
-            raise ValueError("Invalid value for `val`, must not be `None`")  # noqa: E501
+        if value is None:
+            raise ValueError("Invalid value for `value`, must not be `None`")  # noqa: E501
 
-        self._val = val
+        self._value = value
 
     def to_dict(self):
         """Returns the model properties as a dict"""
