@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **last_name** | **str** |  | 
 **email_address** | **str** |  | 
 **password** | **str** |  | 
+**confirm_password** | **str** |  | 
 **street_address** | **str** |  | [optional] 
 **zip_code** | **str** |  | [optional] 
 **city** | **str** |  | [optional] 

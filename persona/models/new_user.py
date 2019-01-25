@@ -35,6 +35,7 @@ class NewUser(object):
         'last_name': 'str',
         'email_address': 'str',
         'password': 'str',
+        'confirm_password': 'str',
         'street_address': 'str',
         'zip_code': 'str',
         'city': 'str',
@@ -47,6 +48,7 @@ class NewUser(object):
         'last_name': 'lastName',
         'email_address': 'emailAddress',
         'password': 'password',
+        'confirm_password': 'confirmPassword',
         'street_address': 'streetAddress',
         'zip_code': 'zipCode',
         'city': 'city',
@@ -54,13 +56,14 @@ class NewUser(object):
         'phone': 'phone'
     }
 
-    def __init__(self, first_name=None, last_name=None, email_address=None, password=None, street_address=None, zip_code=None, city=None, country=None, phone=None):  # noqa: E501
+    def __init__(self, first_name=None, last_name=None, email_address=None, password=None, confirm_password=None, street_address=None, zip_code=None, city=None, country=None, phone=None):  # noqa: E501
         """NewUser - a model defined in OpenAPI"""  # noqa: E501
 
         self._first_name = None
         self._last_name = None
         self._email_address = None
         self._password = None
+        self._confirm_password = None
         self._street_address = None
         self._zip_code = None
         self._city = None
@@ -72,6 +75,7 @@ class NewUser(object):
         self.last_name = last_name
         self.email_address = email_address
         self.password = password
+        self.confirm_password = confirm_password
         if street_address is not None:
             self.street_address = street_address
         if zip_code is not None:
@@ -174,6 +178,29 @@ class NewUser(object):
             raise ValueError("Invalid value for `password`, must not be `None`")  # noqa: E501
 
         self._password = password
+
+    @property
+    def confirm_password(self):
+        """Gets the confirm_password of this NewUser.  # noqa: E501
+
+
+        :return: The confirm_password of this NewUser.  # noqa: E501
+        :rtype: str
+        """
+        return self._confirm_password
+
+    @confirm_password.setter
+    def confirm_password(self, confirm_password):
+        """Sets the confirm_password of this NewUser.
+
+
+        :param confirm_password: The confirm_password of this NewUser.  # noqa: E501
+        :type: str
+        """
+        if confirm_password is None:
+            raise ValueError("Invalid value for `confirm_password`, must not be `None`")  # noqa: E501
+
+        self._confirm_password = confirm_password
 
     @property
     def street_address(self):
