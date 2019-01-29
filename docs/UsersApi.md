@@ -56,7 +56,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **users_uuid_gdpr_put**
-> list[object] users_uuid_gdpr_put(uuid, gdpr_consent, authorization=authorization)
+> User users_uuid_gdpr_put(uuid, gdpr_consent, authorization=authorization)
 
 Updates the GDPR consent settings for a given user.
 
@@ -94,7 +94,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**list[object]**
+[**User**](User.md)
 
 ### Authorization
 
