@@ -56,3 +56,5 @@ from persona.models.product import Product
 from persona.models.subscription import Subscription
 from persona.models.subscription_dates import SubscriptionDates
 from persona.models.user import User
+from persona.models.user_update import UserUpdate
+from persona.models.user_update_address import UserUpdateAddress

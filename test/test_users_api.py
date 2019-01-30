@@ -49,6 +49,13 @@ class TestUsersApi(unittest.TestCase):
         """
         pass
 
+    def test_users_uuid_patch(self):
+        """Test case for users_uuid_patch
+
+        Update a user  # noqa: E501
+        """
+        pass
+
 
 if __name__ == '__main__':
     unittest.main()
