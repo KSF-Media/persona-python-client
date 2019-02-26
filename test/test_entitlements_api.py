@@ -15,23 +15,24 @@ from __future__ import absolute_import
 import unittest
 
 import persona
-from persona.models.new_user import NewUser  # noqa: E501
+from persona.api.entitlements_api import EntitlementsApi  # noqa: E501
 from persona.rest import ApiException
 
 
-class TestNewUser(unittest.TestCase):
-    """NewUser unit test stubs"""
+class TestEntitlementsApi(unittest.TestCase):
+    """EntitlementsApi unit test stubs"""
 
     def setUp(self):
-        pass
+        self.api = persona.api.entitlements_api.EntitlementsApi()  # noqa: E501
 
     def tearDown(self):
         pass
 
-    def testNewUser(self):
-        """Test NewUser"""
-        # FIXME: construct object with mandatory attributes with example values
-        # model = persona.models.new_user.NewUser()  # noqa: E501
+    def test_entitlements_get(self):
+        """Test case for entitlements_get
+
+        List all entitlements  # noqa: E501
+        """
         pass
 
 
