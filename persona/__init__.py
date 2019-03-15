@@ -44,6 +44,7 @@ from persona.models.inline_response415 import InlineResponse415
 from persona.models.inline_response415_unsupported_media_type import InlineResponse415UnsupportedMediaType
 from persona.models.inline_response500 import InlineResponse500
 from persona.models.inline_response500_internal_server_error import InlineResponse500InternalServerError
+from persona.models.legal_consent import LegalConsent
 from persona.models.login_data import LoginData
 from persona.models.login_data_sso import LoginDataSSO
 from persona.models.login_data_so_me import LoginDataSoMe

@@ -56,6 +56,13 @@ class TestUsersApi(unittest.TestCase):
         """
         pass
 
+    def test_users_uuid_legal_put(self):
+        """Test case for users_uuid_legal_put
+
+        Updates the legal consent settings for a given user.  # noqa: E501
+        """
+        pass
+
     def test_users_uuid_patch(self):
         """Test case for users_uuid_patch
 

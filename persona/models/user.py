@@ -38,7 +38,8 @@ class User(object):
         'address': 'Address',
         'cusno': 'str',
         'subs': 'list[Subscription]',
-        'consent': 'list[GdprConsent]'
+        'consent': 'list[GdprConsent]',
+        'legal': 'list[LegalConsent]'
     }
 
     attribute_map = {
@@ -49,10 +50,11 @@ class User(object):
         'address': 'address',
         'cusno': 'cusno',
         'subs': 'subs',
-        'consent': 'consent'
+        'consent': 'consent',
+        'legal': 'legal'
     }
 
-    def __init__(self, uuid=None, email=None, first_name=None, last_name=None, address=None, cusno=None, subs=None, consent=None):  # noqa: E501
+    def __init__(self, uuid=None, email=None, first_name=None, last_name=None, address=None, cusno=None, subs=None, consent=None, legal=None):  # noqa: E501
         """User - a model defined in OpenAPI"""  # noqa: E501
 
         self._uuid = None
@@ -63,6 +65,7 @@ class User(object):
         self._cusno = None
         self._subs = None
         self._consent = None
+        self._legal = None
         self.discriminator = None
 
         self.uuid = uuid
@@ -76,6 +79,7 @@ class User(object):
         self.cusno = cusno
         self.subs = subs
         self.consent = consent
+        self.legal = legal
 
     @property
     def uuid(self):
@@ -254,6 +258,29 @@ class User(object):
             raise ValueError("Invalid value for `consent`, must not be `None`")  # noqa: E501
 
         self._consent = consent
+
+    @property
+    def legal(self):
+        """Gets the legal of this User.  # noqa: E501
+
+
+        :return: The legal of this User.  # noqa: E501
+        :rtype: list[LegalConsent]
+        """
+        return self._legal
+
+    @legal.setter
+    def legal(self, legal):
+        """Sets the legal of this User.
+
+
+        :param legal: The legal of this User.  # noqa: E501
+        :type: list[LegalConsent]
+        """
+        if legal is None:
+            raise ValueError("Invalid value for `legal`, must not be `None`")  # noqa: E501
+
+        self._legal = legal
 
     def to_dict(self):
         """Returns the model properties as a dict"""
