@@ -11,11 +11,12 @@ Method | HTTP request | Description
 
 
 # **login_post**
-> LoginResponse login_post(login_data)
+> LoginResponse login_post(body)
 
 Login with email and password
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -25,11 +26,11 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = persona.LoginApi()
-login_data = persona.LoginData() # LoginData | 
+body = persona.LoginData() # LoginData | 
 
 try:
     # Login with email and password
-    api_response = api_instance.login_post(login_data)
+    api_response = api_instance.login_post(body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling LoginApi->login_post: %s\n" % e)
@@ -39,7 +40,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **login_data** | [**LoginData**](LoginData.md)|  | 
+ **body** | [**LoginData**](LoginData.md)|  | 
 
 ### Return type
 
@@ -57,11 +58,12 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **login_some_post**
-> LoginResponse login_some_post(login_data_so_me)
+> LoginResponse login_some_post(body)
 
 Login with social media
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -71,11 +73,11 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = persona.LoginApi()
-login_data_so_me = persona.LoginDataSoMe() # LoginDataSoMe | 
+body = persona.LoginDataSoMe() # LoginDataSoMe | 
 
 try:
     # Login with social media
-    api_response = api_instance.login_some_post(login_data_so_me)
+    api_response = api_instance.login_some_post(body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling LoginApi->login_some_post: %s\n" % e)
@@ -85,7 +87,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **login_data_so_me** | [**LoginDataSoMe**](LoginDataSoMe.md)|  | 
+ **body** | [**LoginDataSoMe**](LoginDataSoMe.md)|  | 
 
 ### Return type
 
@@ -103,11 +105,12 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **login_sso_post**
-> LoginResponse login_sso_post(login_data_sso)
+> LoginResponse login_sso_post(body)
 
 Login with the AccessToken given by the SSO auth
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -117,11 +120,11 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = persona.LoginApi()
-login_data_sso = persona.LoginDataSSO() # LoginDataSSO | 
+body = persona.LoginDataSSO() # LoginDataSSO | 
 
 try:
     # Login with the AccessToken given by the SSO auth
-    api_response = api_instance.login_sso_post(login_data_sso)
+    api_response = api_instance.login_sso_post(body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling LoginApi->login_sso_post: %s\n" % e)
@@ -131,7 +134,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **login_data_sso** | [**LoginDataSSO**](LoginDataSSO.md)|  | 
+ **body** | [**LoginDataSSO**](LoginDataSSO.md)|  | 
 
 ### Return type
 
@@ -156,6 +159,7 @@ Logout
 Authorization header expects the following format ‘OAuth {token}’
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time

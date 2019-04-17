@@ -18,6 +18,10 @@ import re  # noqa: F401
 import six
 
 from persona.api_client import ApiClient
+from persona.exceptions import (
+    ApiTypeError,
+    ApiValueError
+)
 
 
 class UsersApi(object):
@@ -32,37 +36,37 @@ class UsersApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def users_post(self, new_user, **kwargs):  # noqa: E501
+    def users_post(self, body, **kwargs):  # noqa: E501
         """Create a new user.  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.users_post(new_user, async_req=True)
+        >>> thread = api.users_post(body, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param NewUser new_user: (required)
+        :param NewUser body: (required)
         :return: LoginResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.users_post_with_http_info(new_user, **kwargs)  # noqa: E501
+            return self.users_post_with_http_info(body, **kwargs)  # noqa: E501
         else:
-            (data) = self.users_post_with_http_info(new_user, **kwargs)  # noqa: E501
+            (data) = self.users_post_with_http_info(body, **kwargs)  # noqa: E501
             return data
 
-    def users_post_with_http_info(self, new_user, **kwargs):  # noqa: E501
+    def users_post_with_http_info(self, body, **kwargs):  # noqa: E501
         """Create a new user.  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.users_post_with_http_info(new_user, async_req=True)
+        >>> thread = api.users_post_with_http_info(body, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param NewUser new_user: (required)
+        :param NewUser body: (required)
         :return: LoginResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -70,7 +74,7 @@ class UsersApi(object):
 
         local_var_params = locals()
 
-        all_params = ['new_user']  # noqa: E501
+        all_params = ['body']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -78,16 +82,16 @@ class UsersApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method users_post" % key
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
-        # verify the required parameter 'new_user' is set
-        if ('new_user' not in local_var_params or
-                local_var_params['new_user'] is None):
-            raise ValueError("Missing the required parameter `new_user` when calling `users_post`")  # noqa: E501
+        # verify the required parameter 'body' is set
+        if ('body' not in local_var_params or
+                local_var_params['body'] is None):
+            raise ApiValueError("Missing the required parameter `body` when calling `users_post`")  # noqa: E501
 
         collection_formats = {}
 
@@ -101,8 +105,8 @@ class UsersApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'new_user' in local_var_params:
-            body_params = local_var_params['new_user']
+        if 'body' in local_var_params:
+            body_params = local_var_params['body']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
             ['application/json;charset=utf-8'])  # noqa: E501
@@ -180,7 +184,7 @@ class UsersApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method users_uuid_entitlement_get" % key
                 )
@@ -189,7 +193,7 @@ class UsersApi(object):
         # verify the required parameter 'uuid' is set
         if ('uuid' not in local_var_params or
                 local_var_params['uuid'] is None):
-            raise ValueError("Missing the required parameter `uuid` when calling `users_uuid_entitlement_get`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `uuid` when calling `users_uuid_entitlement_get`")  # noqa: E501
 
         collection_formats = {}
 
@@ -232,18 +236,18 @@ class UsersApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def users_uuid_gdpr_put(self, uuid, gdpr_consent, **kwargs):  # noqa: E501
+    def users_uuid_gdpr_put(self, uuid, body, **kwargs):  # noqa: E501
         """Updates the GDPR consent settings for a given user.  # noqa: E501
 
         Authorization header expects the following format ‘OAuth {token}’  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.users_uuid_gdpr_put(uuid, gdpr_consent, async_req=True)
+        >>> thread = api.users_uuid_gdpr_put(uuid, body, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str uuid: (required)
-        :param list[GdprConsent] gdpr_consent: (required)
+        :param list[GdprConsent] body: (required)
         :param str authorization:
         :return: User
                  If the method is called asynchronously,
@@ -251,23 +255,23 @@ class UsersApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.users_uuid_gdpr_put_with_http_info(uuid, gdpr_consent, **kwargs)  # noqa: E501
+            return self.users_uuid_gdpr_put_with_http_info(uuid, body, **kwargs)  # noqa: E501
         else:
-            (data) = self.users_uuid_gdpr_put_with_http_info(uuid, gdpr_consent, **kwargs)  # noqa: E501
+            (data) = self.users_uuid_gdpr_put_with_http_info(uuid, body, **kwargs)  # noqa: E501
             return data
 
-    def users_uuid_gdpr_put_with_http_info(self, uuid, gdpr_consent, **kwargs):  # noqa: E501
+    def users_uuid_gdpr_put_with_http_info(self, uuid, body, **kwargs):  # noqa: E501
         """Updates the GDPR consent settings for a given user.  # noqa: E501
 
         Authorization header expects the following format ‘OAuth {token}’  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.users_uuid_gdpr_put_with_http_info(uuid, gdpr_consent, async_req=True)
+        >>> thread = api.users_uuid_gdpr_put_with_http_info(uuid, body, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str uuid: (required)
-        :param list[GdprConsent] gdpr_consent: (required)
+        :param list[GdprConsent] body: (required)
         :param str authorization:
         :return: User
                  If the method is called asynchronously,
@@ -276,7 +280,7 @@ class UsersApi(object):
 
         local_var_params = locals()
 
-        all_params = ['uuid', 'gdpr_consent', 'authorization']  # noqa: E501
+        all_params = ['uuid', 'body', 'authorization']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -284,7 +288,7 @@ class UsersApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method users_uuid_gdpr_put" % key
                 )
@@ -293,11 +297,11 @@ class UsersApi(object):
         # verify the required parameter 'uuid' is set
         if ('uuid' not in local_var_params or
                 local_var_params['uuid'] is None):
-            raise ValueError("Missing the required parameter `uuid` when calling `users_uuid_gdpr_put`")  # noqa: E501
-        # verify the required parameter 'gdpr_consent' is set
-        if ('gdpr_consent' not in local_var_params or
-                local_var_params['gdpr_consent'] is None):
-            raise ValueError("Missing the required parameter `gdpr_consent` when calling `users_uuid_gdpr_put`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `uuid` when calling `users_uuid_gdpr_put`")  # noqa: E501
+        # verify the required parameter 'body' is set
+        if ('body' not in local_var_params or
+                local_var_params['body'] is None):
+            raise ApiValueError("Missing the required parameter `body` when calling `users_uuid_gdpr_put`")  # noqa: E501
 
         collection_formats = {}
 
@@ -315,8 +319,8 @@ class UsersApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'gdpr_consent' in local_var_params:
-            body_params = local_var_params['gdpr_consent']
+        if 'body' in local_var_params:
+            body_params = local_var_params['body']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
             ['application/json;charset=utf-8'])  # noqa: E501
@@ -396,7 +400,7 @@ class UsersApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method users_uuid_get" % key
                 )
@@ -405,7 +409,7 @@ class UsersApi(object):
         # verify the required parameter 'uuid' is set
         if ('uuid' not in local_var_params or
                 local_var_params['uuid'] is None):
-            raise ValueError("Missing the required parameter `uuid` when calling `users_uuid_get`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `uuid` when calling `users_uuid_get`")  # noqa: E501
 
         collection_formats = {}
 
@@ -448,18 +452,18 @@ class UsersApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def users_uuid_legal_put(self, uuid, legal_consent, **kwargs):  # noqa: E501
+    def users_uuid_legal_put(self, uuid, body, **kwargs):  # noqa: E501
         """Updates the legal consent settings for a given user.  # noqa: E501
 
         Authorization header expects the following format ‘OAuth {token}’  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.users_uuid_legal_put(uuid, legal_consent, async_req=True)
+        >>> thread = api.users_uuid_legal_put(uuid, body, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str uuid: (required)
-        :param list[LegalConsent] legal_consent: (required)
+        :param list[LegalConsent] body: (required)
         :param str authorization:
         :return: User
                  If the method is called asynchronously,
@@ -467,23 +471,23 @@ class UsersApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.users_uuid_legal_put_with_http_info(uuid, legal_consent, **kwargs)  # noqa: E501
+            return self.users_uuid_legal_put_with_http_info(uuid, body, **kwargs)  # noqa: E501
         else:
-            (data) = self.users_uuid_legal_put_with_http_info(uuid, legal_consent, **kwargs)  # noqa: E501
+            (data) = self.users_uuid_legal_put_with_http_info(uuid, body, **kwargs)  # noqa: E501
             return data
 
-    def users_uuid_legal_put_with_http_info(self, uuid, legal_consent, **kwargs):  # noqa: E501
+    def users_uuid_legal_put_with_http_info(self, uuid, body, **kwargs):  # noqa: E501
         """Updates the legal consent settings for a given user.  # noqa: E501
 
         Authorization header expects the following format ‘OAuth {token}’  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.users_uuid_legal_put_with_http_info(uuid, legal_consent, async_req=True)
+        >>> thread = api.users_uuid_legal_put_with_http_info(uuid, body, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str uuid: (required)
-        :param list[LegalConsent] legal_consent: (required)
+        :param list[LegalConsent] body: (required)
         :param str authorization:
         :return: User
                  If the method is called asynchronously,
@@ -492,7 +496,7 @@ class UsersApi(object):
 
         local_var_params = locals()
 
-        all_params = ['uuid', 'legal_consent', 'authorization']  # noqa: E501
+        all_params = ['uuid', 'body', 'authorization']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -500,7 +504,7 @@ class UsersApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method users_uuid_legal_put" % key
                 )
@@ -509,11 +513,11 @@ class UsersApi(object):
         # verify the required parameter 'uuid' is set
         if ('uuid' not in local_var_params or
                 local_var_params['uuid'] is None):
-            raise ValueError("Missing the required parameter `uuid` when calling `users_uuid_legal_put`")  # noqa: E501
-        # verify the required parameter 'legal_consent' is set
-        if ('legal_consent' not in local_var_params or
-                local_var_params['legal_consent'] is None):
-            raise ValueError("Missing the required parameter `legal_consent` when calling `users_uuid_legal_put`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `uuid` when calling `users_uuid_legal_put`")  # noqa: E501
+        # verify the required parameter 'body' is set
+        if ('body' not in local_var_params or
+                local_var_params['body'] is None):
+            raise ApiValueError("Missing the required parameter `body` when calling `users_uuid_legal_put`")  # noqa: E501
 
         collection_formats = {}
 
@@ -531,8 +535,8 @@ class UsersApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'legal_consent' in local_var_params:
-            body_params = local_var_params['legal_consent']
+        if 'body' in local_var_params:
+            body_params = local_var_params['body']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
             ['application/json;charset=utf-8'])  # noqa: E501
@@ -560,18 +564,18 @@ class UsersApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def users_uuid_patch(self, uuid, user_update, **kwargs):  # noqa: E501
+    def users_uuid_patch(self, uuid, body, **kwargs):  # noqa: E501
         """Update a user  # noqa: E501
 
         Authorization header expects the following format ‘OAuth {token}’  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.users_uuid_patch(uuid, user_update, async_req=True)
+        >>> thread = api.users_uuid_patch(uuid, body, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str uuid: (required)
-        :param UserUpdate user_update: (required)
+        :param UserUpdate body: (required)
         :param str authorization:
         :return: User
                  If the method is called asynchronously,
@@ -579,23 +583,23 @@ class UsersApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.users_uuid_patch_with_http_info(uuid, user_update, **kwargs)  # noqa: E501
+            return self.users_uuid_patch_with_http_info(uuid, body, **kwargs)  # noqa: E501
         else:
-            (data) = self.users_uuid_patch_with_http_info(uuid, user_update, **kwargs)  # noqa: E501
+            (data) = self.users_uuid_patch_with_http_info(uuid, body, **kwargs)  # noqa: E501
             return data
 
-    def users_uuid_patch_with_http_info(self, uuid, user_update, **kwargs):  # noqa: E501
+    def users_uuid_patch_with_http_info(self, uuid, body, **kwargs):  # noqa: E501
         """Update a user  # noqa: E501
 
         Authorization header expects the following format ‘OAuth {token}’  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.users_uuid_patch_with_http_info(uuid, user_update, async_req=True)
+        >>> thread = api.users_uuid_patch_with_http_info(uuid, body, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str uuid: (required)
-        :param UserUpdate user_update: (required)
+        :param UserUpdate body: (required)
         :param str authorization:
         :return: User
                  If the method is called asynchronously,
@@ -604,7 +608,7 @@ class UsersApi(object):
 
         local_var_params = locals()
 
-        all_params = ['uuid', 'user_update', 'authorization']  # noqa: E501
+        all_params = ['uuid', 'body', 'authorization']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -612,7 +616,7 @@ class UsersApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method users_uuid_patch" % key
                 )
@@ -621,11 +625,11 @@ class UsersApi(object):
         # verify the required parameter 'uuid' is set
         if ('uuid' not in local_var_params or
                 local_var_params['uuid'] is None):
-            raise ValueError("Missing the required parameter `uuid` when calling `users_uuid_patch`")  # noqa: E501
-        # verify the required parameter 'user_update' is set
-        if ('user_update' not in local_var_params or
-                local_var_params['user_update'] is None):
-            raise ValueError("Missing the required parameter `user_update` when calling `users_uuid_patch`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `uuid` when calling `users_uuid_patch`")  # noqa: E501
+        # verify the required parameter 'body' is set
+        if ('body' not in local_var_params or
+                local_var_params['body'] is None):
+            raise ApiValueError("Missing the required parameter `body` when calling `users_uuid_patch`")  # noqa: E501
 
         collection_formats = {}
 
@@ -643,8 +647,8 @@ class UsersApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'user_update' in local_var_params:
-            body_params = local_var_params['user_update']
+        if 'body' in local_var_params:
+            body_params = local_var_params['body']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
             ['application/json;charset=utf-8'])  # noqa: E501
@@ -665,6 +669,128 @@ class UsersApi(object):
             post_params=form_params,
             files=local_var_files,
             response_type='User',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def users_uuid_subscriptions_subsno_pause_post(self, uuid, subsno, body, **kwargs):  # noqa: E501
+        """Pause users subscription  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.users_uuid_subscriptions_subsno_pause_post(uuid, subsno, body, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str uuid: (required)
+        :param int subsno: (required)
+        :param SubscriptionPauseDates body: (required)
+        :param str authorization:
+        :return: list[PausedSubscription]
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.users_uuid_subscriptions_subsno_pause_post_with_http_info(uuid, subsno, body, **kwargs)  # noqa: E501
+        else:
+            (data) = self.users_uuid_subscriptions_subsno_pause_post_with_http_info(uuid, subsno, body, **kwargs)  # noqa: E501
+            return data
+
+    def users_uuid_subscriptions_subsno_pause_post_with_http_info(self, uuid, subsno, body, **kwargs):  # noqa: E501
+        """Pause users subscription  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.users_uuid_subscriptions_subsno_pause_post_with_http_info(uuid, subsno, body, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str uuid: (required)
+        :param int subsno: (required)
+        :param SubscriptionPauseDates body: (required)
+        :param str authorization:
+        :return: list[PausedSubscription]
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = ['uuid', 'subsno', 'body', 'authorization']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method users_uuid_subscriptions_subsno_pause_post" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'uuid' is set
+        if ('uuid' not in local_var_params or
+                local_var_params['uuid'] is None):
+            raise ApiValueError("Missing the required parameter `uuid` when calling `users_uuid_subscriptions_subsno_pause_post`")  # noqa: E501
+        # verify the required parameter 'subsno' is set
+        if ('subsno' not in local_var_params or
+                local_var_params['subsno'] is None):
+            raise ApiValueError("Missing the required parameter `subsno` when calling `users_uuid_subscriptions_subsno_pause_post`")  # noqa: E501
+        # verify the required parameter 'body' is set
+        if ('body' not in local_var_params or
+                local_var_params['body'] is None):
+            raise ApiValueError("Missing the required parameter `body` when calling `users_uuid_subscriptions_subsno_pause_post`")  # noqa: E501
+
+        if 'subsno' in local_var_params and local_var_params['subsno'] > 9223372036854775807:  # noqa: E501
+            raise ApiValueError("Invalid value for parameter `subsno` when calling `users_uuid_subscriptions_subsno_pause_post`, must be a value less than or equal to `9223372036854775807`")  # noqa: E501
+        if 'subsno' in local_var_params and local_var_params['subsno'] < -9223372036854775808:  # noqa: E501
+            raise ApiValueError("Invalid value for parameter `subsno` when calling `users_uuid_subscriptions_subsno_pause_post`, must be a value greater than or equal to `-9223372036854775808`")  # noqa: E501
+        collection_formats = {}
+
+        path_params = {}
+        if 'uuid' in local_var_params:
+            path_params['uuid'] = local_var_params['uuid']  # noqa: E501
+        if 'subsno' in local_var_params:
+            path_params['subsno'] = local_var_params['subsno']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+        if 'authorization' in local_var_params:
+            header_params['Authorization'] = local_var_params['authorization']  # noqa: E501
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in local_var_params:
+            body_params = local_var_params['body']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json;charset=utf-8'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json;charset=utf-8'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = []  # noqa: E501
+
+        return self.api_client.call_api(
+            '/users/{uuid}/subscriptions/{subsno}/pause', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='list[PausedSubscription]',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501

@@ -18,6 +18,10 @@ import re  # noqa: F401
 import six
 
 from persona.api_client import ApiClient
+from persona.exceptions import (
+    ApiTypeError,
+    ApiValueError
+)
 
 
 class EntitlementsApi(object):
@@ -76,7 +80,7 @@ class EntitlementsApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method entitlements_get" % key
                 )

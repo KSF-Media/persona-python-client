@@ -43,9 +43,11 @@ from persona.models.package import Package
 from persona.models.package_description import PackageDescription
 from persona.models.package_offer import PackageOffer
 from persona.models.paper import Paper
+from persona.models.paused_subscription import PausedSubscription
 from persona.models.product import Product
 from persona.models.subscription import Subscription
 from persona.models.subscription_dates import SubscriptionDates
+from persona.models.subscription_pause_dates import SubscriptionPauseDates
 from persona.models.user import User
 from persona.models.user_update import UserUpdate
 from persona.models.user_update_address import UserUpdateAddress

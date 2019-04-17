@@ -13,6 +13,7 @@ Method | HTTP request | Description
 List all entitlements
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time

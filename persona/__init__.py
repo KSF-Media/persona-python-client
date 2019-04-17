@@ -24,6 +24,11 @@ from persona.api.users_api import UsersApi
 # import ApiClient
 from persona.api_client import ApiClient
 from persona.configuration import Configuration
+from persona.exceptions import OpenApiException
+from persona.exceptions import ApiTypeError
+from persona.exceptions import ApiValueError
+from persona.exceptions import ApiKeyError
+from persona.exceptions import ApiException
 # import models into sdk package
 from persona.models.active_days import ActiveDays
 from persona.models.address import Address
@@ -54,9 +59,12 @@ from persona.models.package import Package
 from persona.models.package_description import PackageDescription
 from persona.models.package_offer import PackageOffer
 from persona.models.paper import Paper
+from persona.models.paused_subscription import PausedSubscription
 from persona.models.product import Product
 from persona.models.subscription import Subscription
 from persona.models.subscription_dates import SubscriptionDates
+from persona.models.subscription_pause_dates import SubscriptionPauseDates
 from persona.models.user import User
 from persona.models.user_update import UserUpdate
 from persona.models.user_update_address import UserUpdateAddress
+

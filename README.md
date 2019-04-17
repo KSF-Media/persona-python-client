@@ -51,6 +51,7 @@ import persona
 from persona.rest import ApiException
 from pprint import pprint
 
+
 # create an instance of the API class
 api_instance = persona.EntitlementsApi(persona.ApiClient(configuration))
 
@@ -80,6 +81,7 @@ Class | Method | HTTP request | Description
 *UsersApi* | [**users_uuid_get**](docs/UsersApi.md#users_uuid_get) | **GET** /users/{uuid} | Get user by UUID.
 *UsersApi* | [**users_uuid_legal_put**](docs/UsersApi.md#users_uuid_legal_put) | **PUT** /users/{uuid}/legal | Updates the legal consent settings for a given user.
 *UsersApi* | [**users_uuid_patch**](docs/UsersApi.md#users_uuid_patch) | **PATCH** /users/{uuid} | Update a user
+*UsersApi* | [**users_uuid_subscriptions_subsno_pause_post**](docs/UsersApi.md#users_uuid_subscriptions_subsno_pause_post) | **POST** /users/{uuid}/subscriptions/{subsno}/pause | Pause users subscription
 
 
 ## Documentation For Models
@@ -113,9 +115,11 @@ Class | Method | HTTP request | Description
  - [PackageDescription](docs/PackageDescription.md)
  - [PackageOffer](docs/PackageOffer.md)
  - [Paper](docs/Paper.md)
+ - [PausedSubscription](docs/PausedSubscription.md)
  - [Product](docs/Product.md)
  - [Subscription](docs/Subscription.md)
  - [SubscriptionDates](docs/SubscriptionDates.md)
+ - [SubscriptionPauseDates](docs/SubscriptionPauseDates.md)
  - [User](docs/User.md)
  - [UserUpdate](docs/UserUpdate.md)
  - [UserUpdateAddress](docs/UserUpdateAddress.md)
@@ -124,7 +128,6 @@ Class | Method | HTTP request | Description
 ## Documentation For Authorization
 
  All endpoints do not require authorization.
-
 
 ## Author
 

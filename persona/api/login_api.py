@@ -18,6 +18,10 @@ import re  # noqa: F401
 import six
 
 from persona.api_client import ApiClient
+from persona.exceptions import (
+    ApiTypeError,
+    ApiValueError
+)
 
 
 class LoginApi(object):
@@ -32,37 +36,37 @@ class LoginApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def login_post(self, login_data, **kwargs):  # noqa: E501
+    def login_post(self, body, **kwargs):  # noqa: E501
         """Login with email and password  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.login_post(login_data, async_req=True)
+        >>> thread = api.login_post(body, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param LoginData login_data: (required)
+        :param LoginData body: (required)
         :return: LoginResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.login_post_with_http_info(login_data, **kwargs)  # noqa: E501
+            return self.login_post_with_http_info(body, **kwargs)  # noqa: E501
         else:
-            (data) = self.login_post_with_http_info(login_data, **kwargs)  # noqa: E501
+            (data) = self.login_post_with_http_info(body, **kwargs)  # noqa: E501
             return data
 
-    def login_post_with_http_info(self, login_data, **kwargs):  # noqa: E501
+    def login_post_with_http_info(self, body, **kwargs):  # noqa: E501
         """Login with email and password  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.login_post_with_http_info(login_data, async_req=True)
+        >>> thread = api.login_post_with_http_info(body, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param LoginData login_data: (required)
+        :param LoginData body: (required)
         :return: LoginResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -70,7 +74,7 @@ class LoginApi(object):
 
         local_var_params = locals()
 
-        all_params = ['login_data']  # noqa: E501
+        all_params = ['body']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -78,16 +82,16 @@ class LoginApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method login_post" % key
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
-        # verify the required parameter 'login_data' is set
-        if ('login_data' not in local_var_params or
-                local_var_params['login_data'] is None):
-            raise ValueError("Missing the required parameter `login_data` when calling `login_post`")  # noqa: E501
+        # verify the required parameter 'body' is set
+        if ('body' not in local_var_params or
+                local_var_params['body'] is None):
+            raise ApiValueError("Missing the required parameter `body` when calling `login_post`")  # noqa: E501
 
         collection_formats = {}
 
@@ -101,8 +105,8 @@ class LoginApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'login_data' in local_var_params:
-            body_params = local_var_params['login_data']
+        if 'body' in local_var_params:
+            body_params = local_var_params['body']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
             ['application/json;charset=utf-8'])  # noqa: E501
@@ -130,37 +134,37 @@ class LoginApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def login_some_post(self, login_data_so_me, **kwargs):  # noqa: E501
+    def login_some_post(self, body, **kwargs):  # noqa: E501
         """Login with social media  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.login_some_post(login_data_so_me, async_req=True)
+        >>> thread = api.login_some_post(body, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param LoginDataSoMe login_data_so_me: (required)
+        :param LoginDataSoMe body: (required)
         :return: LoginResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.login_some_post_with_http_info(login_data_so_me, **kwargs)  # noqa: E501
+            return self.login_some_post_with_http_info(body, **kwargs)  # noqa: E501
         else:
-            (data) = self.login_some_post_with_http_info(login_data_so_me, **kwargs)  # noqa: E501
+            (data) = self.login_some_post_with_http_info(body, **kwargs)  # noqa: E501
             return data
 
-    def login_some_post_with_http_info(self, login_data_so_me, **kwargs):  # noqa: E501
+    def login_some_post_with_http_info(self, body, **kwargs):  # noqa: E501
         """Login with social media  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.login_some_post_with_http_info(login_data_so_me, async_req=True)
+        >>> thread = api.login_some_post_with_http_info(body, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param LoginDataSoMe login_data_so_me: (required)
+        :param LoginDataSoMe body: (required)
         :return: LoginResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -168,7 +172,7 @@ class LoginApi(object):
 
         local_var_params = locals()
 
-        all_params = ['login_data_so_me']  # noqa: E501
+        all_params = ['body']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -176,16 +180,16 @@ class LoginApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method login_some_post" % key
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
-        # verify the required parameter 'login_data_so_me' is set
-        if ('login_data_so_me' not in local_var_params or
-                local_var_params['login_data_so_me'] is None):
-            raise ValueError("Missing the required parameter `login_data_so_me` when calling `login_some_post`")  # noqa: E501
+        # verify the required parameter 'body' is set
+        if ('body' not in local_var_params or
+                local_var_params['body'] is None):
+            raise ApiValueError("Missing the required parameter `body` when calling `login_some_post`")  # noqa: E501
 
         collection_formats = {}
 
@@ -199,8 +203,8 @@ class LoginApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'login_data_so_me' in local_var_params:
-            body_params = local_var_params['login_data_so_me']
+        if 'body' in local_var_params:
+            body_params = local_var_params['body']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
             ['application/json;charset=utf-8'])  # noqa: E501
@@ -228,37 +232,37 @@ class LoginApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def login_sso_post(self, login_data_sso, **kwargs):  # noqa: E501
+    def login_sso_post(self, body, **kwargs):  # noqa: E501
         """Login with the AccessToken given by the SSO auth  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.login_sso_post(login_data_sso, async_req=True)
+        >>> thread = api.login_sso_post(body, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param LoginDataSSO login_data_sso: (required)
+        :param LoginDataSSO body: (required)
         :return: LoginResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.login_sso_post_with_http_info(login_data_sso, **kwargs)  # noqa: E501
+            return self.login_sso_post_with_http_info(body, **kwargs)  # noqa: E501
         else:
-            (data) = self.login_sso_post_with_http_info(login_data_sso, **kwargs)  # noqa: E501
+            (data) = self.login_sso_post_with_http_info(body, **kwargs)  # noqa: E501
             return data
 
-    def login_sso_post_with_http_info(self, login_data_sso, **kwargs):  # noqa: E501
+    def login_sso_post_with_http_info(self, body, **kwargs):  # noqa: E501
         """Login with the AccessToken given by the SSO auth  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.login_sso_post_with_http_info(login_data_sso, async_req=True)
+        >>> thread = api.login_sso_post_with_http_info(body, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param LoginDataSSO login_data_sso: (required)
+        :param LoginDataSSO body: (required)
         :return: LoginResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -266,7 +270,7 @@ class LoginApi(object):
 
         local_var_params = locals()
 
-        all_params = ['login_data_sso']  # noqa: E501
+        all_params = ['body']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -274,16 +278,16 @@ class LoginApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method login_sso_post" % key
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
-        # verify the required parameter 'login_data_sso' is set
-        if ('login_data_sso' not in local_var_params or
-                local_var_params['login_data_sso'] is None):
-            raise ValueError("Missing the required parameter `login_data_sso` when calling `login_sso_post`")  # noqa: E501
+        # verify the required parameter 'body' is set
+        if ('body' not in local_var_params or
+                local_var_params['body'] is None):
+            raise ApiValueError("Missing the required parameter `body` when calling `login_sso_post`")  # noqa: E501
 
         collection_formats = {}
 
@@ -297,8 +301,8 @@ class LoginApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'login_data_sso' in local_var_params:
-            body_params = local_var_params['login_data_sso']
+        if 'body' in local_var_params:
+            body_params = local_var_params['body']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
             ['application/json;charset=utf-8'])  # noqa: E501
@@ -376,7 +380,7 @@ class LoginApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method login_uuid_delete" % key
                 )
@@ -385,7 +389,7 @@ class LoginApi(object):
         # verify the required parameter 'uuid' is set
         if ('uuid' not in local_var_params or
                 local_var_params['uuid'] is None):
-            raise ValueError("Missing the required parameter `uuid` when calling `login_uuid_delete`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `uuid` when calling `login_uuid_delete`")  # noqa: E501
 
         collection_formats = {}
 

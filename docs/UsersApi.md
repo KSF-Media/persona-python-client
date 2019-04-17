@@ -10,14 +10,16 @@ Method | HTTP request | Description
 [**users_uuid_get**](UsersApi.md#users_uuid_get) | **GET** /users/{uuid} | Get user by UUID.
 [**users_uuid_legal_put**](UsersApi.md#users_uuid_legal_put) | **PUT** /users/{uuid}/legal | Updates the legal consent settings for a given user.
 [**users_uuid_patch**](UsersApi.md#users_uuid_patch) | **PATCH** /users/{uuid} | Update a user
+[**users_uuid_subscriptions_subsno_pause_post**](UsersApi.md#users_uuid_subscriptions_subsno_pause_post) | **POST** /users/{uuid}/subscriptions/{subsno}/pause | Pause users subscription
 
 
 # **users_post**
-> LoginResponse users_post(new_user)
+> LoginResponse users_post(body)
 
 Create a new user.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -27,11 +29,11 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = persona.UsersApi()
-new_user = persona.NewUser() # NewUser | 
+body = persona.NewUser() # NewUser | 
 
 try:
     # Create a new user.
-    api_response = api_instance.users_post(new_user)
+    api_response = api_instance.users_post(body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling UsersApi->users_post: %s\n" % e)
@@ -41,7 +43,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **new_user** | [**NewUser**](NewUser.md)|  | 
+ **body** | [**NewUser**](NewUser.md)|  | 
 
 ### Return type
 
@@ -64,6 +66,7 @@ No authorization required
 Get users entitlements.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -109,13 +112,14 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **users_uuid_gdpr_put**
-> User users_uuid_gdpr_put(uuid, gdpr_consent, authorization=authorization)
+> User users_uuid_gdpr_put(uuid, body, authorization=authorization)
 
 Updates the GDPR consent settings for a given user.
 
 Authorization header expects the following format ‘OAuth {token}’
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -126,12 +130,12 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = persona.UsersApi()
 uuid = 'uuid_example' # str | 
-gdpr_consent = NULL # list[GdprConsent] | 
+body = None # list[GdprConsent] | 
 authorization = 'authorization_example' # str |  (optional)
 
 try:
     # Updates the GDPR consent settings for a given user.
-    api_response = api_instance.users_uuid_gdpr_put(uuid, gdpr_consent, authorization=authorization)
+    api_response = api_instance.users_uuid_gdpr_put(uuid, body, authorization=authorization)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling UsersApi->users_uuid_gdpr_put: %s\n" % e)
@@ -142,7 +146,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **uuid** | [**str**](.md)|  | 
- **gdpr_consent** | [**list[GdprConsent]**](list.md)|  | 
+ **body** | [**list[GdprConsent]**](list.md)|  | 
  **authorization** | **str**|  | [optional] 
 
 ### Return type
@@ -168,6 +172,7 @@ Get user by UUID.
 Authorization header expects the following format ‘OAuth {token}’
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -213,13 +218,14 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **users_uuid_legal_put**
-> User users_uuid_legal_put(uuid, legal_consent, authorization=authorization)
+> User users_uuid_legal_put(uuid, body, authorization=authorization)
 
 Updates the legal consent settings for a given user.
 
 Authorization header expects the following format ‘OAuth {token}’
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -230,12 +236,12 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = persona.UsersApi()
 uuid = 'uuid_example' # str | 
-legal_consent = NULL # list[LegalConsent] | 
+body = None # list[LegalConsent] | 
 authorization = 'authorization_example' # str |  (optional)
 
 try:
     # Updates the legal consent settings for a given user.
-    api_response = api_instance.users_uuid_legal_put(uuid, legal_consent, authorization=authorization)
+    api_response = api_instance.users_uuid_legal_put(uuid, body, authorization=authorization)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling UsersApi->users_uuid_legal_put: %s\n" % e)
@@ -246,7 +252,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **uuid** | [**str**](.md)|  | 
- **legal_consent** | [**list[LegalConsent]**](list.md)|  | 
+ **body** | [**list[LegalConsent]**](list.md)|  | 
  **authorization** | **str**|  | [optional] 
 
 ### Return type
@@ -265,13 +271,14 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **users_uuid_patch**
-> User users_uuid_patch(uuid, user_update, authorization=authorization)
+> User users_uuid_patch(uuid, body, authorization=authorization)
 
 Update a user
 
 Authorization header expects the following format ‘OAuth {token}’
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -282,12 +289,12 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = persona.UsersApi()
 uuid = 'uuid_example' # str | 
-user_update = persona.UserUpdate() # UserUpdate | 
+body = persona.UserUpdate() # UserUpdate | 
 authorization = 'authorization_example' # str |  (optional)
 
 try:
     # Update a user
-    api_response = api_instance.users_uuid_patch(uuid, user_update, authorization=authorization)
+    api_response = api_instance.users_uuid_patch(uuid, body, authorization=authorization)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling UsersApi->users_uuid_patch: %s\n" % e)
@@ -298,12 +305,65 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **uuid** | [**str**](.md)|  | 
- **user_update** | [**UserUpdate**](UserUpdate.md)|  | 
+ **body** | [**UserUpdate**](UserUpdate.md)|  | 
  **authorization** | **str**|  | [optional] 
 
 ### Return type
 
 [**User**](User.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json;charset=utf-8
+ - **Accept**: application/json;charset=utf-8
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **users_uuid_subscriptions_subsno_pause_post**
+> list[PausedSubscription] users_uuid_subscriptions_subsno_pause_post(uuid, subsno, body, authorization=authorization)
+
+Pause users subscription
+
+### Example
+
+```python
+from __future__ import print_function
+import time
+import persona
+from persona.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = persona.UsersApi()
+uuid = 'uuid_example' # str | 
+subsno = 56 # int | 
+body = persona.SubscriptionPauseDates() # SubscriptionPauseDates | 
+authorization = 'authorization_example' # str |  (optional)
+
+try:
+    # Pause users subscription
+    api_response = api_instance.users_uuid_subscriptions_subsno_pause_post(uuid, subsno, body, authorization=authorization)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling UsersApi->users_uuid_subscriptions_subsno_pause_post: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **uuid** | [**str**](.md)|  | 
+ **subsno** | **int**|  | 
+ **body** | [**SubscriptionPauseDates**](SubscriptionPauseDates.md)|  | 
+ **authorization** | **str**|  | [optional] 
+
+### Return type
+
+[**list[PausedSubscription]**](PausedSubscription.md)
 
 ### Authorization
 
