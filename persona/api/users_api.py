@@ -689,7 +689,7 @@ class UsersApi(object):
         :param int subsno: (required)
         :param SubscriptionPauseDates body: (required)
         :param str authorization:
-        :return: list[PausedSubscription]
+        :return: Subscription
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -713,7 +713,7 @@ class UsersApi(object):
         :param int subsno: (required)
         :param SubscriptionPauseDates body: (required)
         :param str authorization:
-        :return: list[PausedSubscription]
+        :return: Subscription
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -790,7 +790,7 @@ class UsersApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='list[PausedSubscription]',  # noqa: E501
+            response_type='Subscription',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501

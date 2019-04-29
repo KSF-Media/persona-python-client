@@ -324,7 +324,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **users_uuid_subscriptions_subsno_pause_post**
-> list[PausedSubscription] users_uuid_subscriptions_subsno_pause_post(uuid, subsno, body, authorization=authorization)
+> Subscription users_uuid_subscriptions_subsno_pause_post(uuid, subsno, body, authorization=authorization)
 
 Pause users subscription
 
@@ -363,7 +363,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[PausedSubscription]**](PausedSubscription.md)
+[**Subscription**](Subscription.md)
 
 ### Authorization
 
