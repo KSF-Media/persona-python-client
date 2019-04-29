@@ -34,6 +34,7 @@ class Package(object):
         'id': 'str',
         'name': 'str',
         'paper': 'Paper',
+        'digital_only': 'bool',
         'products': 'list[Product]',
         'offers': 'list[PackageOffer]',
         'campaigns': 'list[Campaign]',
@@ -45,6 +46,7 @@ class Package(object):
         'id': 'id',
         'name': 'name',
         'paper': 'paper',
+        'digital_only': 'digitalOnly',
         'products': 'products',
         'offers': 'offers',
         'campaigns': 'campaigns',
@@ -52,12 +54,13 @@ class Package(object):
         'description': 'description'
     }
 
-    def __init__(self, id=None, name=None, paper=None, products=None, offers=None, campaigns=None, next_delivery=None, description=None):  # noqa: E501
+    def __init__(self, id=None, name=None, paper=None, digital_only=None, products=None, offers=None, campaigns=None, next_delivery=None, description=None):  # noqa: E501
         """Package - a model defined in OpenAPI"""  # noqa: E501
 
         self._id = None
         self._name = None
         self._paper = None
+        self._digital_only = None
         self._products = None
         self._offers = None
         self._campaigns = None
@@ -68,6 +71,7 @@ class Package(object):
         self.id = id
         self.name = name
         self.paper = paper
+        self.digital_only = digital_only
         self.products = products
         self.offers = offers
         self.campaigns = campaigns
@@ -144,6 +148,29 @@ class Package(object):
             raise ValueError("Invalid value for `paper`, must not be `None`")  # noqa: E501
 
         self._paper = paper
+
+    @property
+    def digital_only(self):
+        """Gets the digital_only of this Package.  # noqa: E501
+
+
+        :return: The digital_only of this Package.  # noqa: E501
+        :rtype: bool
+        """
+        return self._digital_only
+
+    @digital_only.setter
+    def digital_only(self, digital_only):
+        """Sets the digital_only of this Package.
+
+
+        :param digital_only: The digital_only of this Package.  # noqa: E501
+        :type: bool
+        """
+        if digital_only is None:
+            raise ValueError("Invalid value for `digital_only`, must not be `None`")  # noqa: E501
+
+        self._digital_only = digital_only
 
     @property
     def products(self):

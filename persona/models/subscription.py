@@ -41,7 +41,8 @@ class Subscription(object):
         'package': 'Package',
         'dates': 'SubscriptionDates',
         'extsubsexists': 'bool',
-        'campaign': 'Campaign'
+        'campaign': 'Campaign',
+        'paused': 'list[PausedSubscription]'
     }
 
     attribute_map = {
@@ -55,10 +56,11 @@ class Subscription(object):
         'package': 'package',
         'dates': 'dates',
         'extsubsexists': 'extsubsexists',
-        'campaign': 'campaign'
+        'campaign': 'campaign',
+        'paused': 'paused'
     }
 
-    def __init__(self, subsno=None, extno=None, cusno=None, paycusno=None, kind=None, state=None, pricegroup=None, package=None, dates=None, extsubsexists=None, campaign=None):  # noqa: E501
+    def __init__(self, subsno=None, extno=None, cusno=None, paycusno=None, kind=None, state=None, pricegroup=None, package=None, dates=None, extsubsexists=None, campaign=None, paused=None):  # noqa: E501
         """Subscription - a model defined in OpenAPI"""  # noqa: E501
 
         self._subsno = None
@@ -72,6 +74,7 @@ class Subscription(object):
         self._dates = None
         self._extsubsexists = None
         self._campaign = None
+        self._paused = None
         self.discriminator = None
 
         self.subsno = subsno
@@ -87,6 +90,8 @@ class Subscription(object):
         self.extsubsexists = extsubsexists
         if campaign is not None:
             self.campaign = campaign
+        if paused is not None:
+            self.paused = paused
 
     @property
     def subsno(self):
@@ -352,6 +357,27 @@ class Subscription(object):
         """
 
         self._campaign = campaign
+
+    @property
+    def paused(self):
+        """Gets the paused of this Subscription.  # noqa: E501
+
+
+        :return: The paused of this Subscription.  # noqa: E501
+        :rtype: list[PausedSubscription]
+        """
+        return self._paused
+
+    @paused.setter
+    def paused(self, paused):
+        """Sets the paused of this Subscription.
+
+
+        :param paused: The paused of this Subscription.  # noqa: E501
+        :type: list[PausedSubscription]
+        """
+
+        self._paused = paused
 
     def to_dict(self):
         """Returns the model properties as a dict"""

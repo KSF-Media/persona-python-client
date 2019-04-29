@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **id** | **str** |  | 
 **name** | **str** |  | 
 **paper** | [**Paper**](Paper.md) |  | 
+**digital_only** | **bool** |  | 
 **products** | [**list[Product]**](Product.md) |  | 
 **offers** | [**list[PackageOffer]**](PackageOffer.md) |  | 
 **campaigns** | [**list[Campaign]**](Campaign.md) |  | 

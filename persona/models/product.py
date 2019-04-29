@@ -35,7 +35,8 @@ class Product(object):
         'name': 'str',
         'active': 'ActiveDays',
         'next_delivery': 'date',
-        'paper': 'Paper'
+        'paper': 'Paper',
+        'digital': 'bool'
     }
 
     attribute_map = {
@@ -43,10 +44,11 @@ class Product(object):
         'name': 'name',
         'active': 'active',
         'next_delivery': 'nextDelivery',
-        'paper': 'paper'
+        'paper': 'paper',
+        'digital': 'digital'
     }
 
-    def __init__(self, id=None, name=None, active=None, next_delivery=None, paper=None):  # noqa: E501
+    def __init__(self, id=None, name=None, active=None, next_delivery=None, paper=None, digital=None):  # noqa: E501
         """Product - a model defined in OpenAPI"""  # noqa: E501
 
         self._id = None
@@ -54,6 +56,7 @@ class Product(object):
         self._active = None
         self._next_delivery = None
         self._paper = None
+        self._digital = None
         self.discriminator = None
 
         self.id = id
@@ -62,6 +65,7 @@ class Product(object):
         if next_delivery is not None:
             self.next_delivery = next_delivery
         self.paper = paper
+        self.digital = digital
 
     @property
     def id(self):
@@ -175,6 +179,29 @@ class Product(object):
             raise ValueError("Invalid value for `paper`, must not be `None`")  # noqa: E501
 
         self._paper = paper
+
+    @property
+    def digital(self):
+        """Gets the digital of this Product.  # noqa: E501
+
+
+        :return: The digital of this Product.  # noqa: E501
+        :rtype: bool
+        """
+        return self._digital
+
+    @digital.setter
+    def digital(self, digital):
+        """Sets the digital of this Product.
+
+
+        :param digital: The digital of this Product.  # noqa: E501
+        :type: bool
+        """
+        if digital is None:
+            raise ValueError("Invalid value for `digital`, must not be `None`")  # noqa: E501
+
+        self._digital = digital
 
     def to_dict(self):
         """Returns the model properties as a dict"""
