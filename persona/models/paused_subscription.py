@@ -48,7 +48,8 @@ class PausedSubscription(object):
         self.discriminator = None
 
         self.start_date = start_date
-        self.end_date = end_date
+        if end_date is not None:
+            self.end_date = end_date
 
     @property
     def start_date(self):
@@ -91,8 +92,6 @@ class PausedSubscription(object):
         :param end_date: The end_date of this PausedSubscription.  # noqa: E501
         :type: date
         """
-        if end_date is None:
-            raise ValueError("Invalid value for `end_date`, must not be `None`")  # noqa: E501
 
         self._end_date = end_date
 
