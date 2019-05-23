@@ -17,6 +17,7 @@ from __future__ import absolute_import
 from persona.models.active_days import ActiveDays
 from persona.models.address import Address
 from persona.models.campaign import Campaign
+from persona.models.delivery_address import DeliveryAddress
 from persona.models.description_frequency import DescriptionFrequency
 from persona.models.gdpr_consent import GdprConsent
 from persona.models.inline_response400 import InlineResponse400
@@ -44,10 +45,12 @@ from persona.models.package_description import PackageDescription
 from persona.models.package_offer import PackageOffer
 from persona.models.paper import Paper
 from persona.models.paused_subscription import PausedSubscription
+from persona.models.pending_address_change import PendingAddressChange
 from persona.models.product import Product
 from persona.models.subscription import Subscription
 from persona.models.subscription_dates import SubscriptionDates
 from persona.models.subscription_pause_dates import SubscriptionPauseDates
+from persona.models.temporary_address_change import TemporaryAddressChange
 from persona.models.user import User
 from persona.models.user_update import UserUpdate
 from persona.models.user_update_address import UserUpdateAddress

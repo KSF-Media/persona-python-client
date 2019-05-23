@@ -42,7 +42,9 @@ class Subscription(object):
         'dates': 'SubscriptionDates',
         'extsubsexists': 'bool',
         'campaign': 'Campaign',
-        'paused': 'list[PausedSubscription]'
+        'paused': 'list[PausedSubscription]',
+        'delivery_address': 'DeliveryAddress',
+        'pending_address_changes': 'list[PendingAddressChange]'
     }
 
     attribute_map = {
@@ -57,10 +59,12 @@ class Subscription(object):
         'dates': 'dates',
         'extsubsexists': 'extsubsexists',
         'campaign': 'campaign',
-        'paused': 'paused'
+        'paused': 'paused',
+        'delivery_address': 'deliveryAddress',
+        'pending_address_changes': 'pendingAddressChanges'
     }
 
-    def __init__(self, subsno=None, extno=None, cusno=None, paycusno=None, kind=None, state=None, pricegroup=None, package=None, dates=None, extsubsexists=None, campaign=None, paused=None):  # noqa: E501
+    def __init__(self, subsno=None, extno=None, cusno=None, paycusno=None, kind=None, state=None, pricegroup=None, package=None, dates=None, extsubsexists=None, campaign=None, paused=None, delivery_address=None, pending_address_changes=None):  # noqa: E501
         """Subscription - a model defined in OpenAPI"""  # noqa: E501
 
         self._subsno = None
@@ -75,6 +79,8 @@ class Subscription(object):
         self._extsubsexists = None
         self._campaign = None
         self._paused = None
+        self._delivery_address = None
+        self._pending_address_changes = None
         self.discriminator = None
 
         self.subsno = subsno
@@ -92,6 +98,10 @@ class Subscription(object):
             self.campaign = campaign
         if paused is not None:
             self.paused = paused
+        if delivery_address is not None:
+            self.delivery_address = delivery_address
+        if pending_address_changes is not None:
+            self.pending_address_changes = pending_address_changes
 
     @property
     def subsno(self):
@@ -378,6 +388,48 @@ class Subscription(object):
         """
 
         self._paused = paused
+
+    @property
+    def delivery_address(self):
+        """Gets the delivery_address of this Subscription.  # noqa: E501
+
+
+        :return: The delivery_address of this Subscription.  # noqa: E501
+        :rtype: DeliveryAddress
+        """
+        return self._delivery_address
+
+    @delivery_address.setter
+    def delivery_address(self, delivery_address):
+        """Sets the delivery_address of this Subscription.
+
+
+        :param delivery_address: The delivery_address of this Subscription.  # noqa: E501
+        :type: DeliveryAddress
+        """
+
+        self._delivery_address = delivery_address
+
+    @property
+    def pending_address_changes(self):
+        """Gets the pending_address_changes of this Subscription.  # noqa: E501
+
+
+        :return: The pending_address_changes of this Subscription.  # noqa: E501
+        :rtype: list[PendingAddressChange]
+        """
+        return self._pending_address_changes
+
+    @pending_address_changes.setter
+    def pending_address_changes(self, pending_address_changes):
+        """Sets the pending_address_changes of this Subscription.
+
+
+        :param pending_address_changes: The pending_address_changes of this Subscription.  # noqa: E501
+        :type: list[PendingAddressChange]
+        """
+
+        self._pending_address_changes = pending_address_changes
 
     def to_dict(self):
         """Returns the model properties as a dict"""
