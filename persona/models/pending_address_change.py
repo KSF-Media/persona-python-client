@@ -33,26 +33,30 @@ class PendingAddressChange(object):
     openapi_types = {
         'address': 'DeliveryAddress',
         'start_date': 'date',
-        'end_date': 'date'
+        'end_date': 'date',
+        'type': 'str'
     }
 
     attribute_map = {
         'address': 'address',
         'start_date': 'startDate',
-        'end_date': 'endDate'
+        'end_date': 'endDate',
+        'type': 'type'
     }
 
-    def __init__(self, address=None, start_date=None, end_date=None):  # noqa: E501
+    def __init__(self, address=None, start_date=None, end_date=None, type=None):  # noqa: E501
         """PendingAddressChange - a model defined in OpenAPI"""  # noqa: E501
 
         self._address = None
         self._start_date = None
         self._end_date = None
+        self._type = None
         self.discriminator = None
 
         self.address = address
         self.start_date = start_date
         self.end_date = end_date
+        self.type = type
 
     @property
     def address(self):
@@ -122,6 +126,29 @@ class PendingAddressChange(object):
             raise ValueError("Invalid value for `end_date`, must not be `None`")  # noqa: E501
 
         self._end_date = end_date
+
+    @property
+    def type(self):
+        """Gets the type of this PendingAddressChange.  # noqa: E501
+
+
+        :return: The type of this PendingAddressChange.  # noqa: E501
+        :rtype: str
+        """
+        return self._type
+
+    @type.setter
+    def type(self, type):
+        """Sets the type of this PendingAddressChange.
+
+
+        :param type: The type of this PendingAddressChange.  # noqa: E501
+        :type: str
+        """
+        if type is None:
+            raise ValueError("Invalid value for `type`, must not be `None`")  # noqa: E501
+
+        self._type = type
 
     def to_dict(self):
         """Returns the model properties as a dict"""
