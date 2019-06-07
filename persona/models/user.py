@@ -39,7 +39,8 @@ class User(object):
         'cusno': 'str',
         'subs': 'list[Subscription]',
         'consent': 'list[GdprConsent]',
-        'legal': 'list[LegalConsent]'
+        'legal': 'list[LegalConsent]',
+        'pending_address_changes': 'list[PendingAddressChange]'
     }
 
     attribute_map = {
@@ -51,10 +52,11 @@ class User(object):
         'cusno': 'cusno',
         'subs': 'subs',
         'consent': 'consent',
-        'legal': 'legal'
+        'legal': 'legal',
+        'pending_address_changes': 'pendingAddressChanges'
     }
 
-    def __init__(self, uuid=None, email=None, first_name=None, last_name=None, address=None, cusno=None, subs=None, consent=None, legal=None):  # noqa: E501
+    def __init__(self, uuid=None, email=None, first_name=None, last_name=None, address=None, cusno=None, subs=None, consent=None, legal=None, pending_address_changes=None):  # noqa: E501
         """User - a model defined in OpenAPI"""  # noqa: E501
 
         self._uuid = None
@@ -66,6 +68,7 @@ class User(object):
         self._subs = None
         self._consent = None
         self._legal = None
+        self._pending_address_changes = None
         self.discriminator = None
 
         self.uuid = uuid
@@ -80,6 +83,8 @@ class User(object):
         self.subs = subs
         self.consent = consent
         self.legal = legal
+        if pending_address_changes is not None:
+            self.pending_address_changes = pending_address_changes
 
     @property
     def uuid(self):
@@ -281,6 +286,27 @@ class User(object):
             raise ValueError("Invalid value for `legal`, must not be `None`")  # noqa: E501
 
         self._legal = legal
+
+    @property
+    def pending_address_changes(self):
+        """Gets the pending_address_changes of this User.  # noqa: E501
+
+
+        :return: The pending_address_changes of this User.  # noqa: E501
+        :rtype: list[PendingAddressChange]
+        """
+        return self._pending_address_changes
+
+    @pending_address_changes.setter
+    def pending_address_changes(self, pending_address_changes):
+        """Sets the pending_address_changes of this User.
+
+
+        :param pending_address_changes: The pending_address_changes of this User.  # noqa: E501
+        :type: list[PendingAddressChange]
+        """
+
+        self._pending_address_changes = pending_address_changes
 
     def to_dict(self):
         """Returns the model properties as a dict"""

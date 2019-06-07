@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **subs** | [**list[Subscription]**](Subscription.md) |  | 
 **consent** | [**list[GdprConsent]**](GdprConsent.md) |  | 
 **legal** | [**list[LegalConsent]**](LegalConsent.md) |  | 
+**pending_address_changes** | [**list[PendingAddressChange]**](PendingAddressChange.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
