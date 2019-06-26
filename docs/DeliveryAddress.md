@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**street_address** | **str** |  | 
+**street_address** | **str** |  | [optional] 
 **zipcode** | **str** |  | 
 **city** | **str** |  | [optional] 
 

@@ -50,7 +50,8 @@ class DeliveryAddress(object):
         self._city = None
         self.discriminator = None
 
-        self.street_address = street_address
+        if street_address is not None:
+            self.street_address = street_address
         self.zipcode = zipcode
         if city is not None:
             self.city = city
@@ -73,8 +74,6 @@ class DeliveryAddress(object):
         :param street_address: The street_address of this DeliveryAddress.  # noqa: E501
         :type: str
         """
-        if street_address is None:
-            raise ValueError("Invalid value for `street_address`, must not be `None`")  # noqa: E501
 
         self._street_address = street_address
 
