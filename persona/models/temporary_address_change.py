@@ -34,29 +34,34 @@ class TemporaryAddressChange(object):
         'zip_code': 'str',
         'street_address': 'str',
         'start_date': 'date',
-        'end_date': 'date'
+        'end_date': 'date',
+        'temporary_name': 'str'
     }
 
     attribute_map = {
         'zip_code': 'zipCode',
         'street_address': 'streetAddress',
         'start_date': 'startDate',
-        'end_date': 'endDate'
+        'end_date': 'endDate',
+        'temporary_name': 'temporaryName'
     }
 
-    def __init__(self, zip_code=None, street_address=None, start_date=None, end_date=None):  # noqa: E501
+    def __init__(self, zip_code=None, street_address=None, start_date=None, end_date=None, temporary_name=None):  # noqa: E501
         """TemporaryAddressChange - a model defined in OpenAPI"""  # noqa: E501
 
         self._zip_code = None
         self._street_address = None
         self._start_date = None
         self._end_date = None
+        self._temporary_name = None
         self.discriminator = None
 
         self.zip_code = zip_code
         self.street_address = street_address
         self.start_date = start_date
         self.end_date = end_date
+        if temporary_name is not None:
+            self.temporary_name = temporary_name
 
     @property
     def zip_code(self):
@@ -149,6 +154,27 @@ class TemporaryAddressChange(object):
             raise ValueError("Invalid value for `end_date`, must not be `None`")  # noqa: E501
 
         self._end_date = end_date
+
+    @property
+    def temporary_name(self):
+        """Gets the temporary_name of this TemporaryAddressChange.  # noqa: E501
+
+
+        :return: The temporary_name of this TemporaryAddressChange.  # noqa: E501
+        :rtype: str
+        """
+        return self._temporary_name
+
+    @temporary_name.setter
+    def temporary_name(self, temporary_name):
+        """Sets the temporary_name of this TemporaryAddressChange.
+
+
+        :param temporary_name: The temporary_name of this TemporaryAddressChange.  # noqa: E501
+        :type: str
+        """
+
+        self._temporary_name = temporary_name
 
     def to_dict(self):
         """Returns the model properties as a dict"""
