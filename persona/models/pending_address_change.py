@@ -34,34 +34,29 @@ class PendingAddressChange(object):
         'address': 'DeliveryAddress',
         'start_date': 'date',
         'end_date': 'date',
-        'type': 'str',
-        'temporary_name': 'str'
+        'type': 'str'
     }
 
     attribute_map = {
         'address': 'address',
         'start_date': 'startDate',
         'end_date': 'endDate',
-        'type': 'type',
-        'temporary_name': 'temporaryName'
+        'type': 'type'
     }
 
-    def __init__(self, address=None, start_date=None, end_date=None, type=None, temporary_name=None):  # noqa: E501
+    def __init__(self, address=None, start_date=None, end_date=None, type=None):  # noqa: E501
         """PendingAddressChange - a model defined in OpenAPI"""  # noqa: E501
 
         self._address = None
         self._start_date = None
         self._end_date = None
         self._type = None
-        self._temporary_name = None
         self.discriminator = None
 
         self.address = address
         self.start_date = start_date
         self.end_date = end_date
         self.type = type
-        if temporary_name is not None:
-            self.temporary_name = temporary_name
 
     @property
     def address(self):
@@ -154,27 +149,6 @@ class PendingAddressChange(object):
             raise ValueError("Invalid value for `type`, must not be `None`")  # noqa: E501
 
         self._type = type
-
-    @property
-    def temporary_name(self):
-        """Gets the temporary_name of this PendingAddressChange.  # noqa: E501
-
-
-        :return: The temporary_name of this PendingAddressChange.  # noqa: E501
-        :rtype: str
-        """
-        return self._temporary_name
-
-    @temporary_name.setter
-    def temporary_name(self, temporary_name):
-        """Sets the temporary_name of this PendingAddressChange.
-
-
-        :param temporary_name: The temporary_name of this PendingAddressChange.  # noqa: E501
-        :type: str
-        """
-
-        self._temporary_name = temporary_name
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -44,7 +44,9 @@ class Subscription(object):
         'campaign': 'Campaign',
         'paused': 'list[PausedSubscription]',
         'delivery_address': 'DeliveryAddress',
-        'pending_address_changes': 'list[PendingAddressChange]'
+        'pending_address_changes': 'list[PendingAddressChange]',
+        'order_number': 'str',
+        'payment_method': 'str'
     }
 
     attribute_map = {
@@ -61,10 +63,12 @@ class Subscription(object):
         'campaign': 'campaign',
         'paused': 'paused',
         'delivery_address': 'deliveryAddress',
-        'pending_address_changes': 'pendingAddressChanges'
+        'pending_address_changes': 'pendingAddressChanges',
+        'order_number': 'orderNumber',
+        'payment_method': 'paymentMethod'
     }
 
-    def __init__(self, subsno=None, extno=None, cusno=None, paycusno=None, kind=None, state=None, pricegroup=None, package=None, dates=None, extsubsexists=None, campaign=None, paused=None, delivery_address=None, pending_address_changes=None):  # noqa: E501
+    def __init__(self, subsno=None, extno=None, cusno=None, paycusno=None, kind=None, state=None, pricegroup=None, package=None, dates=None, extsubsexists=None, campaign=None, paused=None, delivery_address=None, pending_address_changes=None, order_number=None, payment_method=None):  # noqa: E501
         """Subscription - a model defined in OpenAPI"""  # noqa: E501
 
         self._subsno = None
@@ -81,6 +85,8 @@ class Subscription(object):
         self._paused = None
         self._delivery_address = None
         self._pending_address_changes = None
+        self._order_number = None
+        self._payment_method = None
         self.discriminator = None
 
         self.subsno = subsno
@@ -102,6 +108,10 @@ class Subscription(object):
             self.delivery_address = delivery_address
         if pending_address_changes is not None:
             self.pending_address_changes = pending_address_changes
+        if order_number is not None:
+            self.order_number = order_number
+        if payment_method is not None:
+            self.payment_method = payment_method
 
     @property
     def subsno(self):
@@ -430,6 +440,48 @@ class Subscription(object):
         """
 
         self._pending_address_changes = pending_address_changes
+
+    @property
+    def order_number(self):
+        """Gets the order_number of this Subscription.  # noqa: E501
+
+
+        :return: The order_number of this Subscription.  # noqa: E501
+        :rtype: str
+        """
+        return self._order_number
+
+    @order_number.setter
+    def order_number(self, order_number):
+        """Sets the order_number of this Subscription.
+
+
+        :param order_number: The order_number of this Subscription.  # noqa: E501
+        :type: str
+        """
+
+        self._order_number = order_number
+
+    @property
+    def payment_method(self):
+        """Gets the payment_method of this Subscription.  # noqa: E501
+
+
+        :return: The payment_method of this Subscription.  # noqa: E501
+        :rtype: str
+        """
+        return self._payment_method
+
+    @payment_method.setter
+    def payment_method(self, payment_method):
+        """Sets the payment_method of this Subscription.
+
+
+        :param payment_method: The payment_method of this Subscription.  # noqa: E501
+        :type: str
+        """
+
+        self._payment_method = payment_method
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -33,21 +33,24 @@ class DeliveryAddress(object):
     openapi_types = {
         'street_address': 'str',
         'zipcode': 'str',
-        'city': 'str'
+        'city': 'str',
+        'temporary_name': 'str'
     }
 
     attribute_map = {
         'street_address': 'streetAddress',
         'zipcode': 'zipcode',
-        'city': 'city'
+        'city': 'city',
+        'temporary_name': 'temporaryName'
     }
 
-    def __init__(self, street_address=None, zipcode=None, city=None):  # noqa: E501
+    def __init__(self, street_address=None, zipcode=None, city=None, temporary_name=None):  # noqa: E501
         """DeliveryAddress - a model defined in OpenAPI"""  # noqa: E501
 
         self._street_address = None
         self._zipcode = None
         self._city = None
+        self._temporary_name = None
         self.discriminator = None
 
         if street_address is not None:
@@ -55,6 +58,8 @@ class DeliveryAddress(object):
         self.zipcode = zipcode
         if city is not None:
             self.city = city
+        if temporary_name is not None:
+            self.temporary_name = temporary_name
 
     @property
     def street_address(self):
@@ -120,6 +125,27 @@ class DeliveryAddress(object):
         """
 
         self._city = city
+
+    @property
+    def temporary_name(self):
+        """Gets the temporary_name of this DeliveryAddress.  # noqa: E501
+
+
+        :return: The temporary_name of this DeliveryAddress.  # noqa: E501
+        :rtype: str
+        """
+        return self._temporary_name
+
+    @temporary_name.setter
+    def temporary_name(self, temporary_name):
+        """Sets the temporary_name of this DeliveryAddress.
+
+
+        :param temporary_name: The temporary_name of this DeliveryAddress.  # noqa: E501
+        :type: str
+        """
+
+        self._temporary_name = temporary_name
 
     def to_dict(self):
         """Returns the model properties as a dict"""
