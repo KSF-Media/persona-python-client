@@ -53,14 +53,15 @@ from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = persona.EntitlementsApi(persona.ApiClient(configuration))
+api_instance = persona.AccountApi(persona.ApiClient(configuration))
+body = persona.CodeForTokenData() # CodeForTokenData | 
 
 try:
-    # List all entitlements
-    api_response = api_instance.entitlements_get()
+    # Get a password reset token
+    api_response = api_instance.account_code_for_token_post(body)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling EntitlementsApi->entitlements_get: %s\n" % e)
+    print("Exception when calling AccountApi->account_code_for_token_post: %s\n" % e)
 
 ```
 
@@ -70,6 +71,9 @@ All URIs are relative to *http://http:/v1*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*AccountApi* | [**account_code_for_token_post**](docs/AccountApi.md#account_code_for_token_post) | **POST** /account/codeForToken | Get a password reset token
+*AccountApi* | [**account_forgot_pass_post**](docs/AccountApi.md#account_forgot_pass_post) | **POST** /account/forgotPass | Forgot Password
+*AccountApi* | [**account_reset_forgotten_password_post**](docs/AccountApi.md#account_reset_forgotten_password_post) | **POST** /account/resetForgottenPassword | Reset a forgotten password with a token
 *EntitlementsApi* | [**entitlements_get**](docs/EntitlementsApi.md#entitlements_get) | **GET** /entitlements | List all entitlements
 *LoginApi* | [**login_post**](docs/LoginApi.md#login_post) | **POST** /login | Login with email and password
 *LoginApi* | [**login_some_post**](docs/LoginApi.md#login_some_post) | **POST** /login/some | Login with social media
@@ -90,8 +94,11 @@ Class | Method | HTTP request | Description
  - [ActiveDays](docs/ActiveDays.md)
  - [Address](docs/Address.md)
  - [Campaign](docs/Campaign.md)
+ - [CodeForTokenData](docs/CodeForTokenData.md)
  - [DeliveryAddress](docs/DeliveryAddress.md)
  - [DescriptionFrequency](docs/DescriptionFrequency.md)
+ - [ForgotPasswordData](docs/ForgotPasswordData.md)
+ - [ForgotPasswordResponse](docs/ForgotPasswordResponse.md)
  - [GdprConsent](docs/GdprConsent.md)
  - [InlineResponse400](docs/InlineResponse400.md)
  - [InlineResponse400InvalidRequestBody](docs/InlineResponse400InvalidRequestBody.md)
@@ -124,6 +131,8 @@ Class | Method | HTTP request | Description
  - [SubscriptionDates](docs/SubscriptionDates.md)
  - [SubscriptionPauseDates](docs/SubscriptionPauseDates.md)
  - [TemporaryAddressChange](docs/TemporaryAddressChange.md)
+ - [TokenResponse](docs/TokenResponse.md)
+ - [UpdatePasswordData](docs/UpdatePasswordData.md)
  - [User](docs/User.md)
  - [UserUpdate](docs/UserUpdate.md)
  - [UserUpdateAddress](docs/UserUpdateAddress.md)
