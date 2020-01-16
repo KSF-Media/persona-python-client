@@ -4,8 +4,57 @@ All URIs are relative to *http://http:/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**entitlements_allow_post**](EntitlementsApi.md#entitlements_allow_post) | **POST** /entitlements/allow | 
 [**entitlements_get**](EntitlementsApi.md#entitlements_get) | **GET** /entitlements | List all entitlements
 
+
+# **entitlements_allow_post**
+> list[object] entitlements_allow_post(body, authorization=authorization)
+
+
+
+### Example
+
+```python
+from __future__ import print_function
+import time
+import persona
+from persona.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = persona.EntitlementsApi()
+body = persona.GlobalEntitlementAccess() # GlobalEntitlementAccess | 
+authorization = 'authorization_example' # str |  (optional)
+
+try:
+    api_response = api_instance.entitlements_allow_post(body, authorization=authorization)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling EntitlementsApi->entitlements_allow_post: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**GlobalEntitlementAccess**](GlobalEntitlementAccess.md)|  | 
+ **authorization** | **str**|  | [optional] 
+
+### Return type
+
+**list[object]**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json;charset=utf-8
+ - **Accept**: application/json;charset=utf-8
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **entitlements_get**
 > dict(str, list[str]) entitlements_get()

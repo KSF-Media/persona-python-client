@@ -28,6 +28,12 @@ class TestEntitlementsApi(unittest.TestCase):
     def tearDown(self):
         pass
 
+    def test_entitlements_allow_post(self):
+        """Test case for entitlements_allow_post
+
+        """
+        pass
+
     def test_entitlements_get(self):
         """Test case for entitlements_get
 
