@@ -33,6 +33,7 @@ class TemporaryAddressChange(object):
     openapi_types = {
         'zip_code': 'str',
         'street_address': 'str',
+        'country_code': 'str',
         'start_date': 'date',
         'end_date': 'date',
         'temporary_name': 'str'
@@ -41,16 +42,18 @@ class TemporaryAddressChange(object):
     attribute_map = {
         'zip_code': 'zipCode',
         'street_address': 'streetAddress',
+        'country_code': 'countryCode',
         'start_date': 'startDate',
         'end_date': 'endDate',
         'temporary_name': 'temporaryName'
     }
 
-    def __init__(self, zip_code=None, street_address=None, start_date=None, end_date=None, temporary_name=None):  # noqa: E501
+    def __init__(self, zip_code=None, street_address=None, country_code=None, start_date=None, end_date=None, temporary_name=None):  # noqa: E501
         """TemporaryAddressChange - a model defined in OpenAPI"""  # noqa: E501
 
         self._zip_code = None
         self._street_address = None
+        self._country_code = None
         self._start_date = None
         self._end_date = None
         self._temporary_name = None
@@ -58,6 +61,7 @@ class TemporaryAddressChange(object):
 
         self.zip_code = zip_code
         self.street_address = street_address
+        self.country_code = country_code
         self.start_date = start_date
         self.end_date = end_date
         if temporary_name is not None:
@@ -108,6 +112,29 @@ class TemporaryAddressChange(object):
             raise ValueError("Invalid value for `street_address`, must not be `None`")  # noqa: E501
 
         self._street_address = street_address
+
+    @property
+    def country_code(self):
+        """Gets the country_code of this TemporaryAddressChange.  # noqa: E501
+
+
+        :return: The country_code of this TemporaryAddressChange.  # noqa: E501
+        :rtype: str
+        """
+        return self._country_code
+
+    @country_code.setter
+    def country_code(self, country_code):
+        """Sets the country_code of this TemporaryAddressChange.
+
+
+        :param country_code: The country_code of this TemporaryAddressChange.  # noqa: E501
+        :type: str
+        """
+        if country_code is None:
+            raise ValueError("Invalid value for `country_code`, must not be `None`")  # noqa: E501
+
+        self._country_code = country_code
 
     @property
     def start_date(self):

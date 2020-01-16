@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **zip_code** | **str** |  | 
 **street_address** | **str** |  | 
+**country_code** | **str** |  | 
 **start_date** | **date** |  | 
 **end_date** | **date** |  | 
 **temporary_name** | **str** |  | [optional] 
