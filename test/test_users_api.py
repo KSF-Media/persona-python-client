@@ -84,6 +84,13 @@ class TestUsersApi(unittest.TestCase):
         """
         pass
 
+    def test_users_uuid_subscriptions_subsno_reclamation_post(self):
+        """Test case for users_uuid_subscriptions_subsno_reclamation_post
+
+        Create a new delivery reclamation for a subscription  # noqa: E501
+        """
+        pass
+
 
 if __name__ == '__main__':
     unittest.main()

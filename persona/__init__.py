@@ -36,6 +36,7 @@ from persona.models.address import Address
 from persona.models.campaign import Campaign
 from persona.models.code_for_token_data import CodeForTokenData
 from persona.models.delivery_address import DeliveryAddress
+from persona.models.delivery_reclamation import DeliveryReclamation
 from persona.models.description_frequency import DescriptionFrequency
 from persona.models.forgot_password_data import ForgotPasswordData
 from persona.models.forgot_password_response import ForgotPasswordResponse
@@ -60,6 +61,7 @@ from persona.models.login_data import LoginData
 from persona.models.login_data_sso import LoginDataSSO
 from persona.models.login_data_so_me import LoginDataSoMe
 from persona.models.login_response import LoginResponse
+from persona.models.new_delivery_reclamation import NewDeliveryReclamation
 from persona.models.new_user import NewUser
 from persona.models.package import Package
 from persona.models.package_description import PackageDescription
