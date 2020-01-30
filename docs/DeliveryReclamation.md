@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**number** | **str** |  | 
+**number** | **int** |  | 
 **customer_number** | **int** |  | 
 **subscription_number** | **int** |  | 
 **date** | **date** |  | 

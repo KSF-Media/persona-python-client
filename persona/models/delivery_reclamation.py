@@ -31,7 +31,7 @@ class DeliveryReclamation(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'number': 'str',
+        'number': 'int',
         'customer_number': 'int',
         'subscription_number': 'int',
         'date': 'date',
@@ -76,7 +76,7 @@ class DeliveryReclamation(object):
 
 
         :return: The number of this DeliveryReclamation.  # noqa: E501
-        :rtype: str
+        :rtype: int
         """
         return self._number
 
@@ -86,10 +86,14 @@ class DeliveryReclamation(object):
 
 
         :param number: The number of this DeliveryReclamation.  # noqa: E501
-        :type: str
+        :type: int
         """
         if number is None:
             raise ValueError("Invalid value for `number`, must not be `None`")  # noqa: E501
+        if number is not None and number > 9223372036854775807:  # noqa: E501
+            raise ValueError("Invalid value for `number`, must be a value less than or equal to `9223372036854775807`")  # noqa: E501
+        if number is not None and number < -9223372036854775808:  # noqa: E501
+            raise ValueError("Invalid value for `number`, must be a value greater than or equal to `-9223372036854775808`")  # noqa: E501
 
         self._number = number
 
