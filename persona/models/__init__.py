@@ -20,6 +20,7 @@ from persona.models.campaign import Campaign
 from persona.models.code_for_token_data import CodeForTokenData
 from persona.models.delivery_address import DeliveryAddress
 from persona.models.delivery_reclamation import DeliveryReclamation
+from persona.models.delivery_reclamation_update import DeliveryReclamationUpdate
 from persona.models.description_frequency import DescriptionFrequency
 from persona.models.forgot_password_data import ForgotPasswordData
 from persona.models.forgot_password_response import ForgotPasswordResponse

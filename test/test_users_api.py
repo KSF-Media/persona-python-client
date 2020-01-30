@@ -91,10 +91,17 @@ class TestUsersApi(unittest.TestCase):
         """
         pass
 
-    def test_users_uuid_subscriptions_subsno_reclamation_reclaimno_get(self):
-        """Test case for users_uuid_subscriptions_subsno_reclamation_reclaimno_get
+    def test_users_uuid_subscriptions_subsno_reclamations_reclaimno_get(self):
+        """Test case for users_uuid_subscriptions_subsno_reclamations_reclaimno_get
 
         Get a delivery reclamation  # noqa: E501
+        """
+        pass
+
+    def test_users_uuid_subscriptions_subsno_reclamations_reclaimno_patch(self):
+        """Test case for users_uuid_subscriptions_subsno_reclamations_reclaimno_patch
+
+        Update a delivery reclamation  # noqa: E501
         """
         pass
 

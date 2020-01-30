@@ -13,7 +13,8 @@ Method | HTTP request | Description
 [**users_uuid_subscriptions_subsno_address_change_post**](UsersApi.md#users_uuid_subscriptions_subsno_address_change_post) | **POST** /users/{uuid}/subscriptions/{subsno}/addressChange | Make a temporary address change for a subscription
 [**users_uuid_subscriptions_subsno_pause_post**](UsersApi.md#users_uuid_subscriptions_subsno_pause_post) | **POST** /users/{uuid}/subscriptions/{subsno}/pause | Pause users subscription
 [**users_uuid_subscriptions_subsno_reclamation_post**](UsersApi.md#users_uuid_subscriptions_subsno_reclamation_post) | **POST** /users/{uuid}/subscriptions/{subsno}/reclamation | Create a new delivery reclamation for a subscription
-[**users_uuid_subscriptions_subsno_reclamation_reclaimno_get**](UsersApi.md#users_uuid_subscriptions_subsno_reclamation_reclaimno_get) | **GET** /users/{uuid}/subscriptions/{subsno}/reclamation/{reclaimno} | Get a delivery reclamation
+[**users_uuid_subscriptions_subsno_reclamations_reclaimno_get**](UsersApi.md#users_uuid_subscriptions_subsno_reclamations_reclaimno_get) | **GET** /users/{uuid}/subscriptions/{subsno}/reclamations/{reclaimno} | Get a delivery reclamation
+[**users_uuid_subscriptions_subsno_reclamations_reclaimno_patch**](UsersApi.md#users_uuid_subscriptions_subsno_reclamations_reclaimno_patch) | **PATCH** /users/{uuid}/subscriptions/{subsno}/reclamations/{reclaimno} | Update a delivery reclamation
 
 
 # **users_post**
@@ -485,8 +486,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **users_uuid_subscriptions_subsno_reclamation_reclaimno_get**
-> DeliveryReclamation users_uuid_subscriptions_subsno_reclamation_reclaimno_get(uuid, subsno, reclaimno, authorization=authorization)
+# **users_uuid_subscriptions_subsno_reclamations_reclaimno_get**
+> DeliveryReclamation users_uuid_subscriptions_subsno_reclamations_reclaimno_get(uuid, subsno, reclaimno, authorization=authorization)
 
 Get a delivery reclamation
 
@@ -508,10 +509,10 @@ authorization = 'authorization_example' # str |  (optional)
 
 try:
     # Get a delivery reclamation
-    api_response = api_instance.users_uuid_subscriptions_subsno_reclamation_reclaimno_get(uuid, subsno, reclaimno, authorization=authorization)
+    api_response = api_instance.users_uuid_subscriptions_subsno_reclamations_reclaimno_get(uuid, subsno, reclaimno, authorization=authorization)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling UsersApi->users_uuid_subscriptions_subsno_reclamation_reclaimno_get: %s\n" % e)
+    print("Exception when calling UsersApi->users_uuid_subscriptions_subsno_reclamations_reclaimno_get: %s\n" % e)
 ```
 
 ### Parameters
@@ -534,6 +535,61 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json;charset=utf-8
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **users_uuid_subscriptions_subsno_reclamations_reclaimno_patch**
+> DeliveryReclamation users_uuid_subscriptions_subsno_reclamations_reclaimno_patch(uuid, subsno, reclaimno, body, authorization=authorization)
+
+Update a delivery reclamation
+
+### Example
+
+```python
+from __future__ import print_function
+import time
+import persona
+from persona.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = persona.UsersApi()
+uuid = 'uuid_example' # str | 
+subsno = 56 # int | 
+reclaimno = 56 # int | 
+body = persona.DeliveryReclamationUpdate() # DeliveryReclamationUpdate | 
+authorization = 'authorization_example' # str |  (optional)
+
+try:
+    # Update a delivery reclamation
+    api_response = api_instance.users_uuid_subscriptions_subsno_reclamations_reclaimno_patch(uuid, subsno, reclaimno, body, authorization=authorization)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling UsersApi->users_uuid_subscriptions_subsno_reclamations_reclaimno_patch: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **uuid** | [**str**](.md)|  | 
+ **subsno** | **int**|  | 
+ **reclaimno** | **int**|  | 
+ **body** | [**DeliveryReclamationUpdate**](DeliveryReclamationUpdate.md)|  | 
+ **authorization** | **str**|  | [optional] 
+
+### Return type
+
+[**DeliveryReclamation**](DeliveryReclamation.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json;charset=utf-8
  - **Accept**: application/json;charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
