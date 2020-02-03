@@ -152,7 +152,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **login_uuid_delete**
-> list[object] login_uuid_delete(uuid, authorization=authorization)
+> list[object] login_uuid_delete(uuid, authorization=authorization, everywhere=everywhere)
 
 Logout
 
@@ -171,10 +171,11 @@ from pprint import pprint
 api_instance = persona.LoginApi()
 uuid = 'uuid_example' # str | 
 authorization = 'authorization_example' # str |  (optional)
+everywhere = False # bool |  (optional) (default to False)
 
 try:
     # Logout
-    api_response = api_instance.login_uuid_delete(uuid, authorization=authorization)
+    api_response = api_instance.login_uuid_delete(uuid, authorization=authorization, everywhere=everywhere)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling LoginApi->login_uuid_delete: %s\n" % e)
@@ -186,6 +187,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **uuid** | [**str**](.md)|  | 
  **authorization** | **str**|  | [optional] 
+ **everywhere** | **bool**|  | [optional] [default to False]
 
 ### Return type
 

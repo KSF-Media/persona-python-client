@@ -342,6 +342,7 @@ class LoginApi(object):
         :param async_req bool
         :param str uuid: (required)
         :param str authorization:
+        :param bool everywhere:
         :return: list[object]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -365,6 +366,7 @@ class LoginApi(object):
         :param async_req bool
         :param str uuid: (required)
         :param str authorization:
+        :param bool everywhere:
         :return: list[object]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -372,7 +374,7 @@ class LoginApi(object):
 
         local_var_params = locals()
 
-        all_params = ['uuid', 'authorization']  # noqa: E501
+        all_params = ['uuid', 'authorization', 'everywhere']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -398,6 +400,8 @@ class LoginApi(object):
             path_params['uuid'] = local_var_params['uuid']  # noqa: E501
 
         query_params = []
+        if 'everywhere' in local_var_params:
+            query_params.append(('everywhere', local_var_params['everywhere']))  # noqa: E501
 
         header_params = {}
         if 'authorization' in local_var_params:
