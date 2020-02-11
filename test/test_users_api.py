@@ -35,6 +35,13 @@ class TestUsersApi(unittest.TestCase):
         """
         pass
 
+    def test_users_temporary_post(self):
+        """Test case for users_temporary_post
+
+        Create a new user with email.  # noqa: E501
+        """
+        pass
+
     def test_users_uuid_entitlement_get(self):
         """Test case for users_uuid_entitlement_get
 

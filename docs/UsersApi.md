@@ -5,6 +5,7 @@ All URIs are relative to *http://http:/v1*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**users_post**](UsersApi.md#users_post) | **POST** /users | Create a new user.
+[**users_temporary_post**](UsersApi.md#users_temporary_post) | **POST** /users/temporary | Create a new user with email.
 [**users_uuid_entitlement_get**](UsersApi.md#users_uuid_entitlement_get) | **GET** /users/{uuid}/entitlement | Get users entitlements.
 [**users_uuid_gdpr_put**](UsersApi.md#users_uuid_gdpr_put) | **PUT** /users/{uuid}/gdpr | Updates the GDPR consent settings for a given user.
 [**users_uuid_get**](UsersApi.md#users_uuid_get) | **GET** /users/{uuid} | Get user by UUID.
@@ -48,6 +49,53 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**NewUser**](NewUser.md)|  | 
+
+### Return type
+
+[**LoginResponse**](LoginResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json;charset=utf-8
+ - **Accept**: application/json;charset=utf-8
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **users_temporary_post**
+> LoginResponse users_temporary_post(body)
+
+Create a new user with email.
+
+### Example
+
+```python
+from __future__ import print_function
+import time
+import persona
+from persona.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = persona.UsersApi()
+body = persona.NewTemporaryUser() # NewTemporaryUser | 
+
+try:
+    # Create a new user with email.
+    api_response = api_instance.users_temporary_post(body)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling UsersApi->users_temporary_post: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**NewTemporaryUser**](NewTemporaryUser.md)|  | 
 
 ### Return type
 

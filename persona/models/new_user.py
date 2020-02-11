@@ -31,281 +31,279 @@ class NewUser(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'first_name': 'str',
-        'last_name': 'str',
-        'email_address': 'str',
-        'password': 'str',
-        'confirm_password': 'str',
-        'street_address': 'str',
-        'zip_code': 'str',
-        'city': 'str',
-        'country': 'str',
-        'phone': 'str'
+        'new_user_first_name': 'str',
+        'new_user_last_name': 'str',
+        'new_user_email_address': 'str',
+        'new_user_password': 'str',
+        'new_user_confirm_password': 'str',
+        'new_user_street_address': 'str',
+        'new_user_zip_code': 'str',
+        'new_user_city': 'str',
+        'new_user_country': 'str',
+        'new_user_phone': 'str'
     }
 
     attribute_map = {
-        'first_name': 'firstName',
-        'last_name': 'lastName',
-        'email_address': 'emailAddress',
-        'password': 'password',
-        'confirm_password': 'confirmPassword',
-        'street_address': 'streetAddress',
-        'zip_code': 'zipCode',
-        'city': 'city',
-        'country': 'country',
-        'phone': 'phone'
+        'new_user_first_name': 'newUserFirstName',
+        'new_user_last_name': 'newUserLastName',
+        'new_user_email_address': 'newUserEmailAddress',
+        'new_user_password': 'newUserPassword',
+        'new_user_confirm_password': 'newUserConfirmPassword',
+        'new_user_street_address': 'newUserStreetAddress',
+        'new_user_zip_code': 'newUserZipCode',
+        'new_user_city': 'newUserCity',
+        'new_user_country': 'newUserCountry',
+        'new_user_phone': 'newUserPhone'
     }
 
-    def __init__(self, first_name=None, last_name=None, email_address=None, password=None, confirm_password=None, street_address=None, zip_code=None, city=None, country=None, phone=None):  # noqa: E501
+    def __init__(self, new_user_first_name=None, new_user_last_name=None, new_user_email_address=None, new_user_password=None, new_user_confirm_password=None, new_user_street_address=None, new_user_zip_code=None, new_user_city=None, new_user_country=None, new_user_phone=None):  # noqa: E501
         """NewUser - a model defined in OpenAPI"""  # noqa: E501
 
-        self._first_name = None
-        self._last_name = None
-        self._email_address = None
-        self._password = None
-        self._confirm_password = None
-        self._street_address = None
-        self._zip_code = None
-        self._city = None
-        self._country = None
-        self._phone = None
+        self._new_user_first_name = None
+        self._new_user_last_name = None
+        self._new_user_email_address = None
+        self._new_user_password = None
+        self._new_user_confirm_password = None
+        self._new_user_street_address = None
+        self._new_user_zip_code = None
+        self._new_user_city = None
+        self._new_user_country = None
+        self._new_user_phone = None
         self.discriminator = None
 
-        self.first_name = first_name
-        self.last_name = last_name
-        self.email_address = email_address
-        self.password = password
-        self.confirm_password = confirm_password
-        if street_address is not None:
-            self.street_address = street_address
-        if zip_code is not None:
-            self.zip_code = zip_code
-        if city is not None:
-            self.city = city
-        if country is not None:
-            self.country = country
-        if phone is not None:
-            self.phone = phone
+        if new_user_first_name is not None:
+            self.new_user_first_name = new_user_first_name
+        if new_user_last_name is not None:
+            self.new_user_last_name = new_user_last_name
+        self.new_user_email_address = new_user_email_address
+        self.new_user_password = new_user_password
+        self.new_user_confirm_password = new_user_confirm_password
+        if new_user_street_address is not None:
+            self.new_user_street_address = new_user_street_address
+        if new_user_zip_code is not None:
+            self.new_user_zip_code = new_user_zip_code
+        if new_user_city is not None:
+            self.new_user_city = new_user_city
+        if new_user_country is not None:
+            self.new_user_country = new_user_country
+        if new_user_phone is not None:
+            self.new_user_phone = new_user_phone
 
     @property
-    def first_name(self):
-        """Gets the first_name of this NewUser.  # noqa: E501
+    def new_user_first_name(self):
+        """Gets the new_user_first_name of this NewUser.  # noqa: E501
 
 
-        :return: The first_name of this NewUser.  # noqa: E501
+        :return: The new_user_first_name of this NewUser.  # noqa: E501
         :rtype: str
         """
-        return self._first_name
+        return self._new_user_first_name
 
-    @first_name.setter
-    def first_name(self, first_name):
-        """Sets the first_name of this NewUser.
-
-
-        :param first_name: The first_name of this NewUser.  # noqa: E501
-        :type: str
-        """
-        if first_name is None:
-            raise ValueError("Invalid value for `first_name`, must not be `None`")  # noqa: E501
-
-        self._first_name = first_name
-
-    @property
-    def last_name(self):
-        """Gets the last_name of this NewUser.  # noqa: E501
+    @new_user_first_name.setter
+    def new_user_first_name(self, new_user_first_name):
+        """Sets the new_user_first_name of this NewUser.
 
 
-        :return: The last_name of this NewUser.  # noqa: E501
-        :rtype: str
-        """
-        return self._last_name
-
-    @last_name.setter
-    def last_name(self, last_name):
-        """Sets the last_name of this NewUser.
-
-
-        :param last_name: The last_name of this NewUser.  # noqa: E501
-        :type: str
-        """
-        if last_name is None:
-            raise ValueError("Invalid value for `last_name`, must not be `None`")  # noqa: E501
-
-        self._last_name = last_name
-
-    @property
-    def email_address(self):
-        """Gets the email_address of this NewUser.  # noqa: E501
-
-
-        :return: The email_address of this NewUser.  # noqa: E501
-        :rtype: str
-        """
-        return self._email_address
-
-    @email_address.setter
-    def email_address(self, email_address):
-        """Sets the email_address of this NewUser.
-
-
-        :param email_address: The email_address of this NewUser.  # noqa: E501
-        :type: str
-        """
-        if email_address is None:
-            raise ValueError("Invalid value for `email_address`, must not be `None`")  # noqa: E501
-
-        self._email_address = email_address
-
-    @property
-    def password(self):
-        """Gets the password of this NewUser.  # noqa: E501
-
-
-        :return: The password of this NewUser.  # noqa: E501
-        :rtype: str
-        """
-        return self._password
-
-    @password.setter
-    def password(self, password):
-        """Sets the password of this NewUser.
-
-
-        :param password: The password of this NewUser.  # noqa: E501
-        :type: str
-        """
-        if password is None:
-            raise ValueError("Invalid value for `password`, must not be `None`")  # noqa: E501
-
-        self._password = password
-
-    @property
-    def confirm_password(self):
-        """Gets the confirm_password of this NewUser.  # noqa: E501
-
-
-        :return: The confirm_password of this NewUser.  # noqa: E501
-        :rtype: str
-        """
-        return self._confirm_password
-
-    @confirm_password.setter
-    def confirm_password(self, confirm_password):
-        """Sets the confirm_password of this NewUser.
-
-
-        :param confirm_password: The confirm_password of this NewUser.  # noqa: E501
-        :type: str
-        """
-        if confirm_password is None:
-            raise ValueError("Invalid value for `confirm_password`, must not be `None`")  # noqa: E501
-
-        self._confirm_password = confirm_password
-
-    @property
-    def street_address(self):
-        """Gets the street_address of this NewUser.  # noqa: E501
-
-
-        :return: The street_address of this NewUser.  # noqa: E501
-        :rtype: str
-        """
-        return self._street_address
-
-    @street_address.setter
-    def street_address(self, street_address):
-        """Sets the street_address of this NewUser.
-
-
-        :param street_address: The street_address of this NewUser.  # noqa: E501
+        :param new_user_first_name: The new_user_first_name of this NewUser.  # noqa: E501
         :type: str
         """
 
-        self._street_address = street_address
+        self._new_user_first_name = new_user_first_name
 
     @property
-    def zip_code(self):
-        """Gets the zip_code of this NewUser.  # noqa: E501
+    def new_user_last_name(self):
+        """Gets the new_user_last_name of this NewUser.  # noqa: E501
 
 
-        :return: The zip_code of this NewUser.  # noqa: E501
+        :return: The new_user_last_name of this NewUser.  # noqa: E501
         :rtype: str
         """
-        return self._zip_code
+        return self._new_user_last_name
 
-    @zip_code.setter
-    def zip_code(self, zip_code):
-        """Sets the zip_code of this NewUser.
+    @new_user_last_name.setter
+    def new_user_last_name(self, new_user_last_name):
+        """Sets the new_user_last_name of this NewUser.
 
 
-        :param zip_code: The zip_code of this NewUser.  # noqa: E501
+        :param new_user_last_name: The new_user_last_name of this NewUser.  # noqa: E501
         :type: str
         """
 
-        self._zip_code = zip_code
+        self._new_user_last_name = new_user_last_name
 
     @property
-    def city(self):
-        """Gets the city of this NewUser.  # noqa: E501
+    def new_user_email_address(self):
+        """Gets the new_user_email_address of this NewUser.  # noqa: E501
 
 
-        :return: The city of this NewUser.  # noqa: E501
+        :return: The new_user_email_address of this NewUser.  # noqa: E501
         :rtype: str
         """
-        return self._city
+        return self._new_user_email_address
 
-    @city.setter
-    def city(self, city):
-        """Sets the city of this NewUser.
+    @new_user_email_address.setter
+    def new_user_email_address(self, new_user_email_address):
+        """Sets the new_user_email_address of this NewUser.
 
 
-        :param city: The city of this NewUser.  # noqa: E501
+        :param new_user_email_address: The new_user_email_address of this NewUser.  # noqa: E501
+        :type: str
+        """
+        if new_user_email_address is None:
+            raise ValueError("Invalid value for `new_user_email_address`, must not be `None`")  # noqa: E501
+
+        self._new_user_email_address = new_user_email_address
+
+    @property
+    def new_user_password(self):
+        """Gets the new_user_password of this NewUser.  # noqa: E501
+
+
+        :return: The new_user_password of this NewUser.  # noqa: E501
+        :rtype: str
+        """
+        return self._new_user_password
+
+    @new_user_password.setter
+    def new_user_password(self, new_user_password):
+        """Sets the new_user_password of this NewUser.
+
+
+        :param new_user_password: The new_user_password of this NewUser.  # noqa: E501
+        :type: str
+        """
+        if new_user_password is None:
+            raise ValueError("Invalid value for `new_user_password`, must not be `None`")  # noqa: E501
+
+        self._new_user_password = new_user_password
+
+    @property
+    def new_user_confirm_password(self):
+        """Gets the new_user_confirm_password of this NewUser.  # noqa: E501
+
+
+        :return: The new_user_confirm_password of this NewUser.  # noqa: E501
+        :rtype: str
+        """
+        return self._new_user_confirm_password
+
+    @new_user_confirm_password.setter
+    def new_user_confirm_password(self, new_user_confirm_password):
+        """Sets the new_user_confirm_password of this NewUser.
+
+
+        :param new_user_confirm_password: The new_user_confirm_password of this NewUser.  # noqa: E501
+        :type: str
+        """
+        if new_user_confirm_password is None:
+            raise ValueError("Invalid value for `new_user_confirm_password`, must not be `None`")  # noqa: E501
+
+        self._new_user_confirm_password = new_user_confirm_password
+
+    @property
+    def new_user_street_address(self):
+        """Gets the new_user_street_address of this NewUser.  # noqa: E501
+
+
+        :return: The new_user_street_address of this NewUser.  # noqa: E501
+        :rtype: str
+        """
+        return self._new_user_street_address
+
+    @new_user_street_address.setter
+    def new_user_street_address(self, new_user_street_address):
+        """Sets the new_user_street_address of this NewUser.
+
+
+        :param new_user_street_address: The new_user_street_address of this NewUser.  # noqa: E501
         :type: str
         """
 
-        self._city = city
+        self._new_user_street_address = new_user_street_address
 
     @property
-    def country(self):
-        """Gets the country of this NewUser.  # noqa: E501
+    def new_user_zip_code(self):
+        """Gets the new_user_zip_code of this NewUser.  # noqa: E501
 
 
-        :return: The country of this NewUser.  # noqa: E501
+        :return: The new_user_zip_code of this NewUser.  # noqa: E501
         :rtype: str
         """
-        return self._country
+        return self._new_user_zip_code
 
-    @country.setter
-    def country(self, country):
-        """Sets the country of this NewUser.
+    @new_user_zip_code.setter
+    def new_user_zip_code(self, new_user_zip_code):
+        """Sets the new_user_zip_code of this NewUser.
 
 
-        :param country: The country of this NewUser.  # noqa: E501
+        :param new_user_zip_code: The new_user_zip_code of this NewUser.  # noqa: E501
         :type: str
         """
 
-        self._country = country
+        self._new_user_zip_code = new_user_zip_code
 
     @property
-    def phone(self):
-        """Gets the phone of this NewUser.  # noqa: E501
+    def new_user_city(self):
+        """Gets the new_user_city of this NewUser.  # noqa: E501
 
 
-        :return: The phone of this NewUser.  # noqa: E501
+        :return: The new_user_city of this NewUser.  # noqa: E501
         :rtype: str
         """
-        return self._phone
+        return self._new_user_city
 
-    @phone.setter
-    def phone(self, phone):
-        """Sets the phone of this NewUser.
+    @new_user_city.setter
+    def new_user_city(self, new_user_city):
+        """Sets the new_user_city of this NewUser.
 
 
-        :param phone: The phone of this NewUser.  # noqa: E501
+        :param new_user_city: The new_user_city of this NewUser.  # noqa: E501
         :type: str
         """
 
-        self._phone = phone
+        self._new_user_city = new_user_city
+
+    @property
+    def new_user_country(self):
+        """Gets the new_user_country of this NewUser.  # noqa: E501
+
+
+        :return: The new_user_country of this NewUser.  # noqa: E501
+        :rtype: str
+        """
+        return self._new_user_country
+
+    @new_user_country.setter
+    def new_user_country(self, new_user_country):
+        """Sets the new_user_country of this NewUser.
+
+
+        :param new_user_country: The new_user_country of this NewUser.  # noqa: E501
+        :type: str
+        """
+
+        self._new_user_country = new_user_country
+
+    @property
+    def new_user_phone(self):
+        """Gets the new_user_phone of this NewUser.  # noqa: E501
+
+
+        :return: The new_user_phone of this NewUser.  # noqa: E501
+        :rtype: str
+        """
+        return self._new_user_phone
+
+    @new_user_phone.setter
+    def new_user_phone(self, new_user_phone):
+        """Sets the new_user_phone of this NewUser.
+
+
+        :param new_user_phone: The new_user_phone of this NewUser.  # noqa: E501
+        :type: str
+        """
+
+        self._new_user_phone = new_user_phone
 
     def to_dict(self):
         """Returns the model properties as a dict"""
