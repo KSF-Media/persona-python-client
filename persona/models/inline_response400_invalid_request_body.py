@@ -70,7 +70,7 @@ class InlineResponse400InvalidRequestBody(object):
         :param description: The description of this InlineResponse400InvalidRequestBody.  # noqa: E501
         :type: str
         """
-        allowed_values = ["Couldn't parse the request body."]  # noqa: E501
+        allowed_values = ["Could not parse the request body."]  # noqa: E501
         if description not in allowed_values:
             raise ValueError(
                 "Invalid value for `description` ({0}), must be one of {1}"  # noqa: E501
