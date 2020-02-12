@@ -15,12 +15,12 @@ from __future__ import absolute_import
 import unittest
 
 import persona
-from persona.models.global_entitlement_access import GlobalEntitlementAccess  # noqa: E501
+from persona.models.entitlement_access import EntitlementAccess  # noqa: E501
 from persona.rest import ApiException
 
 
-class TestGlobalEntitlementAccess(unittest.TestCase):
-    """GlobalEntitlementAccess unit test stubs"""
+class TestEntitlementAccess(unittest.TestCase):
+    """EntitlementAccess unit test stubs"""
 
     def setUp(self):
         pass
@@ -28,10 +28,10 @@ class TestGlobalEntitlementAccess(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testGlobalEntitlementAccess(self):
-        """Test GlobalEntitlementAccess"""
+    def testEntitlementAccess(self):
+        """Test EntitlementAccess"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = persona.models.global_entitlement_access.GlobalEntitlementAccess()  # noqa: E501
+        # model = persona.models.entitlement_access.EntitlementAccess()  # noqa: E501
         pass
 
 

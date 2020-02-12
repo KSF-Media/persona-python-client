@@ -34,6 +34,13 @@ class TestEntitlementsApi(unittest.TestCase):
         """
         pass
 
+    def test_entitlements_allow_uuid_post(self):
+        """Test case for entitlements_allow_uuid_post
+
+        Grant product access to a customer  # noqa: E501
+        """
+        pass
+
     def test_entitlements_get(self):
         """Test case for entitlements_get
 

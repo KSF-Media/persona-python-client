@@ -1,4 +1,4 @@
-# GlobalEntitlementAccess
+# EntitlementAccess
 
 ## Properties
 Name | Type | Description | Notes
