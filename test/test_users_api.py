@@ -70,6 +70,13 @@ class TestUsersApi(unittest.TestCase):
         """
         pass
 
+    def test_users_uuid_password_put(self):
+        """Test case for users_uuid_password_put
+
+        Set / Change user password  # noqa: E501
+        """
+        pass
+
     def test_users_uuid_patch(self):
         """Test case for users_uuid_patch
 

@@ -10,6 +10,7 @@ Method | HTTP request | Description
 [**users_uuid_gdpr_put**](UsersApi.md#users_uuid_gdpr_put) | **PUT** /users/{uuid}/gdpr | Updates the GDPR consent settings for a given user.
 [**users_uuid_get**](UsersApi.md#users_uuid_get) | **GET** /users/{uuid} | Get user by UUID.
 [**users_uuid_legal_put**](UsersApi.md#users_uuid_legal_put) | **PUT** /users/{uuid}/legal | Updates the legal consent settings for a given user.
+[**users_uuid_password_put**](UsersApi.md#users_uuid_password_put) | **PUT** /users/{uuid}/password | Set / Change user password
 [**users_uuid_patch**](UsersApi.md#users_uuid_patch) | **PATCH** /users/{uuid} | Update a user
 [**users_uuid_subscriptions_subsno_address_change_post**](UsersApi.md#users_uuid_subscriptions_subsno_address_change_post) | **POST** /users/{uuid}/subscriptions/{subsno}/addressChange | Make a temporary address change for a subscription
 [**users_uuid_subscriptions_subsno_pause_post**](UsersApi.md#users_uuid_subscriptions_subsno_pause_post) | **POST** /users/{uuid}/subscriptions/{subsno}/pause | Pause users subscription
@@ -310,6 +311,59 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**User**](User.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json;charset=utf-8
+ - **Accept**: application/json;charset=utf-8
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **users_uuid_password_put**
+> list[object] users_uuid_password_put(uuid, body, authorization=authorization)
+
+Set / Change user password
+
+Authorization header expects the following format ‘OAuth {token}’
+
+### Example
+
+```python
+from __future__ import print_function
+import time
+import persona
+from persona.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = persona.UsersApi()
+uuid = 'uuid_example' # str | 
+body = persona.UserUpdatePassword() # UserUpdatePassword | 
+authorization = 'authorization_example' # str |  (optional)
+
+try:
+    # Set / Change user password
+    api_response = api_instance.users_uuid_password_put(uuid, body, authorization=authorization)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling UsersApi->users_uuid_password_put: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **uuid** | [**str**](.md)|  | 
+ **body** | [**UserUpdatePassword**](UserUpdatePassword.md)|  | 
+ **authorization** | **str**|  | [optional] 
+
+### Return type
+
+**list[object]**
 
 ### Authorization
 

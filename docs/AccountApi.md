@@ -57,7 +57,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **account_forgot_pass_post**
-> ForgotPasswordResponse account_forgot_pass_post(body)
+> list[object] account_forgot_pass_post(body)
 
 Forgot Password
 
@@ -90,7 +90,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ForgotPasswordResponse**](ForgotPasswordResponse.md)
+**list[object]**
 
 ### Authorization
 
@@ -104,7 +104,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **account_reset_forgotten_password_post**
-> ForgotPasswordResponse account_reset_forgotten_password_post(body)
+> list[object] account_reset_forgotten_password_post(body)
 
 Reset a forgotten password with a token
 
@@ -137,7 +137,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ForgotPasswordResponse**](ForgotPasswordResponse.md)
+**list[object]**
 
 ### Authorization
 

@@ -25,7 +25,6 @@ from persona.models.delivery_reclamation_update import DeliveryReclamationUpdate
 from persona.models.description_frequency import DescriptionFrequency
 from persona.models.entitlement_access import EntitlementAccess
 from persona.models.forgot_password_data import ForgotPasswordData
-from persona.models.forgot_password_response import ForgotPasswordResponse
 from persona.models.gdpr_consent import GdprConsent
 from persona.models.inline_response400 import InlineResponse400
 from persona.models.inline_response400_invalid_request_body import InlineResponse400InvalidRequestBody
@@ -65,3 +64,4 @@ from persona.models.update_password_data import UpdatePasswordData
 from persona.models.user import User
 from persona.models.user_update import UserUpdate
 from persona.models.user_update_address import UserUpdateAddress
+from persona.models.user_update_password import UserUpdatePassword

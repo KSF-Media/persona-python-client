@@ -15,12 +15,12 @@ from __future__ import absolute_import
 import unittest
 
 import persona
-from persona.models.forgot_password_response import ForgotPasswordResponse  # noqa: E501
+from persona.models.user_update_password import UserUpdatePassword  # noqa: E501
 from persona.rest import ApiException
 
 
-class TestForgotPasswordResponse(unittest.TestCase):
-    """ForgotPasswordResponse unit test stubs"""
+class TestUserUpdatePassword(unittest.TestCase):
+    """UserUpdatePassword unit test stubs"""
 
     def setUp(self):
         pass
@@ -28,10 +28,10 @@ class TestForgotPasswordResponse(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testForgotPasswordResponse(self):
-        """Test ForgotPasswordResponse"""
+    def testUserUpdatePassword(self):
+        """Test UserUpdatePassword"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = persona.models.forgot_password_response.ForgotPasswordResponse()  # noqa: E501
+        # model = persona.models.user_update_password.UserUpdatePassword()  # noqa: E501
         pass
 
 
