@@ -40,7 +40,8 @@ class User(object):
         'subs': 'list[Subscription]',
         'consent': 'list[GdprConsent]',
         'legal': 'list[LegalConsent]',
-        'pending_address_changes': 'list[PendingAddressChange]'
+        'pending_address_changes': 'list[PendingAddressChange]',
+        'has_completed_registration': 'bool'
     }
 
     attribute_map = {
@@ -53,10 +54,11 @@ class User(object):
         'subs': 'subs',
         'consent': 'consent',
         'legal': 'legal',
-        'pending_address_changes': 'pendingAddressChanges'
+        'pending_address_changes': 'pendingAddressChanges',
+        'has_completed_registration': 'hasCompletedRegistration'
     }
 
-    def __init__(self, uuid=None, email=None, first_name=None, last_name=None, address=None, cusno=None, subs=None, consent=None, legal=None, pending_address_changes=None):  # noqa: E501
+    def __init__(self, uuid=None, email=None, first_name=None, last_name=None, address=None, cusno=None, subs=None, consent=None, legal=None, pending_address_changes=None, has_completed_registration=None):  # noqa: E501
         """User - a model defined in OpenAPI"""  # noqa: E501
 
         self._uuid = None
@@ -69,6 +71,7 @@ class User(object):
         self._consent = None
         self._legal = None
         self._pending_address_changes = None
+        self._has_completed_registration = None
         self.discriminator = None
 
         self.uuid = uuid
@@ -85,6 +88,7 @@ class User(object):
         self.legal = legal
         if pending_address_changes is not None:
             self.pending_address_changes = pending_address_changes
+        self.has_completed_registration = has_completed_registration
 
     @property
     def uuid(self):
@@ -307,6 +311,29 @@ class User(object):
         """
 
         self._pending_address_changes = pending_address_changes
+
+    @property
+    def has_completed_registration(self):
+        """Gets the has_completed_registration of this User.  # noqa: E501
+
+
+        :return: The has_completed_registration of this User.  # noqa: E501
+        :rtype: bool
+        """
+        return self._has_completed_registration
+
+    @has_completed_registration.setter
+    def has_completed_registration(self, has_completed_registration):
+        """Sets the has_completed_registration of this User.
+
+
+        :param has_completed_registration: The has_completed_registration of this User.  # noqa: E501
+        :type: bool
+        """
+        if has_completed_registration is None:
+            raise ValueError("Invalid value for `has_completed_registration`, must not be `None`")  # noqa: E501
+
+        self._has_completed_registration = has_completed_registration
 
     def to_dict(self):
         """Returns the model properties as a dict"""
