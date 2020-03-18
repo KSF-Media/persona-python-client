@@ -324,7 +324,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **users_uuid_password_put**
-> list[object] users_uuid_password_put(uuid, body, authorization=authorization)
+> User users_uuid_password_put(uuid, body, authorization=authorization)
 
 Set / Change user password
 
@@ -363,7 +363,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**list[object]**
+[**User**](User.md)
 
 ### Authorization
 
