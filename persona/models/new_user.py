@@ -40,7 +40,8 @@ class NewUser(object):
         'zip_code': 'str',
         'city': 'str',
         'country': 'str',
-        'phone': 'str'
+        'phone': 'str',
+        'legal_consents': 'list[LegalConsent]'
     }
 
     attribute_map = {
@@ -53,10 +54,11 @@ class NewUser(object):
         'zip_code': 'zipCode',
         'city': 'city',
         'country': 'country',
-        'phone': 'phone'
+        'phone': 'phone',
+        'legal_consents': 'legalConsents'
     }
 
-    def __init__(self, first_name=None, last_name=None, email_address=None, password=None, confirm_password=None, street_address=None, zip_code=None, city=None, country=None, phone=None):  # noqa: E501
+    def __init__(self, first_name=None, last_name=None, email_address=None, password=None, confirm_password=None, street_address=None, zip_code=None, city=None, country=None, phone=None, legal_consents=None):  # noqa: E501
         """NewUser - a model defined in OpenAPI"""  # noqa: E501
 
         self._first_name = None
@@ -69,6 +71,7 @@ class NewUser(object):
         self._city = None
         self._country = None
         self._phone = None
+        self._legal_consents = None
         self.discriminator = None
 
         if first_name is not None:
@@ -88,6 +91,7 @@ class NewUser(object):
             self.country = country
         if phone is not None:
             self.phone = phone
+        self.legal_consents = legal_consents
 
     @property
     def first_name(self):
@@ -304,6 +308,29 @@ class NewUser(object):
         """
 
         self._phone = phone
+
+    @property
+    def legal_consents(self):
+        """Gets the legal_consents of this NewUser.  # noqa: E501
+
+
+        :return: The legal_consents of this NewUser.  # noqa: E501
+        :rtype: list[LegalConsent]
+        """
+        return self._legal_consents
+
+    @legal_consents.setter
+    def legal_consents(self, legal_consents):
+        """Sets the legal_consents of this NewUser.
+
+
+        :param legal_consents: The legal_consents of this NewUser.  # noqa: E501
+        :type: list[LegalConsent]
+        """
+        if legal_consents is None:
+            raise ValueError("Invalid value for `legal_consents`, must not be `None`")  # noqa: E501
+
+        self._legal_consents = legal_consents
 
     def to_dict(self):
         """Returns the model properties as a dict"""

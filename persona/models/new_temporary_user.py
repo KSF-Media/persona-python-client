@@ -31,20 +31,24 @@ class NewTemporaryUser(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'email_address': 'str'
+        'email_address': 'str',
+        'legal_consents': 'list[LegalConsent]'
     }
 
     attribute_map = {
-        'email_address': 'emailAddress'
+        'email_address': 'emailAddress',
+        'legal_consents': 'legalConsents'
     }
 
-    def __init__(self, email_address=None):  # noqa: E501
+    def __init__(self, email_address=None, legal_consents=None):  # noqa: E501
         """NewTemporaryUser - a model defined in OpenAPI"""  # noqa: E501
 
         self._email_address = None
+        self._legal_consents = None
         self.discriminator = None
 
         self.email_address = email_address
+        self.legal_consents = legal_consents
 
     @property
     def email_address(self):
@@ -68,6 +72,29 @@ class NewTemporaryUser(object):
             raise ValueError("Invalid value for `email_address`, must not be `None`")  # noqa: E501
 
         self._email_address = email_address
+
+    @property
+    def legal_consents(self):
+        """Gets the legal_consents of this NewTemporaryUser.  # noqa: E501
+
+
+        :return: The legal_consents of this NewTemporaryUser.  # noqa: E501
+        :rtype: list[LegalConsent]
+        """
+        return self._legal_consents
+
+    @legal_consents.setter
+    def legal_consents(self, legal_consents):
+        """Sets the legal_consents of this NewTemporaryUser.
+
+
+        :param legal_consents: The legal_consents of this NewTemporaryUser.  # noqa: E501
+        :type: list[LegalConsent]
+        """
+        if legal_consents is None:
+            raise ValueError("Invalid value for `legal_consents`, must not be `None`")  # noqa: E501
+
+        self._legal_consents = legal_consents
 
     def to_dict(self):
         """Returns the model properties as a dict"""
