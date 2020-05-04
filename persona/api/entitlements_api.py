@@ -46,6 +46,7 @@ class EntitlementsApi(object):
 
         :param async_req bool
         :param EntitlementAccess body: (required)
+        :param str auth_user:
         :param str authorization:
         :return: list[object]
                  If the method is called asynchronously,
@@ -68,6 +69,7 @@ class EntitlementsApi(object):
 
         :param async_req bool
         :param EntitlementAccess body: (required)
+        :param str auth_user:
         :param str authorization:
         :return: list[object]
                  If the method is called asynchronously,
@@ -76,7 +78,7 @@ class EntitlementsApi(object):
 
         local_var_params = locals()
 
-        all_params = ['body', 'authorization']  # noqa: E501
+        all_params = ['body', 'auth_user', 'authorization']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -102,6 +104,8 @@ class EntitlementsApi(object):
         query_params = []
 
         header_params = {}
+        if 'auth_user' in local_var_params:
+            header_params['AuthUser'] = local_var_params['auth_user']  # noqa: E501
         if 'authorization' in local_var_params:
             header_params['Authorization'] = local_var_params['authorization']  # noqa: E501
 
@@ -149,6 +153,7 @@ class EntitlementsApi(object):
         :param async_req bool
         :param str uuid: (required)
         :param EntitlementAccess body: (required)
+        :param str auth_user:
         :param str authorization:
         :return: list[object]
                  If the method is called asynchronously,
@@ -172,6 +177,7 @@ class EntitlementsApi(object):
         :param async_req bool
         :param str uuid: (required)
         :param EntitlementAccess body: (required)
+        :param str auth_user:
         :param str authorization:
         :return: list[object]
                  If the method is called asynchronously,
@@ -180,7 +186,7 @@ class EntitlementsApi(object):
 
         local_var_params = locals()
 
-        all_params = ['uuid', 'body', 'authorization']  # noqa: E501
+        all_params = ['uuid', 'body', 'auth_user', 'authorization']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -212,6 +218,8 @@ class EntitlementsApi(object):
         query_params = []
 
         header_params = {}
+        if 'auth_user' in local_var_params:
+            header_params['AuthUser'] = local_var_params['auth_user']  # noqa: E501
         if 'authorization' in local_var_params:
             header_params['Authorization'] = local_var_params['authorization']  # noqa: E501
 

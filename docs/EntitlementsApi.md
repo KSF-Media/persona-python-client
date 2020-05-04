@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **entitlements_allow_post**
-> list[object] entitlements_allow_post(body, authorization=authorization)
+> list[object] entitlements_allow_post(body, auth_user=auth_user, authorization=authorization)
 
 
 
@@ -26,10 +26,11 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = persona.EntitlementsApi()
 body = persona.EntitlementAccess() # EntitlementAccess | 
+auth_user = 'auth_user_example' # str |  (optional)
 authorization = 'authorization_example' # str |  (optional)
 
 try:
-    api_response = api_instance.entitlements_allow_post(body, authorization=authorization)
+    api_response = api_instance.entitlements_allow_post(body, auth_user=auth_user, authorization=authorization)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling EntitlementsApi->entitlements_allow_post: %s\n" % e)
@@ -40,6 +41,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**EntitlementAccess**](EntitlementAccess.md)|  | 
+ **auth_user** | [**str**](.md)|  | [optional] 
  **authorization** | **str**|  | [optional] 
 
 ### Return type
@@ -58,7 +60,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **entitlements_allow_uuid_post**
-> list[object] entitlements_allow_uuid_post(uuid, body, authorization=authorization)
+> list[object] entitlements_allow_uuid_post(uuid, body, auth_user=auth_user, authorization=authorization)
 
 Grant product access to a customer
 
@@ -75,11 +77,12 @@ from pprint import pprint
 api_instance = persona.EntitlementsApi()
 uuid = 'uuid_example' # str | 
 body = persona.EntitlementAccess() # EntitlementAccess | 
+auth_user = 'auth_user_example' # str |  (optional)
 authorization = 'authorization_example' # str |  (optional)
 
 try:
     # Grant product access to a customer
-    api_response = api_instance.entitlements_allow_uuid_post(uuid, body, authorization=authorization)
+    api_response = api_instance.entitlements_allow_uuid_post(uuid, body, auth_user=auth_user, authorization=authorization)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling EntitlementsApi->entitlements_allow_uuid_post: %s\n" % e)
@@ -91,6 +94,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **uuid** | [**str**](.md)|  | 
  **body** | [**EntitlementAccess**](EntitlementAccess.md)|  | 
+ **auth_user** | [**str**](.md)|  | [optional] 
  **authorization** | **str**|  | [optional] 
 
 ### Return type

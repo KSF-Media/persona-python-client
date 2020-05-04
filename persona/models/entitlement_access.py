@@ -31,51 +31,24 @@ class EntitlementAccess(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'user_uuid': 'str',
         'start_at': 'str',
         'end_at': 'str'
     }
 
     attribute_map = {
-        'user_uuid': 'userUuid',
         'start_at': 'startAt',
         'end_at': 'endAt'
     }
 
-    def __init__(self, user_uuid=None, start_at=None, end_at=None):  # noqa: E501
+    def __init__(self, start_at=None, end_at=None):  # noqa: E501
         """EntitlementAccess - a model defined in OpenAPI"""  # noqa: E501
 
-        self._user_uuid = None
         self._start_at = None
         self._end_at = None
         self.discriminator = None
 
-        self.user_uuid = user_uuid
         self.start_at = start_at
         self.end_at = end_at
-
-    @property
-    def user_uuid(self):
-        """Gets the user_uuid of this EntitlementAccess.  # noqa: E501
-
-
-        :return: The user_uuid of this EntitlementAccess.  # noqa: E501
-        :rtype: str
-        """
-        return self._user_uuid
-
-    @user_uuid.setter
-    def user_uuid(self, user_uuid):
-        """Sets the user_uuid of this EntitlementAccess.
-
-
-        :param user_uuid: The user_uuid of this EntitlementAccess.  # noqa: E501
-        :type: str
-        """
-        if user_uuid is None:
-            raise ValueError("Invalid value for `user_uuid`, must not be `None`")  # noqa: E501
-
-        self._user_uuid = user_uuid
 
     @property
     def start_at(self):
