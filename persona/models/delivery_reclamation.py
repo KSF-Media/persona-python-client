@@ -36,8 +36,7 @@ class DeliveryReclamation(object):
         'subscription_number': 'int',
         'date': 'date',
         'publication_date': 'date',
-        'claim': 'str',
-        'status': 'str'
+        'claim': 'str'
     }
 
     attribute_map = {
@@ -46,11 +45,10 @@ class DeliveryReclamation(object):
         'subscription_number': 'subscriptionNumber',
         'date': 'date',
         'publication_date': 'publicationDate',
-        'claim': 'claim',
-        'status': 'status'
+        'claim': 'claim'
     }
 
-    def __init__(self, number=None, customer_number=None, subscription_number=None, date=None, publication_date=None, claim=None, status=None):  # noqa: E501
+    def __init__(self, number=None, customer_number=None, subscription_number=None, date=None, publication_date=None, claim=None):  # noqa: E501
         """DeliveryReclamation - a model defined in OpenAPI"""  # noqa: E501
 
         self._number = None
@@ -59,7 +57,6 @@ class DeliveryReclamation(object):
         self._date = None
         self._publication_date = None
         self._claim = None
-        self._status = None
         self.discriminator = None
 
         self.number = number
@@ -68,7 +65,6 @@ class DeliveryReclamation(object):
         self.date = date
         self.publication_date = publication_date
         self.claim = claim
-        self.status = status
 
     @property
     def number(self):
@@ -219,29 +215,6 @@ class DeliveryReclamation(object):
             raise ValueError("Invalid value for `claim`, must not be `None`")  # noqa: E501
 
         self._claim = claim
-
-    @property
-    def status(self):
-        """Gets the status of this DeliveryReclamation.  # noqa: E501
-
-
-        :return: The status of this DeliveryReclamation.  # noqa: E501
-        :rtype: str
-        """
-        return self._status
-
-    @status.setter
-    def status(self, status):
-        """Sets the status of this DeliveryReclamation.
-
-
-        :param status: The status of this DeliveryReclamation.  # noqa: E501
-        :type: str
-        """
-        if status is None:
-            raise ValueError("Invalid value for `status`, must not be `None`")  # noqa: E501
-
-        self._status = status
 
     def to_dict(self):
         """Returns the model properties as a dict"""

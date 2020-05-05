@@ -39,7 +39,6 @@ from persona.models.code_for_token_data import CodeForTokenData
 from persona.models.delivery_address import DeliveryAddress
 from persona.models.delivery_reclamation import DeliveryReclamation
 from persona.models.delivery_reclamation_claim import DeliveryReclamationClaim
-from persona.models.delivery_reclamation_update import DeliveryReclamationUpdate
 from persona.models.description_frequency import DescriptionFrequency
 from persona.models.entitlement_access import EntitlementAccess
 from persona.models.forgot_password_data import ForgotPasswordData
