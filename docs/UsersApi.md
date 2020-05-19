@@ -16,6 +16,7 @@ Method | HTTP request | Description
 [**users_uuid_subscriptions_subsno_pause_post**](UsersApi.md#users_uuid_subscriptions_subsno_pause_post) | **POST** /users/{uuid}/subscriptions/{subsno}/pause | Pause users subscription
 [**users_uuid_subscriptions_subsno_reclamation_post**](UsersApi.md#users_uuid_subscriptions_subsno_reclamation_post) | **POST** /users/{uuid}/subscriptions/{subsno}/reclamation | Create a new delivery reclamation for a subscription
 [**users_uuid_subscriptions_subsno_reclamations_reclaimno_get**](UsersApi.md#users_uuid_subscriptions_subsno_reclamations_reclaimno_get) | **GET** /users/{uuid}/subscriptions/{subsno}/reclamations/{reclaimno} | Get a delivery reclamation
+[**users_uuid_subscriptions_subsno_unpause_post**](UsersApi.md#users_uuid_subscriptions_subsno_unpause_post) | **POST** /users/{uuid}/subscriptions/{subsno}/unpause | Pause users subscription
 
 
 # **users_post**
@@ -628,6 +629,57 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**DeliveryReclamation**](DeliveryReclamation.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json;charset=utf-8
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **users_uuid_subscriptions_subsno_unpause_post**
+> Subscription users_uuid_subscriptions_subsno_unpause_post(uuid, subsno, authorization=authorization)
+
+Pause users subscription
+
+### Example
+
+```python
+from __future__ import print_function
+import time
+import persona
+from persona.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = persona.UsersApi()
+uuid = 'uuid_example' # str | 
+subsno = 56 # int | 
+authorization = 'authorization_example' # str |  (optional)
+
+try:
+    # Pause users subscription
+    api_response = api_instance.users_uuid_subscriptions_subsno_unpause_post(uuid, subsno, authorization=authorization)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling UsersApi->users_uuid_subscriptions_subsno_unpause_post: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **uuid** | [**str**](.md)|  | 
+ **subsno** | **int**|  | 
+ **authorization** | **str**|  | [optional] 
+
+### Return type
+
+[**Subscription**](Subscription.md)
 
 ### Authorization
 

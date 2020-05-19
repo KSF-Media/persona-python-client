@@ -112,6 +112,13 @@ class TestUsersApi(unittest.TestCase):
         """
         pass
 
+    def test_users_uuid_subscriptions_subsno_unpause_post(self):
+        """Test case for users_uuid_subscriptions_subsno_unpause_post
+
+        Pause users subscription  # noqa: E501
+        """
+        pass
+
 
 if __name__ == '__main__':
     unittest.main()
