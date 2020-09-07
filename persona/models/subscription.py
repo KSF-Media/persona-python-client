@@ -46,7 +46,8 @@ class Subscription(object):
         'delivery_address': 'DeliveryAddress',
         'pending_address_changes': 'list[PendingAddressChange]',
         'order_number': 'str',
-        'payment_method': 'str'
+        'payment_method': 'str',
+        'payment_method_id': 'int'
     }
 
     attribute_map = {
@@ -65,10 +66,11 @@ class Subscription(object):
         'delivery_address': 'deliveryAddress',
         'pending_address_changes': 'pendingAddressChanges',
         'order_number': 'orderNumber',
-        'payment_method': 'paymentMethod'
+        'payment_method': 'paymentMethod',
+        'payment_method_id': 'paymentMethodId'
     }
 
-    def __init__(self, subsno=None, extno=None, cusno=None, paycusno=None, kind=None, state=None, pricegroup=None, package=None, dates=None, extsubsexists=None, campaign=None, paused=None, delivery_address=None, pending_address_changes=None, order_number=None, payment_method=None):  # noqa: E501
+    def __init__(self, subsno=None, extno=None, cusno=None, paycusno=None, kind=None, state=None, pricegroup=None, package=None, dates=None, extsubsexists=None, campaign=None, paused=None, delivery_address=None, pending_address_changes=None, order_number=None, payment_method=None, payment_method_id=None):  # noqa: E501
         """Subscription - a model defined in OpenAPI"""  # noqa: E501
 
         self._subsno = None
@@ -87,6 +89,7 @@ class Subscription(object):
         self._pending_address_changes = None
         self._order_number = None
         self._payment_method = None
+        self._payment_method_id = None
         self.discriminator = None
 
         self.subsno = subsno
@@ -112,6 +115,8 @@ class Subscription(object):
             self.order_number = order_number
         if payment_method is not None:
             self.payment_method = payment_method
+        if payment_method_id is not None:
+            self.payment_method_id = payment_method_id
 
     @property
     def subsno(self):
@@ -482,6 +487,31 @@ class Subscription(object):
         """
 
         self._payment_method = payment_method
+
+    @property
+    def payment_method_id(self):
+        """Gets the payment_method_id of this Subscription.  # noqa: E501
+
+
+        :return: The payment_method_id of this Subscription.  # noqa: E501
+        :rtype: int
+        """
+        return self._payment_method_id
+
+    @payment_method_id.setter
+    def payment_method_id(self, payment_method_id):
+        """Sets the payment_method_id of this Subscription.
+
+
+        :param payment_method_id: The payment_method_id of this Subscription.  # noqa: E501
+        :type: int
+        """
+        if payment_method_id is not None and payment_method_id > 9223372036854775807:  # noqa: E501
+            raise ValueError("Invalid value for `payment_method_id`, must be a value less than or equal to `9223372036854775807`")  # noqa: E501
+        if payment_method_id is not None and payment_method_id < -9223372036854775808:  # noqa: E501
+            raise ValueError("Invalid value for `payment_method_id`, must be a value greater than or equal to `-9223372036854775808`")  # noqa: E501
+
+        self._payment_method_id = payment_method_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

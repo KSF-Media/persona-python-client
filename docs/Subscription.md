@@ -19,6 +19,7 @@ Name | Type | Description | Notes
 **pending_address_changes** | [**list[PendingAddressChange]**](PendingAddressChange.md) |  | [optional] 
 **order_number** | **str** |  | [optional] 
 **payment_method** | **str** |  | [optional] 
+**payment_method_id** | **int** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

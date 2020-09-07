@@ -63,7 +63,8 @@ class TemporaryAddressChange(object):
         self.street_address = street_address
         self.country_code = country_code
         self.start_date = start_date
-        self.end_date = end_date
+        if end_date is not None:
+            self.end_date = end_date
         if temporary_name is not None:
             self.temporary_name = temporary_name
 
@@ -177,8 +178,6 @@ class TemporaryAddressChange(object):
         :param end_date: The end_date of this TemporaryAddressChange.  # noqa: E501
         :type: date
         """
-        if end_date is None:
-            raise ValueError("Invalid value for `end_date`, must not be `None`")  # noqa: E501
 
         self._end_date = end_date
 
