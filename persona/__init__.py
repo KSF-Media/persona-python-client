@@ -36,6 +36,7 @@ from persona.models.active_days import ActiveDays
 from persona.models.address import Address
 from persona.models.campaign import Campaign
 from persona.models.code_for_token_data import CodeForTokenData
+from persona.models.delete_temp_address_change_dates import DeleteTempAddressChangeDates
 from persona.models.delivery_address import DeliveryAddress
 from persona.models.delivery_reclamation import DeliveryReclamation
 from persona.models.delivery_reclamation_claim import DeliveryReclamationClaim

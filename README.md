@@ -90,6 +90,7 @@ Class | Method | HTTP request | Description
 *UsersApi* | [**users_uuid_legal_put**](docs/UsersApi.md#users_uuid_legal_put) | **PUT** /users/{uuid}/legal | Updates the legal consent settings for a given user.
 *UsersApi* | [**users_uuid_password_put**](docs/UsersApi.md#users_uuid_password_put) | **PUT** /users/{uuid}/password | Set / Change user password
 *UsersApi* | [**users_uuid_patch**](docs/UsersApi.md#users_uuid_patch) | **PATCH** /users/{uuid} | Update a user
+*UsersApi* | [**users_uuid_subscriptions_subsno_address_change_delete**](docs/UsersApi.md#users_uuid_subscriptions_subsno_address_change_delete) | **DELETE** /users/{uuid}/subscriptions/{subsno}/addressChange | Delete temporary address change for subscription
 *UsersApi* | [**users_uuid_subscriptions_subsno_address_change_post**](docs/UsersApi.md#users_uuid_subscriptions_subsno_address_change_post) | **POST** /users/{uuid}/subscriptions/{subsno}/addressChange | Make a temporary address change for a subscription
 *UsersApi* | [**users_uuid_subscriptions_subsno_pause_post**](docs/UsersApi.md#users_uuid_subscriptions_subsno_pause_post) | **POST** /users/{uuid}/subscriptions/{subsno}/pause | Pause users subscription
 *UsersApi* | [**users_uuid_subscriptions_subsno_reclamation_post**](docs/UsersApi.md#users_uuid_subscriptions_subsno_reclamation_post) | **POST** /users/{uuid}/subscriptions/{subsno}/reclamation | Create a new delivery reclamation for a subscription
@@ -103,6 +104,7 @@ Class | Method | HTTP request | Description
  - [Address](docs/Address.md)
  - [Campaign](docs/Campaign.md)
  - [CodeForTokenData](docs/CodeForTokenData.md)
+ - [DeleteTempAddressChangeDates](docs/DeleteTempAddressChangeDates.md)
  - [DeliveryAddress](docs/DeliveryAddress.md)
  - [DeliveryReclamation](docs/DeliveryReclamation.md)
  - [DeliveryReclamationClaim](docs/DeliveryReclamationClaim.md)
