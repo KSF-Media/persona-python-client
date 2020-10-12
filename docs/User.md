@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **first_name** | **str** |  | [optional] 
 **last_name** | **str** |  | [optional] 
 **address** | [**Address**](Address.md) |  | [optional] 
-**cusno** | **str** |  | 
+**cusno** | **int** |  | 
 **subs** | [**list[Subscription]**](Subscription.md) |  | 
 **consent** | [**list[GdprConsent]**](GdprConsent.md) |  | 
 **legal** | [**list[LegalConsent]**](LegalConsent.md) |  | 

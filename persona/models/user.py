@@ -36,7 +36,7 @@ class User(object):
         'first_name': 'str',
         'last_name': 'str',
         'address': 'Address',
-        'cusno': 'str',
+        'cusno': 'int',
         'subs': 'list[Subscription]',
         'consent': 'list[GdprConsent]',
         'legal': 'list[LegalConsent]',
@@ -205,7 +205,7 @@ class User(object):
 
 
         :return: The cusno of this User.  # noqa: E501
-        :rtype: str
+        :rtype: int
         """
         return self._cusno
 
@@ -215,10 +215,14 @@ class User(object):
 
 
         :param cusno: The cusno of this User.  # noqa: E501
-        :type: str
+        :type: int
         """
         if cusno is None:
             raise ValueError("Invalid value for `cusno`, must not be `None`")  # noqa: E501
+        if cusno is not None and cusno > 9223372036854775807:  # noqa: E501
+            raise ValueError("Invalid value for `cusno`, must be a value less than or equal to `9223372036854775807`")  # noqa: E501
+        if cusno is not None and cusno < -9223372036854775808:  # noqa: E501
+            raise ValueError("Invalid value for `cusno`, must be a value greater than or equal to `-9223372036854775808`")  # noqa: E501
 
         self._cusno = cusno
 
