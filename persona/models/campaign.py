@@ -33,26 +33,38 @@ class Campaign(object):
     openapi_types = {
         'no': 'int',
         'id': 'str',
-        'name': 'str'
+        'name': 'str',
+        'price_eur': 'float',
+        'length': 'int',
+        'length_unit': 'str'
     }
 
     attribute_map = {
         'no': 'no',
         'id': 'id',
-        'name': 'name'
+        'name': 'name',
+        'price_eur': 'priceEur',
+        'length': 'length',
+        'length_unit': 'lengthUnit'
     }
 
-    def __init__(self, no=None, id=None, name=None):  # noqa: E501
+    def __init__(self, no=None, id=None, name=None, price_eur=None, length=None, length_unit=None):  # noqa: E501
         """Campaign - a model defined in OpenAPI"""  # noqa: E501
 
         self._no = None
         self._id = None
         self._name = None
+        self._price_eur = None
+        self._length = None
+        self._length_unit = None
         self.discriminator = None
 
         self.no = no
         self.id = id
         self.name = name
+        self.price_eur = price_eur
+        self.length = length
+        self.length_unit = length_unit
 
     @property
     def no(self):
@@ -126,6 +138,79 @@ class Campaign(object):
             raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
 
         self._name = name
+
+    @property
+    def price_eur(self):
+        """Gets the price_eur of this Campaign.  # noqa: E501
+
+
+        :return: The price_eur of this Campaign.  # noqa: E501
+        :rtype: float
+        """
+        return self._price_eur
+
+    @price_eur.setter
+    def price_eur(self, price_eur):
+        """Sets the price_eur of this Campaign.
+
+
+        :param price_eur: The price_eur of this Campaign.  # noqa: E501
+        :type: float
+        """
+        if price_eur is None:
+            raise ValueError("Invalid value for `price_eur`, must not be `None`")  # noqa: E501
+
+        self._price_eur = price_eur
+
+    @property
+    def length(self):
+        """Gets the length of this Campaign.  # noqa: E501
+
+
+        :return: The length of this Campaign.  # noqa: E501
+        :rtype: int
+        """
+        return self._length
+
+    @length.setter
+    def length(self, length):
+        """Sets the length of this Campaign.
+
+
+        :param length: The length of this Campaign.  # noqa: E501
+        :type: int
+        """
+        if length is None:
+            raise ValueError("Invalid value for `length`, must not be `None`")  # noqa: E501
+        if length is not None and length > 9223372036854775807:  # noqa: E501
+            raise ValueError("Invalid value for `length`, must be a value less than or equal to `9223372036854775807`")  # noqa: E501
+        if length is not None and length < -9223372036854775808:  # noqa: E501
+            raise ValueError("Invalid value for `length`, must be a value greater than or equal to `-9223372036854775808`")  # noqa: E501
+
+        self._length = length
+
+    @property
+    def length_unit(self):
+        """Gets the length_unit of this Campaign.  # noqa: E501
+
+
+        :return: The length_unit of this Campaign.  # noqa: E501
+        :rtype: str
+        """
+        return self._length_unit
+
+    @length_unit.setter
+    def length_unit(self, length_unit):
+        """Sets the length_unit of this Campaign.
+
+
+        :param length_unit: The length_unit of this Campaign.  # noqa: E501
+        :type: str
+        """
+        if length_unit is None:
+            raise ValueError("Invalid value for `length_unit`, must not be `None`")  # noqa: E501
+
+        self._length_unit = length_unit
 
     def to_dict(self):
         """Returns the model properties as a dict"""

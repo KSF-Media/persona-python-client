@@ -84,6 +84,13 @@ class TestUsersApi(unittest.TestCase):
         """
         pass
 
+    def test_users_uuid_payments_get(self):
+        """Test case for users_uuid_payments_get
+
+        Get user's subscriptions and payment events  # noqa: E501
+        """
+        pass
+
     def test_users_uuid_subscriptions_subsno_address_change_delete(self):
         """Test case for users_uuid_subscriptions_subsno_address_change_delete
 
