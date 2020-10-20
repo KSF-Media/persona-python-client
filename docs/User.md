@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **consent** | [**list[GdprConsent]**](GdprConsent.md) |  | 
 **legal** | [**list[LegalConsent]**](LegalConsent.md) |  | 
 **pending_address_changes** | [**list[PendingAddressChange]**](PendingAddressChange.md) |  | [optional] 
+**past_temporary_addresses** | [**list[PastTemporaryAddress]**](PastTemporaryAddress.md) |  | 
 **has_completed_registration** | **bool** |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

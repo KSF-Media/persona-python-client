@@ -41,6 +41,7 @@ class User(object):
         'consent': 'list[GdprConsent]',
         'legal': 'list[LegalConsent]',
         'pending_address_changes': 'list[PendingAddressChange]',
+        'past_temporary_addresses': 'list[PastTemporaryAddress]',
         'has_completed_registration': 'bool'
     }
 
@@ -55,10 +56,11 @@ class User(object):
         'consent': 'consent',
         'legal': 'legal',
         'pending_address_changes': 'pendingAddressChanges',
+        'past_temporary_addresses': 'pastTemporaryAddresses',
         'has_completed_registration': 'hasCompletedRegistration'
     }
 
-    def __init__(self, uuid=None, email=None, first_name=None, last_name=None, address=None, cusno=None, subs=None, consent=None, legal=None, pending_address_changes=None, has_completed_registration=None):  # noqa: E501
+    def __init__(self, uuid=None, email=None, first_name=None, last_name=None, address=None, cusno=None, subs=None, consent=None, legal=None, pending_address_changes=None, past_temporary_addresses=None, has_completed_registration=None):  # noqa: E501
         """User - a model defined in OpenAPI"""  # noqa: E501
 
         self._uuid = None
@@ -71,6 +73,7 @@ class User(object):
         self._consent = None
         self._legal = None
         self._pending_address_changes = None
+        self._past_temporary_addresses = None
         self._has_completed_registration = None
         self.discriminator = None
 
@@ -88,6 +91,7 @@ class User(object):
         self.legal = legal
         if pending_address_changes is not None:
             self.pending_address_changes = pending_address_changes
+        self.past_temporary_addresses = past_temporary_addresses
         self.has_completed_registration = has_completed_registration
 
     @property
@@ -315,6 +319,29 @@ class User(object):
         """
 
         self._pending_address_changes = pending_address_changes
+
+    @property
+    def past_temporary_addresses(self):
+        """Gets the past_temporary_addresses of this User.  # noqa: E501
+
+
+        :return: The past_temporary_addresses of this User.  # noqa: E501
+        :rtype: list[PastTemporaryAddress]
+        """
+        return self._past_temporary_addresses
+
+    @past_temporary_addresses.setter
+    def past_temporary_addresses(self, past_temporary_addresses):
+        """Sets the past_temporary_addresses of this User.
+
+
+        :param past_temporary_addresses: The past_temporary_addresses of this User.  # noqa: E501
+        :type: list[PastTemporaryAddress]
+        """
+        if past_temporary_addresses is None:
+            raise ValueError("Invalid value for `past_temporary_addresses`, must not be `None`")  # noqa: E501
+
+        self._past_temporary_addresses = past_temporary_addresses
 
     @property
     def has_completed_registration(self):

@@ -52,6 +52,7 @@ from persona.models.package import Package
 from persona.models.package_description import PackageDescription
 from persona.models.package_offer import PackageOffer
 from persona.models.paper import Paper
+from persona.models.past_temporary_address import PastTemporaryAddress
 from persona.models.paused_subscription import PausedSubscription
 from persona.models.payment import Payment
 from persona.models.pending_address_change import PendingAddressChange
