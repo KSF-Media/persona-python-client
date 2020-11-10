@@ -235,6 +235,7 @@ class UsersApi(object):
     def users_uuid_entitlement_get(self, uuid, **kwargs):  # noqa: E501
         """Get users entitlements.  # noqa: E501
 
+        Authorization header expects the following format ‘OAuth {token}’  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.users_uuid_entitlement_get(uuid, async_req=True)
@@ -242,6 +243,7 @@ class UsersApi(object):
 
         :param async_req bool
         :param str uuid: (required)
+        :param str auth_user:
         :param str authorization:
         :param str cache_control:
         :return: list[str]
@@ -258,6 +260,7 @@ class UsersApi(object):
     def users_uuid_entitlement_get_with_http_info(self, uuid, **kwargs):  # noqa: E501
         """Get users entitlements.  # noqa: E501
 
+        Authorization header expects the following format ‘OAuth {token}’  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.users_uuid_entitlement_get_with_http_info(uuid, async_req=True)
@@ -265,6 +268,7 @@ class UsersApi(object):
 
         :param async_req bool
         :param str uuid: (required)
+        :param str auth_user:
         :param str authorization:
         :param str cache_control:
         :return: list[str]
@@ -274,7 +278,7 @@ class UsersApi(object):
 
         local_var_params = locals()
 
-        all_params = ['uuid', 'authorization', 'cache_control']  # noqa: E501
+        all_params = ['uuid', 'auth_user', 'authorization', 'cache_control']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -302,6 +306,8 @@ class UsersApi(object):
         query_params = []
 
         header_params = {}
+        if 'auth_user' in local_var_params:
+            header_params['AuthUser'] = local_var_params['auth_user']  # noqa: E501
         if 'authorization' in local_var_params:
             header_params['Authorization'] = local_var_params['authorization']  # noqa: E501
         if 'cache_control' in local_var_params:
@@ -346,6 +352,7 @@ class UsersApi(object):
         :param async_req bool
         :param str uuid: (required)
         :param list[GdprConsent] body: (required)
+        :param str auth_user:
         :param str authorization:
         :return: User
                  If the method is called asynchronously,
@@ -370,6 +377,7 @@ class UsersApi(object):
         :param async_req bool
         :param str uuid: (required)
         :param list[GdprConsent] body: (required)
+        :param str auth_user:
         :param str authorization:
         :return: User
                  If the method is called asynchronously,
@@ -378,7 +386,7 @@ class UsersApi(object):
 
         local_var_params = locals()
 
-        all_params = ['uuid', 'body', 'authorization']  # noqa: E501
+        all_params = ['uuid', 'body', 'auth_user', 'authorization']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -410,6 +418,8 @@ class UsersApi(object):
         query_params = []
 
         header_params = {}
+        if 'auth_user' in local_var_params:
+            header_params['AuthUser'] = local_var_params['auth_user']  # noqa: E501
         if 'authorization' in local_var_params:
             header_params['Authorization'] = local_var_params['authorization']  # noqa: E501
 
@@ -457,6 +467,7 @@ class UsersApi(object):
 
         :param async_req bool
         :param str uuid: (required)
+        :param str auth_user:
         :param str authorization:
         :param str cache_control:
         :return: User
@@ -481,6 +492,7 @@ class UsersApi(object):
 
         :param async_req bool
         :param str uuid: (required)
+        :param str auth_user:
         :param str authorization:
         :param str cache_control:
         :return: User
@@ -490,7 +502,7 @@ class UsersApi(object):
 
         local_var_params = locals()
 
-        all_params = ['uuid', 'authorization', 'cache_control']  # noqa: E501
+        all_params = ['uuid', 'auth_user', 'authorization', 'cache_control']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -518,6 +530,8 @@ class UsersApi(object):
         query_params = []
 
         header_params = {}
+        if 'auth_user' in local_var_params:
+            header_params['AuthUser'] = local_var_params['auth_user']  # noqa: E501
         if 'authorization' in local_var_params:
             header_params['Authorization'] = local_var_params['authorization']  # noqa: E501
         if 'cache_control' in local_var_params:
@@ -562,6 +576,7 @@ class UsersApi(object):
         :param async_req bool
         :param str uuid: (required)
         :param list[LegalConsent] body: (required)
+        :param str auth_user:
         :param str authorization:
         :return: User
                  If the method is called asynchronously,
@@ -586,6 +601,7 @@ class UsersApi(object):
         :param async_req bool
         :param str uuid: (required)
         :param list[LegalConsent] body: (required)
+        :param str auth_user:
         :param str authorization:
         :return: User
                  If the method is called asynchronously,
@@ -594,7 +610,7 @@ class UsersApi(object):
 
         local_var_params = locals()
 
-        all_params = ['uuid', 'body', 'authorization']  # noqa: E501
+        all_params = ['uuid', 'body', 'auth_user', 'authorization']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -626,6 +642,8 @@ class UsersApi(object):
         query_params = []
 
         header_params = {}
+        if 'auth_user' in local_var_params:
+            header_params['AuthUser'] = local_var_params['auth_user']  # noqa: E501
         if 'authorization' in local_var_params:
             header_params['Authorization'] = local_var_params['authorization']  # noqa: E501
 
@@ -674,6 +692,7 @@ class UsersApi(object):
         :param async_req bool
         :param str uuid: (required)
         :param UserUpdatePassword body: (required)
+        :param str auth_user:
         :param str authorization:
         :return: User
                  If the method is called asynchronously,
@@ -698,6 +717,7 @@ class UsersApi(object):
         :param async_req bool
         :param str uuid: (required)
         :param UserUpdatePassword body: (required)
+        :param str auth_user:
         :param str authorization:
         :return: User
                  If the method is called asynchronously,
@@ -706,7 +726,7 @@ class UsersApi(object):
 
         local_var_params = locals()
 
-        all_params = ['uuid', 'body', 'authorization']  # noqa: E501
+        all_params = ['uuid', 'body', 'auth_user', 'authorization']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -738,6 +758,8 @@ class UsersApi(object):
         query_params = []
 
         header_params = {}
+        if 'auth_user' in local_var_params:
+            header_params['AuthUser'] = local_var_params['auth_user']  # noqa: E501
         if 'authorization' in local_var_params:
             header_params['Authorization'] = local_var_params['authorization']  # noqa: E501
 
@@ -786,6 +808,7 @@ class UsersApi(object):
         :param async_req bool
         :param str uuid: (required)
         :param UserUpdate body: (required)
+        :param str auth_user:
         :param str authorization:
         :return: User
                  If the method is called asynchronously,
@@ -810,6 +833,7 @@ class UsersApi(object):
         :param async_req bool
         :param str uuid: (required)
         :param UserUpdate body: (required)
+        :param str auth_user:
         :param str authorization:
         :return: User
                  If the method is called asynchronously,
@@ -818,7 +842,7 @@ class UsersApi(object):
 
         local_var_params = locals()
 
-        all_params = ['uuid', 'body', 'authorization']  # noqa: E501
+        all_params = ['uuid', 'body', 'auth_user', 'authorization']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -850,6 +874,8 @@ class UsersApi(object):
         query_params = []
 
         header_params = {}
+        if 'auth_user' in local_var_params:
+            header_params['AuthUser'] = local_var_params['auth_user']  # noqa: E501
         if 'authorization' in local_var_params:
             header_params['Authorization'] = local_var_params['authorization']  # noqa: E501
 
@@ -889,6 +915,7 @@ class UsersApi(object):
     def users_uuid_payments_get(self, uuid, **kwargs):  # noqa: E501
         """Get user's subscriptions and payment events  # noqa: E501
 
+        Authorization header expects the following format ‘OAuth {token}’  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.users_uuid_payments_get(uuid, async_req=True)
@@ -896,6 +923,7 @@ class UsersApi(object):
 
         :param async_req bool
         :param str uuid: (required)
+        :param str auth_user:
         :param str authorization:
         :return: list[SubscriptionPayments]
                  If the method is called asynchronously,
@@ -911,6 +939,7 @@ class UsersApi(object):
     def users_uuid_payments_get_with_http_info(self, uuid, **kwargs):  # noqa: E501
         """Get user's subscriptions and payment events  # noqa: E501
 
+        Authorization header expects the following format ‘OAuth {token}’  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.users_uuid_payments_get_with_http_info(uuid, async_req=True)
@@ -918,6 +947,7 @@ class UsersApi(object):
 
         :param async_req bool
         :param str uuid: (required)
+        :param str auth_user:
         :param str authorization:
         :return: list[SubscriptionPayments]
                  If the method is called asynchronously,
@@ -926,7 +956,7 @@ class UsersApi(object):
 
         local_var_params = locals()
 
-        all_params = ['uuid', 'authorization']  # noqa: E501
+        all_params = ['uuid', 'auth_user', 'authorization']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -954,6 +984,8 @@ class UsersApi(object):
         query_params = []
 
         header_params = {}
+        if 'auth_user' in local_var_params:
+            header_params['AuthUser'] = local_var_params['auth_user']  # noqa: E501
         if 'authorization' in local_var_params:
             header_params['Authorization'] = local_var_params['authorization']  # noqa: E501
 
@@ -987,6 +1019,7 @@ class UsersApi(object):
     def users_uuid_subscriptions_subsno_address_change_delete(self, uuid, subsno, body, **kwargs):  # noqa: E501
         """Delete temporary address change for subscription  # noqa: E501
 
+        Authorization header expects the following format ‘OAuth {token}’  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.users_uuid_subscriptions_subsno_address_change_delete(uuid, subsno, body, async_req=True)
@@ -996,6 +1029,7 @@ class UsersApi(object):
         :param str uuid: (required)
         :param int subsno: (required)
         :param DeleteTempAddressChangeDates body: (required)
+        :param str auth_user:
         :param str authorization:
         :return: Subscription
                  If the method is called asynchronously,
@@ -1011,6 +1045,7 @@ class UsersApi(object):
     def users_uuid_subscriptions_subsno_address_change_delete_with_http_info(self, uuid, subsno, body, **kwargs):  # noqa: E501
         """Delete temporary address change for subscription  # noqa: E501
 
+        Authorization header expects the following format ‘OAuth {token}’  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.users_uuid_subscriptions_subsno_address_change_delete_with_http_info(uuid, subsno, body, async_req=True)
@@ -1020,6 +1055,7 @@ class UsersApi(object):
         :param str uuid: (required)
         :param int subsno: (required)
         :param DeleteTempAddressChangeDates body: (required)
+        :param str auth_user:
         :param str authorization:
         :return: Subscription
                  If the method is called asynchronously,
@@ -1028,7 +1064,7 @@ class UsersApi(object):
 
         local_var_params = locals()
 
-        all_params = ['uuid', 'subsno', 'body', 'authorization']  # noqa: E501
+        all_params = ['uuid', 'subsno', 'body', 'auth_user', 'authorization']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1070,6 +1106,8 @@ class UsersApi(object):
         query_params = []
 
         header_params = {}
+        if 'auth_user' in local_var_params:
+            header_params['AuthUser'] = local_var_params['auth_user']  # noqa: E501
         if 'authorization' in local_var_params:
             header_params['Authorization'] = local_var_params['authorization']  # noqa: E501
 
@@ -1109,6 +1147,7 @@ class UsersApi(object):
     def users_uuid_subscriptions_subsno_address_change_post(self, uuid, subsno, body, **kwargs):  # noqa: E501
         """Make a temporary address change for a subscription  # noqa: E501
 
+        Authorization header expects the following format ‘OAuth {token}’  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.users_uuid_subscriptions_subsno_address_change_post(uuid, subsno, body, async_req=True)
@@ -1118,6 +1157,7 @@ class UsersApi(object):
         :param str uuid: (required)
         :param int subsno: (required)
         :param TemporaryAddressChange body: (required)
+        :param str auth_user:
         :param str authorization:
         :return: Subscription
                  If the method is called asynchronously,
@@ -1133,6 +1173,7 @@ class UsersApi(object):
     def users_uuid_subscriptions_subsno_address_change_post_with_http_info(self, uuid, subsno, body, **kwargs):  # noqa: E501
         """Make a temporary address change for a subscription  # noqa: E501
 
+        Authorization header expects the following format ‘OAuth {token}’  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.users_uuid_subscriptions_subsno_address_change_post_with_http_info(uuid, subsno, body, async_req=True)
@@ -1142,6 +1183,7 @@ class UsersApi(object):
         :param str uuid: (required)
         :param int subsno: (required)
         :param TemporaryAddressChange body: (required)
+        :param str auth_user:
         :param str authorization:
         :return: Subscription
                  If the method is called asynchronously,
@@ -1150,7 +1192,7 @@ class UsersApi(object):
 
         local_var_params = locals()
 
-        all_params = ['uuid', 'subsno', 'body', 'authorization']  # noqa: E501
+        all_params = ['uuid', 'subsno', 'body', 'auth_user', 'authorization']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1192,6 +1234,8 @@ class UsersApi(object):
         query_params = []
 
         header_params = {}
+        if 'auth_user' in local_var_params:
+            header_params['AuthUser'] = local_var_params['auth_user']  # noqa: E501
         if 'authorization' in local_var_params:
             header_params['Authorization'] = local_var_params['authorization']  # noqa: E501
 
@@ -1231,6 +1275,7 @@ class UsersApi(object):
     def users_uuid_subscriptions_subsno_pause_post(self, uuid, subsno, body, **kwargs):  # noqa: E501
         """Pause users subscription  # noqa: E501
 
+        Authorization header expects the following format ‘OAuth {token}’  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.users_uuid_subscriptions_subsno_pause_post(uuid, subsno, body, async_req=True)
@@ -1240,6 +1285,7 @@ class UsersApi(object):
         :param str uuid: (required)
         :param int subsno: (required)
         :param SubscriptionPauseDates body: (required)
+        :param str auth_user:
         :param str authorization:
         :return: Subscription
                  If the method is called asynchronously,
@@ -1255,6 +1301,7 @@ class UsersApi(object):
     def users_uuid_subscriptions_subsno_pause_post_with_http_info(self, uuid, subsno, body, **kwargs):  # noqa: E501
         """Pause users subscription  # noqa: E501
 
+        Authorization header expects the following format ‘OAuth {token}’  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.users_uuid_subscriptions_subsno_pause_post_with_http_info(uuid, subsno, body, async_req=True)
@@ -1264,6 +1311,7 @@ class UsersApi(object):
         :param str uuid: (required)
         :param int subsno: (required)
         :param SubscriptionPauseDates body: (required)
+        :param str auth_user:
         :param str authorization:
         :return: Subscription
                  If the method is called asynchronously,
@@ -1272,7 +1320,7 @@ class UsersApi(object):
 
         local_var_params = locals()
 
-        all_params = ['uuid', 'subsno', 'body', 'authorization']  # noqa: E501
+        all_params = ['uuid', 'subsno', 'body', 'auth_user', 'authorization']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1314,6 +1362,8 @@ class UsersApi(object):
         query_params = []
 
         header_params = {}
+        if 'auth_user' in local_var_params:
+            header_params['AuthUser'] = local_var_params['auth_user']  # noqa: E501
         if 'authorization' in local_var_params:
             header_params['Authorization'] = local_var_params['authorization']  # noqa: E501
 
@@ -1353,6 +1403,7 @@ class UsersApi(object):
     def users_uuid_subscriptions_subsno_reclamation_post(self, uuid, subsno, body, **kwargs):  # noqa: E501
         """Create a new delivery reclamation for a subscription  # noqa: E501
 
+        Authorization header expects the following format ‘OAuth {token}’  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.users_uuid_subscriptions_subsno_reclamation_post(uuid, subsno, body, async_req=True)
@@ -1362,6 +1413,7 @@ class UsersApi(object):
         :param str uuid: (required)
         :param int subsno: (required)
         :param NewDeliveryReclamation body: (required)
+        :param str auth_user:
         :param str authorization:
         :return: DeliveryReclamation
                  If the method is called asynchronously,
@@ -1377,6 +1429,7 @@ class UsersApi(object):
     def users_uuid_subscriptions_subsno_reclamation_post_with_http_info(self, uuid, subsno, body, **kwargs):  # noqa: E501
         """Create a new delivery reclamation for a subscription  # noqa: E501
 
+        Authorization header expects the following format ‘OAuth {token}’  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.users_uuid_subscriptions_subsno_reclamation_post_with_http_info(uuid, subsno, body, async_req=True)
@@ -1386,6 +1439,7 @@ class UsersApi(object):
         :param str uuid: (required)
         :param int subsno: (required)
         :param NewDeliveryReclamation body: (required)
+        :param str auth_user:
         :param str authorization:
         :return: DeliveryReclamation
                  If the method is called asynchronously,
@@ -1394,7 +1448,7 @@ class UsersApi(object):
 
         local_var_params = locals()
 
-        all_params = ['uuid', 'subsno', 'body', 'authorization']  # noqa: E501
+        all_params = ['uuid', 'subsno', 'body', 'auth_user', 'authorization']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1436,6 +1490,8 @@ class UsersApi(object):
         query_params = []
 
         header_params = {}
+        if 'auth_user' in local_var_params:
+            header_params['AuthUser'] = local_var_params['auth_user']  # noqa: E501
         if 'authorization' in local_var_params:
             header_params['Authorization'] = local_var_params['authorization']  # noqa: E501
 
@@ -1475,6 +1531,7 @@ class UsersApi(object):
     def users_uuid_subscriptions_subsno_reclamations_reclaimno_get(self, uuid, subsno, reclaimno, **kwargs):  # noqa: E501
         """Get a delivery reclamation  # noqa: E501
 
+        Authorization header expects the following format ‘OAuth {token}’  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.users_uuid_subscriptions_subsno_reclamations_reclaimno_get(uuid, subsno, reclaimno, async_req=True)
@@ -1484,6 +1541,7 @@ class UsersApi(object):
         :param str uuid: (required)
         :param int subsno: (required)
         :param int reclaimno: (required)
+        :param str auth_user:
         :param str authorization:
         :return: DeliveryReclamation
                  If the method is called asynchronously,
@@ -1499,6 +1557,7 @@ class UsersApi(object):
     def users_uuid_subscriptions_subsno_reclamations_reclaimno_get_with_http_info(self, uuid, subsno, reclaimno, **kwargs):  # noqa: E501
         """Get a delivery reclamation  # noqa: E501
 
+        Authorization header expects the following format ‘OAuth {token}’  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.users_uuid_subscriptions_subsno_reclamations_reclaimno_get_with_http_info(uuid, subsno, reclaimno, async_req=True)
@@ -1508,6 +1567,7 @@ class UsersApi(object):
         :param str uuid: (required)
         :param int subsno: (required)
         :param int reclaimno: (required)
+        :param str auth_user:
         :param str authorization:
         :return: DeliveryReclamation
                  If the method is called asynchronously,
@@ -1516,7 +1576,7 @@ class UsersApi(object):
 
         local_var_params = locals()
 
-        all_params = ['uuid', 'subsno', 'reclaimno', 'authorization']  # noqa: E501
+        all_params = ['uuid', 'subsno', 'reclaimno', 'auth_user', 'authorization']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1564,6 +1624,8 @@ class UsersApi(object):
         query_params = []
 
         header_params = {}
+        if 'auth_user' in local_var_params:
+            header_params['AuthUser'] = local_var_params['auth_user']  # noqa: E501
         if 'authorization' in local_var_params:
             header_params['Authorization'] = local_var_params['authorization']  # noqa: E501
 
@@ -1597,6 +1659,7 @@ class UsersApi(object):
     def users_uuid_subscriptions_subsno_unpause_post(self, uuid, subsno, **kwargs):  # noqa: E501
         """Pause users subscription  # noqa: E501
 
+        Authorization header expects the following format ‘OAuth {token}’  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.users_uuid_subscriptions_subsno_unpause_post(uuid, subsno, async_req=True)
@@ -1605,6 +1668,7 @@ class UsersApi(object):
         :param async_req bool
         :param str uuid: (required)
         :param int subsno: (required)
+        :param str auth_user:
         :param str authorization:
         :return: Subscription
                  If the method is called asynchronously,
@@ -1620,6 +1684,7 @@ class UsersApi(object):
     def users_uuid_subscriptions_subsno_unpause_post_with_http_info(self, uuid, subsno, **kwargs):  # noqa: E501
         """Pause users subscription  # noqa: E501
 
+        Authorization header expects the following format ‘OAuth {token}’  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.users_uuid_subscriptions_subsno_unpause_post_with_http_info(uuid, subsno, async_req=True)
@@ -1628,6 +1693,7 @@ class UsersApi(object):
         :param async_req bool
         :param str uuid: (required)
         :param int subsno: (required)
+        :param str auth_user:
         :param str authorization:
         :return: Subscription
                  If the method is called asynchronously,
@@ -1636,7 +1702,7 @@ class UsersApi(object):
 
         local_var_params = locals()
 
-        all_params = ['uuid', 'subsno', 'authorization']  # noqa: E501
+        all_params = ['uuid', 'subsno', 'auth_user', 'authorization']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1674,6 +1740,8 @@ class UsersApi(object):
         query_params = []
 
         header_params = {}
+        if 'auth_user' in local_var_params:
+            header_params['AuthUser'] = local_var_params['auth_user']  # noqa: E501
         if 'authorization' in local_var_params:
             header_params['Authorization'] = local_var_params['authorization']  # noqa: E501
 

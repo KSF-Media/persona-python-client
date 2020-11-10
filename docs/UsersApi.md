@@ -116,9 +116,11 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **users_uuid_entitlement_get**
-> list[str] users_uuid_entitlement_get(uuid, authorization=authorization, cache_control=cache_control)
+> list[str] users_uuid_entitlement_get(uuid, auth_user=auth_user, authorization=authorization, cache_control=cache_control)
 
 Get users entitlements.
+
+Authorization header expects the following format ‘OAuth {token}’
 
 ### Example
 
@@ -132,12 +134,13 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = persona.UsersApi()
 uuid = 'uuid_example' # str | 
+auth_user = 'auth_user_example' # str |  (optional)
 authorization = 'authorization_example' # str |  (optional)
 cache_control = 'cache_control_example' # str |  (optional)
 
 try:
     # Get users entitlements.
-    api_response = api_instance.users_uuid_entitlement_get(uuid, authorization=authorization, cache_control=cache_control)
+    api_response = api_instance.users_uuid_entitlement_get(uuid, auth_user=auth_user, authorization=authorization, cache_control=cache_control)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling UsersApi->users_uuid_entitlement_get: %s\n" % e)
@@ -148,6 +151,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **uuid** | [**str**](.md)|  | 
+ **auth_user** | [**str**](.md)|  | [optional] 
  **authorization** | **str**|  | [optional] 
  **cache_control** | **str**|  | [optional] 
 
@@ -167,7 +171,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **users_uuid_gdpr_put**
-> User users_uuid_gdpr_put(uuid, body, authorization=authorization)
+> User users_uuid_gdpr_put(uuid, body, auth_user=auth_user, authorization=authorization)
 
 Updates the GDPR consent settings for a given user.
 
@@ -186,11 +190,12 @@ from pprint import pprint
 api_instance = persona.UsersApi()
 uuid = 'uuid_example' # str | 
 body = None # list[GdprConsent] | 
+auth_user = 'auth_user_example' # str |  (optional)
 authorization = 'authorization_example' # str |  (optional)
 
 try:
     # Updates the GDPR consent settings for a given user.
-    api_response = api_instance.users_uuid_gdpr_put(uuid, body, authorization=authorization)
+    api_response = api_instance.users_uuid_gdpr_put(uuid, body, auth_user=auth_user, authorization=authorization)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling UsersApi->users_uuid_gdpr_put: %s\n" % e)
@@ -202,6 +207,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **uuid** | [**str**](.md)|  | 
  **body** | [**list[GdprConsent]**](list.md)|  | 
+ **auth_user** | [**str**](.md)|  | [optional] 
  **authorization** | **str**|  | [optional] 
 
 ### Return type
@@ -220,7 +226,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **users_uuid_get**
-> User users_uuid_get(uuid, authorization=authorization, cache_control=cache_control)
+> User users_uuid_get(uuid, auth_user=auth_user, authorization=authorization, cache_control=cache_control)
 
 Get user by UUID.
 
@@ -238,12 +244,13 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = persona.UsersApi()
 uuid = 'uuid_example' # str | 
+auth_user = 'auth_user_example' # str |  (optional)
 authorization = 'authorization_example' # str |  (optional)
 cache_control = 'cache_control_example' # str |  (optional)
 
 try:
     # Get user by UUID.
-    api_response = api_instance.users_uuid_get(uuid, authorization=authorization, cache_control=cache_control)
+    api_response = api_instance.users_uuid_get(uuid, auth_user=auth_user, authorization=authorization, cache_control=cache_control)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling UsersApi->users_uuid_get: %s\n" % e)
@@ -254,6 +261,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **uuid** | [**str**](.md)|  | 
+ **auth_user** | [**str**](.md)|  | [optional] 
  **authorization** | **str**|  | [optional] 
  **cache_control** | **str**|  | [optional] 
 
@@ -273,7 +281,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **users_uuid_legal_put**
-> User users_uuid_legal_put(uuid, body, authorization=authorization)
+> User users_uuid_legal_put(uuid, body, auth_user=auth_user, authorization=authorization)
 
 Updates the legal consent settings for a given user.
 
@@ -292,11 +300,12 @@ from pprint import pprint
 api_instance = persona.UsersApi()
 uuid = 'uuid_example' # str | 
 body = None # list[LegalConsent] | 
+auth_user = 'auth_user_example' # str |  (optional)
 authorization = 'authorization_example' # str |  (optional)
 
 try:
     # Updates the legal consent settings for a given user.
-    api_response = api_instance.users_uuid_legal_put(uuid, body, authorization=authorization)
+    api_response = api_instance.users_uuid_legal_put(uuid, body, auth_user=auth_user, authorization=authorization)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling UsersApi->users_uuid_legal_put: %s\n" % e)
@@ -308,6 +317,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **uuid** | [**str**](.md)|  | 
  **body** | [**list[LegalConsent]**](list.md)|  | 
+ **auth_user** | [**str**](.md)|  | [optional] 
  **authorization** | **str**|  | [optional] 
 
 ### Return type
@@ -326,7 +336,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **users_uuid_password_put**
-> User users_uuid_password_put(uuid, body, authorization=authorization)
+> User users_uuid_password_put(uuid, body, auth_user=auth_user, authorization=authorization)
 
 Set / Change user password
 
@@ -345,11 +355,12 @@ from pprint import pprint
 api_instance = persona.UsersApi()
 uuid = 'uuid_example' # str | 
 body = persona.UserUpdatePassword() # UserUpdatePassword | 
+auth_user = 'auth_user_example' # str |  (optional)
 authorization = 'authorization_example' # str |  (optional)
 
 try:
     # Set / Change user password
-    api_response = api_instance.users_uuid_password_put(uuid, body, authorization=authorization)
+    api_response = api_instance.users_uuid_password_put(uuid, body, auth_user=auth_user, authorization=authorization)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling UsersApi->users_uuid_password_put: %s\n" % e)
@@ -361,6 +372,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **uuid** | [**str**](.md)|  | 
  **body** | [**UserUpdatePassword**](UserUpdatePassword.md)|  | 
+ **auth_user** | [**str**](.md)|  | [optional] 
  **authorization** | **str**|  | [optional] 
 
 ### Return type
@@ -379,7 +391,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **users_uuid_patch**
-> User users_uuid_patch(uuid, body, authorization=authorization)
+> User users_uuid_patch(uuid, body, auth_user=auth_user, authorization=authorization)
 
 Update a user
 
@@ -398,11 +410,12 @@ from pprint import pprint
 api_instance = persona.UsersApi()
 uuid = 'uuid_example' # str | 
 body = persona.UserUpdate() # UserUpdate | 
+auth_user = 'auth_user_example' # str |  (optional)
 authorization = 'authorization_example' # str |  (optional)
 
 try:
     # Update a user
-    api_response = api_instance.users_uuid_patch(uuid, body, authorization=authorization)
+    api_response = api_instance.users_uuid_patch(uuid, body, auth_user=auth_user, authorization=authorization)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling UsersApi->users_uuid_patch: %s\n" % e)
@@ -414,6 +427,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **uuid** | [**str**](.md)|  | 
  **body** | [**UserUpdate**](UserUpdate.md)|  | 
+ **auth_user** | [**str**](.md)|  | [optional] 
  **authorization** | **str**|  | [optional] 
 
 ### Return type
@@ -432,9 +446,11 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **users_uuid_payments_get**
-> list[SubscriptionPayments] users_uuid_payments_get(uuid, authorization=authorization)
+> list[SubscriptionPayments] users_uuid_payments_get(uuid, auth_user=auth_user, authorization=authorization)
 
 Get user's subscriptions and payment events
+
+Authorization header expects the following format ‘OAuth {token}’
 
 ### Example
 
@@ -448,11 +464,12 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = persona.UsersApi()
 uuid = 'uuid_example' # str | 
+auth_user = 'auth_user_example' # str |  (optional)
 authorization = 'authorization_example' # str |  (optional)
 
 try:
     # Get user's subscriptions and payment events
-    api_response = api_instance.users_uuid_payments_get(uuid, authorization=authorization)
+    api_response = api_instance.users_uuid_payments_get(uuid, auth_user=auth_user, authorization=authorization)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling UsersApi->users_uuid_payments_get: %s\n" % e)
@@ -463,6 +480,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **uuid** | [**str**](.md)|  | 
+ **auth_user** | [**str**](.md)|  | [optional] 
  **authorization** | **str**|  | [optional] 
 
 ### Return type
@@ -481,9 +499,11 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **users_uuid_subscriptions_subsno_address_change_delete**
-> Subscription users_uuid_subscriptions_subsno_address_change_delete(uuid, subsno, body, authorization=authorization)
+> Subscription users_uuid_subscriptions_subsno_address_change_delete(uuid, subsno, body, auth_user=auth_user, authorization=authorization)
 
 Delete temporary address change for subscription
+
+Authorization header expects the following format ‘OAuth {token}’
 
 ### Example
 
@@ -499,11 +519,12 @@ api_instance = persona.UsersApi()
 uuid = 'uuid_example' # str | 
 subsno = 56 # int | 
 body = persona.DeleteTempAddressChangeDates() # DeleteTempAddressChangeDates | 
+auth_user = 'auth_user_example' # str |  (optional)
 authorization = 'authorization_example' # str |  (optional)
 
 try:
     # Delete temporary address change for subscription
-    api_response = api_instance.users_uuid_subscriptions_subsno_address_change_delete(uuid, subsno, body, authorization=authorization)
+    api_response = api_instance.users_uuid_subscriptions_subsno_address_change_delete(uuid, subsno, body, auth_user=auth_user, authorization=authorization)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling UsersApi->users_uuid_subscriptions_subsno_address_change_delete: %s\n" % e)
@@ -516,6 +537,7 @@ Name | Type | Description  | Notes
  **uuid** | [**str**](.md)|  | 
  **subsno** | **int**|  | 
  **body** | [**DeleteTempAddressChangeDates**](DeleteTempAddressChangeDates.md)|  | 
+ **auth_user** | [**str**](.md)|  | [optional] 
  **authorization** | **str**|  | [optional] 
 
 ### Return type
@@ -534,9 +556,11 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **users_uuid_subscriptions_subsno_address_change_post**
-> Subscription users_uuid_subscriptions_subsno_address_change_post(uuid, subsno, body, authorization=authorization)
+> Subscription users_uuid_subscriptions_subsno_address_change_post(uuid, subsno, body, auth_user=auth_user, authorization=authorization)
 
 Make a temporary address change for a subscription
+
+Authorization header expects the following format ‘OAuth {token}’
 
 ### Example
 
@@ -552,11 +576,12 @@ api_instance = persona.UsersApi()
 uuid = 'uuid_example' # str | 
 subsno = 56 # int | 
 body = persona.TemporaryAddressChange() # TemporaryAddressChange | 
+auth_user = 'auth_user_example' # str |  (optional)
 authorization = 'authorization_example' # str |  (optional)
 
 try:
     # Make a temporary address change for a subscription
-    api_response = api_instance.users_uuid_subscriptions_subsno_address_change_post(uuid, subsno, body, authorization=authorization)
+    api_response = api_instance.users_uuid_subscriptions_subsno_address_change_post(uuid, subsno, body, auth_user=auth_user, authorization=authorization)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling UsersApi->users_uuid_subscriptions_subsno_address_change_post: %s\n" % e)
@@ -569,6 +594,7 @@ Name | Type | Description  | Notes
  **uuid** | [**str**](.md)|  | 
  **subsno** | **int**|  | 
  **body** | [**TemporaryAddressChange**](TemporaryAddressChange.md)|  | 
+ **auth_user** | [**str**](.md)|  | [optional] 
  **authorization** | **str**|  | [optional] 
 
 ### Return type
@@ -587,9 +613,11 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **users_uuid_subscriptions_subsno_pause_post**
-> Subscription users_uuid_subscriptions_subsno_pause_post(uuid, subsno, body, authorization=authorization)
+> Subscription users_uuid_subscriptions_subsno_pause_post(uuid, subsno, body, auth_user=auth_user, authorization=authorization)
 
 Pause users subscription
+
+Authorization header expects the following format ‘OAuth {token}’
 
 ### Example
 
@@ -605,11 +633,12 @@ api_instance = persona.UsersApi()
 uuid = 'uuid_example' # str | 
 subsno = 56 # int | 
 body = persona.SubscriptionPauseDates() # SubscriptionPauseDates | 
+auth_user = 'auth_user_example' # str |  (optional)
 authorization = 'authorization_example' # str |  (optional)
 
 try:
     # Pause users subscription
-    api_response = api_instance.users_uuid_subscriptions_subsno_pause_post(uuid, subsno, body, authorization=authorization)
+    api_response = api_instance.users_uuid_subscriptions_subsno_pause_post(uuid, subsno, body, auth_user=auth_user, authorization=authorization)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling UsersApi->users_uuid_subscriptions_subsno_pause_post: %s\n" % e)
@@ -622,6 +651,7 @@ Name | Type | Description  | Notes
  **uuid** | [**str**](.md)|  | 
  **subsno** | **int**|  | 
  **body** | [**SubscriptionPauseDates**](SubscriptionPauseDates.md)|  | 
+ **auth_user** | [**str**](.md)|  | [optional] 
  **authorization** | **str**|  | [optional] 
 
 ### Return type
@@ -640,9 +670,11 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **users_uuid_subscriptions_subsno_reclamation_post**
-> DeliveryReclamation users_uuid_subscriptions_subsno_reclamation_post(uuid, subsno, body, authorization=authorization)
+> DeliveryReclamation users_uuid_subscriptions_subsno_reclamation_post(uuid, subsno, body, auth_user=auth_user, authorization=authorization)
 
 Create a new delivery reclamation for a subscription
+
+Authorization header expects the following format ‘OAuth {token}’
 
 ### Example
 
@@ -658,11 +690,12 @@ api_instance = persona.UsersApi()
 uuid = 'uuid_example' # str | 
 subsno = 56 # int | 
 body = persona.NewDeliveryReclamation() # NewDeliveryReclamation | 
+auth_user = 'auth_user_example' # str |  (optional)
 authorization = 'authorization_example' # str |  (optional)
 
 try:
     # Create a new delivery reclamation for a subscription
-    api_response = api_instance.users_uuid_subscriptions_subsno_reclamation_post(uuid, subsno, body, authorization=authorization)
+    api_response = api_instance.users_uuid_subscriptions_subsno_reclamation_post(uuid, subsno, body, auth_user=auth_user, authorization=authorization)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling UsersApi->users_uuid_subscriptions_subsno_reclamation_post: %s\n" % e)
@@ -675,6 +708,7 @@ Name | Type | Description  | Notes
  **uuid** | [**str**](.md)|  | 
  **subsno** | **int**|  | 
  **body** | [**NewDeliveryReclamation**](NewDeliveryReclamation.md)|  | 
+ **auth_user** | [**str**](.md)|  | [optional] 
  **authorization** | **str**|  | [optional] 
 
 ### Return type
@@ -693,9 +727,11 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **users_uuid_subscriptions_subsno_reclamations_reclaimno_get**
-> DeliveryReclamation users_uuid_subscriptions_subsno_reclamations_reclaimno_get(uuid, subsno, reclaimno, authorization=authorization)
+> DeliveryReclamation users_uuid_subscriptions_subsno_reclamations_reclaimno_get(uuid, subsno, reclaimno, auth_user=auth_user, authorization=authorization)
 
 Get a delivery reclamation
+
+Authorization header expects the following format ‘OAuth {token}’
 
 ### Example
 
@@ -711,11 +747,12 @@ api_instance = persona.UsersApi()
 uuid = 'uuid_example' # str | 
 subsno = 56 # int | 
 reclaimno = 56 # int | 
+auth_user = 'auth_user_example' # str |  (optional)
 authorization = 'authorization_example' # str |  (optional)
 
 try:
     # Get a delivery reclamation
-    api_response = api_instance.users_uuid_subscriptions_subsno_reclamations_reclaimno_get(uuid, subsno, reclaimno, authorization=authorization)
+    api_response = api_instance.users_uuid_subscriptions_subsno_reclamations_reclaimno_get(uuid, subsno, reclaimno, auth_user=auth_user, authorization=authorization)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling UsersApi->users_uuid_subscriptions_subsno_reclamations_reclaimno_get: %s\n" % e)
@@ -728,6 +765,7 @@ Name | Type | Description  | Notes
  **uuid** | [**str**](.md)|  | 
  **subsno** | **int**|  | 
  **reclaimno** | **int**|  | 
+ **auth_user** | [**str**](.md)|  | [optional] 
  **authorization** | **str**|  | [optional] 
 
 ### Return type
@@ -746,9 +784,11 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **users_uuid_subscriptions_subsno_unpause_post**
-> Subscription users_uuid_subscriptions_subsno_unpause_post(uuid, subsno, authorization=authorization)
+> Subscription users_uuid_subscriptions_subsno_unpause_post(uuid, subsno, auth_user=auth_user, authorization=authorization)
 
 Pause users subscription
+
+Authorization header expects the following format ‘OAuth {token}’
 
 ### Example
 
@@ -763,11 +803,12 @@ from pprint import pprint
 api_instance = persona.UsersApi()
 uuid = 'uuid_example' # str | 
 subsno = 56 # int | 
+auth_user = 'auth_user_example' # str |  (optional)
 authorization = 'authorization_example' # str |  (optional)
 
 try:
     # Pause users subscription
-    api_response = api_instance.users_uuid_subscriptions_subsno_unpause_post(uuid, subsno, authorization=authorization)
+    api_response = api_instance.users_uuid_subscriptions_subsno_unpause_post(uuid, subsno, auth_user=auth_user, authorization=authorization)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling UsersApi->users_uuid_subscriptions_subsno_unpause_post: %s\n" % e)
@@ -779,6 +820,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **uuid** | [**str**](.md)|  | 
  **subsno** | **int**|  | 
+ **auth_user** | [**str**](.md)|  | [optional] 
  **authorization** | **str**|  | [optional] 
 
 ### Return type
