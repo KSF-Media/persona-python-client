@@ -74,6 +74,7 @@ Class | Method | HTTP request | Description
 *AccountApi* | [**account_code_for_token_post**](docs/AccountApi.md#account_code_for_token_post) | **POST** /account/codeForToken | Get a password reset token
 *AccountApi* | [**account_forgot_pass_post**](docs/AccountApi.md#account_forgot_pass_post) | **POST** /account/forgotPass | Forgot Password
 *AccountApi* | [**account_reset_forgotten_password_post**](docs/AccountApi.md#account_reset_forgotten_password_post) | **POST** /account/resetForgottenPassword | Reset a forgotten password with a token
+*AdminApi* | [**admin_search_get**](docs/AdminApi.md#admin_search_get) | **GET** /admin/search | Search for users
 *AdminApi* | [**admin_uuid_get**](docs/AdminApi.md#admin_uuid_get) | **GET** /admin/{uuid} | Get user by admin credentials.
 *EntitlementsApi* | [**entitlements_allow_post**](docs/EntitlementsApi.md#entitlements_allow_post) | **POST** /entitlements/allow | 
 *EntitlementsApi* | [**entitlements_allow_uuid_post**](docs/EntitlementsApi.md#entitlements_allow_uuid_post) | **POST** /entitlements/allow/{uuid} | Grant product access to a customer
