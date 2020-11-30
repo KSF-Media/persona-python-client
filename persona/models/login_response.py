@@ -33,27 +33,31 @@ class LoginResponse(object):
     openapi_types = {
         'token': 'str',
         'sso_code': 'str',
-        'uuid': 'str'
+        'uuid': 'str',
+        'is_admin': 'bool'
     }
 
     attribute_map = {
         'token': 'token',
         'sso_code': 'ssoCode',
-        'uuid': 'uuid'
+        'uuid': 'uuid',
+        'is_admin': 'isAdmin'
     }
 
-    def __init__(self, token=None, sso_code=None, uuid=None):  # noqa: E501
+    def __init__(self, token=None, sso_code=None, uuid=None, is_admin=None):  # noqa: E501
         """LoginResponse - a model defined in OpenAPI"""  # noqa: E501
 
         self._token = None
         self._sso_code = None
         self._uuid = None
+        self._is_admin = None
         self.discriminator = None
 
         self.token = token
         if sso_code is not None:
             self.sso_code = sso_code
         self.uuid = uuid
+        self.is_admin = is_admin
 
     @property
     def token(self):
@@ -121,6 +125,29 @@ class LoginResponse(object):
             raise ValueError("Invalid value for `uuid`, must not be `None`")  # noqa: E501
 
         self._uuid = uuid
+
+    @property
+    def is_admin(self):
+        """Gets the is_admin of this LoginResponse.  # noqa: E501
+
+
+        :return: The is_admin of this LoginResponse.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_admin
+
+    @is_admin.setter
+    def is_admin(self, is_admin):
+        """Sets the is_admin of this LoginResponse.
+
+
+        :param is_admin: The is_admin of this LoginResponse.  # noqa: E501
+        :type: bool
+        """
+        if is_admin is None:
+            raise ValueError("Invalid value for `is_admin`, must not be `None`")  # noqa: E501
+
+        self._is_admin = is_admin
 
     def to_dict(self):
         """Returns the model properties as a dict"""
