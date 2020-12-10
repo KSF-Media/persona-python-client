@@ -5,6 +5,7 @@ All URIs are relative to *http://http:/v1*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**users_post**](UsersApi.md#users_post) | **POST** /users | Create a new user.
+[**users_search_get**](UsersApi.md#users_search_get) | **GET** /users/search | Search for users
 [**users_temporary_post**](UsersApi.md#users_temporary_post) | **POST** /users/temporary | Create a new user with email.
 [**users_uuid_entitlement_get**](UsersApi.md#users_uuid_entitlement_get) | **GET** /users/{uuid}/entitlement | Get users entitlements.
 [**users_uuid_gdpr_put**](UsersApi.md#users_uuid_gdpr_put) | **PUT** /users/{uuid}/gdpr | Updates the GDPR consent settings for a given user.
@@ -64,6 +65,57 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json;charset=utf-8
+ - **Accept**: application/json;charset=utf-8
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **users_search_get**
+> list[User] users_search_get(query, auth_user=auth_user, authorization=authorization)
+
+Search for users
+
+### Example
+
+```python
+from __future__ import print_function
+import time
+import persona
+from persona.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = persona.UsersApi()
+query = 'query_example' # str | 
+auth_user = 'auth_user_example' # str |  (optional)
+authorization = 'authorization_example' # str |  (optional)
+
+try:
+    # Search for users
+    api_response = api_instance.users_search_get(query, auth_user=auth_user, authorization=authorization)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling UsersApi->users_search_get: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **query** | **str**|  | 
+ **auth_user** | [**str**](.md)|  | [optional] 
+ **authorization** | **str**|  | [optional] 
+
+### Return type
+
+[**list[User]**](User.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/json;charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

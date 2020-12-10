@@ -28,13 +28,6 @@ class TestAdminApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_admin_search_get(self):
-        """Test case for admin_search_get
-
-        Search for users  # noqa: E501
-        """
-        pass
-
     def test_admin_uuid_get(self):
         """Test case for admin_uuid_get
 
