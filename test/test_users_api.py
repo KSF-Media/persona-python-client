@@ -112,6 +112,13 @@ class TestUsersApi(unittest.TestCase):
         """
         pass
 
+    def test_users_uuid_subscriptions_subsno_cancel_put(self):
+        """Test case for users_uuid_subscriptions_subsno_cancel_put
+
+        Cancels user subscription  # noqa: E501
+        """
+        pass
+
     def test_users_uuid_subscriptions_subsno_pause_post(self):
         """Test case for users_uuid_subscriptions_subsno_pause_post
 
