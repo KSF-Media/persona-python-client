@@ -42,7 +42,8 @@ class Payment(object):
         'type': 'str',
         'state': 'str',
         'disc_percent': 'float',
-        'disc_amount': 'float'
+        'disc_amount': 'float',
+        'reference': 'str'
     }
 
     attribute_map = {
@@ -57,10 +58,11 @@ class Payment(object):
         'type': 'type',
         'state': 'state',
         'disc_percent': 'discPercent',
-        'disc_amount': 'discAmount'
+        'disc_amount': 'discAmount',
+        'reference': 'reference'
     }
 
-    def __init__(self, invno=None, date=None, due_date=None, expenses=None, interest=None, vat=None, amount=None, open_amount=None, type=None, state=None, disc_percent=None, disc_amount=None):  # noqa: E501
+    def __init__(self, invno=None, date=None, due_date=None, expenses=None, interest=None, vat=None, amount=None, open_amount=None, type=None, state=None, disc_percent=None, disc_amount=None, reference=None):  # noqa: E501
         """Payment - a model defined in OpenAPI"""  # noqa: E501
 
         self._invno = None
@@ -75,6 +77,7 @@ class Payment(object):
         self._state = None
         self._disc_percent = None
         self._disc_amount = None
+        self._reference = None
         self.discriminator = None
 
         self.invno = invno
@@ -91,6 +94,8 @@ class Payment(object):
             self.disc_percent = disc_percent
         if disc_amount is not None:
             self.disc_amount = disc_amount
+        if reference is not None:
+            self.reference = reference
 
     @property
     def invno(self):
@@ -367,6 +372,27 @@ class Payment(object):
         """
 
         self._disc_amount = disc_amount
+
+    @property
+    def reference(self):
+        """Gets the reference of this Payment.  # noqa: E501
+
+
+        :return: The reference of this Payment.  # noqa: E501
+        :rtype: str
+        """
+        return self._reference
+
+    @reference.setter
+    def reference(self, reference):
+        """Sets the reference of this Payment.
+
+
+        :param reference: The reference of this Payment.  # noqa: E501
+        :type: str
+        """
+
+        self._reference = reference
 
     def to_dict(self):
         """Returns the model properties as a dict"""
