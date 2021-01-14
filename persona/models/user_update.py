@@ -33,21 +33,24 @@ class UserUpdate(object):
     openapi_types = {
         'first_name': 'str',
         'last_name': 'str',
-        'address': 'UserUpdateAddress'
+        'address': 'UserUpdateAddress',
+        'pending_address_changes': 'list[object]'
     }
 
     attribute_map = {
         'first_name': 'firstName',
         'last_name': 'lastName',
-        'address': 'address'
+        'address': 'address',
+        'pending_address_changes': 'pendingAddressChanges'
     }
 
-    def __init__(self, first_name=None, last_name=None, address=None):  # noqa: E501
+    def __init__(self, first_name=None, last_name=None, address=None, pending_address_changes=None):  # noqa: E501
         """UserUpdate - a model defined in OpenAPI"""  # noqa: E501
 
         self._first_name = None
         self._last_name = None
         self._address = None
+        self._pending_address_changes = None
         self.discriminator = None
 
         if first_name is not None:
@@ -56,6 +59,8 @@ class UserUpdate(object):
             self.last_name = last_name
         if address is not None:
             self.address = address
+        if pending_address_changes is not None:
+            self.pending_address_changes = pending_address_changes
 
     @property
     def first_name(self):
@@ -123,6 +128,27 @@ class UserUpdate(object):
         """
 
         self._address = address
+
+    @property
+    def pending_address_changes(self):
+        """Gets the pending_address_changes of this UserUpdate.  # noqa: E501
+
+
+        :return: The pending_address_changes of this UserUpdate.  # noqa: E501
+        :rtype: list[object]
+        """
+        return self._pending_address_changes
+
+    @pending_address_changes.setter
+    def pending_address_changes(self, pending_address_changes):
+        """Sets the pending_address_changes of this UserUpdate.
+
+
+        :param pending_address_changes: The pending_address_changes of this UserUpdate.  # noqa: E501
+        :type: list[object]
+        """
+
+        self._pending_address_changes = pending_address_changes
 
     def to_dict(self):
         """Returns the model properties as a dict"""
