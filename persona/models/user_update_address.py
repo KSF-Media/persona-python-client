@@ -33,26 +33,31 @@ class UserUpdateAddress(object):
     openapi_types = {
         'country_code': 'str',
         'zip_code': 'str',
-        'street_address': 'str'
+        'street_address': 'str',
+        'valid_from': 'date'
     }
 
     attribute_map = {
         'country_code': 'countryCode',
         'zip_code': 'zipCode',
-        'street_address': 'streetAddress'
+        'street_address': 'streetAddress',
+        'valid_from': 'validFrom'
     }
 
-    def __init__(self, country_code=None, zip_code=None, street_address=None):  # noqa: E501
+    def __init__(self, country_code=None, zip_code=None, street_address=None, valid_from=None):  # noqa: E501
         """UserUpdateAddress - a model defined in OpenAPI"""  # noqa: E501
 
         self._country_code = None
         self._zip_code = None
         self._street_address = None
+        self._valid_from = None
         self.discriminator = None
 
         self.country_code = country_code
         self.zip_code = zip_code
         self.street_address = street_address
+        if valid_from is not None:
+            self.valid_from = valid_from
 
     @property
     def country_code(self):
@@ -122,6 +127,27 @@ class UserUpdateAddress(object):
             raise ValueError("Invalid value for `street_address`, must not be `None`")  # noqa: E501
 
         self._street_address = street_address
+
+    @property
+    def valid_from(self):
+        """Gets the valid_from of this UserUpdateAddress.  # noqa: E501
+
+
+        :return: The valid_from of this UserUpdateAddress.  # noqa: E501
+        :rtype: date
+        """
+        return self._valid_from
+
+    @valid_from.setter
+    def valid_from(self, valid_from):
+        """Sets the valid_from of this UserUpdateAddress.
+
+
+        :param valid_from: The valid_from of this UserUpdateAddress.  # noqa: E501
+        :type: date
+        """
+
+        self._valid_from = valid_from
 
     def to_dict(self):
         """Returns the model properties as a dict"""
