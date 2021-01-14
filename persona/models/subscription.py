@@ -43,6 +43,7 @@ class Subscription(object):
         'extsubsexists': 'bool',
         'campaign': 'Campaign',
         'paused': 'list[PausedSubscription]',
+        'receiver': 'str',
         'delivery_address': 'DeliveryAddress',
         'pending_address_changes': 'list[PendingAddressChange]',
         'order_number': 'str',
@@ -63,6 +64,7 @@ class Subscription(object):
         'extsubsexists': 'extsubsexists',
         'campaign': 'campaign',
         'paused': 'paused',
+        'receiver': 'receiver',
         'delivery_address': 'deliveryAddress',
         'pending_address_changes': 'pendingAddressChanges',
         'order_number': 'orderNumber',
@@ -70,7 +72,7 @@ class Subscription(object):
         'payment_method_id': 'paymentMethodId'
     }
 
-    def __init__(self, subsno=None, extno=None, cusno=None, paycusno=None, kind=None, state=None, pricegroup=None, package=None, dates=None, extsubsexists=None, campaign=None, paused=None, delivery_address=None, pending_address_changes=None, order_number=None, payment_method=None, payment_method_id=None):  # noqa: E501
+    def __init__(self, subsno=None, extno=None, cusno=None, paycusno=None, kind=None, state=None, pricegroup=None, package=None, dates=None, extsubsexists=None, campaign=None, paused=None, receiver=None, delivery_address=None, pending_address_changes=None, order_number=None, payment_method=None, payment_method_id=None):  # noqa: E501
         """Subscription - a model defined in OpenAPI"""  # noqa: E501
 
         self._subsno = None
@@ -85,6 +87,7 @@ class Subscription(object):
         self._extsubsexists = None
         self._campaign = None
         self._paused = None
+        self._receiver = None
         self._delivery_address = None
         self._pending_address_changes = None
         self._order_number = None
@@ -107,6 +110,8 @@ class Subscription(object):
             self.campaign = campaign
         if paused is not None:
             self.paused = paused
+        if receiver is not None:
+            self.receiver = receiver
         if delivery_address is not None:
             self.delivery_address = delivery_address
         if pending_address_changes is not None:
@@ -403,6 +408,27 @@ class Subscription(object):
         """
 
         self._paused = paused
+
+    @property
+    def receiver(self):
+        """Gets the receiver of this Subscription.  # noqa: E501
+
+
+        :return: The receiver of this Subscription.  # noqa: E501
+        :rtype: str
+        """
+        return self._receiver
+
+    @receiver.setter
+    def receiver(self, receiver):
+        """Sets the receiver of this Subscription.
+
+
+        :param receiver: The receiver of this Subscription.  # noqa: E501
+        :type: str
+        """
+
+        self._receiver = receiver
 
     @property
     def delivery_address(self):
