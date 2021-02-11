@@ -119,6 +119,13 @@ class TestUsersApi(unittest.TestCase):
         """
         pass
 
+    def test_users_uuid_subscriptions_subsno_pause_patch(self):
+        """Test case for users_uuid_subscriptions_subsno_pause_patch
+
+        Edit pause duration  # noqa: E501
+        """
+        pass
+
     def test_users_uuid_subscriptions_subsno_pause_post(self):
         """Test case for users_uuid_subscriptions_subsno_pause_post
 

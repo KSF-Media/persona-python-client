@@ -79,6 +79,7 @@ from persona.models.product import Product
 from persona.models.subscription import Subscription
 from persona.models.subscription_dates import SubscriptionDates
 from persona.models.subscription_pause_dates import SubscriptionPauseDates
+from persona.models.subscription_pause_edit import SubscriptionPauseEdit
 from persona.models.subscription_payments import SubscriptionPayments
 from persona.models.temporary_address_change import TemporaryAddressChange
 from persona.models.token_response import TokenResponse
