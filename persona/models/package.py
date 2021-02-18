@@ -37,7 +37,7 @@ class Package(object):
         'digital_only': 'bool',
         'products': 'list[Product]',
         'offers': 'list[PackageOffer]',
-        'campaigns': 'list[Campaign]',
+        'campaigns': 'list[PackageCampaign]',
         'next_delivery': 'date',
         'description': 'PackageDescription'
     }
@@ -224,7 +224,7 @@ class Package(object):
 
 
         :return: The campaigns of this Package.  # noqa: E501
-        :rtype: list[Campaign]
+        :rtype: list[PackageCampaign]
         """
         return self._campaigns
 
@@ -234,7 +234,7 @@ class Package(object):
 
 
         :param campaigns: The campaigns of this Package.  # noqa: E501
-        :type: list[Campaign]
+        :type: list[PackageCampaign]
         """
         if campaigns is None:
             raise ValueError("Invalid value for `campaigns`, must not be `None`")  # noqa: E501

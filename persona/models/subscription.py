@@ -41,7 +41,7 @@ class Subscription(object):
         'package': 'Package',
         'dates': 'SubscriptionDates',
         'extsubsexists': 'bool',
-        'campaign': 'Campaign',
+        'campaign': 'PackageCampaign',
         'paused': 'list[PausedSubscription]',
         'receiver': 'str',
         'delivery_address': 'DeliveryAddress',
@@ -373,7 +373,7 @@ class Subscription(object):
 
 
         :return: The campaign of this Subscription.  # noqa: E501
-        :rtype: Campaign
+        :rtype: PackageCampaign
         """
         return self._campaign
 
@@ -383,7 +383,7 @@ class Subscription(object):
 
 
         :param campaign: The campaign of this Subscription.  # noqa: E501
-        :type: Campaign
+        :type: PackageCampaign
         """
 
         self._campaign = campaign

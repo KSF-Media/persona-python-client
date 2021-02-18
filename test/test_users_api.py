@@ -105,6 +105,13 @@ class TestUsersApi(unittest.TestCase):
         """
         pass
 
+    def test_users_uuid_subscriptions_subsno_address_change_patch(self):
+        """Test case for users_uuid_subscriptions_subsno_address_change_patch
+
+        Edit temporary address change dates of a subscription  # noqa: E501
+        """
+        pass
+
     def test_users_uuid_subscriptions_subsno_address_change_post(self):
         """Test case for users_uuid_subscriptions_subsno_address_change_post
 

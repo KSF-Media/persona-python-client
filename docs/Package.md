@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **digital_only** | **bool** |  | 
 **products** | [**list[Product]**](Product.md) |  | 
 **offers** | [**list[PackageOffer]**](PackageOffer.md) |  | 
-**campaigns** | [**list[Campaign]**](Campaign.md) |  | 
+**campaigns** | [**list[PackageCampaign]**](PackageCampaign.md) |  | 
 **next_delivery** | **date** |  | [optional] 
 **description** | [**PackageDescription**](PackageDescription.md) |  | [optional] 
 

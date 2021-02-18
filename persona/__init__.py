@@ -34,7 +34,6 @@ from persona.exceptions import ApiException
 # import models into sdk package
 from persona.models.active_days import ActiveDays
 from persona.models.address import Address
-from persona.models.campaign import Campaign
 from persona.models.cancel_subscription_reason import CancelSubscriptionReason
 from persona.models.code_for_token_data import CodeForTokenData
 from persona.models.delete_temp_address_change_dates import DeleteTempAddressChangeDates
@@ -68,6 +67,7 @@ from persona.models.new_delivery_reclamation import NewDeliveryReclamation
 from persona.models.new_temporary_user import NewTemporaryUser
 from persona.models.new_user import NewUser
 from persona.models.package import Package
+from persona.models.package_campaign import PackageCampaign
 from persona.models.package_description import PackageDescription
 from persona.models.package_offer import PackageOffer
 from persona.models.paper import Paper
@@ -82,6 +82,7 @@ from persona.models.subscription_pause_dates import SubscriptionPauseDates
 from persona.models.subscription_pause_edit import SubscriptionPauseEdit
 from persona.models.subscription_payments import SubscriptionPayments
 from persona.models.temporary_address_change import TemporaryAddressChange
+from persona.models.temporary_address_change_dates import TemporaryAddressChangeDates
 from persona.models.token_response import TokenResponse
 from persona.models.update_password_data import UpdatePasswordData
 from persona.models.user import User

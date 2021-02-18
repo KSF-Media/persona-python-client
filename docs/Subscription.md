@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **package** | [**Package**](Package.md) |  | 
 **dates** | [**SubscriptionDates**](SubscriptionDates.md) |  | 
 **extsubsexists** | **bool** |  | 
-**campaign** | [**Campaign**](Campaign.md) |  | [optional] 
+**campaign** | [**PackageCampaign**](PackageCampaign.md) |  | [optional] 
 **paused** | [**list[PausedSubscription]**](PausedSubscription.md) |  | [optional] 
 **receiver** | **str** |  | [optional] 
 **delivery_address** | [**DeliveryAddress**](DeliveryAddress.md) |  | [optional] 

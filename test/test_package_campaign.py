@@ -15,12 +15,12 @@ from __future__ import absolute_import
 import unittest
 
 import persona
-from persona.models.campaign import Campaign  # noqa: E501
+from persona.models.package_campaign import PackageCampaign  # noqa: E501
 from persona.rest import ApiException
 
 
-class TestCampaign(unittest.TestCase):
-    """Campaign unit test stubs"""
+class TestPackageCampaign(unittest.TestCase):
+    """PackageCampaign unit test stubs"""
 
     def setUp(self):
         pass
@@ -28,10 +28,10 @@ class TestCampaign(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testCampaign(self):
-        """Test Campaign"""
+    def testPackageCampaign(self):
+        """Test PackageCampaign"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = persona.models.campaign.Campaign()  # noqa: E501
+        # model = persona.models.package_campaign.PackageCampaign()  # noqa: E501
         pass
 
 

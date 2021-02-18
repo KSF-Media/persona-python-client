@@ -15,6 +15,7 @@ Method | HTTP request | Description
 [**users_uuid_patch**](UsersApi.md#users_uuid_patch) | **PATCH** /users/{uuid} | Update a user
 [**users_uuid_payments_get**](UsersApi.md#users_uuid_payments_get) | **GET** /users/{uuid}/payments | Get user&#39;s subscriptions and payment events
 [**users_uuid_subscriptions_subsno_address_change_delete**](UsersApi.md#users_uuid_subscriptions_subsno_address_change_delete) | **DELETE** /users/{uuid}/subscriptions/{subsno}/addressChange | Delete temporary address change for subscription
+[**users_uuid_subscriptions_subsno_address_change_patch**](UsersApi.md#users_uuid_subscriptions_subsno_address_change_patch) | **PATCH** /users/{uuid}/subscriptions/{subsno}/addressChange | Edit temporary address change dates of a subscription
 [**users_uuid_subscriptions_subsno_address_change_post**](UsersApi.md#users_uuid_subscriptions_subsno_address_change_post) | **POST** /users/{uuid}/subscriptions/{subsno}/addressChange | Make a temporary address change for a subscription
 [**users_uuid_subscriptions_subsno_cancel_put**](UsersApi.md#users_uuid_subscriptions_subsno_cancel_put) | **PUT** /users/{uuid}/subscriptions/{subsno}/cancel | Cancels user subscription
 [**users_uuid_subscriptions_subsno_pause_patch**](UsersApi.md#users_uuid_subscriptions_subsno_pause_patch) | **PATCH** /users/{uuid}/subscriptions/{subsno}/pause | Edit pause duration
@@ -591,6 +592,63 @@ Name | Type | Description  | Notes
  **uuid** | [**str**](.md)|  | 
  **subsno** | **int**|  | 
  **body** | [**DeleteTempAddressChangeDates**](DeleteTempAddressChangeDates.md)|  | 
+ **auth_user** | [**str**](.md)|  | [optional] 
+ **authorization** | **str**|  | [optional] 
+
+### Return type
+
+[**Subscription**](Subscription.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json;charset=utf-8
+ - **Accept**: application/json;charset=utf-8
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **users_uuid_subscriptions_subsno_address_change_patch**
+> Subscription users_uuid_subscriptions_subsno_address_change_patch(uuid, subsno, body, auth_user=auth_user, authorization=authorization)
+
+Edit temporary address change dates of a subscription
+
+Authorization header expects the following format ‘OAuth {token}’
+
+### Example
+
+```python
+from __future__ import print_function
+import time
+import persona
+from persona.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = persona.UsersApi()
+uuid = 'uuid_example' # str | 
+subsno = 56 # int | 
+body = persona.TemporaryAddressChangeDates() # TemporaryAddressChangeDates | 
+auth_user = 'auth_user_example' # str |  (optional)
+authorization = 'authorization_example' # str |  (optional)
+
+try:
+    # Edit temporary address change dates of a subscription
+    api_response = api_instance.users_uuid_subscriptions_subsno_address_change_patch(uuid, subsno, body, auth_user=auth_user, authorization=authorization)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling UsersApi->users_uuid_subscriptions_subsno_address_change_patch: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **uuid** | [**str**](.md)|  | 
+ **subsno** | **int**|  | 
+ **body** | [**TemporaryAddressChangeDates**](TemporaryAddressChangeDates.md)|  | 
  **auth_user** | [**str**](.md)|  | [optional] 
  **authorization** | **str**|  | [optional] 
 
