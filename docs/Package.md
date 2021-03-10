@@ -11,6 +11,8 @@ Name | Type | Description | Notes
 **offers** | [**list[PackageOffer]**](PackageOffer.md) |  | 
 **campaigns** | [**list[PackageCampaign]**](PackageCampaign.md) |  | 
 **next_delivery** | **date** |  | [optional] 
+**can_pause** | **bool** |  | 
+**can_temp_addr** | **bool** |  | 
 **description** | [**PackageDescription**](PackageDescription.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

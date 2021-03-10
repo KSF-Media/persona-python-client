@@ -39,6 +39,8 @@ class Package(object):
         'offers': 'list[PackageOffer]',
         'campaigns': 'list[PackageCampaign]',
         'next_delivery': 'date',
+        'can_pause': 'bool',
+        'can_temp_addr': 'bool',
         'description': 'PackageDescription'
     }
 
@@ -51,10 +53,12 @@ class Package(object):
         'offers': 'offers',
         'campaigns': 'campaigns',
         'next_delivery': 'nextDelivery',
+        'can_pause': 'canPause',
+        'can_temp_addr': 'canTempAddr',
         'description': 'description'
     }
 
-    def __init__(self, id=None, name=None, paper=None, digital_only=None, products=None, offers=None, campaigns=None, next_delivery=None, description=None):  # noqa: E501
+    def __init__(self, id=None, name=None, paper=None, digital_only=None, products=None, offers=None, campaigns=None, next_delivery=None, can_pause=None, can_temp_addr=None, description=None):  # noqa: E501
         """Package - a model defined in OpenAPI"""  # noqa: E501
 
         self._id = None
@@ -65,6 +69,8 @@ class Package(object):
         self._offers = None
         self._campaigns = None
         self._next_delivery = None
+        self._can_pause = None
+        self._can_temp_addr = None
         self._description = None
         self.discriminator = None
 
@@ -77,6 +83,8 @@ class Package(object):
         self.campaigns = campaigns
         if next_delivery is not None:
             self.next_delivery = next_delivery
+        self.can_pause = can_pause
+        self.can_temp_addr = can_temp_addr
         if description is not None:
             self.description = description
 
@@ -261,6 +269,52 @@ class Package(object):
         """
 
         self._next_delivery = next_delivery
+
+    @property
+    def can_pause(self):
+        """Gets the can_pause of this Package.  # noqa: E501
+
+
+        :return: The can_pause of this Package.  # noqa: E501
+        :rtype: bool
+        """
+        return self._can_pause
+
+    @can_pause.setter
+    def can_pause(self, can_pause):
+        """Sets the can_pause of this Package.
+
+
+        :param can_pause: The can_pause of this Package.  # noqa: E501
+        :type: bool
+        """
+        if can_pause is None:
+            raise ValueError("Invalid value for `can_pause`, must not be `None`")  # noqa: E501
+
+        self._can_pause = can_pause
+
+    @property
+    def can_temp_addr(self):
+        """Gets the can_temp_addr of this Package.  # noqa: E501
+
+
+        :return: The can_temp_addr of this Package.  # noqa: E501
+        :rtype: bool
+        """
+        return self._can_temp_addr
+
+    @can_temp_addr.setter
+    def can_temp_addr(self, can_temp_addr):
+        """Sets the can_temp_addr of this Package.
+
+
+        :param can_temp_addr: The can_temp_addr of this Package.  # noqa: E501
+        :type: bool
+        """
+        if can_temp_addr is None:
+            raise ValueError("Invalid value for `can_temp_addr`, must not be `None`")  # noqa: E501
+
+        self._can_temp_addr = can_temp_addr
 
     @property
     def description(self):
