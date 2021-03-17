@@ -34,6 +34,7 @@ class UserUpdate(object):
         'first_name': 'str',
         'last_name': 'str',
         'address': 'UserUpdateAddress',
+        'email': 'str',
         'pending_address_changes': 'list[object]'
     }
 
@@ -41,15 +42,17 @@ class UserUpdate(object):
         'first_name': 'firstName',
         'last_name': 'lastName',
         'address': 'address',
+        'email': 'email',
         'pending_address_changes': 'pendingAddressChanges'
     }
 
-    def __init__(self, first_name=None, last_name=None, address=None, pending_address_changes=None):  # noqa: E501
+    def __init__(self, first_name=None, last_name=None, address=None, email=None, pending_address_changes=None):  # noqa: E501
         """UserUpdate - a model defined in OpenAPI"""  # noqa: E501
 
         self._first_name = None
         self._last_name = None
         self._address = None
+        self._email = None
         self._pending_address_changes = None
         self.discriminator = None
 
@@ -59,6 +62,8 @@ class UserUpdate(object):
             self.last_name = last_name
         if address is not None:
             self.address = address
+        if email is not None:
+            self.email = email
         if pending_address_changes is not None:
             self.pending_address_changes = pending_address_changes
 
@@ -128,6 +133,27 @@ class UserUpdate(object):
         """
 
         self._address = address
+
+    @property
+    def email(self):
+        """Gets the email of this UserUpdate.  # noqa: E501
+
+
+        :return: The email of this UserUpdate.  # noqa: E501
+        :rtype: str
+        """
+        return self._email
+
+    @email.setter
+    def email(self, email):
+        """Sets the email of this UserUpdate.
+
+
+        :param email: The email of this UserUpdate.  # noqa: E501
+        :type: str
+        """
+
+        self._email = email
 
     @property
     def pending_address_changes(self):
