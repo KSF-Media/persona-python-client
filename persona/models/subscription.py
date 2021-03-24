@@ -48,7 +48,7 @@ class Subscription(object):
         'pending_address_changes': 'list[PendingAddressChange]',
         'order_number': 'str',
         'payment_method': 'str',
-        'payment_method_id': 'int'
+        'payment_method_id': 'PaymentMethodId'
     }
 
     attribute_map = {
@@ -127,6 +127,7 @@ class Subscription(object):
     def subsno(self):
         """Gets the subsno of this Subscription.  # noqa: E501
 
+        Subscription Id - primary key together with extno  # noqa: E501
 
         :return: The subsno of this Subscription.  # noqa: E501
         :rtype: int
@@ -137,6 +138,7 @@ class Subscription(object):
     def subsno(self, subsno):
         """Sets the subsno of this Subscription.
 
+        Subscription Id - primary key together with extno  # noqa: E501
 
         :param subsno: The subsno of this Subscription.  # noqa: E501
         :type: int
@@ -154,6 +156,7 @@ class Subscription(object):
     def extno(self):
         """Gets the extno of this Subscription.  # noqa: E501
 
+        Subscription Extension Id - how many times a subscription has been extended  # noqa: E501
 
         :return: The extno of this Subscription.  # noqa: E501
         :rtype: int
@@ -164,6 +167,7 @@ class Subscription(object):
     def extno(self, extno):
         """Sets the extno of this Subscription.
 
+        Subscription Extension Id - how many times a subscription has been extended  # noqa: E501
 
         :param extno: The extno of this Subscription.  # noqa: E501
         :type: int
@@ -181,6 +185,7 @@ class Subscription(object):
     def cusno(self):
         """Gets the cusno of this Subscription.  # noqa: E501
 
+        Customer getting the subscription  # noqa: E501
 
         :return: The cusno of this Subscription.  # noqa: E501
         :rtype: int
@@ -191,6 +196,7 @@ class Subscription(object):
     def cusno(self, cusno):
         """Sets the cusno of this Subscription.
 
+        Customer getting the subscription  # noqa: E501
 
         :param cusno: The cusno of this Subscription.  # noqa: E501
         :type: int
@@ -208,6 +214,7 @@ class Subscription(object):
     def paycusno(self):
         """Gets the paycusno of this Subscription.  # noqa: E501
 
+        Customer paying for the subscription  # noqa: E501
 
         :return: The paycusno of this Subscription.  # noqa: E501
         :rtype: int
@@ -218,6 +225,7 @@ class Subscription(object):
     def paycusno(self, paycusno):
         """Sets the paycusno of this Subscription.
 
+        Customer paying for the subscription  # noqa: E501
 
         :param paycusno: The paycusno of this Subscription.  # noqa: E501
         :type: int
@@ -235,6 +243,7 @@ class Subscription(object):
     def kind(self):
         """Gets the kind of this Subscription.  # noqa: E501
 
+        Subscription kind - what kind of order is it  # noqa: E501
 
         :return: The kind of this Subscription.  # noqa: E501
         :rtype: str
@@ -245,12 +254,19 @@ class Subscription(object):
     def kind(self, kind):
         """Sets the kind of this Subscription.
 
+        Subscription kind - what kind of order is it  # noqa: E501
 
         :param kind: The kind of this Subscription.  # noqa: E501
         :type: str
         """
         if kind is None:
             raise ValueError("Invalid value for `kind`, must not be `None`")  # noqa: E501
+        allowed_values = ["StandingOrder", "TimeLimitedOrder", "NewsStandOrder", "FreeOrder", "Testing1", "Testing2"]  # noqa: E501
+        if kind not in allowed_values:
+            raise ValueError(
+                "Invalid value for `kind` ({0}), must be one of {1}"  # noqa: E501
+                .format(kind, allowed_values)
+            )
 
         self._kind = kind
 
@@ -258,6 +274,7 @@ class Subscription(object):
     def state(self):
         """Gets the state of this Subscription.  # noqa: E501
 
+        Current state of the Subscription  # noqa: E501
 
         :return: The state of this Subscription.  # noqa: E501
         :rtype: str
@@ -268,12 +285,19 @@ class Subscription(object):
     def state(self, state):
         """Sets the state of this Subscription.
 
+        Current state of the Subscription  # noqa: E501
 
         :param state: The state of this Subscription.  # noqa: E501
         :type: str
         """
         if state is None:
             raise ValueError("Invalid value for `state`, must not be `None`")  # noqa: E501
+        allowed_values = ["Upcoming", "Active", "Paused", "Ended", "UnpaidAndCanceled", "Canceled", "CanceledWithLatePayment", "RestartedAfterLatePayment", "DeactivatedRecently", "Unknown"]  # noqa: E501
+        if state not in allowed_values:
+            raise ValueError(
+                "Invalid value for `state` ({0}), must be one of {1}"  # noqa: E501
+                .format(state, allowed_values)
+            )
 
         self._state = state
 
@@ -281,6 +305,7 @@ class Subscription(object):
     def pricegroup(self):
         """Gets the pricegroup of this Subscription.  # noqa: E501
 
+        Pricegroup of the Subscription  # noqa: E501
 
         :return: The pricegroup of this Subscription.  # noqa: E501
         :rtype: str
@@ -291,10 +316,17 @@ class Subscription(object):
     def pricegroup(self, pricegroup):
         """Sets the pricegroup of this Subscription.
 
+        Pricegroup of the Subscription  # noqa: E501
 
         :param pricegroup: The pricegroup of this Subscription.  # noqa: E501
         :type: str
         """
+        allowed_values = ["Normal", "Campaign", "Flex", "Company", "CompanyFlex", "Student", "HBL365Discount"]  # noqa: E501
+        if pricegroup not in allowed_values:
+            raise ValueError(
+                "Invalid value for `pricegroup` ({0}), must be one of {1}"  # noqa: E501
+                .format(pricegroup, allowed_values)
+            )
 
         self._pricegroup = pricegroup
 
@@ -348,6 +380,7 @@ class Subscription(object):
     def extsubsexists(self):
         """Gets the extsubsexists of this Subscription.  # noqa: E501
 
+        If the extension of this subscription exists  # noqa: E501
 
         :return: The extsubsexists of this Subscription.  # noqa: E501
         :rtype: bool
@@ -358,6 +391,7 @@ class Subscription(object):
     def extsubsexists(self, extsubsexists):
         """Sets the extsubsexists of this Subscription.
 
+        If the extension of this subscription exists  # noqa: E501
 
         :param extsubsexists: The extsubsexists of this Subscription.  # noqa: E501
         :type: bool
@@ -392,6 +426,7 @@ class Subscription(object):
     def paused(self):
         """Gets the paused of this Subscription.  # noqa: E501
 
+        Pause periods of this subscription  # noqa: E501
 
         :return: The paused of this Subscription.  # noqa: E501
         :rtype: list[PausedSubscription]
@@ -402,6 +437,7 @@ class Subscription(object):
     def paused(self, paused):
         """Sets the paused of this Subscription.
 
+        Pause periods of this subscription  # noqa: E501
 
         :param paused: The paused of this Subscription.  # noqa: E501
         :type: list[PausedSubscription]
@@ -413,6 +449,7 @@ class Subscription(object):
     def receiver(self):
         """Gets the receiver of this Subscription.  # noqa: E501
 
+        The name of subscription receiver  # noqa: E501
 
         :return: The receiver of this Subscription.  # noqa: E501
         :rtype: str
@@ -423,6 +460,7 @@ class Subscription(object):
     def receiver(self, receiver):
         """Sets the receiver of this Subscription.
 
+        The name of subscription receiver  # noqa: E501
 
         :param receiver: The receiver of this Subscription.  # noqa: E501
         :type: str
@@ -455,6 +493,7 @@ class Subscription(object):
     def pending_address_changes(self):
         """Gets the pending_address_changes of this Subscription.  # noqa: E501
 
+        Pending and ongoing temporary address changes  # noqa: E501
 
         :return: The pending_address_changes of this Subscription.  # noqa: E501
         :rtype: list[PendingAddressChange]
@@ -465,6 +504,7 @@ class Subscription(object):
     def pending_address_changes(self, pending_address_changes):
         """Sets the pending_address_changes of this Subscription.
 
+        Pending and ongoing temporary address changes  # noqa: E501
 
         :param pending_address_changes: The pending_address_changes of this Subscription.  # noqa: E501
         :type: list[PendingAddressChange]
@@ -476,6 +516,7 @@ class Subscription(object):
     def order_number(self):
         """Gets the order_number of this Subscription.  # noqa: E501
 
+        Order number of subscription  # noqa: E501
 
         :return: The order_number of this Subscription.  # noqa: E501
         :rtype: str
@@ -486,6 +527,7 @@ class Subscription(object):
     def order_number(self, order_number):
         """Sets the order_number of this Subscription.
 
+        Order number of subscription  # noqa: E501
 
         :param order_number: The order_number of this Subscription.  # noqa: E501
         :type: str
@@ -497,6 +539,7 @@ class Subscription(object):
     def payment_method(self):
         """Gets the payment_method of this Subscription.  # noqa: E501
 
+        Payment method of subscription  # noqa: E501
 
         :return: The payment_method of this Subscription.  # noqa: E501
         :rtype: str
@@ -507,10 +550,17 @@ class Subscription(object):
     def payment_method(self, payment_method):
         """Sets the payment_method of this Subscription.
 
+        Payment method of subscription  # noqa: E501
 
         :param payment_method: The payment_method of this Subscription.  # noqa: E501
         :type: str
         """
+        allowed_values = ["PaperInvoice", "CreditCard", "NetBank", "ElectronicInvoice", "DirectPayment", "UnknownPaymentMethod"]  # noqa: E501
+        if payment_method not in allowed_values:
+            raise ValueError(
+                "Invalid value for `payment_method` ({0}), must be one of {1}"  # noqa: E501
+                .format(payment_method, allowed_values)
+            )
 
         self._payment_method = payment_method
 
@@ -520,7 +570,7 @@ class Subscription(object):
 
 
         :return: The payment_method_id of this Subscription.  # noqa: E501
-        :rtype: int
+        :rtype: PaymentMethodId
         """
         return self._payment_method_id
 
@@ -530,12 +580,8 @@ class Subscription(object):
 
 
         :param payment_method_id: The payment_method_id of this Subscription.  # noqa: E501
-        :type: int
+        :type: PaymentMethodId
         """
-        if payment_method_id is not None and payment_method_id > 9223372036854775807:  # noqa: E501
-            raise ValueError("Invalid value for `payment_method_id`, must be a value less than or equal to `9223372036854775807`")  # noqa: E501
-        if payment_method_id is not None and payment_method_id < -9223372036854775808:  # noqa: E501
-            raise ValueError("Invalid value for `payment_method_id`, must be a value greater than or equal to `-9223372036854775808`")  # noqa: E501
 
         self._payment_method_id = payment_method_id
 

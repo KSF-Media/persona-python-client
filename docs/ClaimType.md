@@ -1,4 +1,4 @@
-# DeliveryReclamationClaim
+# ClaimType
 
 ## Properties
 Name | Type | Description | Notes

@@ -84,6 +84,7 @@ class Address(object):
     def country_code(self):
         """Gets the country_code of this Address.  # noqa: E501
 
+        Country code  # noqa: E501
 
         :return: The country_code of this Address.  # noqa: E501
         :rtype: str
@@ -94,6 +95,7 @@ class Address(object):
     def country_code(self, country_code):
         """Sets the country_code of this Address.
 
+        Country code  # noqa: E501
 
         :param country_code: The country_code of this Address.  # noqa: E501
         :type: str
@@ -107,6 +109,7 @@ class Address(object):
     def zip_code(self):
         """Gets the zip_code of this Address.  # noqa: E501
 
+        Zip code  # noqa: E501
 
         :return: The zip_code of this Address.  # noqa: E501
         :rtype: str
@@ -117,6 +120,7 @@ class Address(object):
     def zip_code(self, zip_code):
         """Sets the zip_code of this Address.
 
+        Zip code  # noqa: E501
 
         :param zip_code: The zip_code of this Address.  # noqa: E501
         :type: str
@@ -128,6 +132,7 @@ class Address(object):
     def city(self):
         """Gets the city of this Address.  # noqa: E501
 
+        City  # noqa: E501
 
         :return: The city of this Address.  # noqa: E501
         :rtype: str
@@ -138,6 +143,7 @@ class Address(object):
     def city(self, city):
         """Sets the city of this Address.
 
+        City  # noqa: E501
 
         :param city: The city of this Address.  # noqa: E501
         :type: str
@@ -149,6 +155,7 @@ class Address(object):
     def street_address(self):
         """Gets the street_address of this Address.  # noqa: E501
 
+        Street address, containing all details  # noqa: E501
 
         :return: The street_address of this Address.  # noqa: E501
         :rtype: str
@@ -159,6 +166,7 @@ class Address(object):
     def street_address(self, street_address):
         """Sets the street_address of this Address.
 
+        Street address, containing all details  # noqa: E501
 
         :param street_address: The street_address of this Address.  # noqa: E501
         :type: str
@@ -172,6 +180,7 @@ class Address(object):
     def street_name(self):
         """Gets the street_name of this Address.  # noqa: E501
 
+        Street name  # noqa: E501
 
         :return: The street_name of this Address.  # noqa: E501
         :rtype: str
@@ -182,6 +191,7 @@ class Address(object):
     def street_name(self, street_name):
         """Sets the street_name of this Address.
 
+        Street name  # noqa: E501
 
         :param street_name: The street_name of this Address.  # noqa: E501
         :type: str
@@ -193,6 +203,7 @@ class Address(object):
     def house_no(self):
         """Gets the house_no of this Address.  # noqa: E501
 
+        House number  # noqa: E501
 
         :return: The house_no of this Address.  # noqa: E501
         :rtype: str
@@ -203,6 +214,7 @@ class Address(object):
     def house_no(self, house_no):
         """Sets the house_no of this Address.
 
+        House number  # noqa: E501
 
         :param house_no: The house_no of this Address.  # noqa: E501
         :type: str
@@ -214,6 +226,7 @@ class Address(object):
     def staircase(self):
         """Gets the staircase of this Address.  # noqa: E501
 
+        Staircase letter  # noqa: E501
 
         :return: The staircase of this Address.  # noqa: E501
         :rtype: str
@@ -224,6 +237,7 @@ class Address(object):
     def staircase(self, staircase):
         """Sets the staircase of this Address.
 
+        Staircase letter  # noqa: E501
 
         :param staircase: The staircase of this Address.  # noqa: E501
         :type: str
@@ -235,6 +249,7 @@ class Address(object):
     def apartment(self):
         """Gets the apartment of this Address.  # noqa: E501
 
+        Apartment number  # noqa: E501
 
         :return: The apartment of this Address.  # noqa: E501
         :rtype: str
@@ -245,6 +260,7 @@ class Address(object):
     def apartment(self, apartment):
         """Sets the apartment of this Address.
 
+        Apartment number  # noqa: E501
 
         :param apartment: The apartment of this Address.  # noqa: E501
         :type: str

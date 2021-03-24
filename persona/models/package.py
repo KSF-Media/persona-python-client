@@ -92,6 +92,7 @@ class Package(object):
     def id(self):
         """Gets the id of this Package.  # noqa: E501
 
+        Package identifier  # noqa: E501
 
         :return: The id of this Package.  # noqa: E501
         :rtype: str
@@ -102,6 +103,7 @@ class Package(object):
     def id(self, id):
         """Sets the id of this Package.
 
+        Package identifier  # noqa: E501
 
         :param id: The id of this Package.  # noqa: E501
         :type: str
@@ -115,6 +117,7 @@ class Package(object):
     def name(self):
         """Gets the name of this Package.  # noqa: E501
 
+        Package name  # noqa: E501
 
         :return: The name of this Package.  # noqa: E501
         :rtype: str
@@ -125,6 +128,7 @@ class Package(object):
     def name(self, name):
         """Sets the name of this Package.
 
+        Package name  # noqa: E501
 
         :param name: The name of this Package.  # noqa: E501
         :type: str
@@ -161,6 +165,7 @@ class Package(object):
     def digital_only(self):
         """Gets the digital_only of this Package.  # noqa: E501
 
+        All products in this package are digital  # noqa: E501
 
         :return: The digital_only of this Package.  # noqa: E501
         :rtype: bool
@@ -171,6 +176,7 @@ class Package(object):
     def digital_only(self, digital_only):
         """Sets the digital_only of this Package.
 
+        All products in this package are digital  # noqa: E501
 
         :param digital_only: The digital_only of this Package.  # noqa: E501
         :type: bool
@@ -184,6 +190,7 @@ class Package(object):
     def products(self):
         """Gets the products of this Package.  # noqa: E501
 
+        The Products contained in a package  # noqa: E501
 
         :return: The products of this Package.  # noqa: E501
         :rtype: list[Product]
@@ -194,6 +201,7 @@ class Package(object):
     def products(self, products):
         """Sets the products of this Package.
 
+        The Products contained in a package  # noqa: E501
 
         :param products: The products of this Package.  # noqa: E501
         :type: list[Product]
@@ -207,6 +215,7 @@ class Package(object):
     def offers(self):
         """Gets the offers of this Package.  # noqa: E501
 
+        Offers for the package  # noqa: E501
 
         :return: The offers of this Package.  # noqa: E501
         :rtype: list[PackageOffer]
@@ -217,6 +226,7 @@ class Package(object):
     def offers(self, offers):
         """Sets the offers of this Package.
 
+        Offers for the package  # noqa: E501
 
         :param offers: The offers of this Package.  # noqa: E501
         :type: list[PackageOffer]
@@ -230,6 +240,7 @@ class Package(object):
     def campaigns(self):
         """Gets the campaigns of this Package.  # noqa: E501
 
+        Active campaigns for the package  # noqa: E501
 
         :return: The campaigns of this Package.  # noqa: E501
         :rtype: list[PackageCampaign]
@@ -240,6 +251,7 @@ class Package(object):
     def campaigns(self, campaigns):
         """Sets the campaigns of this Package.
 
+        Active campaigns for the package  # noqa: E501
 
         :param campaigns: The campaigns of this Package.  # noqa: E501
         :type: list[PackageCampaign]
@@ -274,6 +286,7 @@ class Package(object):
     def can_pause(self):
         """Gets the can_pause of this Package.  # noqa: E501
 
+        Does the package allow delivery pauses  # noqa: E501
 
         :return: The can_pause of this Package.  # noqa: E501
         :rtype: bool
@@ -284,6 +297,7 @@ class Package(object):
     def can_pause(self, can_pause):
         """Sets the can_pause of this Package.
 
+        Does the package allow delivery pauses  # noqa: E501
 
         :param can_pause: The can_pause of this Package.  # noqa: E501
         :type: bool
@@ -297,6 +311,7 @@ class Package(object):
     def can_temp_addr(self):
         """Gets the can_temp_addr of this Package.  # noqa: E501
 
+        Does the package allow temporary address changes  # noqa: E501
 
         :return: The can_temp_addr of this Package.  # noqa: E501
         :rtype: bool
@@ -307,6 +322,7 @@ class Package(object):
     def can_temp_addr(self, can_temp_addr):
         """Sets the can_temp_addr of this Package.
 
+        Does the package allow temporary address changes  # noqa: E501
 
         :param can_temp_addr: The can_temp_addr of this Package.  # noqa: E501
         :type: bool

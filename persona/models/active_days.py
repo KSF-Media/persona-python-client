@@ -74,6 +74,7 @@ class ActiveDays(object):
     def mon(self):
         """Gets the mon of this ActiveDays.  # noqa: E501
 
+        Active on Monday  # noqa: E501
 
         :return: The mon of this ActiveDays.  # noqa: E501
         :rtype: bool
@@ -84,6 +85,7 @@ class ActiveDays(object):
     def mon(self, mon):
         """Sets the mon of this ActiveDays.
 
+        Active on Monday  # noqa: E501
 
         :param mon: The mon of this ActiveDays.  # noqa: E501
         :type: bool
@@ -97,6 +99,7 @@ class ActiveDays(object):
     def tue(self):
         """Gets the tue of this ActiveDays.  # noqa: E501
 
+        Active on Tuesday  # noqa: E501
 
         :return: The tue of this ActiveDays.  # noqa: E501
         :rtype: bool
@@ -107,6 +110,7 @@ class ActiveDays(object):
     def tue(self, tue):
         """Sets the tue of this ActiveDays.
 
+        Active on Tuesday  # noqa: E501
 
         :param tue: The tue of this ActiveDays.  # noqa: E501
         :type: bool
@@ -120,6 +124,7 @@ class ActiveDays(object):
     def wed(self):
         """Gets the wed of this ActiveDays.  # noqa: E501
 
+        Active on Wednedsday  # noqa: E501
 
         :return: The wed of this ActiveDays.  # noqa: E501
         :rtype: bool
@@ -130,6 +135,7 @@ class ActiveDays(object):
     def wed(self, wed):
         """Sets the wed of this ActiveDays.
 
+        Active on Wednedsday  # noqa: E501
 
         :param wed: The wed of this ActiveDays.  # noqa: E501
         :type: bool
@@ -143,6 +149,7 @@ class ActiveDays(object):
     def thu(self):
         """Gets the thu of this ActiveDays.  # noqa: E501
 
+        Active on Thursday  # noqa: E501
 
         :return: The thu of this ActiveDays.  # noqa: E501
         :rtype: bool
@@ -153,6 +160,7 @@ class ActiveDays(object):
     def thu(self, thu):
         """Sets the thu of this ActiveDays.
 
+        Active on Thursday  # noqa: E501
 
         :param thu: The thu of this ActiveDays.  # noqa: E501
         :type: bool
@@ -166,6 +174,7 @@ class ActiveDays(object):
     def fri(self):
         """Gets the fri of this ActiveDays.  # noqa: E501
 
+        Active on Friday  # noqa: E501
 
         :return: The fri of this ActiveDays.  # noqa: E501
         :rtype: bool
@@ -176,6 +185,7 @@ class ActiveDays(object):
     def fri(self, fri):
         """Sets the fri of this ActiveDays.
 
+        Active on Friday  # noqa: E501
 
         :param fri: The fri of this ActiveDays.  # noqa: E501
         :type: bool
@@ -189,6 +199,7 @@ class ActiveDays(object):
     def sat(self):
         """Gets the sat of this ActiveDays.  # noqa: E501
 
+        Active on Saturday  # noqa: E501
 
         :return: The sat of this ActiveDays.  # noqa: E501
         :rtype: bool
@@ -199,6 +210,7 @@ class ActiveDays(object):
     def sat(self, sat):
         """Sets the sat of this ActiveDays.
 
+        Active on Saturday  # noqa: E501
 
         :param sat: The sat of this ActiveDays.  # noqa: E501
         :type: bool
@@ -212,6 +224,7 @@ class ActiveDays(object):
     def sun(self):
         """Gets the sun of this ActiveDays.  # noqa: E501
 
+        Active on Sunday  # noqa: E501
 
         :return: The sun of this ActiveDays.  # noqa: E501
         :rtype: bool
@@ -222,6 +235,7 @@ class ActiveDays(object):
     def sun(self, sun):
         """Sets the sun of this ActiveDays.
 
+        Active on Sunday  # noqa: E501
 
         :param sun: The sun of this ActiveDays.  # noqa: E501
         :type: bool

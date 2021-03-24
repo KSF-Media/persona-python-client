@@ -32,7 +32,7 @@ class NewDeliveryReclamation(object):
     """
     openapi_types = {
         'publication_date': 'date',
-        'claim': 'DeliveryReclamationClaim'
+        'claim': 'ClaimType'
     }
 
     attribute_map = {
@@ -79,7 +79,7 @@ class NewDeliveryReclamation(object):
 
 
         :return: The claim of this NewDeliveryReclamation.  # noqa: E501
-        :rtype: DeliveryReclamationClaim
+        :rtype: ClaimType
         """
         return self._claim
 
@@ -89,7 +89,7 @@ class NewDeliveryReclamation(object):
 
 
         :param claim: The claim of this NewDeliveryReclamation.  # noqa: E501
-        :type: DeliveryReclamationClaim
+        :type: ClaimType
         """
         if claim is None:
             raise ValueError("Invalid value for `claim`, must not be `None`")  # noqa: E501

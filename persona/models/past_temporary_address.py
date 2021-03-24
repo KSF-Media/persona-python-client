@@ -68,6 +68,7 @@ class PastTemporaryAddress(object):
     def country_code(self):
         """Gets the country_code of this PastTemporaryAddress.  # noqa: E501
 
+        Country code  # noqa: E501
 
         :return: The country_code of this PastTemporaryAddress.  # noqa: E501
         :rtype: str
@@ -78,6 +79,7 @@ class PastTemporaryAddress(object):
     def country_code(self, country_code):
         """Sets the country_code of this PastTemporaryAddress.
 
+        Country code  # noqa: E501
 
         :param country_code: The country_code of this PastTemporaryAddress.  # noqa: E501
         :type: str
@@ -91,6 +93,7 @@ class PastTemporaryAddress(object):
     def zipcode(self):
         """Gets the zipcode of this PastTemporaryAddress.  # noqa: E501
 
+        Zip code  # noqa: E501
 
         :return: The zipcode of this PastTemporaryAddress.  # noqa: E501
         :rtype: str
@@ -101,6 +104,7 @@ class PastTemporaryAddress(object):
     def zipcode(self, zipcode):
         """Sets the zipcode of this PastTemporaryAddress.
 
+        Zip code  # noqa: E501
 
         :param zipcode: The zipcode of this PastTemporaryAddress.  # noqa: E501
         :type: str
@@ -114,6 +118,7 @@ class PastTemporaryAddress(object):
     def city_name(self):
         """Gets the city_name of this PastTemporaryAddress.  # noqa: E501
 
+        City  # noqa: E501
 
         :return: The city_name of this PastTemporaryAddress.  # noqa: E501
         :rtype: str
@@ -124,6 +129,7 @@ class PastTemporaryAddress(object):
     def city_name(self, city_name):
         """Sets the city_name of this PastTemporaryAddress.
 
+        City  # noqa: E501
 
         :param city_name: The city_name of this PastTemporaryAddress.  # noqa: E501
         :type: str
@@ -135,6 +141,7 @@ class PastTemporaryAddress(object):
     def street(self):
         """Gets the street of this PastTemporaryAddress.  # noqa: E501
 
+        Street  # noqa: E501
 
         :return: The street of this PastTemporaryAddress.  # noqa: E501
         :rtype: str
@@ -145,6 +152,7 @@ class PastTemporaryAddress(object):
     def street(self, street):
         """Sets the street of this PastTemporaryAddress.
 
+        Street  # noqa: E501
 
         :param street: The street of this PastTemporaryAddress.  # noqa: E501
         :type: str
@@ -158,6 +166,7 @@ class PastTemporaryAddress(object):
     def temporary_name(self):
         """Gets the temporary_name of this PastTemporaryAddress.  # noqa: E501
 
+        Temporary name (c/o)  # noqa: E501
 
         :return: The temporary_name of this PastTemporaryAddress.  # noqa: E501
         :rtype: str
@@ -168,6 +177,7 @@ class PastTemporaryAddress(object):
     def temporary_name(self, temporary_name):
         """Sets the temporary_name of this PastTemporaryAddress.
 
+        Temporary name (c/o)  # noqa: E501
 
         :param temporary_name: The temporary_name of this PastTemporaryAddress.  # noqa: E501
         :type: str

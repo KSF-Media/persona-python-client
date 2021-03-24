@@ -65,6 +65,7 @@ class DeliveryAddress(object):
     def street_address(self):
         """Gets the street_address of this DeliveryAddress.  # noqa: E501
 
+        Street address, containing all details  # noqa: E501
 
         :return: The street_address of this DeliveryAddress.  # noqa: E501
         :rtype: str
@@ -75,6 +76,7 @@ class DeliveryAddress(object):
     def street_address(self, street_address):
         """Sets the street_address of this DeliveryAddress.
 
+        Street address, containing all details  # noqa: E501
 
         :param street_address: The street_address of this DeliveryAddress.  # noqa: E501
         :type: str
@@ -86,6 +88,7 @@ class DeliveryAddress(object):
     def zipcode(self):
         """Gets the zipcode of this DeliveryAddress.  # noqa: E501
 
+          # noqa: E501
 
         :return: The zipcode of this DeliveryAddress.  # noqa: E501
         :rtype: str
@@ -96,6 +99,7 @@ class DeliveryAddress(object):
     def zipcode(self, zipcode):
         """Sets the zipcode of this DeliveryAddress.
 
+          # noqa: E501
 
         :param zipcode: The zipcode of this DeliveryAddress.  # noqa: E501
         :type: str
@@ -109,6 +113,7 @@ class DeliveryAddress(object):
     def city(self):
         """Gets the city of this DeliveryAddress.  # noqa: E501
 
+          # noqa: E501
 
         :return: The city of this DeliveryAddress.  # noqa: E501
         :rtype: str
@@ -119,6 +124,7 @@ class DeliveryAddress(object):
     def city(self, city):
         """Sets the city of this DeliveryAddress.
 
+          # noqa: E501
 
         :param city: The city of this DeliveryAddress.  # noqa: E501
         :type: str
@@ -130,6 +136,7 @@ class DeliveryAddress(object):
     def temporary_name(self):
         """Gets the temporary_name of this DeliveryAddress.  # noqa: E501
 
+        Temporary name (or c/o) of delivery address  # noqa: E501
 
         :return: The temporary_name of this DeliveryAddress.  # noqa: E501
         :rtype: str
@@ -140,6 +147,7 @@ class DeliveryAddress(object):
     def temporary_name(self, temporary_name):
         """Sets the temporary_name of this DeliveryAddress.
 
+        Temporary name (or c/o) of delivery address  # noqa: E501
 
         :param temporary_name: The temporary_name of this DeliveryAddress.  # noqa: E501
         :type: str

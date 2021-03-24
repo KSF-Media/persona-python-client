@@ -15,12 +15,12 @@ from __future__ import absolute_import
 import unittest
 
 import persona
-from persona.models.delivery_reclamation_claim import DeliveryReclamationClaim  # noqa: E501
+from persona.models.claim_type import ClaimType  # noqa: E501
 from persona.rest import ApiException
 
 
-class TestDeliveryReclamationClaim(unittest.TestCase):
-    """DeliveryReclamationClaim unit test stubs"""
+class TestClaimType(unittest.TestCase):
+    """ClaimType unit test stubs"""
 
     def setUp(self):
         pass
@@ -28,10 +28,10 @@ class TestDeliveryReclamationClaim(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testDeliveryReclamationClaim(self):
-        """Test DeliveryReclamationClaim"""
+    def testClaimType(self):
+        """Test ClaimType"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = persona.models.delivery_reclamation_claim.DeliveryReclamationClaim()  # noqa: E501
+        # model = persona.models.claim_type.ClaimType()  # noqa: E501
         pass
 
 

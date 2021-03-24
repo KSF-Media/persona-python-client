@@ -130,6 +130,7 @@ class PendingAddressChange(object):
     def type(self):
         """Gets the type of this PendingAddressChange.  # noqa: E501
 
+        Type of address change  # noqa: E501
 
         :return: The type of this PendingAddressChange.  # noqa: E501
         :rtype: str
@@ -140,12 +141,19 @@ class PendingAddressChange(object):
     def type(self, type):
         """Sets the type of this PendingAddressChange.
 
+        Type of address change  # noqa: E501
 
         :param type: The type of this PendingAddressChange.  # noqa: E501
         :type: str
         """
         if type is None:
             raise ValueError("Invalid value for `type`, must not be `None`")  # noqa: E501
+        allowed_values = ["Definitive", "Temporary"]  # noqa: E501
+        if type not in allowed_values:
+            raise ValueError(
+                "Invalid value for `type` ({0}), must be one of {1}"  # noqa: E501
+                .format(type, allowed_values)
+            )
 
         self._type = type
 

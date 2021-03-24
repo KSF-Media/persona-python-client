@@ -55,6 +55,7 @@ class CancelSubscriptionReason(object):
     def reason(self):
         """Gets the reason of this CancelSubscriptionReason.  # noqa: E501
 
+        Cancel reason code  # noqa: E501
 
         :return: The reason of this CancelSubscriptionReason.  # noqa: E501
         :rtype: str
@@ -65,12 +66,19 @@ class CancelSubscriptionReason(object):
     def reason(self, reason):
         """Sets the reason of this CancelSubscriptionReason.
 
+        Cancel reason code  # noqa: E501
 
         :param reason: The reason of this CancelSubscriptionReason.  # noqa: E501
         :type: str
         """
         if reason is None:
             raise ValueError("Invalid value for `reason`, must not be `None`")  # noqa: E501
+        allowed_values = ["Price", "Distribution", "Content", "OldAge", "Deceased", "Digital", "Other", "ChangeProduct"]  # noqa: E501
+        if reason not in allowed_values:
+            raise ValueError(
+                "Invalid value for `reason` ({0}), must be one of {1}"  # noqa: E501
+                .format(reason, allowed_values)
+            )
 
         self._reason = reason
 
@@ -78,6 +86,7 @@ class CancelSubscriptionReason(object):
     def notes(self):
         """Gets the notes of this CancelSubscriptionReason.  # noqa: E501
 
+        Cancel reason explanation  # noqa: E501
 
         :return: The notes of this CancelSubscriptionReason.  # noqa: E501
         :rtype: str
@@ -88,6 +97,7 @@ class CancelSubscriptionReason(object):
     def notes(self, notes):
         """Sets the notes of this CancelSubscriptionReason.
 
+        Cancel reason explanation  # noqa: E501
 
         :param notes: The notes of this CancelSubscriptionReason.  # noqa: E501
         :type: str

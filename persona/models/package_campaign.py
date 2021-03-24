@@ -70,6 +70,7 @@ class PackageCampaign(object):
     def no(self):
         """Gets the no of this PackageCampaign.  # noqa: E501
 
+        Campaign number  # noqa: E501
 
         :return: The no of this PackageCampaign.  # noqa: E501
         :rtype: int
@@ -80,6 +81,7 @@ class PackageCampaign(object):
     def no(self, no):
         """Sets the no of this PackageCampaign.
 
+        Campaign number  # noqa: E501
 
         :param no: The no of this PackageCampaign.  # noqa: E501
         :type: int
@@ -97,6 +99,7 @@ class PackageCampaign(object):
     def id(self):
         """Gets the id of this PackageCampaign.  # noqa: E501
 
+        Campaign id  # noqa: E501
 
         :return: The id of this PackageCampaign.  # noqa: E501
         :rtype: str
@@ -107,6 +110,7 @@ class PackageCampaign(object):
     def id(self, id):
         """Sets the id of this PackageCampaign.
 
+        Campaign id  # noqa: E501
 
         :param id: The id of this PackageCampaign.  # noqa: E501
         :type: str
@@ -120,6 +124,7 @@ class PackageCampaign(object):
     def name(self):
         """Gets the name of this PackageCampaign.  # noqa: E501
 
+        Campaign name  # noqa: E501
 
         :return: The name of this PackageCampaign.  # noqa: E501
         :rtype: str
@@ -130,6 +135,7 @@ class PackageCampaign(object):
     def name(self, name):
         """Sets the name of this PackageCampaign.
 
+        Campaign name  # noqa: E501
 
         :param name: The name of this PackageCampaign.  # noqa: E501
         :type: str
@@ -143,6 +149,7 @@ class PackageCampaign(object):
     def price_eur(self):
         """Gets the price_eur of this PackageCampaign.  # noqa: E501
 
+        Price of campaign in euros  # noqa: E501
 
         :return: The price_eur of this PackageCampaign.  # noqa: E501
         :rtype: float
@@ -153,6 +160,7 @@ class PackageCampaign(object):
     def price_eur(self, price_eur):
         """Sets the price_eur of this PackageCampaign.
 
+        Price of campaign in euros  # noqa: E501
 
         :param price_eur: The price_eur of this PackageCampaign.  # noqa: E501
         :type: float
@@ -166,6 +174,7 @@ class PackageCampaign(object):
     def length(self):
         """Gets the length of this PackageCampaign.  # noqa: E501
 
+        Length of campaign  # noqa: E501
 
         :return: The length of this PackageCampaign.  # noqa: E501
         :rtype: int
@@ -176,6 +185,7 @@ class PackageCampaign(object):
     def length(self, length):
         """Sets the length of this PackageCampaign.
 
+        Length of campaign  # noqa: E501
 
         :param length: The length of this PackageCampaign.  # noqa: E501
         :type: int
@@ -193,6 +203,7 @@ class PackageCampaign(object):
     def length_unit(self):
         """Gets the length_unit of this PackageCampaign.  # noqa: E501
 
+        Unit of length (days, weeks, months, years)  # noqa: E501
 
         :return: The length_unit of this PackageCampaign.  # noqa: E501
         :rtype: str
@@ -203,12 +214,19 @@ class PackageCampaign(object):
     def length_unit(self, length_unit):
         """Sets the length_unit of this PackageCampaign.
 
+        Unit of length (days, weeks, months, years)  # noqa: E501
 
         :param length_unit: The length_unit of this PackageCampaign.  # noqa: E501
         :type: str
         """
         if length_unit is None:
             raise ValueError("Invalid value for `length_unit`, must not be `None`")  # noqa: E501
+        allowed_values = ["Day", "Week", "Month", "Year"]  # noqa: E501
+        if length_unit not in allowed_values:
+            raise ValueError(
+                "Invalid value for `length_unit` ({0}), must be one of {1}"  # noqa: E501
+                .format(length_unit, allowed_values)
+            )
 
         self._length_unit = length_unit
 

@@ -85,6 +85,7 @@ class SubscriptionDates(object):
     def len_months(self):
         """Gets the len_months of this SubscriptionDates.  # noqa: E501
 
+        Length of Subscription in months  # noqa: E501
 
         :return: The len_months of this SubscriptionDates.  # noqa: E501
         :rtype: int
@@ -95,6 +96,7 @@ class SubscriptionDates(object):
     def len_months(self, len_months):
         """Sets the len_months of this SubscriptionDates.
 
+        Length of Subscription in months  # noqa: E501
 
         :param len_months: The len_months of this SubscriptionDates.  # noqa: E501
         :type: int
@@ -110,6 +112,7 @@ class SubscriptionDates(object):
     def len_days(self):
         """Gets the len_days of this SubscriptionDates.  # noqa: E501
 
+        Additional days (on top of months) for Subscription duration  # noqa: E501
 
         :return: The len_days of this SubscriptionDates.  # noqa: E501
         :rtype: int
@@ -120,6 +123,7 @@ class SubscriptionDates(object):
     def len_days(self, len_days):
         """Sets the len_days of this SubscriptionDates.
 
+        Additional days (on top of months) for Subscription duration  # noqa: E501
 
         :param len_days: The len_days of this SubscriptionDates.  # noqa: E501
         :type: int

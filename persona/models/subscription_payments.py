@@ -66,6 +66,7 @@ class SubscriptionPayments(object):
     def subsno(self):
         """Gets the subsno of this SubscriptionPayments.  # noqa: E501
 
+        Product subsno  # noqa: E501
 
         :return: The subsno of this SubscriptionPayments.  # noqa: E501
         :rtype: int
@@ -76,6 +77,7 @@ class SubscriptionPayments(object):
     def subsno(self, subsno):
         """Sets the subsno of this SubscriptionPayments.
 
+        Product subsno  # noqa: E501
 
         :param subsno: The subsno of this SubscriptionPayments.  # noqa: E501
         :type: int
@@ -93,6 +95,7 @@ class SubscriptionPayments(object):
     def name(self):
         """Gets the name of this SubscriptionPayments.  # noqa: E501
 
+        Package name  # noqa: E501
 
         :return: The name of this SubscriptionPayments.  # noqa: E501
         :rtype: str
@@ -103,6 +106,7 @@ class SubscriptionPayments(object):
     def name(self, name):
         """Sets the name of this SubscriptionPayments.
 
+        Package name  # noqa: E501
 
         :param name: The name of this SubscriptionPayments.  # noqa: E501
         :type: str
@@ -162,6 +166,7 @@ class SubscriptionPayments(object):
     def payments(self):
         """Gets the payments of this SubscriptionPayments.  # noqa: E501
 
+        Payments  # noqa: E501
 
         :return: The payments of this SubscriptionPayments.  # noqa: E501
         :rtype: list[Payment]
@@ -172,6 +177,7 @@ class SubscriptionPayments(object):
     def payments(self, payments):
         """Sets the payments of this SubscriptionPayments.
 
+        Payments  # noqa: E501
 
         :param payments: The payments of this SubscriptionPayments.  # noqa: E501
         :type: list[Payment]

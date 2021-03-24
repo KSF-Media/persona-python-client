@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**len_months** | **int** |  | [optional] 
-**len_days** | **int** |  | [optional] 
+**len_months** | **int** | Length of Subscription in months | [optional] 
+**len_days** | **int** | Additional days (on top of months) for Subscription duration | [optional] 
 **start** | **date** |  | 
 **end** | **date** |  | [optional] 
 **unpaid_break** | **date** |  | [optional] 

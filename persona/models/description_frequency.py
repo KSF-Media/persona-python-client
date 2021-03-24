@@ -54,6 +54,7 @@ class DescriptionFrequency(object):
     def amount(self):
         """Gets the amount of this DescriptionFrequency.  # noqa: E501
 
+        Frequency number for the package  # noqa: E501
 
         :return: The amount of this DescriptionFrequency.  # noqa: E501
         :rtype: int
@@ -64,6 +65,7 @@ class DescriptionFrequency(object):
     def amount(self, amount):
         """Sets the amount of this DescriptionFrequency.
 
+        Frequency number for the package  # noqa: E501
 
         :param amount: The amount of this DescriptionFrequency.  # noqa: E501
         :type: int
@@ -81,6 +83,7 @@ class DescriptionFrequency(object):
     def unit(self):
         """Gets the unit of this DescriptionFrequency.  # noqa: E501
 
+        Unit in which the number is measured  # noqa: E501
 
         :return: The unit of this DescriptionFrequency.  # noqa: E501
         :rtype: str
@@ -91,6 +94,7 @@ class DescriptionFrequency(object):
     def unit(self, unit):
         """Sets the unit of this DescriptionFrequency.
 
+        Unit in which the number is measured  # noqa: E501
 
         :param unit: The unit of this DescriptionFrequency.  # noqa: E501
         :type: str

@@ -82,6 +82,7 @@ class PackageDescription(object):
     def brand(self):
         """Gets the brand of this PackageDescription.  # noqa: E501
 
+        Brand name  # noqa: E501
 
         :return: The brand of this PackageDescription.  # noqa: E501
         :rtype: str
@@ -92,6 +93,7 @@ class PackageDescription(object):
     def brand(self, brand):
         """Sets the brand of this PackageDescription.
 
+        Brand name  # noqa: E501
 
         :param brand: The brand of this PackageDescription.  # noqa: E501
         :type: str
@@ -105,6 +107,7 @@ class PackageDescription(object):
     def brand_long(self):
         """Gets the brand_long of this PackageDescription.  # noqa: E501
 
+        Brand name, long  # noqa: E501
 
         :return: The brand_long of this PackageDescription.  # noqa: E501
         :rtype: str
@@ -115,6 +118,7 @@ class PackageDescription(object):
     def brand_long(self, brand_long):
         """Sets the brand_long of this PackageDescription.
 
+        Brand name, long  # noqa: E501
 
         :param brand_long: The brand_long of this PackageDescription.  # noqa: E501
         :type: str
@@ -128,6 +132,7 @@ class PackageDescription(object):
     def desc_short(self):
         """Gets the desc_short of this PackageDescription.  # noqa: E501
 
+        Short description  # noqa: E501
 
         :return: The desc_short of this PackageDescription.  # noqa: E501
         :rtype: str
@@ -138,6 +143,7 @@ class PackageDescription(object):
     def desc_short(self, desc_short):
         """Sets the desc_short of this PackageDescription.
 
+        Short description  # noqa: E501
 
         :param desc_short: The desc_short of this PackageDescription.  # noqa: E501
         :type: str
@@ -151,6 +157,7 @@ class PackageDescription(object):
     def desc_long(self):
         """Gets the desc_long of this PackageDescription.  # noqa: E501
 
+        Long description  # noqa: E501
 
         :return: The desc_long of this PackageDescription.  # noqa: E501
         :rtype: str
@@ -161,6 +168,7 @@ class PackageDescription(object):
     def desc_long(self, desc_long):
         """Sets the desc_long of this PackageDescription.
 
+        Long description  # noqa: E501
 
         :param desc_long: The desc_long of this PackageDescription.  # noqa: E501
         :type: str
@@ -174,6 +182,7 @@ class PackageDescription(object):
     def url(self):
         """Gets the url of this PackageDescription.  # noqa: E501
 
+        Url for the current package  # noqa: E501
 
         :return: The url of this PackageDescription.  # noqa: E501
         :rtype: str
@@ -184,6 +193,7 @@ class PackageDescription(object):
     def url(self, url):
         """Sets the url of this PackageDescription.
 
+        Url for the current package  # noqa: E501
 
         :param url: The url of this PackageDescription.  # noqa: E501
         :type: str
@@ -197,6 +207,7 @@ class PackageDescription(object):
     def days(self):
         """Gets the days of this PackageDescription.  # noqa: E501
 
+        How many days the package is active  # noqa: E501
 
         :return: The days of this PackageDescription.  # noqa: E501
         :rtype: str
@@ -207,6 +218,7 @@ class PackageDescription(object):
     def days(self, days):
         """Sets the days of this PackageDescription.
 
+        How many days the package is active  # noqa: E501
 
         :param days: The days of this PackageDescription.  # noqa: E501
         :type: str
@@ -220,6 +232,7 @@ class PackageDescription(object):
     def weekdays(self):
         """Gets the weekdays of this PackageDescription.  # noqa: E501
 
+        Weekdays for which the package is active  # noqa: E501
 
         :return: The weekdays of this PackageDescription.  # noqa: E501
         :rtype: str
@@ -230,6 +243,7 @@ class PackageDescription(object):
     def weekdays(self, weekdays):
         """Sets the weekdays of this PackageDescription.
 
+        Weekdays for which the package is active  # noqa: E501
 
         :param weekdays: The weekdays of this PackageDescription.  # noqa: E501
         :type: str
@@ -266,6 +280,7 @@ class PackageDescription(object):
     def includes(self):
         """Gets the includes of this PackageDescription.  # noqa: E501
 
+        Entitlements included in the package  # noqa: E501
 
         :return: The includes of this PackageDescription.  # noqa: E501
         :rtype: list[str]
@@ -276,6 +291,7 @@ class PackageDescription(object):
     def includes(self, includes):
         """Sets the includes of this PackageDescription.
 
+        Entitlements included in the package  # noqa: E501
 
         :param includes: The includes of this PackageDescription.  # noqa: E501
         :type: list[str]

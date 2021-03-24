@@ -70,6 +70,7 @@ class DeliveryReclamation(object):
     def number(self):
         """Gets the number of this DeliveryReclamation.  # noqa: E501
 
+        The reclamation identifier  # noqa: E501
 
         :return: The number of this DeliveryReclamation.  # noqa: E501
         :rtype: int
@@ -80,6 +81,7 @@ class DeliveryReclamation(object):
     def number(self, number):
         """Sets the number of this DeliveryReclamation.
 
+        The reclamation identifier  # noqa: E501
 
         :param number: The number of this DeliveryReclamation.  # noqa: E501
         :type: int
@@ -97,6 +99,7 @@ class DeliveryReclamation(object):
     def customer_number(self):
         """Gets the customer_number of this DeliveryReclamation.  # noqa: E501
 
+        The identifier of the customer that made reclamation  # noqa: E501
 
         :return: The customer_number of this DeliveryReclamation.  # noqa: E501
         :rtype: int
@@ -107,6 +110,7 @@ class DeliveryReclamation(object):
     def customer_number(self, customer_number):
         """Sets the customer_number of this DeliveryReclamation.
 
+        The identifier of the customer that made reclamation  # noqa: E501
 
         :param customer_number: The customer_number of this DeliveryReclamation.  # noqa: E501
         :type: int
@@ -124,6 +128,7 @@ class DeliveryReclamation(object):
     def subscription_number(self):
         """Gets the subscription_number of this DeliveryReclamation.  # noqa: E501
 
+        The identifier of the subscription for which reclamation was made  # noqa: E501
 
         :return: The subscription_number of this DeliveryReclamation.  # noqa: E501
         :rtype: int
@@ -134,6 +139,7 @@ class DeliveryReclamation(object):
     def subscription_number(self, subscription_number):
         """Sets the subscription_number of this DeliveryReclamation.
 
+        The identifier of the subscription for which reclamation was made  # noqa: E501
 
         :param subscription_number: The subscription_number of this DeliveryReclamation.  # noqa: E501
         :type: int
@@ -197,6 +203,7 @@ class DeliveryReclamation(object):
     def claim(self):
         """Gets the claim of this DeliveryReclamation.  # noqa: E501
 
+        The type of claim for the reclamation  # noqa: E501
 
         :return: The claim of this DeliveryReclamation.  # noqa: E501
         :rtype: str
@@ -207,12 +214,19 @@ class DeliveryReclamation(object):
     def claim(self, claim):
         """Sets the claim of this DeliveryReclamation.
 
+        The type of claim for the reclamation  # noqa: E501
 
         :param claim: The claim of this DeliveryReclamation.  # noqa: E501
         :type: str
         """
         if claim is None:
             raise ValueError("Invalid value for `claim`, must not be `None`")  # noqa: E501
+        allowed_values = ["Extension", "NewDelivery"]  # noqa: E501
+        if claim not in allowed_values:
+            raise ValueError(
+                "Invalid value for `claim` ({0}), must be one of {1}"  # noqa: E501
+                .format(claim, allowed_values)
+            )
 
         self._claim = claim
 

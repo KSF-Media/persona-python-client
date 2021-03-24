@@ -71,6 +71,7 @@ class Product(object):
     def id(self):
         """Gets the id of this Product.  # noqa: E501
 
+        Identifying code of the product  # noqa: E501
 
         :return: The id of this Product.  # noqa: E501
         :rtype: str
@@ -81,6 +82,7 @@ class Product(object):
     def id(self, id):
         """Sets the id of this Product.
 
+        Identifying code of the product  # noqa: E501
 
         :param id: The id of this Product.  # noqa: E501
         :type: str
@@ -94,6 +96,7 @@ class Product(object):
     def name(self):
         """Gets the name of this Product.  # noqa: E501
 
+        The name of the product  # noqa: E501
 
         :return: The name of this Product.  # noqa: E501
         :rtype: str
@@ -104,6 +107,7 @@ class Product(object):
     def name(self, name):
         """Sets the name of this Product.
 
+        The name of the product  # noqa: E501
 
         :param name: The name of this Product.  # noqa: E501
         :type: str
@@ -184,6 +188,7 @@ class Product(object):
     def digital(self):
         """Gets the digital of this Product.  # noqa: E501
 
+        Is the product digital?  # noqa: E501
 
         :return: The digital of this Product.  # noqa: E501
         :rtype: bool
@@ -194,6 +199,7 @@ class Product(object):
     def digital(self, digital):
         """Sets the digital of this Product.
 
+        Is the product digital?  # noqa: E501
 
         :param digital: The digital of this Product.  # noqa: E501
         :type: bool

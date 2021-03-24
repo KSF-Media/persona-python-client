@@ -101,6 +101,7 @@ class Payment(object):
     def invno(self):
         """Gets the invno of this Payment.  # noqa: E501
 
+        Payment invoice ID  # noqa: E501
 
         :return: The invno of this Payment.  # noqa: E501
         :rtype: int
@@ -111,6 +112,7 @@ class Payment(object):
     def invno(self, invno):
         """Sets the invno of this Payment.
 
+        Payment invoice ID  # noqa: E501
 
         :param invno: The invno of this Payment.  # noqa: E501
         :type: int
@@ -174,6 +176,7 @@ class Payment(object):
     def expenses(self):
         """Gets the expenses of this Payment.  # noqa: E501
 
+          # noqa: E501
 
         :return: The expenses of this Payment.  # noqa: E501
         :rtype: float
@@ -184,6 +187,7 @@ class Payment(object):
     def expenses(self, expenses):
         """Sets the expenses of this Payment.
 
+          # noqa: E501
 
         :param expenses: The expenses of this Payment.  # noqa: E501
         :type: float
@@ -197,6 +201,7 @@ class Payment(object):
     def interest(self):
         """Gets the interest of this Payment.  # noqa: E501
 
+          # noqa: E501
 
         :return: The interest of this Payment.  # noqa: E501
         :rtype: float
@@ -207,6 +212,7 @@ class Payment(object):
     def interest(self, interest):
         """Sets the interest of this Payment.
 
+          # noqa: E501
 
         :param interest: The interest of this Payment.  # noqa: E501
         :type: float
@@ -220,6 +226,7 @@ class Payment(object):
     def vat(self):
         """Gets the vat of this Payment.  # noqa: E501
 
+          # noqa: E501
 
         :return: The vat of this Payment.  # noqa: E501
         :rtype: float
@@ -230,6 +237,7 @@ class Payment(object):
     def vat(self, vat):
         """Sets the vat of this Payment.
 
+          # noqa: E501
 
         :param vat: The vat of this Payment.  # noqa: E501
         :type: float
@@ -243,6 +251,7 @@ class Payment(object):
     def amount(self):
         """Gets the amount of this Payment.  # noqa: E501
 
+          # noqa: E501
 
         :return: The amount of this Payment.  # noqa: E501
         :rtype: float
@@ -253,6 +262,7 @@ class Payment(object):
     def amount(self, amount):
         """Sets the amount of this Payment.
 
+          # noqa: E501
 
         :param amount: The amount of this Payment.  # noqa: E501
         :type: float
@@ -266,6 +276,7 @@ class Payment(object):
     def open_amount(self):
         """Gets the open_amount of this Payment.  # noqa: E501
 
+          # noqa: E501
 
         :return: The open_amount of this Payment.  # noqa: E501
         :rtype: float
@@ -276,6 +287,7 @@ class Payment(object):
     def open_amount(self, open_amount):
         """Sets the open_amount of this Payment.
 
+          # noqa: E501
 
         :param open_amount: The open_amount of this Payment.  # noqa: E501
         :type: float
@@ -289,6 +301,7 @@ class Payment(object):
     def type(self):
         """Gets the type of this Payment.  # noqa: E501
 
+          # noqa: E501
 
         :return: The type of this Payment.  # noqa: E501
         :rtype: str
@@ -299,12 +312,19 @@ class Payment(object):
     def type(self, type):
         """Sets the type of this Payment.
 
+          # noqa: E501
 
         :param type: The type of this Payment.  # noqa: E501
         :type: str
         """
         if type is None:
             raise ValueError("Invalid value for `type`, must not be `None`")  # noqa: E501
+        allowed_values = ["NormalState", "DirectDebit", "Reminder1", "Reminder2", "ReservedPaymentType1", "Nonpayment", "ReservedPaymentType2", "Reimbursement"]  # noqa: E501
+        if type not in allowed_values:
+            raise ValueError(
+                "Invalid value for `type` ({0}), must be one of {1}"  # noqa: E501
+                .format(type, allowed_values)
+            )
 
         self._type = type
 
@@ -312,6 +332,7 @@ class Payment(object):
     def state(self):
         """Gets the state of this Payment.  # noqa: E501
 
+          # noqa: E501
 
         :return: The state of this Payment.  # noqa: E501
         :rtype: str
@@ -322,12 +343,19 @@ class Payment(object):
     def state(self, state):
         """Sets the state of this Payment.
 
+          # noqa: E501
 
         :param state: The state of this Payment.  # noqa: E501
         :type: str
         """
         if state is None:
             raise ValueError("Invalid value for `state`, must not be `None`")  # noqa: E501
+        allowed_values = ["PaymentOpen", "PartiallyPaid", "Paid", "Reminded", "Foreclosure", "ReservedPaymentState", "Reimbursed", "CreditLoss"]  # noqa: E501
+        if state not in allowed_values:
+            raise ValueError(
+                "Invalid value for `state` ({0}), must be one of {1}"  # noqa: E501
+                .format(state, allowed_values)
+            )
 
         self._state = state
 
@@ -335,6 +363,7 @@ class Payment(object):
     def disc_percent(self):
         """Gets the disc_percent of this Payment.  # noqa: E501
 
+          # noqa: E501
 
         :return: The disc_percent of this Payment.  # noqa: E501
         :rtype: float
@@ -345,6 +374,7 @@ class Payment(object):
     def disc_percent(self, disc_percent):
         """Sets the disc_percent of this Payment.
 
+          # noqa: E501
 
         :param disc_percent: The disc_percent of this Payment.  # noqa: E501
         :type: float
@@ -356,6 +386,7 @@ class Payment(object):
     def disc_amount(self):
         """Gets the disc_amount of this Payment.  # noqa: E501
 
+          # noqa: E501
 
         :return: The disc_amount of this Payment.  # noqa: E501
         :rtype: float
@@ -366,6 +397,7 @@ class Payment(object):
     def disc_amount(self, disc_amount):
         """Sets the disc_amount of this Payment.
 
+          # noqa: E501
 
         :param disc_amount: The disc_amount of this Payment.  # noqa: E501
         :type: float
@@ -377,6 +409,7 @@ class Payment(object):
     def reference(self):
         """Gets the reference of this Payment.  # noqa: E501
 
+        Reference number  # noqa: E501
 
         :return: The reference of this Payment.  # noqa: E501
         :rtype: str
@@ -387,6 +420,7 @@ class Payment(object):
     def reference(self, reference):
         """Sets the reference of this Payment.
 
+        Reference number  # noqa: E501
 
         :param reference: The reference of this Payment.  # noqa: E501
         :type: str

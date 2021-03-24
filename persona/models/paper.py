@@ -54,6 +54,7 @@ class Paper(object):
     def code(self):
         """Gets the code of this Paper.  # noqa: E501
 
+        Identifying code of the paper  # noqa: E501
 
         :return: The code of this Paper.  # noqa: E501
         :rtype: str
@@ -64,6 +65,7 @@ class Paper(object):
     def code(self, code):
         """Sets the code of this Paper.
 
+        Identifying code of the paper  # noqa: E501
 
         :param code: The code of this Paper.  # noqa: E501
         :type: str
@@ -77,6 +79,7 @@ class Paper(object):
     def name(self):
         """Gets the name of this Paper.  # noqa: E501
 
+        The name of the paper  # noqa: E501
 
         :return: The name of this Paper.  # noqa: E501
         :rtype: str
@@ -87,6 +90,7 @@ class Paper(object):
     def name(self, name):
         """Sets the name of this Paper.
 
+        The name of the paper  # noqa: E501
 
         :param name: The name of this Paper.  # noqa: E501
         :type: str
