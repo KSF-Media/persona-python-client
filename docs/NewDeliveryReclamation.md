@@ -3,8 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**paper** | [**PaperCode**](PaperCode.md) |  | [optional] 
 **publication_date** | **date** |  | 
-**claim** | [**ClaimType**](ClaimType.md) |  | 
+**claim** | **str** | The type of claim for the reclamation | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

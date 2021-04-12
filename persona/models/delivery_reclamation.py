@@ -35,6 +35,7 @@ class DeliveryReclamation(object):
         'customer_number': 'int',
         'subscription_number': 'int',
         'date': 'date',
+        'paper': 'PaperCode',
         'publication_date': 'date',
         'claim': 'str'
     }
@@ -44,17 +45,19 @@ class DeliveryReclamation(object):
         'customer_number': 'customerNumber',
         'subscription_number': 'subscriptionNumber',
         'date': 'date',
+        'paper': 'paper',
         'publication_date': 'publicationDate',
         'claim': 'claim'
     }
 
-    def __init__(self, number=None, customer_number=None, subscription_number=None, date=None, publication_date=None, claim=None):  # noqa: E501
+    def __init__(self, number=None, customer_number=None, subscription_number=None, date=None, paper=None, publication_date=None, claim=None):  # noqa: E501
         """DeliveryReclamation - a model defined in OpenAPI"""  # noqa: E501
 
         self._number = None
         self._customer_number = None
         self._subscription_number = None
         self._date = None
+        self._paper = None
         self._publication_date = None
         self._claim = None
         self.discriminator = None
@@ -63,6 +66,8 @@ class DeliveryReclamation(object):
         self.customer_number = customer_number
         self.subscription_number = subscription_number
         self.date = date
+        if paper is not None:
+            self.paper = paper
         self.publication_date = publication_date
         self.claim = claim
 
@@ -175,6 +180,27 @@ class DeliveryReclamation(object):
             raise ValueError("Invalid value for `date`, must not be `None`")  # noqa: E501
 
         self._date = date
+
+    @property
+    def paper(self):
+        """Gets the paper of this DeliveryReclamation.  # noqa: E501
+
+
+        :return: The paper of this DeliveryReclamation.  # noqa: E501
+        :rtype: PaperCode
+        """
+        return self._paper
+
+    @paper.setter
+    def paper(self, paper):
+        """Sets the paper of this DeliveryReclamation.
+
+
+        :param paper: The paper of this DeliveryReclamation.  # noqa: E501
+        :type: PaperCode
+        """
+
+        self._paper = paper
 
     @property
     def publication_date(self):

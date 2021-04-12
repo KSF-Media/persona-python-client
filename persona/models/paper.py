@@ -31,7 +31,7 @@ class Paper(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'code': 'str',
+        'code': 'PaperCode',
         'name': 'str'
     }
 
@@ -54,10 +54,9 @@ class Paper(object):
     def code(self):
         """Gets the code of this Paper.  # noqa: E501
 
-        Identifying code of the paper  # noqa: E501
 
         :return: The code of this Paper.  # noqa: E501
-        :rtype: str
+        :rtype: PaperCode
         """
         return self._code
 
@@ -65,10 +64,9 @@ class Paper(object):
     def code(self, code):
         """Sets the code of this Paper.
 
-        Identifying code of the paper  # noqa: E501
 
         :param code: The code of this Paper.  # noqa: E501
-        :type: str
+        :type: PaperCode
         """
         if code is None:
             raise ValueError("Invalid value for `code`, must not be `None`")  # noqa: E501

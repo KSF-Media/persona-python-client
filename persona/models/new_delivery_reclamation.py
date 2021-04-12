@@ -31,24 +31,50 @@ class NewDeliveryReclamation(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'paper': 'PaperCode',
         'publication_date': 'date',
-        'claim': 'ClaimType'
+        'claim': 'str'
     }
 
     attribute_map = {
+        'paper': 'paper',
         'publication_date': 'publicationDate',
         'claim': 'claim'
     }
 
-    def __init__(self, publication_date=None, claim=None):  # noqa: E501
+    def __init__(self, paper=None, publication_date=None, claim=None):  # noqa: E501
         """NewDeliveryReclamation - a model defined in OpenAPI"""  # noqa: E501
 
+        self._paper = None
         self._publication_date = None
         self._claim = None
         self.discriminator = None
 
+        if paper is not None:
+            self.paper = paper
         self.publication_date = publication_date
         self.claim = claim
+
+    @property
+    def paper(self):
+        """Gets the paper of this NewDeliveryReclamation.  # noqa: E501
+
+
+        :return: The paper of this NewDeliveryReclamation.  # noqa: E501
+        :rtype: PaperCode
+        """
+        return self._paper
+
+    @paper.setter
+    def paper(self, paper):
+        """Sets the paper of this NewDeliveryReclamation.
+
+
+        :param paper: The paper of this NewDeliveryReclamation.  # noqa: E501
+        :type: PaperCode
+        """
+
+        self._paper = paper
 
     @property
     def publication_date(self):
@@ -77,9 +103,10 @@ class NewDeliveryReclamation(object):
     def claim(self):
         """Gets the claim of this NewDeliveryReclamation.  # noqa: E501
 
+        The type of claim for the reclamation  # noqa: E501
 
         :return: The claim of this NewDeliveryReclamation.  # noqa: E501
-        :rtype: ClaimType
+        :rtype: str
         """
         return self._claim
 
@@ -87,12 +114,19 @@ class NewDeliveryReclamation(object):
     def claim(self, claim):
         """Sets the claim of this NewDeliveryReclamation.
 
+        The type of claim for the reclamation  # noqa: E501
 
         :param claim: The claim of this NewDeliveryReclamation.  # noqa: E501
-        :type: ClaimType
+        :type: str
         """
         if claim is None:
             raise ValueError("Invalid value for `claim`, must not be `None`")  # noqa: E501
+        allowed_values = ["Extension", "NewDelivery"]  # noqa: E501
+        if claim not in allowed_values:
+            raise ValueError(
+                "Invalid value for `claim` ({0}), must be one of {1}"  # noqa: E501
+                .format(claim, allowed_values)
+            )
 
         self._claim = claim
 

@@ -17,7 +17,6 @@ from __future__ import absolute_import
 from persona.models.active_days import ActiveDays
 from persona.models.address import Address
 from persona.models.cancel_subscription_reason import CancelSubscriptionReason
-from persona.models.claim_type import ClaimType
 from persona.models.code_for_token_data import CodeForTokenData
 from persona.models.delete_temp_address_change_dates import DeleteTempAddressChangeDates
 from persona.models.delivery_address import DeliveryAddress

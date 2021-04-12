@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **customer_number** | **int** | The identifier of the customer that made reclamation | 
 **subscription_number** | **int** | The identifier of the subscription for which reclamation was made | 
 **date** | **date** |  | 
+**paper** | [**PaperCode**](PaperCode.md) |  | [optional] 
 **publication_date** | **date** |  | 
 **claim** | **str** | The type of claim for the reclamation | 
 
