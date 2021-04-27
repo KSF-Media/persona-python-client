@@ -77,6 +77,8 @@ No authorization required
 
 Search for users
 
+deprecated
+
 ### Example
 
 ```python

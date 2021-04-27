@@ -41,6 +41,7 @@ from persona.models.delivery_address import DeliveryAddress
 from persona.models.delivery_reclamation import DeliveryReclamation
 from persona.models.description_frequency import DescriptionFrequency
 from persona.models.entitlement_access import EntitlementAccess
+from persona.models.faro_user import FaroUser
 from persona.models.forgot_password_data import ForgotPasswordData
 from persona.models.gdpr_consent import GdprConsent
 from persona.models.inline_response400 import InlineResponse400
@@ -57,6 +58,7 @@ from persona.models.inline_response415 import InlineResponse415
 from persona.models.inline_response415_unsupported_media_type import InlineResponse415UnsupportedMediaType
 from persona.models.inline_response500 import InlineResponse500
 from persona.models.inline_response500_internal_server_error import InlineResponse500InternalServerError
+from persona.models.janrain_user import JanrainUser
 from persona.models.legal_consent import LegalConsent
 from persona.models.login_data import LoginData
 from persona.models.login_data_sso import LoginDataSSO
@@ -75,6 +77,8 @@ from persona.models.paused_subscription import PausedSubscription
 from persona.models.payment import Payment
 from persona.models.pending_address_change import PendingAddressChange
 from persona.models.product import Product
+from persona.models.search_query import SearchQuery
+from persona.models.search_result import SearchResult
 from persona.models.subscription import Subscription
 from persona.models.subscription_dates import SubscriptionDates
 from persona.models.subscription_pause_dates import SubscriptionPauseDates

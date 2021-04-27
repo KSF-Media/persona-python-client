@@ -15,24 +15,23 @@ from __future__ import absolute_import
 import unittest
 
 import persona
-from persona.api.admin_api import AdminApi  # noqa: E501
+from persona.models.search_query import SearchQuery  # noqa: E501
 from persona.rest import ApiException
 
 
-class TestAdminApi(unittest.TestCase):
-    """AdminApi unit test stubs"""
+class TestSearchQuery(unittest.TestCase):
+    """SearchQuery unit test stubs"""
 
     def setUp(self):
-        self.api = persona.api.admin_api.AdminApi()  # noqa: E501
+        pass
 
     def tearDown(self):
         pass
 
-    def test_admin_search_post(self):
-        """Test case for admin_search_post
-
-        Search for users  # noqa: E501
-        """
+    def testSearchQuery(self):
+        """Test SearchQuery"""
+        # FIXME: construct object with mandatory attributes with example values
+        # model = persona.models.search_query.SearchQuery()  # noqa: E501
         pass
 
 

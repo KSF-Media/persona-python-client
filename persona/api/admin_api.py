@@ -36,53 +36,49 @@ class AdminApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def admin_uuid_get(self, uuid, **kwargs):  # noqa: E501
-        """Get user by admin credentials.  # noqa: E501
+    def admin_search_post(self, body, **kwargs):  # noqa: E501
+        """Search for users  # noqa: E501
 
-        Authorization header expects the following format ‘OAuth {token}’  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.admin_uuid_get(uuid, async_req=True)
+        >>> thread = api.admin_search_post(body, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str uuid: (required)
+        :param SearchQuery body: (required)
         :param str auth_user:
         :param str authorization:
-        :param str cache_control:
-        :return: User
+        :return: list[SearchResult]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.admin_uuid_get_with_http_info(uuid, **kwargs)  # noqa: E501
+            return self.admin_search_post_with_http_info(body, **kwargs)  # noqa: E501
         else:
-            (data) = self.admin_uuid_get_with_http_info(uuid, **kwargs)  # noqa: E501
+            (data) = self.admin_search_post_with_http_info(body, **kwargs)  # noqa: E501
             return data
 
-    def admin_uuid_get_with_http_info(self, uuid, **kwargs):  # noqa: E501
-        """Get user by admin credentials.  # noqa: E501
+    def admin_search_post_with_http_info(self, body, **kwargs):  # noqa: E501
+        """Search for users  # noqa: E501
 
-        Authorization header expects the following format ‘OAuth {token}’  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.admin_uuid_get_with_http_info(uuid, async_req=True)
+        >>> thread = api.admin_search_post_with_http_info(body, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str uuid: (required)
+        :param SearchQuery body: (required)
         :param str auth_user:
         :param str authorization:
-        :param str cache_control:
-        :return: User
+        :return: list[SearchResult]
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
         local_var_params = locals()
 
-        all_params = ['uuid', 'auth_user', 'authorization', 'cache_control']  # noqa: E501
+        all_params = ['body', 'auth_user', 'authorization']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -92,20 +88,18 @@ class AdminApi(object):
             if key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method admin_uuid_get" % key
+                    " to method admin_search_post" % key
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
-        # verify the required parameter 'uuid' is set
-        if ('uuid' not in local_var_params or
-                local_var_params['uuid'] is None):
-            raise ApiValueError("Missing the required parameter `uuid` when calling `admin_uuid_get`")  # noqa: E501
+        # verify the required parameter 'body' is set
+        if ('body' not in local_var_params or
+                local_var_params['body'] is None):
+            raise ApiValueError("Missing the required parameter `body` when calling `admin_search_post`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'uuid' in local_var_params:
-            path_params['uuid'] = local_var_params['uuid']  # noqa: E501
 
         query_params = []
 
@@ -114,29 +108,33 @@ class AdminApi(object):
             header_params['AuthUser'] = local_var_params['auth_user']  # noqa: E501
         if 'authorization' in local_var_params:
             header_params['Authorization'] = local_var_params['authorization']  # noqa: E501
-        if 'cache_control' in local_var_params:
-            header_params['Cache-Control'] = local_var_params['cache_control']  # noqa: E501
 
         form_params = []
         local_var_files = {}
 
         body_params = None
+        if 'body' in local_var_params:
+            body_params = local_var_params['body']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json;charset=utf-8'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
             ['application/json;charset=utf-8'])  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/admin/{uuid}', 'GET',
+            '/admin/search', 'POST',
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='User',  # noqa: E501
+            response_type='list[SearchResult]',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501

@@ -137,6 +137,7 @@ class UsersApi(object):
     def users_search_get(self, query, **kwargs):  # noqa: E501
         """Search for users  # noqa: E501
 
+        deprecated  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.users_search_get(query, async_req=True)
@@ -160,6 +161,7 @@ class UsersApi(object):
     def users_search_get_with_http_info(self, query, **kwargs):  # noqa: E501
         """Search for users  # noqa: E501
 
+        deprecated  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.users_search_get_with_http_info(query, async_req=True)
