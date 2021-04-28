@@ -31,7 +31,7 @@ class NewDeliveryReclamation(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'paper': 'PaperCode',
+        'paper': 'str',
         'publication_date': 'date',
         'claim': 'str'
     }
@@ -61,7 +61,7 @@ class NewDeliveryReclamation(object):
 
 
         :return: The paper of this NewDeliveryReclamation.  # noqa: E501
-        :rtype: PaperCode
+        :rtype: str
         """
         return self._paper
 
@@ -71,7 +71,7 @@ class NewDeliveryReclamation(object):
 
 
         :param paper: The paper of this NewDeliveryReclamation.  # noqa: E501
-        :type: PaperCode
+        :type: str
         """
 
         self._paper = paper

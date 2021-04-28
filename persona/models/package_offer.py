@@ -32,8 +32,8 @@ class PackageOffer(object):
     """
     openapi_types = {
         'months': 'int',
-        'total_price': 'Price',
-        'monthly_price': 'Price'
+        'total_price': 'int',
+        'monthly_price': 'int'
     }
 
     attribute_map = {
@@ -87,9 +87,10 @@ class PackageOffer(object):
     def total_price(self):
         """Gets the total_price of this PackageOffer.  # noqa: E501
 
+        Amount of cents that has to be paid  # noqa: E501
 
         :return: The total_price of this PackageOffer.  # noqa: E501
-        :rtype: Price
+        :rtype: int
         """
         return self._total_price
 
@@ -97,12 +98,15 @@ class PackageOffer(object):
     def total_price(self, total_price):
         """Sets the total_price of this PackageOffer.
 
+        Amount of cents that has to be paid  # noqa: E501
 
         :param total_price: The total_price of this PackageOffer.  # noqa: E501
-        :type: Price
+        :type: int
         """
         if total_price is None:
             raise ValueError("Invalid value for `total_price`, must not be `None`")  # noqa: E501
+        if total_price is not None and total_price < 0:  # noqa: E501
+            raise ValueError("Invalid value for `total_price`, must be a value greater than or equal to `0`")  # noqa: E501
 
         self._total_price = total_price
 
@@ -110,9 +114,10 @@ class PackageOffer(object):
     def monthly_price(self):
         """Gets the monthly_price of this PackageOffer.  # noqa: E501
 
+        Amount of cents that has to be paid  # noqa: E501
 
         :return: The monthly_price of this PackageOffer.  # noqa: E501
-        :rtype: Price
+        :rtype: int
         """
         return self._monthly_price
 
@@ -120,12 +125,15 @@ class PackageOffer(object):
     def monthly_price(self, monthly_price):
         """Sets the monthly_price of this PackageOffer.
 
+        Amount of cents that has to be paid  # noqa: E501
 
         :param monthly_price: The monthly_price of this PackageOffer.  # noqa: E501
-        :type: Price
+        :type: int
         """
         if monthly_price is None:
             raise ValueError("Invalid value for `monthly_price`, must not be `None`")  # noqa: E501
+        if monthly_price is not None and monthly_price < 0:  # noqa: E501
+            raise ValueError("Invalid value for `monthly_price`, must be a value greater than or equal to `0`")  # noqa: E501
 
         self._monthly_price = monthly_price
 

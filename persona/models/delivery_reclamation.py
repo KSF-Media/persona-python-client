@@ -35,7 +35,7 @@ class DeliveryReclamation(object):
         'customer_number': 'int',
         'subscription_number': 'int',
         'date': 'date',
-        'paper': 'PaperCode',
+        'paper': 'str',
         'publication_date': 'date',
         'claim': 'str'
     }
@@ -187,7 +187,7 @@ class DeliveryReclamation(object):
 
 
         :return: The paper of this DeliveryReclamation.  # noqa: E501
-        :rtype: PaperCode
+        :rtype: str
         """
         return self._paper
 
@@ -197,7 +197,7 @@ class DeliveryReclamation(object):
 
 
         :param paper: The paper of this DeliveryReclamation.  # noqa: E501
-        :type: PaperCode
+        :type: str
         """
 
         self._paper = paper

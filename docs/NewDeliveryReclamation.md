@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**paper** | [**PaperCode**](PaperCode.md) |  | [optional] 
+**paper** | **str** |  | [optional] 
 **publication_date** | **date** |  | 
 **claim** | **str** | The type of claim for the reclamation | 
 

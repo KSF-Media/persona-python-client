@@ -48,7 +48,7 @@ class Subscription(object):
         'pending_address_changes': 'list[PendingAddressChange]',
         'order_number': 'str',
         'payment_method': 'str',
-        'payment_method_id': 'PaymentMethodId'
+        'payment_method_id': 'int'
     }
 
     attribute_map = {
@@ -570,7 +570,7 @@ class Subscription(object):
 
 
         :return: The payment_method_id of this Subscription.  # noqa: E501
-        :rtype: PaymentMethodId
+        :rtype: int
         """
         return self._payment_method_id
 
@@ -580,8 +580,12 @@ class Subscription(object):
 
 
         :param payment_method_id: The payment_method_id of this Subscription.  # noqa: E501
-        :type: PaymentMethodId
+        :type: int
         """
+        if payment_method_id is not None and payment_method_id > 9223372036854775807:  # noqa: E501
+            raise ValueError("Invalid value for `payment_method_id`, must be a value less than or equal to `9223372036854775807`")  # noqa: E501
+        if payment_method_id is not None and payment_method_id < -9223372036854775808:  # noqa: E501
+            raise ValueError("Invalid value for `payment_method_id`, must be a value greater than or equal to `-9223372036854775808`")  # noqa: E501
 
         self._payment_method_id = payment_method_id
 

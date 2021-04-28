@@ -20,7 +20,7 @@ Name | Type | Description | Notes
 **pending_address_changes** | [**list[PendingAddressChange]**](PendingAddressChange.md) | Pending and ongoing temporary address changes | [optional] 
 **order_number** | **str** | Order number of subscription | [optional] 
 **payment_method** | **str** | Payment method of subscription | [optional] 
-**payment_method_id** | [**PaymentMethodId**](PaymentMethodId.md) |  | [optional] 
+**payment_method_id** | **int** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
