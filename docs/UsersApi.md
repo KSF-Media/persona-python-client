@@ -4,6 +4,7 @@ All URIs are relative to *http://http:/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**users_admin_post**](UsersApi.md#users_admin_post) | **POST** /users/admin | Create a new user with admin options.
 [**users_post**](UsersApi.md#users_post) | **POST** /users | Create a new user.
 [**users_search_get**](UsersApi.md#users_search_get) | **GET** /users/search | Search for users
 [**users_temporary_post**](UsersApi.md#users_temporary_post) | **POST** /users/temporary | Create a new user with email.
@@ -24,6 +25,57 @@ Method | HTTP request | Description
 [**users_uuid_subscriptions_subsno_reclamations_reclaimno_get**](UsersApi.md#users_uuid_subscriptions_subsno_reclamations_reclaimno_get) | **GET** /users/{uuid}/subscriptions/{subsno}/reclamations/{reclaimno} | Get a delivery reclamation
 [**users_uuid_subscriptions_subsno_unpause_post**](UsersApi.md#users_uuid_subscriptions_subsno_unpause_post) | **POST** /users/{uuid}/subscriptions/{subsno}/unpause | Pause users subscription
 
+
+# **users_admin_post**
+> LoginResponse users_admin_post(body, auth_user=auth_user, authorization=authorization)
+
+Create a new user with admin options.
+
+### Example
+
+```python
+from __future__ import print_function
+import time
+import persona
+from persona.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = persona.UsersApi()
+body = persona.AdminNewUser() # AdminNewUser | 
+auth_user = 'auth_user_example' # str |  (optional)
+authorization = 'authorization_example' # str |  (optional)
+
+try:
+    # Create a new user with admin options.
+    api_response = api_instance.users_admin_post(body, auth_user=auth_user, authorization=authorization)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling UsersApi->users_admin_post: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**AdminNewUser**](AdminNewUser.md)|  | 
+ **auth_user** | [**str**](.md)|  | [optional] 
+ **authorization** | **str**|  | [optional] 
+
+### Return type
+
+[**LoginResponse**](LoginResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json;charset=utf-8
+ - **Accept**: application/json;charset=utf-8
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **users_post**
 > LoginResponse users_post(body)

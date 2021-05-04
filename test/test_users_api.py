@@ -28,6 +28,13 @@ class TestUsersApi(unittest.TestCase):
     def tearDown(self):
         pass
 
+    def test_users_admin_post(self):
+        """Test case for users_admin_post
+
+        Create a new user with admin options.  # noqa: E501
+        """
+        pass
+
     def test_users_post(self):
         """Test case for users_post
 
