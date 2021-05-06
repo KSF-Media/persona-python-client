@@ -35,6 +35,13 @@ class TestAdminApi(unittest.TestCase):
         """
         pass
 
+    def test_admin_user_post(self):
+        """Test case for admin_user_post
+
+        Create a new user with admin options.  # noqa: E501
+        """
+        pass
+
 
 if __name__ == '__main__':
     unittest.main()
