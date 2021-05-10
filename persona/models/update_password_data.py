@@ -32,26 +32,26 @@ class UpdatePasswordData(object):
     """
     openapi_types = {
         'password': 'str',
-        'password_confirm': 'str',
+        'confirm_password': 'str',
         'token': 'str'
     }
 
     attribute_map = {
         'password': 'password',
-        'password_confirm': 'password_confirm',
+        'confirm_password': 'confirmPassword',
         'token': 'token'
     }
 
-    def __init__(self, password=None, password_confirm=None, token=None):  # noqa: E501
+    def __init__(self, password=None, confirm_password=None, token=None):  # noqa: E501
         """UpdatePasswordData - a model defined in OpenAPI"""  # noqa: E501
 
         self._password = None
-        self._password_confirm = None
+        self._confirm_password = None
         self._token = None
         self.discriminator = None
 
         self.password = password
-        self.password_confirm = password_confirm
+        self.confirm_password = confirm_password
         self.token = token
 
     @property
@@ -78,27 +78,27 @@ class UpdatePasswordData(object):
         self._password = password
 
     @property
-    def password_confirm(self):
-        """Gets the password_confirm of this UpdatePasswordData.  # noqa: E501
+    def confirm_password(self):
+        """Gets the confirm_password of this UpdatePasswordData.  # noqa: E501
 
 
-        :return: The password_confirm of this UpdatePasswordData.  # noqa: E501
+        :return: The confirm_password of this UpdatePasswordData.  # noqa: E501
         :rtype: str
         """
-        return self._password_confirm
+        return self._confirm_password
 
-    @password_confirm.setter
-    def password_confirm(self, password_confirm):
-        """Sets the password_confirm of this UpdatePasswordData.
+    @confirm_password.setter
+    def confirm_password(self, confirm_password):
+        """Sets the confirm_password of this UpdatePasswordData.
 
 
-        :param password_confirm: The password_confirm of this UpdatePasswordData.  # noqa: E501
+        :param confirm_password: The confirm_password of this UpdatePasswordData.  # noqa: E501
         :type: str
         """
-        if password_confirm is None:
-            raise ValueError("Invalid value for `password_confirm`, must not be `None`")  # noqa: E501
+        if confirm_password is None:
+            raise ValueError("Invalid value for `confirm_password`, must not be `None`")  # noqa: E501
 
-        self._password_confirm = password_confirm
+        self._confirm_password = confirm_password
 
     @property
     def token(self):

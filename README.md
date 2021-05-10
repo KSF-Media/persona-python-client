@@ -54,14 +54,14 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = persona.AccountApi(persona.ApiClient(configuration))
-body = persona.CodeForTokenData() # CodeForTokenData | 
+body = persona.ForgotPasswordData() # ForgotPasswordData | 
 
 try:
-    # Get a password reset token
-    api_response = api_instance.account_code_for_token_post(body)
+    # Request password reset link
+    api_response = api_instance.account_password_forgot_post(body)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AccountApi->account_code_for_token_post: %s\n" % e)
+    print("Exception when calling AccountApi->account_password_forgot_post: %s\n" % e)
 
 ```
 
@@ -71,9 +71,8 @@ All URIs are relative to *http://http:/v1*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*AccountApi* | [**account_code_for_token_post**](docs/AccountApi.md#account_code_for_token_post) | **POST** /account/codeForToken | Get a password reset token
-*AccountApi* | [**account_forgot_pass_post**](docs/AccountApi.md#account_forgot_pass_post) | **POST** /account/forgotPass | Forgot Password
-*AccountApi* | [**account_reset_forgotten_password_post**](docs/AccountApi.md#account_reset_forgotten_password_post) | **POST** /account/resetForgottenPassword | Reset a forgotten password with a token
+*AccountApi* | [**account_password_forgot_post**](docs/AccountApi.md#account_password_forgot_post) | **POST** /account/password/forgot | Request password reset link
+*AccountApi* | [**account_password_reset_post**](docs/AccountApi.md#account_password_reset_post) | **POST** /account/password/reset | Reset a forgotten password with a token
 *AdminApi* | [**admin_search_post**](docs/AdminApi.md#admin_search_post) | **POST** /admin/search | Search for users
 *AdminApi* | [**admin_user_post**](docs/AdminApi.md#admin_user_post) | **POST** /admin/user | Create a new user with admin options.
 *EntitlementsApi* | [**entitlements_allow_post**](docs/EntitlementsApi.md#entitlements_allow_post) | **POST** /entitlements/allow | 
@@ -110,7 +109,6 @@ Class | Method | HTTP request | Description
  - [Address](docs/Address.md)
  - [AdminNewUser](docs/AdminNewUser.md)
  - [CancelSubscriptionReason](docs/CancelSubscriptionReason.md)
- - [CodeForTokenData](docs/CodeForTokenData.md)
  - [DeleteTempAddressChangeDates](docs/DeleteTempAddressChangeDates.md)
  - [DeliveryAddress](docs/DeliveryAddress.md)
  - [DeliveryReclamation](docs/DeliveryReclamation.md)
@@ -161,7 +159,6 @@ Class | Method | HTTP request | Description
  - [SubscriptionPayments](docs/SubscriptionPayments.md)
  - [TemporaryAddressChange](docs/TemporaryAddressChange.md)
  - [TemporaryAddressChangeDates](docs/TemporaryAddressChangeDates.md)
- - [TokenResponse](docs/TokenResponse.md)
  - [UpdatePasswordData](docs/UpdatePasswordData.md)
  - [User](docs/User.md)
  - [UserUpdate](docs/UserUpdate.md)

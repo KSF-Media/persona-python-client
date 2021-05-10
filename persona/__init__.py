@@ -36,7 +36,6 @@ from persona.models.active_days import ActiveDays
 from persona.models.address import Address
 from persona.models.admin_new_user import AdminNewUser
 from persona.models.cancel_subscription_reason import CancelSubscriptionReason
-from persona.models.code_for_token_data import CodeForTokenData
 from persona.models.delete_temp_address_change_dates import DeleteTempAddressChangeDates
 from persona.models.delivery_address import DeliveryAddress
 from persona.models.delivery_reclamation import DeliveryReclamation
@@ -87,7 +86,6 @@ from persona.models.subscription_pause_edit import SubscriptionPauseEdit
 from persona.models.subscription_payments import SubscriptionPayments
 from persona.models.temporary_address_change import TemporaryAddressChange
 from persona.models.temporary_address_change_dates import TemporaryAddressChangeDates
-from persona.models.token_response import TokenResponse
 from persona.models.update_password_data import UpdatePasswordData
 from persona.models.user import User
 from persona.models.user_update import UserUpdate
