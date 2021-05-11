@@ -50,8 +50,10 @@ class UpdatePasswordData(object):
         self._token = None
         self.discriminator = None
 
-        self.password = password
-        self.confirm_password = confirm_password
+        if password is not None:
+            self.password = password
+        if confirm_password is not None:
+            self.confirm_password = confirm_password
         self.token = token
 
     @property
@@ -72,8 +74,6 @@ class UpdatePasswordData(object):
         :param password: The password of this UpdatePasswordData.  # noqa: E501
         :type: str
         """
-        if password is None:
-            raise ValueError("Invalid value for `password`, must not be `None`")  # noqa: E501
 
         self._password = password
 
@@ -95,8 +95,6 @@ class UpdatePasswordData(object):
         :param confirm_password: The confirm_password of this UpdatePasswordData.  # noqa: E501
         :type: str
         """
-        if confirm_password is None:
-            raise ValueError("Invalid value for `confirm_password`, must not be `None`")  # noqa: E501
 
         self._confirm_password = confirm_password
 
