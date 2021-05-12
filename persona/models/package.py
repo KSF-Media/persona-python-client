@@ -33,6 +33,7 @@ class Package(object):
     openapi_types = {
         'id': 'str',
         'name': 'str',
+        'description': 'list[str]',
         'paper': 'Paper',
         'digital_only': 'bool',
         'products': 'list[Product]',
@@ -40,13 +41,13 @@ class Package(object):
         'campaigns': 'list[PackageCampaign]',
         'next_delivery': 'date',
         'can_pause': 'bool',
-        'can_temp_addr': 'bool',
-        'description': 'PackageDescription'
+        'can_temp_addr': 'bool'
     }
 
     attribute_map = {
         'id': 'id',
         'name': 'name',
+        'description': 'description',
         'paper': 'paper',
         'digital_only': 'digitalOnly',
         'products': 'products',
@@ -54,15 +55,15 @@ class Package(object):
         'campaigns': 'campaigns',
         'next_delivery': 'nextDelivery',
         'can_pause': 'canPause',
-        'can_temp_addr': 'canTempAddr',
-        'description': 'description'
+        'can_temp_addr': 'canTempAddr'
     }
 
-    def __init__(self, id=None, name=None, paper=None, digital_only=None, products=None, offers=None, campaigns=None, next_delivery=None, can_pause=None, can_temp_addr=None, description=None):  # noqa: E501
+    def __init__(self, id=None, name=None, description=None, paper=None, digital_only=None, products=None, offers=None, campaigns=None, next_delivery=None, can_pause=None, can_temp_addr=None):  # noqa: E501
         """Package - a model defined in OpenAPI"""  # noqa: E501
 
         self._id = None
         self._name = None
+        self._description = None
         self._paper = None
         self._digital_only = None
         self._products = None
@@ -71,11 +72,11 @@ class Package(object):
         self._next_delivery = None
         self._can_pause = None
         self._can_temp_addr = None
-        self._description = None
         self.discriminator = None
 
         self.id = id
         self.name = name
+        self.description = description
         self.paper = paper
         self.digital_only = digital_only
         self.products = products
@@ -85,8 +86,6 @@ class Package(object):
             self.next_delivery = next_delivery
         self.can_pause = can_pause
         self.can_temp_addr = can_temp_addr
-        if description is not None:
-            self.description = description
 
     @property
     def id(self):
@@ -137,6 +136,31 @@ class Package(object):
             raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
 
         self._name = name
+
+    @property
+    def description(self):
+        """Gets the description of this Package.  # noqa: E501
+
+        Package description  # noqa: E501
+
+        :return: The description of this Package.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._description
+
+    @description.setter
+    def description(self, description):
+        """Sets the description of this Package.
+
+        Package description  # noqa: E501
+
+        :param description: The description of this Package.  # noqa: E501
+        :type: list[str]
+        """
+        if description is None:
+            raise ValueError("Invalid value for `description`, must not be `None`")  # noqa: E501
+
+        self._description = description
 
     @property
     def paper(self):
@@ -331,27 +355,6 @@ class Package(object):
             raise ValueError("Invalid value for `can_temp_addr`, must not be `None`")  # noqa: E501
 
         self._can_temp_addr = can_temp_addr
-
-    @property
-    def description(self):
-        """Gets the description of this Package.  # noqa: E501
-
-
-        :return: The description of this Package.  # noqa: E501
-        :rtype: PackageDescription
-        """
-        return self._description
-
-    @description.setter
-    def description(self, description):
-        """Sets the description of this Package.
-
-
-        :param description: The description of this Package.  # noqa: E501
-        :type: PackageDescription
-        """
-
-        self._description = description
 
     def to_dict(self):
         """Returns the model properties as a dict"""
