@@ -33,7 +33,7 @@ class Package(object):
     openapi_types = {
         'id': 'str',
         'name': 'str',
-        'description': 'list[str]',
+        'info': 'list[str]',
         'paper': 'Paper',
         'digital_only': 'bool',
         'products': 'list[Product]',
@@ -47,7 +47,7 @@ class Package(object):
     attribute_map = {
         'id': 'id',
         'name': 'name',
-        'description': 'description',
+        'info': 'info',
         'paper': 'paper',
         'digital_only': 'digitalOnly',
         'products': 'products',
@@ -58,12 +58,12 @@ class Package(object):
         'can_temp_addr': 'canTempAddr'
     }
 
-    def __init__(self, id=None, name=None, description=None, paper=None, digital_only=None, products=None, offers=None, campaigns=None, next_delivery=None, can_pause=None, can_temp_addr=None):  # noqa: E501
+    def __init__(self, id=None, name=None, info=None, paper=None, digital_only=None, products=None, offers=None, campaigns=None, next_delivery=None, can_pause=None, can_temp_addr=None):  # noqa: E501
         """Package - a model defined in OpenAPI"""  # noqa: E501
 
         self._id = None
         self._name = None
-        self._description = None
+        self._info = None
         self._paper = None
         self._digital_only = None
         self._products = None
@@ -76,7 +76,7 @@ class Package(object):
 
         self.id = id
         self.name = name
-        self.description = description
+        self.info = info
         self.paper = paper
         self.digital_only = digital_only
         self.products = products
@@ -138,29 +138,29 @@ class Package(object):
         self._name = name
 
     @property
-    def description(self):
-        """Gets the description of this Package.  # noqa: E501
+    def info(self):
+        """Gets the info of this Package.  # noqa: E501
 
         Package description  # noqa: E501
 
-        :return: The description of this Package.  # noqa: E501
+        :return: The info of this Package.  # noqa: E501
         :rtype: list[str]
         """
-        return self._description
+        return self._info
 
-    @description.setter
-    def description(self, description):
-        """Sets the description of this Package.
+    @info.setter
+    def info(self, info):
+        """Sets the info of this Package.
 
         Package description  # noqa: E501
 
-        :param description: The description of this Package.  # noqa: E501
+        :param info: The info of this Package.  # noqa: E501
         :type: list[str]
         """
-        if description is None:
-            raise ValueError("Invalid value for `description`, must not be `None`")  # noqa: E501
+        if info is None:
+            raise ValueError("Invalid value for `info`, must not be `None`")  # noqa: E501
 
-        self._description = description
+        self._info = info
 
     @property
     def paper(self):

@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **str** | Package identifier | 
 **name** | **str** | Package name | 
-**description** | **list[str]** | Package description | 
+**info** | **list[str]** | Package description | 
 **paper** | [**Paper**](Paper.md) |  | 
 **digital_only** | **bool** | All products in this package are digital | 
 **products** | [**list[Product]**](Product.md) | The Products contained in a package | 
