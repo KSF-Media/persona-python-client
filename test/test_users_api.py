@@ -35,13 +35,6 @@ class TestUsersApi(unittest.TestCase):
         """
         pass
 
-    def test_users_search_get(self):
-        """Test case for users_search_get
-
-        Search for users  # noqa: E501
-        """
-        pass
-
     def test_users_temporary_post(self):
         """Test case for users_temporary_post
 

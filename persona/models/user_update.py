@@ -35,7 +35,8 @@ class UserUpdate(object):
         'last_name': 'str',
         'address': 'UserUpdateAddress',
         'email': 'str',
-        'pending_address_changes': 'list[object]'
+        'pending_address_changes': 'list[object]',
+        'update_cusno': 'int'
     }
 
     attribute_map = {
@@ -43,10 +44,11 @@ class UserUpdate(object):
         'last_name': 'lastName',
         'address': 'address',
         'email': 'email',
-        'pending_address_changes': 'pendingAddressChanges'
+        'pending_address_changes': 'pendingAddressChanges',
+        'update_cusno': 'updateCusno'
     }
 
-    def __init__(self, first_name=None, last_name=None, address=None, email=None, pending_address_changes=None):  # noqa: E501
+    def __init__(self, first_name=None, last_name=None, address=None, email=None, pending_address_changes=None, update_cusno=None):  # noqa: E501
         """UserUpdate - a model defined in OpenAPI"""  # noqa: E501
 
         self._first_name = None
@@ -54,6 +56,7 @@ class UserUpdate(object):
         self._address = None
         self._email = None
         self._pending_address_changes = None
+        self._update_cusno = None
         self.discriminator = None
 
         if first_name is not None:
@@ -66,6 +69,8 @@ class UserUpdate(object):
             self.email = email
         if pending_address_changes is not None:
             self.pending_address_changes = pending_address_changes
+        if update_cusno is not None:
+            self.update_cusno = update_cusno
 
     @property
     def first_name(self):
@@ -175,6 +180,31 @@ class UserUpdate(object):
         """
 
         self._pending_address_changes = pending_address_changes
+
+    @property
+    def update_cusno(self):
+        """Gets the update_cusno of this UserUpdate.  # noqa: E501
+
+
+        :return: The update_cusno of this UserUpdate.  # noqa: E501
+        :rtype: int
+        """
+        return self._update_cusno
+
+    @update_cusno.setter
+    def update_cusno(self, update_cusno):
+        """Sets the update_cusno of this UserUpdate.
+
+
+        :param update_cusno: The update_cusno of this UserUpdate.  # noqa: E501
+        :type: int
+        """
+        if update_cusno is not None and update_cusno > 9223372036854775807:  # noqa: E501
+            raise ValueError("Invalid value for `update_cusno`, must be a value less than or equal to `9223372036854775807`")  # noqa: E501
+        if update_cusno is not None and update_cusno < -9223372036854775808:  # noqa: E501
+            raise ValueError("Invalid value for `update_cusno`, must be a value greater than or equal to `-9223372036854775808`")  # noqa: E501
+
+        self._update_cusno = update_cusno
 
     def to_dict(self):
         """Returns the model properties as a dict"""
