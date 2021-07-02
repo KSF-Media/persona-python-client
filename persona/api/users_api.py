@@ -680,6 +680,226 @@ class UsersApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
+    def users_uuid_newsletters_get(self, uuid, **kwargs):  # noqa: E501
+        """Get newsletter subscriptions  # noqa: E501
+
+        Get list of newsletter subscriptions from mailchimp  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.users_uuid_newsletters_get(uuid, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str uuid: (required)
+        :param str auth_user:
+        :param str authorization:
+        :return: NewsletterSubscriptions
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.users_uuid_newsletters_get_with_http_info(uuid, **kwargs)  # noqa: E501
+        else:
+            (data) = self.users_uuid_newsletters_get_with_http_info(uuid, **kwargs)  # noqa: E501
+            return data
+
+    def users_uuid_newsletters_get_with_http_info(self, uuid, **kwargs):  # noqa: E501
+        """Get newsletter subscriptions  # noqa: E501
+
+        Get list of newsletter subscriptions from mailchimp  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.users_uuid_newsletters_get_with_http_info(uuid, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str uuid: (required)
+        :param str auth_user:
+        :param str authorization:
+        :return: NewsletterSubscriptions
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = ['uuid', 'auth_user', 'authorization']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method users_uuid_newsletters_get" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'uuid' is set
+        if ('uuid' not in local_var_params or
+                local_var_params['uuid'] is None):
+            raise ApiValueError("Missing the required parameter `uuid` when calling `users_uuid_newsletters_get`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'uuid' in local_var_params:
+            path_params['uuid'] = local_var_params['uuid']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+        if 'auth_user' in local_var_params:
+            header_params['AuthUser'] = local_var_params['auth_user']  # noqa: E501
+        if 'authorization' in local_var_params:
+            header_params['Authorization'] = local_var_params['authorization']  # noqa: E501
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json;charset=utf-8'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = []  # noqa: E501
+
+        return self.api_client.call_api(
+            '/users/{uuid}/newsletters', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='NewsletterSubscriptions',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def users_uuid_newsletters_put(self, uuid, body, **kwargs):  # noqa: E501
+        """Update newsletter subscriptions  # noqa: E501
+
+        Get list of newsletter subscriptions from mailchimp  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.users_uuid_newsletters_put(uuid, body, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str uuid: (required)
+        :param NewsletterSubscriptions body: (required)
+        :param str auth_user:
+        :param str authorization:
+        :return: NewsletterSubscriptions
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.users_uuid_newsletters_put_with_http_info(uuid, body, **kwargs)  # noqa: E501
+        else:
+            (data) = self.users_uuid_newsletters_put_with_http_info(uuid, body, **kwargs)  # noqa: E501
+            return data
+
+    def users_uuid_newsletters_put_with_http_info(self, uuid, body, **kwargs):  # noqa: E501
+        """Update newsletter subscriptions  # noqa: E501
+
+        Get list of newsletter subscriptions from mailchimp  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.users_uuid_newsletters_put_with_http_info(uuid, body, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str uuid: (required)
+        :param NewsletterSubscriptions body: (required)
+        :param str auth_user:
+        :param str authorization:
+        :return: NewsletterSubscriptions
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = ['uuid', 'body', 'auth_user', 'authorization']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method users_uuid_newsletters_put" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'uuid' is set
+        if ('uuid' not in local_var_params or
+                local_var_params['uuid'] is None):
+            raise ApiValueError("Missing the required parameter `uuid` when calling `users_uuid_newsletters_put`")  # noqa: E501
+        # verify the required parameter 'body' is set
+        if ('body' not in local_var_params or
+                local_var_params['body'] is None):
+            raise ApiValueError("Missing the required parameter `body` when calling `users_uuid_newsletters_put`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'uuid' in local_var_params:
+            path_params['uuid'] = local_var_params['uuid']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+        if 'auth_user' in local_var_params:
+            header_params['AuthUser'] = local_var_params['auth_user']  # noqa: E501
+        if 'authorization' in local_var_params:
+            header_params['Authorization'] = local_var_params['authorization']  # noqa: E501
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in local_var_params:
+            body_params = local_var_params['body']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json;charset=utf-8'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json;charset=utf-8'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = []  # noqa: E501
+
+        return self.api_client.call_api(
+            '/users/{uuid}/newsletters', 'PUT',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='NewsletterSubscriptions',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
     def users_uuid_password_put(self, uuid, body, **kwargs):  # noqa: E501
         """Set / Change user password  # noqa: E501
 

@@ -48,6 +48,7 @@ from persona.models.login_response import LoginResponse
 from persona.models.new_delivery_reclamation import NewDeliveryReclamation
 from persona.models.new_temporary_user import NewTemporaryUser
 from persona.models.new_user import NewUser
+from persona.models.newsletter_subscriptions import NewsletterSubscriptions
 from persona.models.package import Package
 from persona.models.package_campaign import PackageCampaign
 from persona.models.package_offer import PackageOffer

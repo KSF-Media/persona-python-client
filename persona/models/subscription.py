@@ -555,7 +555,7 @@ class Subscription(object):
         :param payment_method: The payment_method of this Subscription.  # noqa: E501
         :type: str
         """
-        allowed_values = ["PaperInvoice", "CreditCard", "Email", "NetBank", "ElectronicInvoice", "DirectPayment", "UnknownPaymentMethod"]  # noqa: E501
+        allowed_values = ["PaperInvoice", "CreditCard", "NetBank", "ElectronicInvoice", "DirectPayment", "UnknownPaymentMethod"]  # noqa: E501
         if payment_method not in allowed_values:
             raise ValueError(
                 "Invalid value for `payment_method` ({0}), must be one of {1}"  # noqa: E501

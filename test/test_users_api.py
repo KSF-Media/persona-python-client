@@ -70,6 +70,20 @@ class TestUsersApi(unittest.TestCase):
         """
         pass
 
+    def test_users_uuid_newsletters_get(self):
+        """Test case for users_uuid_newsletters_get
+
+        Get newsletter subscriptions  # noqa: E501
+        """
+        pass
+
+    def test_users_uuid_newsletters_put(self):
+        """Test case for users_uuid_newsletters_put
+
+        Update newsletter subscriptions  # noqa: E501
+        """
+        pass
+
     def test_users_uuid_password_put(self):
         """Test case for users_uuid_password_put
 

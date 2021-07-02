@@ -88,6 +88,8 @@ Class | Method | HTTP request | Description
 *UsersApi* | [**users_uuid_gdpr_put**](docs/UsersApi.md#users_uuid_gdpr_put) | **PUT** /users/{uuid}/gdpr | Updates the GDPR consent settings for a given user.
 *UsersApi* | [**users_uuid_get**](docs/UsersApi.md#users_uuid_get) | **GET** /users/{uuid} | Get user by UUID.
 *UsersApi* | [**users_uuid_legal_put**](docs/UsersApi.md#users_uuid_legal_put) | **PUT** /users/{uuid}/legal | Updates the legal consent settings for a given user.
+*UsersApi* | [**users_uuid_newsletters_get**](docs/UsersApi.md#users_uuid_newsletters_get) | **GET** /users/{uuid}/newsletters | Get newsletter subscriptions
+*UsersApi* | [**users_uuid_newsletters_put**](docs/UsersApi.md#users_uuid_newsletters_put) | **PUT** /users/{uuid}/newsletters | Update newsletter subscriptions
 *UsersApi* | [**users_uuid_password_put**](docs/UsersApi.md#users_uuid_password_put) | **PUT** /users/{uuid}/password | Set / Change user password
 *UsersApi* | [**users_uuid_patch**](docs/UsersApi.md#users_uuid_patch) | **PATCH** /users/{uuid} | Update a user
 *UsersApi* | [**users_uuid_payments_get**](docs/UsersApi.md#users_uuid_payments_get) | **GET** /users/{uuid}/payments | Get user&#39;s subscriptions and payment events
@@ -138,6 +140,7 @@ Class | Method | HTTP request | Description
  - [NewDeliveryReclamation](docs/NewDeliveryReclamation.md)
  - [NewTemporaryUser](docs/NewTemporaryUser.md)
  - [NewUser](docs/NewUser.md)
+ - [NewsletterSubscriptions](docs/NewsletterSubscriptions.md)
  - [Package](docs/Package.md)
  - [PackageCampaign](docs/PackageCampaign.md)
  - [PackageOffer](docs/PackageOffer.md)
