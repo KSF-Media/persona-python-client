@@ -15,6 +15,7 @@ Method | HTTP request | Description
 [**users_uuid_password_put**](UsersApi.md#users_uuid_password_put) | **PUT** /users/{uuid}/password | Set / Change user password
 [**users_uuid_patch**](UsersApi.md#users_uuid_patch) | **PATCH** /users/{uuid} | Update a user
 [**users_uuid_payments_get**](UsersApi.md#users_uuid_payments_get) | **GET** /users/{uuid}/payments | Get user&#39;s subscriptions and payment events
+[**users_uuid_scope_get**](UsersApi.md#users_uuid_scope_get) | **GET** /users/{uuid}/scope | Check if user has valid token for a scope
 [**users_uuid_subscriptions_subsno_address_change_delete**](UsersApi.md#users_uuid_subscriptions_subsno_address_change_delete) | **DELETE** /users/{uuid}/subscriptions/{subsno}/addressChange | Delete temporary address change for subscription
 [**users_uuid_subscriptions_subsno_address_change_patch**](UsersApi.md#users_uuid_subscriptions_subsno_address_change_patch) | **PATCH** /users/{uuid}/subscriptions/{subsno}/addressChange | Edit temporary address change dates of a subscription
 [**users_uuid_subscriptions_subsno_address_change_post**](UsersApi.md#users_uuid_subscriptions_subsno_address_change_post) | **POST** /users/{uuid}/subscriptions/{subsno}/addressChange | Make a temporary address change for a subscription
@@ -608,6 +609,58 @@ No authorization required
 
  - **Content-Type**: Not defined
  - **Accept**: application/json;charset=utf-8
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **users_uuid_scope_get**
+> users_uuid_scope_get(uuid, authorization=authorization, scope=scope)
+
+Check if user has valid token for a scope
+
+Authorization header expects the following format ‘OAuth {token}’
+
+### Example
+
+```python
+from __future__ import print_function
+import time
+import persona
+from persona.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = persona.UsersApi()
+uuid = 'uuid_example' # str | 
+authorization = 'authorization_example' # str |  (optional)
+scope = 'scope_example' # str |  (optional)
+
+try:
+    # Check if user has valid token for a scope
+    api_instance.users_uuid_scope_get(uuid, authorization=authorization, scope=scope)
+except ApiException as e:
+    print("Exception when calling UsersApi->users_uuid_scope_get: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **uuid** | [**str**](.md)|  | 
+ **authorization** | **str**|  | [optional] 
+ **scope** | **str**|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

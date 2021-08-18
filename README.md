@@ -93,6 +93,7 @@ Class | Method | HTTP request | Description
 *UsersApi* | [**users_uuid_password_put**](docs/UsersApi.md#users_uuid_password_put) | **PUT** /users/{uuid}/password | Set / Change user password
 *UsersApi* | [**users_uuid_patch**](docs/UsersApi.md#users_uuid_patch) | **PATCH** /users/{uuid} | Update a user
 *UsersApi* | [**users_uuid_payments_get**](docs/UsersApi.md#users_uuid_payments_get) | **GET** /users/{uuid}/payments | Get user&#39;s subscriptions and payment events
+*UsersApi* | [**users_uuid_scope_get**](docs/UsersApi.md#users_uuid_scope_get) | **GET** /users/{uuid}/scope | Check if user has valid token for a scope
 *UsersApi* | [**users_uuid_subscriptions_subsno_address_change_delete**](docs/UsersApi.md#users_uuid_subscriptions_subsno_address_change_delete) | **DELETE** /users/{uuid}/subscriptions/{subsno}/addressChange | Delete temporary address change for subscription
 *UsersApi* | [**users_uuid_subscriptions_subsno_address_change_patch**](docs/UsersApi.md#users_uuid_subscriptions_subsno_address_change_patch) | **PATCH** /users/{uuid}/subscriptions/{subsno}/addressChange | Edit temporary address change dates of a subscription
 *UsersApi* | [**users_uuid_subscriptions_subsno_address_change_post**](docs/UsersApi.md#users_uuid_subscriptions_subsno_address_change_post) | **POST** /users/{uuid}/subscriptions/{subsno}/addressChange | Make a temporary address change for a subscription
