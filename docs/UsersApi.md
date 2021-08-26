@@ -613,7 +613,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **users_uuid_scope_get**
-> users_uuid_scope_get(uuid, authorization=authorization, scope=scope)
+> int users_uuid_scope_get(uuid, authorization=authorization, scope=scope)
 
 Check if user has valid token for a scope
 
@@ -636,7 +636,8 @@ scope = 'scope_example' # str |  (optional)
 
 try:
     # Check if user has valid token for a scope
-    api_instance.users_uuid_scope_get(uuid, authorization=authorization, scope=scope)
+    api_response = api_instance.users_uuid_scope_get(uuid, authorization=authorization, scope=scope)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling UsersApi->users_uuid_scope_get: %s\n" % e)
 ```
@@ -651,7 +652,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+**int**
 
 ### Authorization
 
@@ -660,7 +661,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json;charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
