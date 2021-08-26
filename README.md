@@ -102,7 +102,7 @@ Class | Method | HTTP request | Description
 *UsersApi* | [**users_uuid_subscriptions_subsno_pause_post**](docs/UsersApi.md#users_uuid_subscriptions_subsno_pause_post) | **POST** /users/{uuid}/subscriptions/{subsno}/pause | Pause users subscription
 *UsersApi* | [**users_uuid_subscriptions_subsno_reclamation_post**](docs/UsersApi.md#users_uuid_subscriptions_subsno_reclamation_post) | **POST** /users/{uuid}/subscriptions/{subsno}/reclamation | Create a new delivery reclamation for a subscription
 *UsersApi* | [**users_uuid_subscriptions_subsno_reclamations_reclaimno_get**](docs/UsersApi.md#users_uuid_subscriptions_subsno_reclamations_reclaimno_get) | **GET** /users/{uuid}/subscriptions/{subsno}/reclamations/{reclaimno} | Get a delivery reclamation
-*UsersApi* | [**users_uuid_subscriptions_subsno_unpause_post**](docs/UsersApi.md#users_uuid_subscriptions_subsno_unpause_post) | **POST** /users/{uuid}/subscriptions/{subsno}/unpause | Pause users subscription
+*UsersApi* | [**users_uuid_subscriptions_subsno_unpause_post**](docs/UsersApi.md#users_uuid_subscriptions_subsno_unpause_post) | **POST** /users/{uuid}/subscriptions/{subsno}/unpause | Unpause users subscription
 
 
 ## Documentation For Models

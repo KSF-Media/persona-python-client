@@ -2365,7 +2365,7 @@ class UsersApi(object):
             collection_formats=collection_formats)
 
     def users_uuid_subscriptions_subsno_unpause_post(self, uuid, subsno, **kwargs):  # noqa: E501
-        """Pause users subscription  # noqa: E501
+        """Unpause users subscription  # noqa: E501
 
         Authorization header expects the following format ‘OAuth {token}’  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
@@ -2378,6 +2378,8 @@ class UsersApi(object):
         :param int subsno: (required)
         :param str auth_user:
         :param str authorization:
+        :param date start_date:
+        :param date end_date:
         :return: Subscription
                  If the method is called asynchronously,
                  returns the request thread.
@@ -2390,7 +2392,7 @@ class UsersApi(object):
             return data
 
     def users_uuid_subscriptions_subsno_unpause_post_with_http_info(self, uuid, subsno, **kwargs):  # noqa: E501
-        """Pause users subscription  # noqa: E501
+        """Unpause users subscription  # noqa: E501
 
         Authorization header expects the following format ‘OAuth {token}’  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
@@ -2403,6 +2405,8 @@ class UsersApi(object):
         :param int subsno: (required)
         :param str auth_user:
         :param str authorization:
+        :param date start_date:
+        :param date end_date:
         :return: Subscription
                  If the method is called asynchronously,
                  returns the request thread.
@@ -2410,7 +2414,7 @@ class UsersApi(object):
 
         local_var_params = locals()
 
-        all_params = ['uuid', 'subsno', 'auth_user', 'authorization']  # noqa: E501
+        all_params = ['uuid', 'subsno', 'auth_user', 'authorization', 'start_date', 'end_date']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2446,6 +2450,10 @@ class UsersApi(object):
             path_params['subsno'] = local_var_params['subsno']  # noqa: E501
 
         query_params = []
+        if 'start_date' in local_var_params:
+            query_params.append(('startDate', local_var_params['start_date']))  # noqa: E501
+        if 'end_date' in local_var_params:
+            query_params.append(('endDate', local_var_params['end_date']))  # noqa: E501
 
         header_params = {}
         if 'auth_user' in local_var_params:

@@ -24,7 +24,7 @@ Method | HTTP request | Description
 [**users_uuid_subscriptions_subsno_pause_post**](UsersApi.md#users_uuid_subscriptions_subsno_pause_post) | **POST** /users/{uuid}/subscriptions/{subsno}/pause | Pause users subscription
 [**users_uuid_subscriptions_subsno_reclamation_post**](UsersApi.md#users_uuid_subscriptions_subsno_reclamation_post) | **POST** /users/{uuid}/subscriptions/{subsno}/reclamation | Create a new delivery reclamation for a subscription
 [**users_uuid_subscriptions_subsno_reclamations_reclaimno_get**](UsersApi.md#users_uuid_subscriptions_subsno_reclamations_reclaimno_get) | **GET** /users/{uuid}/subscriptions/{subsno}/reclamations/{reclaimno} | Get a delivery reclamation
-[**users_uuid_subscriptions_subsno_unpause_post**](UsersApi.md#users_uuid_subscriptions_subsno_unpause_post) | **POST** /users/{uuid}/subscriptions/{subsno}/unpause | Pause users subscription
+[**users_uuid_subscriptions_subsno_unpause_post**](UsersApi.md#users_uuid_subscriptions_subsno_unpause_post) | **POST** /users/{uuid}/subscriptions/{subsno}/unpause | Unpause users subscription
 
 
 # **users_post**
@@ -1122,9 +1122,9 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **users_uuid_subscriptions_subsno_unpause_post**
-> Subscription users_uuid_subscriptions_subsno_unpause_post(uuid, subsno, auth_user=auth_user, authorization=authorization)
+> Subscription users_uuid_subscriptions_subsno_unpause_post(uuid, subsno, auth_user=auth_user, authorization=authorization, start_date=start_date, end_date=end_date)
 
-Pause users subscription
+Unpause users subscription
 
 Authorization header expects the following format ‘OAuth {token}’
 
@@ -1143,10 +1143,12 @@ uuid = 'uuid_example' # str |
 subsno = 56 # int | 
 auth_user = 'auth_user_example' # str |  (optional)
 authorization = 'authorization_example' # str |  (optional)
+start_date = '2013-10-20' # date |  (optional)
+end_date = '2013-10-20' # date |  (optional)
 
 try:
-    # Pause users subscription
-    api_response = api_instance.users_uuid_subscriptions_subsno_unpause_post(uuid, subsno, auth_user=auth_user, authorization=authorization)
+    # Unpause users subscription
+    api_response = api_instance.users_uuid_subscriptions_subsno_unpause_post(uuid, subsno, auth_user=auth_user, authorization=authorization, start_date=start_date, end_date=end_date)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling UsersApi->users_uuid_subscriptions_subsno_unpause_post: %s\n" % e)
@@ -1160,6 +1162,8 @@ Name | Type | Description  | Notes
  **subsno** | **int**|  | 
  **auth_user** | [**str**](.md)|  | [optional] 
  **authorization** | **str**|  | [optional] 
+ **start_date** | **date**|  | [optional] 
+ **end_date** | **date**|  | [optional] 
 
 ### Return type
 
