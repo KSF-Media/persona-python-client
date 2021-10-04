@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **last_name** | **str** |  | [optional] 
 **address** | [**UserUpdateAddress**](UserUpdateAddress.md) |  | [optional] 
 **email** | **str** |  | [optional] 
+**phone** | **str** |  | [optional] 
 **pending_address_changes** | **list[object]** |  | [optional] 
 **update_cusno** | **int** |  | [optional] 
 

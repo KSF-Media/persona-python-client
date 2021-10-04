@@ -35,6 +35,7 @@ class UserUpdate(object):
         'last_name': 'str',
         'address': 'UserUpdateAddress',
         'email': 'str',
+        'phone': 'str',
         'pending_address_changes': 'list[object]',
         'update_cusno': 'int'
     }
@@ -44,17 +45,19 @@ class UserUpdate(object):
         'last_name': 'lastName',
         'address': 'address',
         'email': 'email',
+        'phone': 'phone',
         'pending_address_changes': 'pendingAddressChanges',
         'update_cusno': 'updateCusno'
     }
 
-    def __init__(self, first_name=None, last_name=None, address=None, email=None, pending_address_changes=None, update_cusno=None):  # noqa: E501
+    def __init__(self, first_name=None, last_name=None, address=None, email=None, phone=None, pending_address_changes=None, update_cusno=None):  # noqa: E501
         """UserUpdate - a model defined in OpenAPI"""  # noqa: E501
 
         self._first_name = None
         self._last_name = None
         self._address = None
         self._email = None
+        self._phone = None
         self._pending_address_changes = None
         self._update_cusno = None
         self.discriminator = None
@@ -67,6 +70,8 @@ class UserUpdate(object):
             self.address = address
         if email is not None:
             self.email = email
+        if phone is not None:
+            self.phone = phone
         if pending_address_changes is not None:
             self.pending_address_changes = pending_address_changes
         if update_cusno is not None:
@@ -159,6 +164,29 @@ class UserUpdate(object):
         """
 
         self._email = email
+
+    @property
+    def phone(self):
+        """Gets the phone of this UserUpdate.  # noqa: E501
+
+
+        :return: The phone of this UserUpdate.  # noqa: E501
+        :rtype: str
+        """
+        return self._phone
+
+    @phone.setter
+    def phone(self, phone):
+        """Sets the phone of this UserUpdate.
+
+
+        :param phone: The phone of this UserUpdate.  # noqa: E501
+        :type: str
+        """
+        if phone is not None and len(phone) < 1:
+            raise ValueError("Invalid value for `phone`, length must be greater than or equal to `1`")  # noqa: E501
+
+        self._phone = phone
 
     @property
     def pending_address_changes(self):

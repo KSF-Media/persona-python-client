@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **email** | **str** |  | 
 **first_name** | **str** |  | [optional] 
 **last_name** | **str** |  | [optional] 
+**phone** | **str** |  | [optional] 
 **address** | [**Address**](Address.md) |  | [optional] 
 **cusno** | **int** |  | 
 **subs** | [**list[Subscription]**](Subscription.md) |  | 

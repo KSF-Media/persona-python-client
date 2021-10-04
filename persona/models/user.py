@@ -35,6 +35,7 @@ class User(object):
         'email': 'str',
         'first_name': 'str',
         'last_name': 'str',
+        'phone': 'str',
         'address': 'Address',
         'cusno': 'int',
         'subs': 'list[Subscription]',
@@ -50,6 +51,7 @@ class User(object):
         'email': 'email',
         'first_name': 'firstName',
         'last_name': 'lastName',
+        'phone': 'phone',
         'address': 'address',
         'cusno': 'cusno',
         'subs': 'subs',
@@ -60,13 +62,14 @@ class User(object):
         'has_completed_registration': 'hasCompletedRegistration'
     }
 
-    def __init__(self, uuid=None, email=None, first_name=None, last_name=None, address=None, cusno=None, subs=None, consent=None, legal=None, pending_address_changes=None, past_temporary_addresses=None, has_completed_registration=None):  # noqa: E501
+    def __init__(self, uuid=None, email=None, first_name=None, last_name=None, phone=None, address=None, cusno=None, subs=None, consent=None, legal=None, pending_address_changes=None, past_temporary_addresses=None, has_completed_registration=None):  # noqa: E501
         """User - a model defined in OpenAPI"""  # noqa: E501
 
         self._uuid = None
         self._email = None
         self._first_name = None
         self._last_name = None
+        self._phone = None
         self._address = None
         self._cusno = None
         self._subs = None
@@ -83,6 +86,8 @@ class User(object):
             self.first_name = first_name
         if last_name is not None:
             self.last_name = last_name
+        if phone is not None:
+            self.phone = phone
         if address is not None:
             self.address = address
         self.cusno = cusno
@@ -181,6 +186,27 @@ class User(object):
         """
 
         self._last_name = last_name
+
+    @property
+    def phone(self):
+        """Gets the phone of this User.  # noqa: E501
+
+
+        :return: The phone of this User.  # noqa: E501
+        :rtype: str
+        """
+        return self._phone
+
+    @phone.setter
+    def phone(self, phone):
+        """Sets the phone of this User.
+
+
+        :param phone: The phone of this User.  # noqa: E501
+        :type: str
+        """
+
+        self._phone = phone
 
     @property
     def address(self):
