@@ -1236,43 +1236,43 @@ class UsersApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def users_uuid_scope_get(self, uuid, **kwargs):  # noqa: E501
+    def users_uuid_scope_get(self, uuid, scope, **kwargs):  # noqa: E501
         """Check if user has valid token for a scope  # noqa: E501
 
         Authorization header expects the following format ‘OAuth {token}’  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.users_uuid_scope_get(uuid, async_req=True)
+        >>> thread = api.users_uuid_scope_get(uuid, scope, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str uuid: (required)
+        :param str scope: (required)
         :param str authorization:
-        :param str scope:
         :return: int
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.users_uuid_scope_get_with_http_info(uuid, **kwargs)  # noqa: E501
+            return self.users_uuid_scope_get_with_http_info(uuid, scope, **kwargs)  # noqa: E501
         else:
-            (data) = self.users_uuid_scope_get_with_http_info(uuid, **kwargs)  # noqa: E501
+            (data) = self.users_uuid_scope_get_with_http_info(uuid, scope, **kwargs)  # noqa: E501
             return data
 
-    def users_uuid_scope_get_with_http_info(self, uuid, **kwargs):  # noqa: E501
+    def users_uuid_scope_get_with_http_info(self, uuid, scope, **kwargs):  # noqa: E501
         """Check if user has valid token for a scope  # noqa: E501
 
         Authorization header expects the following format ‘OAuth {token}’  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.users_uuid_scope_get_with_http_info(uuid, async_req=True)
+        >>> thread = api.users_uuid_scope_get_with_http_info(uuid, scope, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str uuid: (required)
+        :param str scope: (required)
         :param str authorization:
-        :param str scope:
         :return: int
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1280,7 +1280,7 @@ class UsersApi(object):
 
         local_var_params = locals()
 
-        all_params = ['uuid', 'authorization', 'scope']  # noqa: E501
+        all_params = ['uuid', 'scope', 'authorization']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1298,6 +1298,10 @@ class UsersApi(object):
         if ('uuid' not in local_var_params or
                 local_var_params['uuid'] is None):
             raise ApiValueError("Missing the required parameter `uuid` when calling `users_uuid_scope_get`")  # noqa: E501
+        # verify the required parameter 'scope' is set
+        if ('scope' not in local_var_params or
+                local_var_params['scope'] is None):
+            raise ApiValueError("Missing the required parameter `scope` when calling `users_uuid_scope_get`")  # noqa: E501
 
         collection_formats = {}
 

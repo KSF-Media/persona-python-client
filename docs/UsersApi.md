@@ -613,7 +613,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **users_uuid_scope_get**
-> int users_uuid_scope_get(uuid, authorization=authorization, scope=scope)
+> int users_uuid_scope_get(uuid, scope, authorization=authorization)
 
 Check if user has valid token for a scope
 
@@ -631,12 +631,12 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = persona.UsersApi()
 uuid = 'uuid_example' # str | 
+scope = 'scope_example' # str | 
 authorization = 'authorization_example' # str |  (optional)
-scope = 'scope_example' # str |  (optional)
 
 try:
     # Check if user has valid token for a scope
-    api_response = api_instance.users_uuid_scope_get(uuid, authorization=authorization, scope=scope)
+    api_response = api_instance.users_uuid_scope_get(uuid, scope, authorization=authorization)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling UsersApi->users_uuid_scope_get: %s\n" % e)
@@ -647,8 +647,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **uuid** | [**str**](.md)|  | 
+ **scope** | **str**|  | 
  **authorization** | **str**|  | [optional] 
- **scope** | **str**|  | [optional] 
 
 ### Return type
 
