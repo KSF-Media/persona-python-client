@@ -81,8 +81,10 @@ class Payment(object):
         self.discriminator = None
 
         self.invno = invno
-        self.date = date
-        self.due_date = due_date
+        if date is not None:
+            self.date = date
+        if due_date is not None:
+            self.due_date = due_date
         self.expenses = expenses
         self.interest = interest
         self.vat = vat
@@ -144,8 +146,6 @@ class Payment(object):
         :param date: The date of this Payment.  # noqa: E501
         :type: date
         """
-        if date is None:
-            raise ValueError("Invalid value for `date`, must not be `None`")  # noqa: E501
 
         self._date = date
 
@@ -167,8 +167,6 @@ class Payment(object):
         :param due_date: The due_date of this Payment.  # noqa: E501
         :type: date
         """
-        if due_date is None:
-            raise ValueError("Invalid value for `due_date`, must not be `None`")  # noqa: E501
 
         self._due_date = due_date
 

@@ -4,8 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **invno** | **int** | Payment invoice ID | 
-**date** | **date** |  | 
-**due_date** | **date** |  | 
+**date** | **date** |  | [optional] 
+**due_date** | **date** |  | [optional] 
 **expenses** | **float** |  | 
 **interest** | **float** |  | 
 **vat** | **float** |  | 
