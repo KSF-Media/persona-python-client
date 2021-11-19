@@ -28,6 +28,13 @@ class TestEntitlementsApi(unittest.TestCase):
     def tearDown(self):
         pass
 
+    def test_entitlements_allow_get(self):
+        """Test case for entitlements_allow_get
+
+        Check if global entitlements are enabled  # noqa: E501
+        """
+        pass
+
     def test_entitlements_allow_post(self):
         """Test case for entitlements_allow_post
 
