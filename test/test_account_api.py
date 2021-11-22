@@ -28,6 +28,13 @@ class TestAccountApi(unittest.TestCase):
     def tearDown(self):
         pass
 
+    def test_account_password_forgot_get(self):
+        """Test case for account_password_forgot_get
+
+        Request password reset link  # noqa: E501
+        """
+        pass
+
     def test_account_password_forgot_post(self):
         """Test case for account_password_forgot_post
 

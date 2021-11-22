@@ -31,20 +31,25 @@ class ForgotPasswordData(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'email': 'str'
+        'email': 'str',
+        'redir': 'bool'
     }
 
     attribute_map = {
-        'email': 'email'
+        'email': 'email',
+        'redir': 'redir'
     }
 
-    def __init__(self, email=None):  # noqa: E501
+    def __init__(self, email=None, redir=None):  # noqa: E501
         """ForgotPasswordData - a model defined in OpenAPI"""  # noqa: E501
 
         self._email = None
+        self._redir = None
         self.discriminator = None
 
         self.email = email
+        if redir is not None:
+            self.redir = redir
 
     @property
     def email(self):
@@ -68,6 +73,27 @@ class ForgotPasswordData(object):
             raise ValueError("Invalid value for `email`, must not be `None`")  # noqa: E501
 
         self._email = email
+
+    @property
+    def redir(self):
+        """Gets the redir of this ForgotPasswordData.  # noqa: E501
+
+
+        :return: The redir of this ForgotPasswordData.  # noqa: E501
+        :rtype: bool
+        """
+        return self._redir
+
+    @redir.setter
+    def redir(self, redir):
+        """Sets the redir of this ForgotPasswordData.
+
+
+        :param redir: The redir of this ForgotPasswordData.  # noqa: E501
+        :type: bool
+        """
+
+        self._redir = redir
 
     def to_dict(self):
         """Returns the model properties as a dict"""

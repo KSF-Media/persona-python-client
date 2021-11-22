@@ -54,14 +54,15 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = persona.AccountApi(persona.ApiClient(configuration))
-body = persona.ForgotPasswordData() # ForgotPasswordData | 
+email = 'email_example' # str | 
+redir = True # bool |  (optional)
 
 try:
     # Request password reset link
-    api_response = api_instance.account_password_forgot_post(body)
+    api_response = api_instance.account_password_forgot_get(email, redir=redir)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AccountApi->account_password_forgot_post: %s\n" % e)
+    print("Exception when calling AccountApi->account_password_forgot_get: %s\n" % e)
 
 ```
 
@@ -71,6 +72,7 @@ All URIs are relative to *http://http:/v1*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*AccountApi* | [**account_password_forgot_get**](docs/AccountApi.md#account_password_forgot_get) | **GET** /account/password/forgot | Request password reset link
 *AccountApi* | [**account_password_forgot_post**](docs/AccountApi.md#account_password_forgot_post) | **POST** /account/password/forgot | Request password reset link
 *AccountApi* | [**account_password_reset_post**](docs/AccountApi.md#account_password_reset_post) | **POST** /account/password/reset | Reset a forgotten password with a token
 *AdminApi* | [**admin_search_post**](docs/AdminApi.md#admin_search_post) | **POST** /admin/search | Search for users
