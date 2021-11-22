@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **entitlements_allow_get**
-> str entitlements_allow_get(auth_user=auth_user, authorization=authorization)
+> list[str] entitlements_allow_get(auth_user=auth_user, authorization=authorization)
 
 Check if global entitlements are enabled
 
@@ -46,7 +46,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**str**
+**list[str]**
 
 ### Authorization
 
