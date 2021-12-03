@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **entitlements_allow_get**
-> list[str] entitlements_allow_get(auth_user=auth_user, authorization=authorization)
+> list[str] entitlements_allow_get(auth_user=auth_user, authorization=authorization, ip=ip, paper=paper)
 
 Check if global entitlements are enabled
 
@@ -28,10 +28,12 @@ from pprint import pprint
 api_instance = persona.EntitlementsApi()
 auth_user = 'auth_user_example' # str |  (optional)
 authorization = 'authorization_example' # str |  (optional)
+ip = 'ip_example' # str |  (optional)
+paper = 'paper_example' # str |  (optional)
 
 try:
     # Check if global entitlements are enabled
-    api_response = api_instance.entitlements_allow_get(auth_user=auth_user, authorization=authorization)
+    api_response = api_instance.entitlements_allow_get(auth_user=auth_user, authorization=authorization, ip=ip, paper=paper)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling EntitlementsApi->entitlements_allow_get: %s\n" % e)
@@ -43,6 +45,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **auth_user** | [**str**](.md)|  | [optional] 
  **authorization** | **str**|  | [optional] 
+ **ip** | **str**|  | [optional] 
+ **paper** | **str**|  | [optional] 
 
 ### Return type
 

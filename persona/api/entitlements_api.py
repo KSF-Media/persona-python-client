@@ -47,6 +47,8 @@ class EntitlementsApi(object):
         :param async_req bool
         :param str auth_user:
         :param str authorization:
+        :param str ip:
+        :param str paper:
         :return: list[str]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -69,6 +71,8 @@ class EntitlementsApi(object):
         :param async_req bool
         :param str auth_user:
         :param str authorization:
+        :param str ip:
+        :param str paper:
         :return: list[str]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -76,7 +80,7 @@ class EntitlementsApi(object):
 
         local_var_params = locals()
 
-        all_params = ['auth_user', 'authorization']  # noqa: E501
+        all_params = ['auth_user', 'authorization', 'ip', 'paper']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -96,6 +100,10 @@ class EntitlementsApi(object):
         path_params = {}
 
         query_params = []
+        if 'ip' in local_var_params:
+            query_params.append(('ip', local_var_params['ip']))  # noqa: E501
+        if 'paper' in local_var_params:
+            query_params.append(('paper', local_var_params['paper']))  # noqa: E501
 
         header_params = {}
         if 'auth_user' in local_var_params:
