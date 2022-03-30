@@ -32,23 +32,27 @@ class PausedSubscription(object):
     """
     openapi_types = {
         'start_date': 'date',
-        'end_date': 'date'
+        'end_date': 'date',
+        'sleep_type': 'str'
     }
 
     attribute_map = {
         'start_date': 'startDate',
-        'end_date': 'endDate'
+        'end_date': 'endDate',
+        'sleep_type': 'sleepType'
     }
 
-    def __init__(self, start_date=None, end_date=None):  # noqa: E501
+    def __init__(self, start_date=None, end_date=None, sleep_type=None):  # noqa: E501
         """PausedSubscription - a model defined in OpenAPI"""  # noqa: E501
 
         self._start_date = None
         self._end_date = None
+        self._sleep_type = None
         self.discriminator = None
 
         self.start_date = start_date
         self.end_date = end_date
+        self.sleep_type = sleep_type
 
     @property
     def start_date(self):
@@ -95,6 +99,37 @@ class PausedSubscription(object):
             raise ValueError("Invalid value for `end_date`, must not be `None`")  # noqa: E501
 
         self._end_date = end_date
+
+    @property
+    def sleep_type(self):
+        """Gets the sleep_type of this PausedSubscription.  # noqa: E501
+
+        Type of subscription pause  # noqa: E501
+
+        :return: The sleep_type of this PausedSubscription.  # noqa: E501
+        :rtype: str
+        """
+        return self._sleep_type
+
+    @sleep_type.setter
+    def sleep_type(self, sleep_type):
+        """Sets the sleep_type of this PausedSubscription.
+
+        Type of subscription pause  # noqa: E501
+
+        :param sleep_type: The sleep_type of this PausedSubscription.  # noqa: E501
+        :type: str
+        """
+        if sleep_type is None:
+            raise ValueError("Invalid value for `sleep_type`, must not be `None`")  # noqa: E501
+        allowed_values = ["Pause", "Rebate", "UnknownSleepType"]  # noqa: E501
+        if sleep_type not in allowed_values:
+            raise ValueError(
+                "Invalid value for `sleep_type` ({0}), must be one of {1}"  # noqa: E501
+                .format(sleep_type, allowed_values)
+            )
+
+        self._sleep_type = sleep_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

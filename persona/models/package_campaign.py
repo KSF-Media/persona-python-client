@@ -36,7 +36,9 @@ class PackageCampaign(object):
         'name': 'str',
         'price_eur': 'float',
         'length': 'int',
-        'length_unit': 'str'
+        'length_unit': 'str',
+        'start_day': 'date',
+        'end_day': 'date'
     }
 
     attribute_map = {
@@ -45,10 +47,12 @@ class PackageCampaign(object):
         'name': 'name',
         'price_eur': 'priceEur',
         'length': 'length',
-        'length_unit': 'lengthUnit'
+        'length_unit': 'lengthUnit',
+        'start_day': 'startDay',
+        'end_day': 'endDay'
     }
 
-    def __init__(self, no=None, id=None, name=None, price_eur=None, length=None, length_unit=None):  # noqa: E501
+    def __init__(self, no=None, id=None, name=None, price_eur=None, length=None, length_unit=None, start_day=None, end_day=None):  # noqa: E501
         """PackageCampaign - a model defined in OpenAPI"""  # noqa: E501
 
         self._no = None
@@ -57,6 +61,8 @@ class PackageCampaign(object):
         self._price_eur = None
         self._length = None
         self._length_unit = None
+        self._start_day = None
+        self._end_day = None
         self.discriminator = None
 
         self.no = no
@@ -65,6 +71,10 @@ class PackageCampaign(object):
         self.price_eur = price_eur
         self.length = length
         self.length_unit = length_unit
+        if start_day is not None:
+            self.start_day = start_day
+        if end_day is not None:
+            self.end_day = end_day
 
     @property
     def no(self):
@@ -229,6 +239,48 @@ class PackageCampaign(object):
             )
 
         self._length_unit = length_unit
+
+    @property
+    def start_day(self):
+        """Gets the start_day of this PackageCampaign.  # noqa: E501
+
+
+        :return: The start_day of this PackageCampaign.  # noqa: E501
+        :rtype: date
+        """
+        return self._start_day
+
+    @start_day.setter
+    def start_day(self, start_day):
+        """Sets the start_day of this PackageCampaign.
+
+
+        :param start_day: The start_day of this PackageCampaign.  # noqa: E501
+        :type: date
+        """
+
+        self._start_day = start_day
+
+    @property
+    def end_day(self):
+        """Gets the end_day of this PackageCampaign.  # noqa: E501
+
+
+        :return: The end_day of this PackageCampaign.  # noqa: E501
+        :rtype: date
+        """
+        return self._end_day
+
+    @end_day.setter
+    def end_day(self, end_day):
+        """Sets the end_day of this PackageCampaign.
+
+
+        :param end_day: The end_day of this PackageCampaign.  # noqa: E501
+        :type: date
+        """
+
+        self._end_day = end_day
 
     def to_dict(self):
         """Returns the model properties as a dict"""
