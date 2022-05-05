@@ -57,6 +57,7 @@ from persona.models.past_temporary_address import PastTemporaryAddress
 from persona.models.paused_subscription import PausedSubscription
 from persona.models.payment import Payment
 from persona.models.pending_address_change import PendingAddressChange
+from persona.models.persisted_entitlement_access import PersistedEntitlementAccess
 from persona.models.product import Product
 from persona.models.search_query import SearchQuery
 from persona.models.search_result import SearchResult

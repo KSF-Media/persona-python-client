@@ -28,6 +28,13 @@ class TestEntitlementsApi(unittest.TestCase):
     def tearDown(self):
         pass
 
+    def test_entitlements_allow_delete(self):
+        """Test case for entitlements_allow_delete
+
+        Remove an entitlement  # noqa: E501
+        """
+        pass
+
     def test_entitlements_allow_get(self):
         """Test case for entitlements_allow_get
 
@@ -38,6 +45,7 @@ class TestEntitlementsApi(unittest.TestCase):
     def test_entitlements_allow_post(self):
         """Test case for entitlements_allow_post
 
+        Add an entitlement for all users  # noqa: E501
         """
         pass
 
