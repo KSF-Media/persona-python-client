@@ -104,7 +104,6 @@ class PausedSubscription(object):
     def sleep_type(self):
         """Gets the sleep_type of this PausedSubscription.  # noqa: E501
 
-        Type of subscription pause  # noqa: E501
 
         :return: The sleep_type of this PausedSubscription.  # noqa: E501
         :rtype: str
@@ -115,14 +114,13 @@ class PausedSubscription(object):
     def sleep_type(self, sleep_type):
         """Sets the sleep_type of this PausedSubscription.
 
-        Type of subscription pause  # noqa: E501
 
         :param sleep_type: The sleep_type of this PausedSubscription.  # noqa: E501
         :type: str
         """
         if sleep_type is None:
             raise ValueError("Invalid value for `sleep_type`, must not be `None`")  # noqa: E501
-        allowed_values = ["Pause", "Rebate", "UnknownSleepType"]  # noqa: E501
+        allowed_values = ["Upcoming", "Active", "Paused", "Ended", "UnpaidAndCanceled", "Canceled", "CanceledWithLatePayment", "RestartedAfterLatePayment", "DeactivatedRecently", "Unknown"]  # noqa: E501
         if sleep_type not in allowed_values:
             raise ValueError(
                 "Invalid value for `sleep_type` ({0}), must be one of {1}"  # noqa: E501

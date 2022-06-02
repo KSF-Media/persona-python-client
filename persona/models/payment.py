@@ -299,7 +299,6 @@ class Payment(object):
     def type(self):
         """Gets the type of this Payment.  # noqa: E501
 
-          # noqa: E501
 
         :return: The type of this Payment.  # noqa: E501
         :rtype: str
@@ -310,7 +309,6 @@ class Payment(object):
     def type(self, type):
         """Sets the type of this Payment.
 
-          # noqa: E501
 
         :param type: The type of this Payment.  # noqa: E501
         :type: str
@@ -330,7 +328,6 @@ class Payment(object):
     def state(self):
         """Gets the state of this Payment.  # noqa: E501
 
-          # noqa: E501
 
         :return: The state of this Payment.  # noqa: E501
         :rtype: str
@@ -341,7 +338,6 @@ class Payment(object):
     def state(self, state):
         """Sets the state of this Payment.
 
-          # noqa: E501
 
         :param state: The state of this Payment.  # noqa: E501
         :type: str

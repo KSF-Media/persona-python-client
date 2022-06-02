@@ -103,7 +103,6 @@ class NewDeliveryReclamation(object):
     def claim(self):
         """Gets the claim of this NewDeliveryReclamation.  # noqa: E501
 
-        The type of claim for the reclamation  # noqa: E501
 
         :return: The claim of this NewDeliveryReclamation.  # noqa: E501
         :rtype: str
@@ -114,7 +113,6 @@ class NewDeliveryReclamation(object):
     def claim(self, claim):
         """Sets the claim of this NewDeliveryReclamation.
 
-        The type of claim for the reclamation  # noqa: E501
 
         :param claim: The claim of this NewDeliveryReclamation.  # noqa: E501
         :type: str

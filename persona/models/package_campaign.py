@@ -213,7 +213,6 @@ class PackageCampaign(object):
     def length_unit(self):
         """Gets the length_unit of this PackageCampaign.  # noqa: E501
 
-        Unit of length (days, weeks, months, years)  # noqa: E501
 
         :return: The length_unit of this PackageCampaign.  # noqa: E501
         :rtype: str
@@ -224,7 +223,6 @@ class PackageCampaign(object):
     def length_unit(self, length_unit):
         """Sets the length_unit of this PackageCampaign.
 
-        Unit of length (days, weeks, months, years)  # noqa: E501
 
         :param length_unit: The length_unit of this PackageCampaign.  # noqa: E501
         :type: str

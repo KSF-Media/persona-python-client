@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **name** | **str** | Campaign name | 
 **price_eur** | **float** | Price of campaign in euros | 
 **length** | **int** | Length of campaign | 
-**length_unit** | **str** | Unit of length (days, weeks, months, years) | 
+**length_unit** | **str** |  | 
 **start_day** | **date** |  | [optional] 
 **end_day** | **date** |  | [optional] 
 

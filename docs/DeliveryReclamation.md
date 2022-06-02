@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **date** | **date** |  | 
 **paper** | **str** |  | [optional] 
 **publication_date** | **date** |  | 
-**claim** | **str** | The type of claim for the reclamation | 
+**claim** | **str** |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

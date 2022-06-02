@@ -539,7 +539,6 @@ class Subscription(object):
     def payment_method(self):
         """Gets the payment_method of this Subscription.  # noqa: E501
 
-        Payment method of subscription  # noqa: E501
 
         :return: The payment_method of this Subscription.  # noqa: E501
         :rtype: str
@@ -550,7 +549,6 @@ class Subscription(object):
     def payment_method(self, payment_method):
         """Sets the payment_method of this Subscription.
 
-        Payment method of subscription  # noqa: E501
 
         :param payment_method: The payment_method of this Subscription.  # noqa: E501
         :type: str

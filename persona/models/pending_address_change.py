@@ -130,7 +130,6 @@ class PendingAddressChange(object):
     def type(self):
         """Gets the type of this PendingAddressChange.  # noqa: E501
 
-        Type of address change  # noqa: E501
 
         :return: The type of this PendingAddressChange.  # noqa: E501
         :rtype: str
@@ -141,7 +140,6 @@ class PendingAddressChange(object):
     def type(self, type):
         """Sets the type of this PendingAddressChange.
 
-        Type of address change  # noqa: E501
 
         :param type: The type of this PendingAddressChange.  # noqa: E501
         :type: str
