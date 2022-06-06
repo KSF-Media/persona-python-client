@@ -55,7 +55,6 @@ class CancelSubscriptionReason(object):
     def reason(self):
         """Gets the reason of this CancelSubscriptionReason.  # noqa: E501
 
-        Cancel reason code  # noqa: E501
 
         :return: The reason of this CancelSubscriptionReason.  # noqa: E501
         :rtype: str
@@ -66,7 +65,6 @@ class CancelSubscriptionReason(object):
     def reason(self, reason):
         """Sets the reason of this CancelSubscriptionReason.
 
-        Cancel reason code  # noqa: E501
 
         :param reason: The reason of this CancelSubscriptionReason.  # noqa: E501
         :type: str

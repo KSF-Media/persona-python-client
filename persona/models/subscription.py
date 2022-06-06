@@ -243,7 +243,6 @@ class Subscription(object):
     def kind(self):
         """Gets the kind of this Subscription.  # noqa: E501
 
-        Subscription kind - what kind of order is it  # noqa: E501
 
         :return: The kind of this Subscription.  # noqa: E501
         :rtype: str
@@ -254,7 +253,6 @@ class Subscription(object):
     def kind(self, kind):
         """Sets the kind of this Subscription.
 
-        Subscription kind - what kind of order is it  # noqa: E501
 
         :param kind: The kind of this Subscription.  # noqa: E501
         :type: str
@@ -274,7 +272,6 @@ class Subscription(object):
     def state(self):
         """Gets the state of this Subscription.  # noqa: E501
 
-        Current state of the Subscription  # noqa: E501
 
         :return: The state of this Subscription.  # noqa: E501
         :rtype: str
@@ -285,7 +282,6 @@ class Subscription(object):
     def state(self, state):
         """Sets the state of this Subscription.
 
-        Current state of the Subscription  # noqa: E501
 
         :param state: The state of this Subscription.  # noqa: E501
         :type: str
@@ -305,7 +301,6 @@ class Subscription(object):
     def pricegroup(self):
         """Gets the pricegroup of this Subscription.  # noqa: E501
 
-        Pricegroup of the Subscription  # noqa: E501
 
         :return: The pricegroup of this Subscription.  # noqa: E501
         :rtype: str
@@ -316,7 +311,6 @@ class Subscription(object):
     def pricegroup(self, pricegroup):
         """Sets the pricegroup of this Subscription.
 
-        Pricegroup of the Subscription  # noqa: E501
 
         :param pricegroup: The pricegroup of this Subscription.  # noqa: E501
         :type: str

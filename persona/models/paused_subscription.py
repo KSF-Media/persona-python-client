@@ -120,7 +120,7 @@ class PausedSubscription(object):
         """
         if sleep_type is None:
             raise ValueError("Invalid value for `sleep_type`, must not be `None`")  # noqa: E501
-        allowed_values = ["Upcoming", "Active", "Paused", "Ended", "UnpaidAndCanceled", "Canceled", "CanceledWithLatePayment", "RestartedAfterLatePayment", "DeactivatedRecently", "Unknown"]  # noqa: E501
+        allowed_values = ["Pause", "Rebate", "UnknownSleepType"]  # noqa: E501
         if sleep_type not in allowed_values:
             raise ValueError(
                 "Invalid value for `sleep_type` ({0}), must be one of {1}"  # noqa: E501
