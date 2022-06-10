@@ -36,6 +36,102 @@ class LoginApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
+    def login_ip_get(self, **kwargs):  # noqa: E501
+        """Login with IP  # noqa: E501
+
+        Returns auth & token for customers with IP based entitlement  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.login_ip_get(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str x_real_ip:
+        :param str paper:
+        :return: LoginResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.login_ip_get_with_http_info(**kwargs)  # noqa: E501
+        else:
+            (data) = self.login_ip_get_with_http_info(**kwargs)  # noqa: E501
+            return data
+
+    def login_ip_get_with_http_info(self, **kwargs):  # noqa: E501
+        """Login with IP  # noqa: E501
+
+        Returns auth & token for customers with IP based entitlement  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.login_ip_get_with_http_info(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str x_real_ip:
+        :param str paper:
+        :return: LoginResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = ['x_real_ip', 'paper']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method login_ip_get" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+        if 'paper' in local_var_params:
+            query_params.append(('paper', local_var_params['paper']))  # noqa: E501
+
+        header_params = {}
+        if 'x_real_ip' in local_var_params:
+            header_params['X-Real-IP'] = local_var_params['x_real_ip']  # noqa: E501
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json;charset=utf-8'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = []  # noqa: E501
+
+        return self.api_client.call_api(
+            '/login/ip', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='LoginResponse',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
     def login_post(self, body, **kwargs):  # noqa: E501
         """Login with email and password  # noqa: E501
 

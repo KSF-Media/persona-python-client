@@ -28,6 +28,13 @@ class TestLoginApi(unittest.TestCase):
     def tearDown(self):
         pass
 
+    def test_login_ip_get(self):
+        """Test case for login_ip_get
+
+        Login with IP  # noqa: E501
+        """
+        pass
+
     def test_login_post(self):
         """Test case for login_post
 
