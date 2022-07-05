@@ -48,7 +48,8 @@ class Subscription(object):
         'pending_address_changes': 'list[PendingAddressChange]',
         'order_number': 'str',
         'payment_method': 'str',
-        'payment_method_id': 'int'
+        'payment_method_id': 'int',
+        'delivery_trouble_end': 'str'
     }
 
     attribute_map = {
@@ -69,10 +70,11 @@ class Subscription(object):
         'pending_address_changes': 'pendingAddressChanges',
         'order_number': 'orderNumber',
         'payment_method': 'paymentMethod',
-        'payment_method_id': 'paymentMethodId'
+        'payment_method_id': 'paymentMethodId',
+        'delivery_trouble_end': 'deliveryTroubleEnd'
     }
 
-    def __init__(self, subsno=None, extno=None, cusno=None, paycusno=None, kind=None, state=None, pricegroup=None, package=None, dates=None, extsubsexists=None, campaign=None, paused=None, receiver=None, delivery_address=None, pending_address_changes=None, order_number=None, payment_method=None, payment_method_id=None):  # noqa: E501
+    def __init__(self, subsno=None, extno=None, cusno=None, paycusno=None, kind=None, state=None, pricegroup=None, package=None, dates=None, extsubsexists=None, campaign=None, paused=None, receiver=None, delivery_address=None, pending_address_changes=None, order_number=None, payment_method=None, payment_method_id=None, delivery_trouble_end=None):  # noqa: E501
         """Subscription - a model defined in OpenAPI"""  # noqa: E501
 
         self._subsno = None
@@ -93,6 +95,7 @@ class Subscription(object):
         self._order_number = None
         self._payment_method = None
         self._payment_method_id = None
+        self._delivery_trouble_end = None
         self.discriminator = None
 
         self.subsno = subsno
@@ -122,6 +125,8 @@ class Subscription(object):
             self.payment_method = payment_method
         if payment_method_id is not None:
             self.payment_method_id = payment_method_id
+        if delivery_trouble_end is not None:
+            self.delivery_trouble_end = delivery_trouble_end
 
     @property
     def subsno(self):
@@ -580,6 +585,27 @@ class Subscription(object):
             raise ValueError("Invalid value for `payment_method_id`, must be a value greater than or equal to `-9223372036854775808`")  # noqa: E501
 
         self._payment_method_id = payment_method_id
+
+    @property
+    def delivery_trouble_end(self):
+        """Gets the delivery_trouble_end of this Subscription.  # noqa: E501
+
+
+        :return: The delivery_trouble_end of this Subscription.  # noqa: E501
+        :rtype: str
+        """
+        return self._delivery_trouble_end
+
+    @delivery_trouble_end.setter
+    def delivery_trouble_end(self, delivery_trouble_end):
+        """Sets the delivery_trouble_end of this Subscription.
+
+
+        :param delivery_trouble_end: The delivery_trouble_end of this Subscription.  # noqa: E501
+        :type: str
+        """
+
+        self._delivery_trouble_end = delivery_trouble_end
 
     def to_dict(self):
         """Returns the model properties as a dict"""
