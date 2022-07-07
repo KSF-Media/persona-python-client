@@ -49,7 +49,7 @@ class Subscription(object):
         'order_number': 'str',
         'payment_method': 'str',
         'payment_method_id': 'int',
-        'delivery_trouble_end': 'str'
+        'delivery_trouble_end': 'datetime'
     }
 
     attribute_map = {
@@ -592,7 +592,7 @@ class Subscription(object):
 
 
         :return: The delivery_trouble_end of this Subscription.  # noqa: E501
-        :rtype: str
+        :rtype: datetime
         """
         return self._delivery_trouble_end
 
@@ -602,7 +602,7 @@ class Subscription(object):
 
 
         :param delivery_trouble_end: The delivery_trouble_end of this Subscription.  # noqa: E501
-        :type: str
+        :type: datetime
         """
 
         self._delivery_trouble_end = delivery_trouble_end
