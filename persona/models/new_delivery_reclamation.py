@@ -33,27 +33,32 @@ class NewDeliveryReclamation(object):
     openapi_types = {
         'paper': 'str',
         'publication_date': 'date',
-        'claim': 'str'
+        'claim': 'str',
+        'door_code': 'str'
     }
 
     attribute_map = {
         'paper': 'paper',
         'publication_date': 'publicationDate',
-        'claim': 'claim'
+        'claim': 'claim',
+        'door_code': 'doorCode'
     }
 
-    def __init__(self, paper=None, publication_date=None, claim=None):  # noqa: E501
+    def __init__(self, paper=None, publication_date=None, claim=None, door_code=None):  # noqa: E501
         """NewDeliveryReclamation - a model defined in OpenAPI"""  # noqa: E501
 
         self._paper = None
         self._publication_date = None
         self._claim = None
+        self._door_code = None
         self.discriminator = None
 
         if paper is not None:
             self.paper = paper
         self.publication_date = publication_date
         self.claim = claim
+        if door_code is not None:
+            self.door_code = door_code
 
     @property
     def paper(self):
@@ -127,6 +132,29 @@ class NewDeliveryReclamation(object):
             )
 
         self._claim = claim
+
+    @property
+    def door_code(self):
+        """Gets the door_code of this NewDeliveryReclamation.  # noqa: E501
+
+        Door code for possible redelivery  # noqa: E501
+
+        :return: The door_code of this NewDeliveryReclamation.  # noqa: E501
+        :rtype: str
+        """
+        return self._door_code
+
+    @door_code.setter
+    def door_code(self, door_code):
+        """Sets the door_code of this NewDeliveryReclamation.
+
+        Door code for possible redelivery  # noqa: E501
+
+        :param door_code: The door_code of this NewDeliveryReclamation.  # noqa: E501
+        :type: str
+        """
+
+        self._door_code = door_code
 
     def to_dict(self):
         """Returns the model properties as a dict"""
