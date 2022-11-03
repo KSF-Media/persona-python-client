@@ -342,7 +342,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **users_uuid_newsletters_get**
-> NewsletterSubscriptions users_uuid_newsletters_get(uuid, auth_user=auth_user, authorization=authorization)
+> list[Newsletter] users_uuid_newsletters_get(uuid, auth_user=auth_user, authorization=authorization)
 
 Get newsletter subscriptions
 
@@ -381,7 +381,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**NewsletterSubscriptions**](NewsletterSubscriptions.md)
+[**list[Newsletter]**](Newsletter.md)
 
 ### Authorization
 
@@ -395,7 +395,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **users_uuid_newsletters_put**
-> NewsletterSubscriptions users_uuid_newsletters_put(uuid, body, auth_user=auth_user, authorization=authorization)
+> list[Newsletter] users_uuid_newsletters_put(uuid, body, auth_user=auth_user, authorization=authorization)
 
 Update newsletter subscriptions
 
@@ -413,7 +413,7 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = persona.UsersApi()
 uuid = 'uuid_example' # str | 
-body = persona.NewsletterSubscriptions() # NewsletterSubscriptions | 
+body = None # list[Newsletter] | 
 auth_user = 'auth_user_example' # str |  (optional)
 authorization = 'authorization_example' # str |  (optional)
 
@@ -430,13 +430,13 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **uuid** | [**str**](.md)|  | 
- **body** | [**NewsletterSubscriptions**](NewsletterSubscriptions.md)|  | 
+ **body** | [**list[Newsletter]**](list.md)|  | 
  **auth_user** | [**str**](.md)|  | [optional] 
  **authorization** | **str**|  | [optional] 
 
 ### Return type
 
-[**NewsletterSubscriptions**](NewsletterSubscriptions.md)
+[**list[Newsletter]**](Newsletter.md)
 
 ### Authorization
 

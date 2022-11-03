@@ -15,12 +15,12 @@ from __future__ import absolute_import
 import unittest
 
 import persona
-from persona.models.newsletter_subscriptions import NewsletterSubscriptions  # noqa: E501
+from persona.models.newsletter import Newsletter  # noqa: E501
 from persona.rest import ApiException
 
 
-class TestNewsletterSubscriptions(unittest.TestCase):
-    """NewsletterSubscriptions unit test stubs"""
+class TestNewsletter(unittest.TestCase):
+    """Newsletter unit test stubs"""
 
     def setUp(self):
         pass
@@ -28,10 +28,10 @@ class TestNewsletterSubscriptions(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testNewsletterSubscriptions(self):
-        """Test NewsletterSubscriptions"""
+    def testNewsletter(self):
+        """Test Newsletter"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = persona.models.newsletter_subscriptions.NewsletterSubscriptions()  # noqa: E501
+        # model = persona.models.newsletter.Newsletter()  # noqa: E501
         pass
 
 

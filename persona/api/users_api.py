@@ -693,7 +693,7 @@ class UsersApi(object):
         :param str uuid: (required)
         :param str auth_user:
         :param str authorization:
-        :return: NewsletterSubscriptions
+        :return: list[Newsletter]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -717,7 +717,7 @@ class UsersApi(object):
         :param str uuid: (required)
         :param str auth_user:
         :param str authorization:
-        :return: NewsletterSubscriptions
+        :return: list[Newsletter]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -776,7 +776,7 @@ class UsersApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='NewsletterSubscriptions',  # noqa: E501
+            response_type='list[Newsletter]',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
@@ -795,10 +795,10 @@ class UsersApi(object):
 
         :param async_req bool
         :param str uuid: (required)
-        :param NewsletterSubscriptions body: (required)
+        :param list[Newsletter] body: (required)
         :param str auth_user:
         :param str authorization:
-        :return: NewsletterSubscriptions
+        :return: list[Newsletter]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -820,10 +820,10 @@ class UsersApi(object):
 
         :param async_req bool
         :param str uuid: (required)
-        :param NewsletterSubscriptions body: (required)
+        :param list[Newsletter] body: (required)
         :param str auth_user:
         :param str authorization:
-        :return: NewsletterSubscriptions
+        :return: list[Newsletter]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -892,7 +892,7 @@ class UsersApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='NewsletterSubscriptions',  # noqa: E501
+            response_type='list[Newsletter]',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
