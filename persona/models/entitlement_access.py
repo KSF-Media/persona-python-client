@@ -33,27 +33,32 @@ class EntitlementAccess(object):
     openapi_types = {
         'start_at': 'str',
         'end_at': 'str',
-        'only_to_products': 'list[str]'
+        'only_to_products': 'list[str]',
+        'by_package_id': 'str'
     }
 
     attribute_map = {
         'start_at': 'startAt',
         'end_at': 'endAt',
-        'only_to_products': 'onlyToProducts'
+        'only_to_products': 'onlyToProducts',
+        'by_package_id': 'byPackageId'
     }
 
-    def __init__(self, start_at=None, end_at=None, only_to_products=None):  # noqa: E501
+    def __init__(self, start_at=None, end_at=None, only_to_products=None, by_package_id=None):  # noqa: E501
         """EntitlementAccess - a model defined in OpenAPI"""  # noqa: E501
 
         self._start_at = None
         self._end_at = None
         self._only_to_products = None
+        self._by_package_id = None
         self.discriminator = None
 
         self.start_at = start_at
         self.end_at = end_at
         if only_to_products is not None:
             self.only_to_products = only_to_products
+        if by_package_id is not None:
+            self.by_package_id = by_package_id
 
     @property
     def start_at(self):
@@ -121,6 +126,27 @@ class EntitlementAccess(object):
         """
 
         self._only_to_products = only_to_products
+
+    @property
+    def by_package_id(self):
+        """Gets the by_package_id of this EntitlementAccess.  # noqa: E501
+
+
+        :return: The by_package_id of this EntitlementAccess.  # noqa: E501
+        :rtype: str
+        """
+        return self._by_package_id
+
+    @by_package_id.setter
+    def by_package_id(self, by_package_id):
+        """Sets the by_package_id of this EntitlementAccess.
+
+
+        :param by_package_id: The by_package_id of this EntitlementAccess.  # noqa: E501
+        :type: str
+        """
+
+        self._by_package_id = by_package_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""
