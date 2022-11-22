@@ -82,6 +82,7 @@ Class | Method | HTTP request | Description
 *EntitlementsApi* | [**entitlements_allow_post**](docs/EntitlementsApi.md#entitlements_allow_post) | **POST** /entitlements/allow | Add an entitlement for all users
 *EntitlementsApi* | [**entitlements_allow_uuid_post**](docs/EntitlementsApi.md#entitlements_allow_uuid_post) | **POST** /entitlements/allow/{uuid} | Grant product access to a customer
 *EntitlementsApi* | [**entitlements_get**](docs/EntitlementsApi.md#entitlements_get) | **GET** /entitlements | List all entitlements
+*EntitlementsApi* | [**entitlements_global_get**](docs/EntitlementsApi.md#entitlements_global_get) | **GET** /entitlements/global | Lists all past and future global entitlements
 *LoginApi* | [**login_ip_get**](docs/LoginApi.md#login_ip_get) | **GET** /login/ip | Login with IP
 *LoginApi* | [**login_post**](docs/LoginApi.md#login_post) | **POST** /login | Login with email and password
 *LoginApi* | [**login_some_post**](docs/LoginApi.md#login_some_post) | **POST** /login/some | Login with social media

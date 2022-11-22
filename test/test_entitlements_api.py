@@ -63,6 +63,13 @@ class TestEntitlementsApi(unittest.TestCase):
         """
         pass
 
+    def test_entitlements_global_get(self):
+        """Test case for entitlements_global_get
+
+        Lists all past and future global entitlements  # noqa: E501
+        """
+        pass
+
 
 if __name__ == '__main__':
     unittest.main()
