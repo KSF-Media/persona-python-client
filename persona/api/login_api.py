@@ -36,41 +36,41 @@ class LoginApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def login_ip_get(self, **kwargs):  # noqa: E501
+    def login_ip_get(self, x_real_ip, paper, **kwargs):  # noqa: E501
         """Login with IP  # noqa: E501
 
         Returns auth & token for customers with IP based entitlement  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.login_ip_get(async_req=True)
+        >>> thread = api.login_ip_get(x_real_ip, paper, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str x_real_ip:
-        :param str paper:
+        :param str x_real_ip: (required)
+        :param str paper: (required)
         :return: LoginResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.login_ip_get_with_http_info(**kwargs)  # noqa: E501
+            return self.login_ip_get_with_http_info(x_real_ip, paper, **kwargs)  # noqa: E501
         else:
-            (data) = self.login_ip_get_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.login_ip_get_with_http_info(x_real_ip, paper, **kwargs)  # noqa: E501
             return data
 
-    def login_ip_get_with_http_info(self, **kwargs):  # noqa: E501
+    def login_ip_get_with_http_info(self, x_real_ip, paper, **kwargs):  # noqa: E501
         """Login with IP  # noqa: E501
 
         Returns auth & token for customers with IP based entitlement  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.login_ip_get_with_http_info(async_req=True)
+        >>> thread = api.login_ip_get_with_http_info(x_real_ip, paper, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str x_real_ip:
-        :param str paper:
+        :param str x_real_ip: (required)
+        :param str paper: (required)
         :return: LoginResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -92,6 +92,14 @@ class LoginApi(object):
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
+        # verify the required parameter 'x_real_ip' is set
+        if ('x_real_ip' not in local_var_params or
+                local_var_params['x_real_ip'] is None):
+            raise ApiValueError("Missing the required parameter `x_real_ip` when calling `login_ip_get`")  # noqa: E501
+        # verify the required parameter 'paper' is set
+        if ('paper' not in local_var_params or
+                local_var_params['paper'] is None):
+            raise ApiValueError("Missing the required parameter `paper` when calling `login_ip_get`")  # noqa: E501
 
         collection_formats = {}
 

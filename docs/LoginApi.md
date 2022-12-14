@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **login_ip_get**
-> LoginResponse login_ip_get(x_real_ip=x_real_ip, paper=paper)
+> LoginResponse login_ip_get(x_real_ip, paper)
 
 Login with IP
 
@@ -29,12 +29,12 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = persona.LoginApi()
-x_real_ip = 'x_real_ip_example' # str |  (optional)
-paper = 'paper_example' # str |  (optional)
+x_real_ip = 'x_real_ip_example' # str | 
+paper = 'paper_example' # str | 
 
 try:
     # Login with IP
-    api_response = api_instance.login_ip_get(x_real_ip=x_real_ip, paper=paper)
+    api_response = api_instance.login_ip_get(x_real_ip, paper)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling LoginApi->login_ip_get: %s\n" % e)
@@ -44,8 +44,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **x_real_ip** | **str**|  | [optional] 
- **paper** | **str**|  | [optional] 
+ **x_real_ip** | **str**|  | 
+ **paper** | **str**|  | 
 
 ### Return type
 
