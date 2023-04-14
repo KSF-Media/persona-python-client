@@ -142,6 +142,106 @@ class AdminApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
+    def admin_transfer_passive_subscribers_listid_post(self, listid, **kwargs):  # noqa: E501
+        """Transfers passive customers from Kayak to Mailchimp  # noqa: E501
+
+        Passive subscribers/members/customers are users who don't have active entitlements and haven't opted out from email marketing. For the given list (audience) ID, this endpoint transfers the list of passive subscribers from Kayak to Mailchimp (via Faro).  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.admin_transfer_passive_subscribers_listid_post(listid, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str listid: (required)
+        :param str auth_user:
+        :param str authorization:
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.admin_transfer_passive_subscribers_listid_post_with_http_info(listid, **kwargs)  # noqa: E501
+        else:
+            (data) = self.admin_transfer_passive_subscribers_listid_post_with_http_info(listid, **kwargs)  # noqa: E501
+            return data
+
+    def admin_transfer_passive_subscribers_listid_post_with_http_info(self, listid, **kwargs):  # noqa: E501
+        """Transfers passive customers from Kayak to Mailchimp  # noqa: E501
+
+        Passive subscribers/members/customers are users who don't have active entitlements and haven't opted out from email marketing. For the given list (audience) ID, this endpoint transfers the list of passive subscribers from Kayak to Mailchimp (via Faro).  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.admin_transfer_passive_subscribers_listid_post_with_http_info(listid, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str listid: (required)
+        :param str auth_user:
+        :param str authorization:
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = ['listid', 'auth_user', 'authorization']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method admin_transfer_passive_subscribers_listid_post" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'listid' is set
+        if ('listid' not in local_var_params or
+                local_var_params['listid'] is None):
+            raise ApiValueError("Missing the required parameter `listid` when calling `admin_transfer_passive_subscribers_listid_post`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'listid' in local_var_params:
+            path_params['listid'] = local_var_params['listid']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+        if 'auth_user' in local_var_params:
+            header_params['AuthUser'] = local_var_params['auth_user']  # noqa: E501
+        if 'authorization' in local_var_params:
+            header_params['Authorization'] = local_var_params['authorization']  # noqa: E501
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # Authentication setting
+        auth_settings = []  # noqa: E501
+
+        return self.api_client.call_api(
+            '/admin/transfer-passive-subscribers/{listid}', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=None,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
     def admin_user_post(self, body, **kwargs):  # noqa: E501
         """Create a new user with admin options.  # noqa: E501
 

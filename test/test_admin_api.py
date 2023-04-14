@@ -35,6 +35,13 @@ class TestAdminApi(unittest.TestCase):
         """
         pass
 
+    def test_admin_transfer_passive_subscribers_listid_post(self):
+        """Test case for admin_transfer_passive_subscribers_listid_post
+
+        Transfers passive customers from Kayak to Mailchimp  # noqa: E501
+        """
+        pass
+
     def test_admin_user_post(self):
         """Test case for admin_user_post
 
