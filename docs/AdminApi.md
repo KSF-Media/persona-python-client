@@ -61,7 +61,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **admin_transfer_passive_subscribers_listid_post**
-> admin_transfer_passive_subscribers_listid_post(listid, auth_user=auth_user, authorization=authorization)
+> object admin_transfer_passive_subscribers_listid_post(listid, auth_user=auth_user, authorization=authorization)
 
 Transfers passive customers from Kayak to Mailchimp
 
@@ -84,7 +84,8 @@ authorization = 'authorization_example' # str |  (optional)
 
 try:
     # Transfers passive customers from Kayak to Mailchimp
-    api_instance.admin_transfer_passive_subscribers_listid_post(listid, auth_user=auth_user, authorization=authorization)
+    api_response = api_instance.admin_transfer_passive_subscribers_listid_post(listid, auth_user=auth_user, authorization=authorization)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling AdminApi->admin_transfer_passive_subscribers_listid_post: %s\n" % e)
 ```
@@ -99,7 +100,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+**object**
 
 ### Authorization
 
@@ -108,7 +109,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json;charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
