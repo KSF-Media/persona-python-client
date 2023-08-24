@@ -95,8 +95,8 @@ class AccountApi(object):
                 local_var_params['email'] is None):
             raise ApiValueError("Missing the required parameter `email` when calling `account_password_forgot_get`")  # noqa: E501
 
-        if 'email' in local_var_params and not re.search(r'^[a-zA-Z0-9.!#$%&\'*+\\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$', local_var_params['email']):  # noqa: E501
-            raise ApiValueError("Invalid value for parameter `email` when calling `account_password_forgot_get`, must conform to the pattern `/^[a-zA-Z0-9.!#$%&'*+\\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/`")  # noqa: E501
+        if 'email' in local_var_params and not re.search(r'^[a-zåäöA-ZÅÄÖ0-9.!#$%&\'*+\\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$', local_var_params['email']):  # noqa: E501
+            raise ApiValueError("Invalid value for parameter `email` when calling `account_password_forgot_get`, must conform to the pattern `/^[a-zåäöA-ZÅÄÖ0-9.!#$%&'*+\\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/`")  # noqa: E501
         collection_formats = {}
 
         path_params = {}
