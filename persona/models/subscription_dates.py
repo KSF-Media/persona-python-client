@@ -31,8 +31,8 @@ class SubscriptionDates(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'len_months': 'int',
         'len_days': 'int',
+        'len_months': 'int',
         'start': 'date',
         'end': 'date',
         'unpaid_break': 'date',
@@ -42,8 +42,8 @@ class SubscriptionDates(object):
     }
 
     attribute_map = {
-        'len_months': 'lenMonths',
         'len_days': 'lenDays',
+        'len_months': 'lenMonths',
         'start': 'start',
         'end': 'end',
         'unpaid_break': 'unpaidBreak',
@@ -52,11 +52,11 @@ class SubscriptionDates(object):
         'suspend': 'suspend'
     }
 
-    def __init__(self, len_months=None, len_days=None, start=None, end=None, unpaid_break=None, invoicing_start=None, paid_until=None, suspend=None):  # noqa: E501
+    def __init__(self, len_days=None, len_months=None, start=None, end=None, unpaid_break=None, invoicing_start=None, paid_until=None, suspend=None):  # noqa: E501
         """SubscriptionDates - a model defined in OpenAPI"""  # noqa: E501
 
-        self._len_months = None
         self._len_days = None
+        self._len_months = None
         self._start = None
         self._end = None
         self._unpaid_break = None
@@ -65,10 +65,10 @@ class SubscriptionDates(object):
         self._suspend = None
         self.discriminator = None
 
-        if len_months is not None:
-            self.len_months = len_months
         if len_days is not None:
             self.len_days = len_days
+        if len_months is not None:
+            self.len_months = len_months
         self.start = start
         if end is not None:
             self.end = end
@@ -80,33 +80,6 @@ class SubscriptionDates(object):
             self.paid_until = paid_until
         if suspend is not None:
             self.suspend = suspend
-
-    @property
-    def len_months(self):
-        """Gets the len_months of this SubscriptionDates.  # noqa: E501
-
-        Length of Subscription in months  # noqa: E501
-
-        :return: The len_months of this SubscriptionDates.  # noqa: E501
-        :rtype: int
-        """
-        return self._len_months
-
-    @len_months.setter
-    def len_months(self, len_months):
-        """Sets the len_months of this SubscriptionDates.
-
-        Length of Subscription in months  # noqa: E501
-
-        :param len_months: The len_months of this SubscriptionDates.  # noqa: E501
-        :type: int
-        """
-        if len_months is not None and len_months > 9223372036854775807:  # noqa: E501
-            raise ValueError("Invalid value for `len_months`, must be a value less than or equal to `9223372036854775807`")  # noqa: E501
-        if len_months is not None and len_months < -9223372036854775808:  # noqa: E501
-            raise ValueError("Invalid value for `len_months`, must be a value greater than or equal to `-9223372036854775808`")  # noqa: E501
-
-        self._len_months = len_months
 
     @property
     def len_days(self):
@@ -134,6 +107,33 @@ class SubscriptionDates(object):
             raise ValueError("Invalid value for `len_days`, must be a value greater than or equal to `-9223372036854775808`")  # noqa: E501
 
         self._len_days = len_days
+
+    @property
+    def len_months(self):
+        """Gets the len_months of this SubscriptionDates.  # noqa: E501
+
+        Length of Subscription in months  # noqa: E501
+
+        :return: The len_months of this SubscriptionDates.  # noqa: E501
+        :rtype: int
+        """
+        return self._len_months
+
+    @len_months.setter
+    def len_months(self, len_months):
+        """Sets the len_months of this SubscriptionDates.
+
+        Length of Subscription in months  # noqa: E501
+
+        :param len_months: The len_months of this SubscriptionDates.  # noqa: E501
+        :type: int
+        """
+        if len_months is not None and len_months > 9223372036854775807:  # noqa: E501
+            raise ValueError("Invalid value for `len_months`, must be a value less than or equal to `9223372036854775807`")  # noqa: E501
+        if len_months is not None and len_months < -9223372036854775808:  # noqa: E501
+            raise ValueError("Invalid value for `len_months`, must be a value greater than or equal to `-9223372036854775808`")  # noqa: E501
+
+        self._len_months = len_months
 
     @property
     def start(self):
