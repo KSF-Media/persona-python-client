@@ -75,6 +75,9 @@ Class | Method | HTTP request | Description
 *AccountApi* | [**account_password_forgot_get**](docs/AccountApi.md#account_password_forgot_get) | **GET** /account/password/forgot | Request password reset link
 *AccountApi* | [**account_password_forgot_post**](docs/AccountApi.md#account_password_forgot_post) | **POST** /account/password/forgot | Request password reset link
 *AccountApi* | [**account_password_reset_post**](docs/AccountApi.md#account_password_reset_post) | **POST** /account/password/reset | Reset a forgotten password with a token
+*AdminApi* | [**admin_free_pass_delete**](docs/AdminApi.md#admin_free_pass_delete) | **DELETE** /admin/free-pass | Revokes an existing free pass
+*AdminApi* | [**admin_free_pass_post**](docs/AdminApi.md#admin_free_pass_post) | **POST** /admin/free-pass | Creates a free pass to an article
+*AdminApi* | [**admin_free_passes_get**](docs/AdminApi.md#admin_free_passes_get) | **GET** /admin/free-passes | Lists all free passes
 *AdminApi* | [**admin_search_post**](docs/AdminApi.md#admin_search_post) | **POST** /admin/search | Search for users
 *AdminApi* | [**admin_transfer_passive_subscribers_listid_post**](docs/AdminApi.md#admin_transfer_passive_subscribers_listid_post) | **POST** /admin/transfer-passive-subscribers/{listid} | Transfers passive customers from Kayak to Mailchimp
 *AdminApi* | [**admin_user_post**](docs/AdminApi.md#admin_user_post) | **POST** /admin/user | Create a new user with admin options.
@@ -82,6 +85,7 @@ Class | Method | HTTP request | Description
 *EntitlementsApi* | [**entitlements_allow_get**](docs/EntitlementsApi.md#entitlements_allow_get) | **GET** /entitlements/allow | Check if global entitlements are enabled
 *EntitlementsApi* | [**entitlements_allow_post**](docs/EntitlementsApi.md#entitlements_allow_post) | **POST** /entitlements/allow | Add an entitlement for all users
 *EntitlementsApi* | [**entitlements_allow_uuid_post**](docs/EntitlementsApi.md#entitlements_allow_uuid_post) | **POST** /entitlements/allow/{uuid} | Grant product access to a customer
+*EntitlementsApi* | [**entitlements_free_pass_get**](docs/EntitlementsApi.md#entitlements_free_pass_get) | **GET** /entitlements/free-pass | Verify given free pass hash
 *EntitlementsApi* | [**entitlements_get**](docs/EntitlementsApi.md#entitlements_get) | **GET** /entitlements | List all entitlements
 *EntitlementsApi* | [**entitlements_global_get**](docs/EntitlementsApi.md#entitlements_global_get) | **GET** /entitlements/global | Lists all past and future global entitlements
 *IdentificationApi* | [**identification_login_get**](docs/IdentificationApi.md#identification_login_get) | **GET** /identification/login | Authenticate with OpenID Connect
@@ -127,6 +131,8 @@ Class | Method | HTTP request | Description
  - [EntitlementAccess](docs/EntitlementAccess.md)
  - [FaroUser](docs/FaroUser.md)
  - [ForgotPasswordData](docs/ForgotPasswordData.md)
+ - [FreePass](docs/FreePass.md)
+ - [FreePassInput](docs/FreePassInput.md)
  - [GdprConsent](docs/GdprConsent.md)
  - [InlineResponse400](docs/InlineResponse400.md)
  - [InlineResponse400InvalidRequestBody](docs/InlineResponse400InvalidRequestBody.md)

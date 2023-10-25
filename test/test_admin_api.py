@@ -28,6 +28,27 @@ class TestAdminApi(unittest.TestCase):
     def tearDown(self):
         pass
 
+    def test_admin_free_pass_delete(self):
+        """Test case for admin_free_pass_delete
+
+        Revokes an existing free pass  # noqa: E501
+        """
+        pass
+
+    def test_admin_free_pass_post(self):
+        """Test case for admin_free_pass_post
+
+        Creates a free pass to an article  # noqa: E501
+        """
+        pass
+
+    def test_admin_free_passes_get(self):
+        """Test case for admin_free_passes_get
+
+        Lists all free passes  # noqa: E501
+        """
+        pass
+
     def test_admin_search_post(self):
         """Test case for admin_search_post
 

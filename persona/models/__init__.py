@@ -24,6 +24,8 @@ from persona.models.delivery_reclamation import DeliveryReclamation
 from persona.models.entitlement_access import EntitlementAccess
 from persona.models.faro_user import FaroUser
 from persona.models.forgot_password_data import ForgotPasswordData
+from persona.models.free_pass import FreePass
+from persona.models.free_pass_input import FreePassInput
 from persona.models.gdpr_consent import GdprConsent
 from persona.models.inline_response400 import InlineResponse400
 from persona.models.inline_response400_invalid_request_body import InlineResponse400InvalidRequestBody
