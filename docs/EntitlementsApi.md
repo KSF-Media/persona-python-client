@@ -8,7 +8,6 @@ Method | HTTP request | Description
 [**entitlements_allow_get**](EntitlementsApi.md#entitlements_allow_get) | **GET** /entitlements/allow | Check if global entitlements are enabled
 [**entitlements_allow_post**](EntitlementsApi.md#entitlements_allow_post) | **POST** /entitlements/allow | Add an entitlement for all users
 [**entitlements_allow_uuid_post**](EntitlementsApi.md#entitlements_allow_uuid_post) | **POST** /entitlements/allow/{uuid} | Grant product access to a customer
-[**entitlements_free_pass_get**](EntitlementsApi.md#entitlements_free_pass_get) | **GET** /entitlements/free-pass | Verify given free pass hash
 [**entitlements_get**](EntitlementsApi.md#entitlements_get) | **GET** /entitlements | List all entitlements
 [**entitlements_global_get**](EntitlementsApi.md#entitlements_global_get) | **GET** /entitlements/global | Lists all past and future global entitlements
 
@@ -217,57 +216,6 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json;charset=utf-8
- - **Accept**: application/json;charset=utf-8
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **entitlements_free_pass_get**
-> bool entitlements_free_pass_get(auth_user=auth_user, authorization=authorization, free_pass_hash=free_pass_hash)
-
-Verify given free pass hash
-
-### Example
-
-```python
-from __future__ import print_function
-import time
-import persona
-from persona.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = persona.EntitlementsApi()
-auth_user = 'auth_user_example' # str |  (optional)
-authorization = 'authorization_example' # str |  (optional)
-free_pass_hash = 'free_pass_hash_example' # str |  (optional)
-
-try:
-    # Verify given free pass hash
-    api_response = api_instance.entitlements_free_pass_get(auth_user=auth_user, authorization=authorization, free_pass_hash=free_pass_hash)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling EntitlementsApi->entitlements_free_pass_get: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **auth_user** | [**str**](.md)|  | [optional] 
- **authorization** | **str**|  | [optional] 
- **free_pass_hash** | **str**|  | [optional] 
-
-### Return type
-
-**bool**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
  - **Accept**: application/json;charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
