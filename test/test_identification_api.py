@@ -35,6 +35,13 @@ class TestIdentificationApi(unittest.TestCase):
         """
         pass
 
+    def test_identification_login_monitor_get(self):
+        """Test case for identification_login_monitor_get
+
+        Get token for off band response login flow monitor  # noqa: E501
+        """
+        pass
+
     def test_identification_login_return_get(self):
         """Test case for identification_login_return_get
 

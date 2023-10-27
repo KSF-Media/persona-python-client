@@ -5,6 +5,7 @@ All URIs are relative to *http://http:/v1*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**identification_login_get**](IdentificationApi.md#identification_login_get) | **GET** /identification/login | Authenticate with OpenID Connect
+[**identification_login_monitor_get**](IdentificationApi.md#identification_login_monitor_get) | **GET** /identification/login/monitor | Get token for off band response login flow monitor
 [**identification_login_return_get**](IdentificationApi.md#identification_login_return_get) | **GET** /identification/login/return | Redirect endpoint for OpenID Connect
 [**identification_user_stamp_uuid_post**](IdentificationApi.md#identification_user_stamp_uuid_post) | **POST** /identification/user/stamp/{uuid} | Query when the strong identification was last updated
 
@@ -31,6 +32,48 @@ try:
     api_instance.identification_login_get()
 except ApiException as e:
     print("Exception when calling IdentificationApi->identification_login_get: %s\n" % e)
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **identification_login_monitor_get**
+> identification_login_monitor_get()
+
+Get token for off band response login flow monitor
+
+### Example
+
+```python
+from __future__ import print_function
+import time
+import persona
+from persona.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = persona.IdentificationApi()
+
+try:
+    # Get token for off band response login flow monitor
+    api_instance.identification_login_monitor_get()
+except ApiException as e:
+    print("Exception when calling IdentificationApi->identification_login_monitor_get: %s\n" % e)
 ```
 
 ### Parameters
