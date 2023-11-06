@@ -56,6 +56,13 @@ class TestEntitlementsApi(unittest.TestCase):
         """
         pass
 
+    def test_entitlements_free_pass_get(self):
+        """Test case for entitlements_free_pass_get
+
+        Verify given free pass hash  # noqa: E501
+        """
+        pass
+
     def test_entitlements_get(self):
         """Test case for entitlements_get
 
