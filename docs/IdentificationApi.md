@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **identification_login_get**
-> identification_login_get()
+> identification_login_get(monitor=monitor)
 
 Authenticate with OpenID Connect
 
@@ -26,16 +26,20 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = persona.IdentificationApi()
+monitor = 'monitor_example' # str |  (optional)
 
 try:
     # Authenticate with OpenID Connect
-    api_instance.identification_login_get()
+    api_instance.identification_login_get(monitor=monitor)
 except ApiException as e:
     print("Exception when calling IdentificationApi->identification_login_get: %s\n" % e)
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **monitor** | **str**|  | [optional] 
 
 ### Return type
 
