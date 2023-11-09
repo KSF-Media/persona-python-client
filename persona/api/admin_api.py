@@ -140,13 +140,13 @@ class AdminApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def admin_free_pass_post(self, body, **kwargs):  # noqa: E501
+    def admin_free_pass_put(self, body, **kwargs):  # noqa: E501
         """Creates a free pass to an article  # noqa: E501
 
         Free passes can be used to temporarily bypass the paywall for individual articles.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.admin_free_pass_post(body, async_req=True)
+        >>> thread = api.admin_free_pass_put(body, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -159,18 +159,18 @@ class AdminApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.admin_free_pass_post_with_http_info(body, **kwargs)  # noqa: E501
+            return self.admin_free_pass_put_with_http_info(body, **kwargs)  # noqa: E501
         else:
-            (data) = self.admin_free_pass_post_with_http_info(body, **kwargs)  # noqa: E501
+            (data) = self.admin_free_pass_put_with_http_info(body, **kwargs)  # noqa: E501
             return data
 
-    def admin_free_pass_post_with_http_info(self, body, **kwargs):  # noqa: E501
+    def admin_free_pass_put_with_http_info(self, body, **kwargs):  # noqa: E501
         """Creates a free pass to an article  # noqa: E501
 
         Free passes can be used to temporarily bypass the paywall for individual articles.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.admin_free_pass_post_with_http_info(body, async_req=True)
+        >>> thread = api.admin_free_pass_put_with_http_info(body, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -194,14 +194,14 @@ class AdminApi(object):
             if key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method admin_free_pass_post" % key
+                    " to method admin_free_pass_put" % key
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'body' is set
         if ('body' not in local_var_params or
                 local_var_params['body'] is None):
-            raise ApiValueError("Missing the required parameter `body` when calling `admin_free_pass_post`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `body` when calling `admin_free_pass_put`")  # noqa: E501
 
         collection_formats = {}
 
@@ -233,7 +233,7 @@ class AdminApi(object):
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/admin/free-pass', 'POST',
+            '/admin/free-pass', 'PUT',
             path_params,
             query_params,
             header_params,

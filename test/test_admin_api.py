@@ -35,8 +35,8 @@ class TestAdminApi(unittest.TestCase):
         """
         pass
 
-    def test_admin_free_pass_post(self):
-        """Test case for admin_free_pass_post
+    def test_admin_free_pass_put(self):
+        """Test case for admin_free_pass_put
 
         Creates a free pass to an article  # noqa: E501
         """

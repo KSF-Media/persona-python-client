@@ -5,7 +5,7 @@ All URIs are relative to *http://http:/v1*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**admin_free_pass_delete**](AdminApi.md#admin_free_pass_delete) | **DELETE** /admin/free-pass | Revokes an existing free pass
-[**admin_free_pass_post**](AdminApi.md#admin_free_pass_post) | **POST** /admin/free-pass | Creates a free pass to an article
+[**admin_free_pass_put**](AdminApi.md#admin_free_pass_put) | **PUT** /admin/free-pass | Creates a free pass to an article
 [**admin_free_passes_get**](AdminApi.md#admin_free_passes_get) | **GET** /admin/free-passes | Lists all free passes
 [**admin_search_post**](AdminApi.md#admin_search_post) | **POST** /admin/search | Search for users
 [**admin_transfer_passive_subscribers_listid_post**](AdminApi.md#admin_transfer_passive_subscribers_listid_post) | **POST** /admin/transfer-passive-subscribers/{listid} | Transfers passive customers from Kayak to Mailchimp
@@ -64,8 +64,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **admin_free_pass_post**
-> str admin_free_pass_post(body, auth_user=auth_user, authorization=authorization)
+# **admin_free_pass_put**
+> str admin_free_pass_put(body, auth_user=auth_user, authorization=authorization)
 
 Creates a free pass to an article
 
@@ -88,10 +88,10 @@ authorization = 'authorization_example' # str |  (optional)
 
 try:
     # Creates a free pass to an article
-    api_response = api_instance.admin_free_pass_post(body, auth_user=auth_user, authorization=authorization)
+    api_response = api_instance.admin_free_pass_put(body, auth_user=auth_user, authorization=authorization)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AdminApi->admin_free_pass_post: %s\n" % e)
+    print("Exception when calling AdminApi->admin_free_pass_put: %s\n" % e)
 ```
 
 ### Parameters
