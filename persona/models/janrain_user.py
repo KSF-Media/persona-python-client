@@ -35,9 +35,6 @@ class JanrainUser(object):
         'email': 'str',
         'first_name': 'str',
         'last_name': 'str',
-        'middle_name': 'str',
-        'consent': 'list[GdprConsent]',
-        'legal': 'list[LegalConsent]',
         'cusno': 'str',
         'other_cusnos': 'list[str]'
     }
@@ -47,23 +44,17 @@ class JanrainUser(object):
         'email': 'email',
         'first_name': 'firstName',
         'last_name': 'lastName',
-        'middle_name': 'middleName',
-        'consent': 'consent',
-        'legal': 'legal',
         'cusno': 'cusno',
         'other_cusnos': 'otherCusnos'
     }
 
-    def __init__(self, uuid=None, email=None, first_name=None, last_name=None, middle_name=None, consent=None, legal=None, cusno=None, other_cusnos=None):  # noqa: E501
+    def __init__(self, uuid=None, email=None, first_name=None, last_name=None, cusno=None, other_cusnos=None):  # noqa: E501
         """JanrainUser - a model defined in OpenAPI"""  # noqa: E501
 
         self._uuid = None
         self._email = None
         self._first_name = None
         self._last_name = None
-        self._middle_name = None
-        self._consent = None
-        self._legal = None
         self._cusno = None
         self._other_cusnos = None
         self.discriminator = None
@@ -75,10 +66,6 @@ class JanrainUser(object):
             self.first_name = first_name
         if last_name is not None:
             self.last_name = last_name
-        if middle_name is not None:
-            self.middle_name = middle_name
-        self.consent = consent
-        self.legal = legal
         if cusno is not None:
             self.cusno = cusno
         if other_cusnos is not None:
@@ -169,73 +156,6 @@ class JanrainUser(object):
         """
 
         self._last_name = last_name
-
-    @property
-    def middle_name(self):
-        """Gets the middle_name of this JanrainUser.  # noqa: E501
-
-
-        :return: The middle_name of this JanrainUser.  # noqa: E501
-        :rtype: str
-        """
-        return self._middle_name
-
-    @middle_name.setter
-    def middle_name(self, middle_name):
-        """Sets the middle_name of this JanrainUser.
-
-
-        :param middle_name: The middle_name of this JanrainUser.  # noqa: E501
-        :type: str
-        """
-
-        self._middle_name = middle_name
-
-    @property
-    def consent(self):
-        """Gets the consent of this JanrainUser.  # noqa: E501
-
-
-        :return: The consent of this JanrainUser.  # noqa: E501
-        :rtype: list[GdprConsent]
-        """
-        return self._consent
-
-    @consent.setter
-    def consent(self, consent):
-        """Sets the consent of this JanrainUser.
-
-
-        :param consent: The consent of this JanrainUser.  # noqa: E501
-        :type: list[GdprConsent]
-        """
-        if consent is None:
-            raise ValueError("Invalid value for `consent`, must not be `None`")  # noqa: E501
-
-        self._consent = consent
-
-    @property
-    def legal(self):
-        """Gets the legal of this JanrainUser.  # noqa: E501
-
-
-        :return: The legal of this JanrainUser.  # noqa: E501
-        :rtype: list[LegalConsent]
-        """
-        return self._legal
-
-    @legal.setter
-    def legal(self, legal):
-        """Sets the legal of this JanrainUser.
-
-
-        :param legal: The legal of this JanrainUser.  # noqa: E501
-        :type: list[LegalConsent]
-        """
-        if legal is None:
-            raise ValueError("Invalid value for `legal`, must not be `None`")  # noqa: E501
-
-        self._legal = legal
 
     @property
     def cusno(self):

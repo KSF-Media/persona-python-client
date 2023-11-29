@@ -7,9 +7,6 @@ Name | Type | Description | Notes
 **email** | **str** |  | [optional] 
 **first_name** | **str** |  | [optional] 
 **last_name** | **str** |  | [optional] 
-**middle_name** | **str** |  | [optional] 
-**consent** | [**list[GdprConsent]**](GdprConsent.md) |  | 
-**legal** | [**list[LegalConsent]**](LegalConsent.md) |  | 
 **cusno** | **str** |  | [optional] 
 **other_cusnos** | **list[str]** |  | [optional] 
 

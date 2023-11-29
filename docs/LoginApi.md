@@ -6,8 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**login_ip_get**](LoginApi.md#login_ip_get) | **GET** /login/ip | Login with IP
 [**login_post**](LoginApi.md#login_post) | **POST** /login | Login with email and password
-[**login_some_post**](LoginApi.md#login_some_post) | **POST** /login/some | Login with social media
-[**login_sso_post**](LoginApi.md#login_sso_post) | **POST** /login/sso | Login with the AccessToken given by the SSO auth
+[**login_sso_post**](LoginApi.md#login_sso_post) | **POST** /login/sso | Disabled. Always returns 403.
 [**login_uuid_delete**](LoginApi.md#login_uuid_delete) | **DELETE** /login/{uuid} | Logout
 
 
@@ -109,57 +108,10 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **login_some_post**
-> LoginResponse login_some_post(body)
-
-Login with social media
-
-### Example
-
-```python
-from __future__ import print_function
-import time
-import persona
-from persona.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = persona.LoginApi()
-body = persona.LoginDataSoMe() # LoginDataSoMe | 
-
-try:
-    # Login with social media
-    api_response = api_instance.login_some_post(body)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling LoginApi->login_some_post: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**LoginDataSoMe**](LoginDataSoMe.md)|  | 
-
-### Return type
-
-[**LoginResponse**](LoginResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json;charset=utf-8
- - **Accept**: application/json;charset=utf-8
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **login_sso_post**
 > LoginResponse login_sso_post(body)
 
-Login with the AccessToken given by the SSO auth
+Disabled. Always returns 403.
 
 ### Example
 
@@ -175,7 +127,7 @@ api_instance = persona.LoginApi()
 body = persona.LoginDataSSO() # LoginDataSSO | 
 
 try:
-    # Login with the AccessToken given by the SSO auth
+    # Disabled. Always returns 403.
     api_response = api_instance.login_sso_post(body)
     pprint(api_response)
 except ApiException as e:

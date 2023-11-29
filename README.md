@@ -53,16 +53,16 @@ from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = persona.AccountApi(persona.ApiClient(configuration))
-email = 'email_example' # str | 
-redir = True # bool |  (optional)
+api_instance = persona.AdminApi(persona.ApiClient(configuration))
+body = 'body_example' # str | 
+auth_user = 'auth_user_example' # str |  (optional)
+authorization = 'authorization_example' # str |  (optional)
 
 try:
-    # Request password reset link
-    api_response = api_instance.account_password_forgot_get(email, redir=redir)
-    pprint(api_response)
+    # Revokes an existing free pass
+    api_instance.admin_free_pass_delete(body, auth_user=auth_user, authorization=authorization)
 except ApiException as e:
-    print("Exception when calling AccountApi->account_password_forgot_get: %s\n" % e)
+    print("Exception when calling AdminApi->admin_free_pass_delete: %s\n" % e)
 
 ```
 
@@ -72,9 +72,6 @@ All URIs are relative to *http://http:/v1*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*AccountApi* | [**account_password_forgot_get**](docs/AccountApi.md#account_password_forgot_get) | **GET** /account/password/forgot | Request password reset link
-*AccountApi* | [**account_password_forgot_post**](docs/AccountApi.md#account_password_forgot_post) | **POST** /account/password/forgot | Request password reset link
-*AccountApi* | [**account_password_reset_post**](docs/AccountApi.md#account_password_reset_post) | **POST** /account/password/reset | Reset a forgotten password with a token
 *AdminApi* | [**admin_free_pass_delete**](docs/AdminApi.md#admin_free_pass_delete) | **DELETE** /admin/free-pass | Revokes an existing free pass
 *AdminApi* | [**admin_free_pass_put**](docs/AdminApi.md#admin_free_pass_put) | **PUT** /admin/free-pass | Creates a free pass to an article
 *AdminApi* | [**admin_free_passes_get**](docs/AdminApi.md#admin_free_passes_get) | **GET** /admin/free-passes | Lists all free passes
@@ -94,8 +91,7 @@ Class | Method | HTTP request | Description
 *IdentificationApi* | [**identification_user_stamp_uuid_post**](docs/IdentificationApi.md#identification_user_stamp_uuid_post) | **POST** /identification/user/stamp/{uuid} | Query when the strong identification was last updated
 *LoginApi* | [**login_ip_get**](docs/LoginApi.md#login_ip_get) | **GET** /login/ip | Login with IP
 *LoginApi* | [**login_post**](docs/LoginApi.md#login_post) | **POST** /login | Login with email and password
-*LoginApi* | [**login_some_post**](docs/LoginApi.md#login_some_post) | **POST** /login/some | Login with social media
-*LoginApi* | [**login_sso_post**](docs/LoginApi.md#login_sso_post) | **POST** /login/sso | Login with the AccessToken given by the SSO auth
+*LoginApi* | [**login_sso_post**](docs/LoginApi.md#login_sso_post) | **POST** /login/sso | Disabled. Always returns 403.
 *LoginApi* | [**login_uuid_delete**](docs/LoginApi.md#login_uuid_delete) | **DELETE** /login/{uuid} | Logout
 *UsersApi* | [**users_post**](docs/UsersApi.md#users_post) | **POST** /users | Create a new user.
 *UsersApi* | [**users_temporary_post**](docs/UsersApi.md#users_temporary_post) | **POST** /users/temporary | Create a new user with email.
@@ -131,7 +127,6 @@ Class | Method | HTTP request | Description
  - [DeliveryReclamation](docs/DeliveryReclamation.md)
  - [EntitlementAccess](docs/EntitlementAccess.md)
  - [FaroUser](docs/FaroUser.md)
- - [ForgotPasswordData](docs/ForgotPasswordData.md)
  - [FreePass](docs/FreePass.md)
  - [FreePassInput](docs/FreePassInput.md)
  - [GdprConsent](docs/GdprConsent.md)
@@ -140,10 +135,6 @@ Class | Method | HTTP request | Description
  - [InlineResponse403](docs/InlineResponse403.md)
  - [InlineResponse4031](docs/InlineResponse4031.md)
  - [InlineResponse4031AccessTokenExpired](docs/InlineResponse4031AccessTokenExpired.md)
- - [InlineResponse4032](docs/InlineResponse4032.md)
- - [InlineResponse4032EmailAddressInUse](docs/InlineResponse4032EmailAddressInUse.md)
- - [InlineResponse4032EmailNotAuthorized](docs/InlineResponse4032EmailNotAuthorized.md)
- - [InlineResponse4032OauthFailed](docs/InlineResponse4032OauthFailed.md)
  - [InlineResponse403InvalidCredentials](docs/InlineResponse403InvalidCredentials.md)
  - [InlineResponse415](docs/InlineResponse415.md)
  - [InlineResponse415UnsupportedMediaType](docs/InlineResponse415UnsupportedMediaType.md)
@@ -153,7 +144,6 @@ Class | Method | HTTP request | Description
  - [LegalConsent](docs/LegalConsent.md)
  - [LoginData](docs/LoginData.md)
  - [LoginDataSSO](docs/LoginDataSSO.md)
- - [LoginDataSoMe](docs/LoginDataSoMe.md)
  - [LoginResponse](docs/LoginResponse.md)
  - [NewDeliveryReclamation](docs/NewDeliveryReclamation.md)
  - [NewTemporaryUser](docs/NewTemporaryUser.md)
@@ -179,7 +169,6 @@ Class | Method | HTTP request | Description
  - [SubscriptionPayments](docs/SubscriptionPayments.md)
  - [TemporaryAddressChange](docs/TemporaryAddressChange.md)
  - [TemporaryAddressChangeDates](docs/TemporaryAddressChangeDates.md)
- - [UpdatePasswordData](docs/UpdatePasswordData.md)
  - [User](docs/User.md)
  - [UserUpdate](docs/UserUpdate.md)
  - [UserUpdateAddress](docs/UserUpdateAddress.md)

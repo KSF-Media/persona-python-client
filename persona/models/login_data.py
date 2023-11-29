@@ -32,28 +32,23 @@ class LoginData(object):
     """
     openapi_types = {
         'username': 'str',
-        'password': 'str',
-        'merge_token': 'str'
+        'password': 'str'
     }
 
     attribute_map = {
         'username': 'username',
-        'password': 'password',
-        'merge_token': 'mergeToken'
+        'password': 'password'
     }
 
-    def __init__(self, username=None, password=None, merge_token=None):  # noqa: E501
+    def __init__(self, username=None, password=None):  # noqa: E501
         """LoginData - a model defined in OpenAPI"""  # noqa: E501
 
         self._username = None
         self._password = None
-        self._merge_token = None
         self.discriminator = None
 
         self.username = username
         self.password = password
-        if merge_token is not None:
-            self.merge_token = merge_token
 
     @property
     def username(self):
@@ -100,27 +95,6 @@ class LoginData(object):
             raise ValueError("Invalid value for `password`, must not be `None`")  # noqa: E501
 
         self._password = password
-
-    @property
-    def merge_token(self):
-        """Gets the merge_token of this LoginData.  # noqa: E501
-
-
-        :return: The merge_token of this LoginData.  # noqa: E501
-        :rtype: str
-        """
-        return self._merge_token
-
-    @merge_token.setter
-    def merge_token(self, merge_token):
-        """Sets the merge_token of this LoginData.
-
-
-        :param merge_token: The merge_token of this LoginData.  # noqa: E501
-        :type: str
-        """
-
-        self._merge_token = merge_token
 
     def to_dict(self):
         """Returns the model properties as a dict"""

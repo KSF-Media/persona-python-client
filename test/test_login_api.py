@@ -42,17 +42,10 @@ class TestLoginApi(unittest.TestCase):
         """
         pass
 
-    def test_login_some_post(self):
-        """Test case for login_some_post
-
-        Login with social media  # noqa: E501
-        """
-        pass
-
     def test_login_sso_post(self):
         """Test case for login_sso_post
 
-        Login with the AccessToken given by the SSO auth  # noqa: E501
+        Disabled. Always returns 403.  # noqa: E501
         """
         pass
 

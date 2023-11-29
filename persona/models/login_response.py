@@ -32,30 +32,25 @@ class LoginResponse(object):
     """
     openapi_types = {
         'token': 'str',
-        'sso_code': 'str',
         'uuid': 'str',
         'is_admin': 'bool'
     }
 
     attribute_map = {
         'token': 'token',
-        'sso_code': 'ssoCode',
         'uuid': 'uuid',
         'is_admin': 'isAdmin'
     }
 
-    def __init__(self, token=None, sso_code=None, uuid=None, is_admin=None):  # noqa: E501
+    def __init__(self, token=None, uuid=None, is_admin=None):  # noqa: E501
         """LoginResponse - a model defined in OpenAPI"""  # noqa: E501
 
         self._token = None
-        self._sso_code = None
         self._uuid = None
         self._is_admin = None
         self.discriminator = None
 
         self.token = token
-        if sso_code is not None:
-            self.sso_code = sso_code
         self.uuid = uuid
         self.is_admin = is_admin
 
@@ -81,27 +76,6 @@ class LoginResponse(object):
             raise ValueError("Invalid value for `token`, must not be `None`")  # noqa: E501
 
         self._token = token
-
-    @property
-    def sso_code(self):
-        """Gets the sso_code of this LoginResponse.  # noqa: E501
-
-
-        :return: The sso_code of this LoginResponse.  # noqa: E501
-        :rtype: str
-        """
-        return self._sso_code
-
-    @sso_code.setter
-    def sso_code(self, sso_code):
-        """Sets the sso_code of this LoginResponse.
-
-
-        :param sso_code: The sso_code of this LoginResponse.  # noqa: E501
-        :type: str
-        """
-
-        self._sso_code = sso_code
 
     @property
     def uuid(self):

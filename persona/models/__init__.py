@@ -23,7 +23,6 @@ from persona.models.delivery_address import DeliveryAddress
 from persona.models.delivery_reclamation import DeliveryReclamation
 from persona.models.entitlement_access import EntitlementAccess
 from persona.models.faro_user import FaroUser
-from persona.models.forgot_password_data import ForgotPasswordData
 from persona.models.free_pass import FreePass
 from persona.models.free_pass_input import FreePassInput
 from persona.models.gdpr_consent import GdprConsent
@@ -32,10 +31,6 @@ from persona.models.inline_response400_invalid_request_body import InlineRespons
 from persona.models.inline_response403 import InlineResponse403
 from persona.models.inline_response4031 import InlineResponse4031
 from persona.models.inline_response4031_access_token_expired import InlineResponse4031AccessTokenExpired
-from persona.models.inline_response4032 import InlineResponse4032
-from persona.models.inline_response4032_email_address_in_use import InlineResponse4032EmailAddressInUse
-from persona.models.inline_response4032_email_not_authorized import InlineResponse4032EmailNotAuthorized
-from persona.models.inline_response4032_oauth_failed import InlineResponse4032OauthFailed
 from persona.models.inline_response403_invalid_credentials import InlineResponse403InvalidCredentials
 from persona.models.inline_response415 import InlineResponse415
 from persona.models.inline_response415_unsupported_media_type import InlineResponse415UnsupportedMediaType
@@ -45,7 +40,6 @@ from persona.models.janrain_user import JanrainUser
 from persona.models.legal_consent import LegalConsent
 from persona.models.login_data import LoginData
 from persona.models.login_data_sso import LoginDataSSO
-from persona.models.login_data_so_me import LoginDataSoMe
 from persona.models.login_response import LoginResponse
 from persona.models.new_delivery_reclamation import NewDeliveryReclamation
 from persona.models.new_temporary_user import NewTemporaryUser
@@ -71,7 +65,6 @@ from persona.models.subscription_pause_edit import SubscriptionPauseEdit
 from persona.models.subscription_payments import SubscriptionPayments
 from persona.models.temporary_address_change import TemporaryAddressChange
 from persona.models.temporary_address_change_dates import TemporaryAddressChangeDates
-from persona.models.update_password_data import UpdatePasswordData
 from persona.models.user import User
 from persona.models.user_update import UserUpdate
 from persona.models.user_update_address import UserUpdateAddress
