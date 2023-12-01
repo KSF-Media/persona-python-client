@@ -17,6 +17,7 @@ from __future__ import absolute_import
 __version__ = "1.0.0"
 
 # import apis into sdk package
+from persona.api.account_api import AccountApi
 from persona.api.admin_api import AdminApi
 from persona.api.entitlements_api import EntitlementsApi
 from persona.api.identification_api import IdentificationApi
@@ -41,6 +42,7 @@ from persona.models.delivery_address import DeliveryAddress
 from persona.models.delivery_reclamation import DeliveryReclamation
 from persona.models.entitlement_access import EntitlementAccess
 from persona.models.faro_user import FaroUser
+from persona.models.forgot_password_data import ForgotPasswordData
 from persona.models.free_pass import FreePass
 from persona.models.free_pass_input import FreePassInput
 from persona.models.gdpr_consent import GdprConsent
@@ -83,6 +85,7 @@ from persona.models.subscription_pause_edit import SubscriptionPauseEdit
 from persona.models.subscription_payments import SubscriptionPayments
 from persona.models.temporary_address_change import TemporaryAddressChange
 from persona.models.temporary_address_change_dates import TemporaryAddressChangeDates
+from persona.models.update_password_data import UpdatePasswordData
 from persona.models.user import User
 from persona.models.user_update import UserUpdate
 from persona.models.user_update_address import UserUpdateAddress

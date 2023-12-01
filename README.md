@@ -53,16 +53,14 @@ from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = persona.AdminApi(persona.ApiClient(configuration))
+api_instance = persona.AccountApi(persona.ApiClient(configuration))
 body = 'body_example' # str | 
-auth_user = 'auth_user_example' # str |  (optional)
-authorization = 'authorization_example' # str |  (optional)
 
 try:
-    # Revokes an existing free pass
-    api_instance.admin_free_pass_delete(body, auth_user=auth_user, authorization=authorization)
+    # Validate password reset token
+    api_instance.account_password_check_token_post(body)
 except ApiException as e:
-    print("Exception when calling AdminApi->admin_free_pass_delete: %s\n" % e)
+    print("Exception when calling AccountApi->account_password_check_token_post: %s\n" % e)
 
 ```
 
@@ -72,6 +70,9 @@ All URIs are relative to *http://http:/v1*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*AccountApi* | [**account_password_check_token_post**](docs/AccountApi.md#account_password_check_token_post) | **POST** /account/password/check-token | Validate password reset token
+*AccountApi* | [**account_password_forgot_post**](docs/AccountApi.md#account_password_forgot_post) | **POST** /account/password/forgot | Request password reset link
+*AccountApi* | [**account_password_reset_post**](docs/AccountApi.md#account_password_reset_post) | **POST** /account/password/reset | Reset a forgotten password with a token
 *AdminApi* | [**admin_free_pass_delete**](docs/AdminApi.md#admin_free_pass_delete) | **DELETE** /admin/free-pass | Revokes an existing free pass
 *AdminApi* | [**admin_free_pass_put**](docs/AdminApi.md#admin_free_pass_put) | **PUT** /admin/free-pass | Creates a free pass to an article
 *AdminApi* | [**admin_free_passes_get**](docs/AdminApi.md#admin_free_passes_get) | **GET** /admin/free-passes | Lists all free passes
@@ -127,6 +128,7 @@ Class | Method | HTTP request | Description
  - [DeliveryReclamation](docs/DeliveryReclamation.md)
  - [EntitlementAccess](docs/EntitlementAccess.md)
  - [FaroUser](docs/FaroUser.md)
+ - [ForgotPasswordData](docs/ForgotPasswordData.md)
  - [FreePass](docs/FreePass.md)
  - [FreePassInput](docs/FreePassInput.md)
  - [GdprConsent](docs/GdprConsent.md)
@@ -169,6 +171,7 @@ Class | Method | HTTP request | Description
  - [SubscriptionPayments](docs/SubscriptionPayments.md)
  - [TemporaryAddressChange](docs/TemporaryAddressChange.md)
  - [TemporaryAddressChangeDates](docs/TemporaryAddressChangeDates.md)
+ - [UpdatePasswordData](docs/UpdatePasswordData.md)
  - [User](docs/User.md)
  - [UserUpdate](docs/UserUpdate.md)
  - [UserUpdateAddress](docs/UserUpdateAddress.md)
