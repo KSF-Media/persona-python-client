@@ -239,7 +239,7 @@ class AccountApi(object):
     def account_password_reset_post(self, body, **kwargs):  # noqa: E501
         """Reset a forgotten password with a token  # noqa: E501
 
-        The final step of the forgotten password reset procedure performs password reset with a token obtained from the email message sent by the POST /password/forgot endpoint and the new password and its confirmation.  # noqa: E501
+        The final step of the forgotten password reset procedure performs password reset with a token obtained from the email message sent by the POST /password/forgot endpoint and the new password and its confirmation. If @password@ or @confirmPassword@ are missing, then this endpoint performs a mere token validation like the @/password/check-token@ endpoint.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.account_password_reset_post(body, async_req=True)
@@ -261,7 +261,7 @@ class AccountApi(object):
     def account_password_reset_post_with_http_info(self, body, **kwargs):  # noqa: E501
         """Reset a forgotten password with a token  # noqa: E501
 
-        The final step of the forgotten password reset procedure performs password reset with a token obtained from the email message sent by the POST /password/forgot endpoint and the new password and its confirmation.  # noqa: E501
+        The final step of the forgotten password reset procedure performs password reset with a token obtained from the email message sent by the POST /password/forgot endpoint and the new password and its confirmation. If @password@ or @confirmPassword@ are missing, then this endpoint performs a mere token validation like the @/password/check-token@ endpoint.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.account_password_reset_post_with_http_info(body, async_req=True)
