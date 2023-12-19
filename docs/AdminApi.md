@@ -10,6 +10,7 @@ Method | HTTP request | Description
 [**admin_search_post**](AdminApi.md#admin_search_post) | **POST** /admin/search | Search for users
 [**admin_transfer_passive_subscribers_listid_post**](AdminApi.md#admin_transfer_passive_subscribers_listid_post) | **POST** /admin/transfer-passive-subscribers/{listid} | Transfers passive customers from Kayak to Mailchimp
 [**admin_user_post**](AdminApi.md#admin_user_post) | **POST** /admin/user | Create a new user with admin options.
+[**admin_user_uuid_delete**](AdminApi.md#admin_user_uuid_delete) | **DELETE** /admin/user/{uuid} | Delete user
 
 
 # **admin_free_pass_delete**
@@ -320,6 +321,56 @@ No authorization required
 
  - **Content-Type**: application/json;charset=utf-8
  - **Accept**: application/json;charset=utf-8
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **admin_user_uuid_delete**
+> admin_user_uuid_delete(uuid, auth_user=auth_user, authorization=authorization)
+
+Delete user
+
+### Example
+
+```python
+from __future__ import print_function
+import time
+import persona
+from persona.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = persona.AdminApi()
+uuid = 'uuid_example' # str | 
+auth_user = 'auth_user_example' # str |  (optional)
+authorization = 'authorization_example' # str |  (optional)
+
+try:
+    # Delete user
+    api_instance.admin_user_uuid_delete(uuid, auth_user=auth_user, authorization=authorization)
+except ApiException as e:
+    print("Exception when calling AdminApi->admin_user_uuid_delete: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **uuid** | [**str**](.md)|  | 
+ **auth_user** | [**str**](.md)|  | [optional] 
+ **authorization** | **str**|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

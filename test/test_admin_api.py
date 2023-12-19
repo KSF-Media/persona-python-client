@@ -70,6 +70,13 @@ class TestAdminApi(unittest.TestCase):
         """
         pass
 
+    def test_admin_user_uuid_delete(self):
+        """Test case for admin_user_uuid_delete
+
+        Delete user  # noqa: E501
+        """
+        pass
+
 
 if __name__ == '__main__':
     unittest.main()

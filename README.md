@@ -79,6 +79,7 @@ Class | Method | HTTP request | Description
 *AdminApi* | [**admin_search_post**](docs/AdminApi.md#admin_search_post) | **POST** /admin/search | Search for users
 *AdminApi* | [**admin_transfer_passive_subscribers_listid_post**](docs/AdminApi.md#admin_transfer_passive_subscribers_listid_post) | **POST** /admin/transfer-passive-subscribers/{listid} | Transfers passive customers from Kayak to Mailchimp
 *AdminApi* | [**admin_user_post**](docs/AdminApi.md#admin_user_post) | **POST** /admin/user | Create a new user with admin options.
+*AdminApi* | [**admin_user_uuid_delete**](docs/AdminApi.md#admin_user_uuid_delete) | **DELETE** /admin/user/{uuid} | Delete user
 *EntitlementsApi* | [**entitlements_allow_delete**](docs/EntitlementsApi.md#entitlements_allow_delete) | **DELETE** /entitlements/allow | Remove an entitlement
 *EntitlementsApi* | [**entitlements_allow_get**](docs/EntitlementsApi.md#entitlements_allow_get) | **GET** /entitlements/allow | Check if global entitlements are enabled
 *EntitlementsApi* | [**entitlements_allow_post**](docs/EntitlementsApi.md#entitlements_allow_post) | **POST** /entitlements/allow | Add an entitlement for all users
