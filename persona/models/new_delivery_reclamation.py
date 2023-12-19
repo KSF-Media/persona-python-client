@@ -34,23 +34,26 @@ class NewDeliveryReclamation(object):
         'paper': 'str',
         'publication_date': 'date',
         'claim': 'str',
-        'door_code': 'str'
+        'door_code': 'str',
+        'reason': 'str'
     }
 
     attribute_map = {
         'paper': 'paper',
         'publication_date': 'publicationDate',
         'claim': 'claim',
-        'door_code': 'doorCode'
+        'door_code': 'doorCode',
+        'reason': 'reason'
     }
 
-    def __init__(self, paper=None, publication_date=None, claim=None, door_code=None):  # noqa: E501
+    def __init__(self, paper=None, publication_date=None, claim=None, door_code=None, reason=None):  # noqa: E501
         """NewDeliveryReclamation - a model defined in OpenAPI"""  # noqa: E501
 
         self._paper = None
         self._publication_date = None
         self._claim = None
         self._door_code = None
+        self._reason = None
         self.discriminator = None
 
         if paper is not None:
@@ -59,6 +62,8 @@ class NewDeliveryReclamation(object):
         self.claim = claim
         if door_code is not None:
             self.door_code = door_code
+        if reason is not None:
+            self.reason = reason
 
     @property
     def paper(self):
@@ -155,6 +160,33 @@ class NewDeliveryReclamation(object):
         """
 
         self._door_code = door_code
+
+    @property
+    def reason(self):
+        """Gets the reason of this NewDeliveryReclamation.  # noqa: E501
+
+
+        :return: The reason of this NewDeliveryReclamation.  # noqa: E501
+        :rtype: str
+        """
+        return self._reason
+
+    @reason.setter
+    def reason(self, reason):
+        """Sets the reason of this NewDeliveryReclamation.
+
+
+        :param reason: The reason of this NewDeliveryReclamation.  # noqa: E501
+        :type: str
+        """
+        allowed_values = ["MissingDelivery", "WrongPaper", "DamagedPaper", "OlderReclamation"]  # noqa: E501
+        if reason not in allowed_values:
+            raise ValueError(
+                "Invalid value for `reason` ({0}), must be one of {1}"  # noqa: E501
+                .format(reason, allowed_values)
+            )
+
+        self._reason = reason
 
     def to_dict(self):
         """Returns the model properties as a dict"""
